@@ -1,0 +1,35 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+uglyurls = true
+
+[permalinks]
+posts = "/:year/:month/:day/:slug"
+
+[markup.goldmark.renderer]
+# Allows HTML in Markdown
+unsafe = true
+
+[mediaTypes]
+[mediaTypes."text/gemini"]
+suffixes = ["gmi"]
+
+[outputFormats]
+[outputFormats.Gemini]
+name = "GEMTEXT"
+isPlainText = true
+isHTML = false
+mediaType = "text/gemini"
+protocol = "gemini://"
+permalinkable = true
+path = "gemini/"
+
+[outputFormats.GEMRSS]
+name = "GEMRSS"
+isHTML = false
+mediaType = "application/rss+xml"
+protocol = "gemini://"
+path = "gemini/"
+
+[outputs]
+section = ["HTML", "RSS", "GEMRSS"]

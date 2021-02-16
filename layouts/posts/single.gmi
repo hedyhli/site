@@ -1,0 +1,16 @@
+# {{$.Title | safeHTML}}
+
+{{ $lastmod := .Lastmod -}}
+{{ if lt .Date $lastmod -}}
+Originally posted {{ .Date.Format "2006-01-02" }}. Last updated {{ .Lastmod.Format "2006-01-02" }}.
+{{ else -}}
+Posted {{ .Date.Format "2006-01-02" }}.
+{{ end }}
+{{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
+
+---
+
+=> / Root
+=> {{ .Site.Params.src }} Gemini capsule source code
+
+{{ .Site.Params.copyright }}

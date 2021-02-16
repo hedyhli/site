@@ -1,0 +1,7 @@
+<hr>
+<footer id="site-footer">
+	<p>Copyright © {{now.Year}} Hedy Li · <a href="{{ .Site.Params.src }}">Website source code</a></p>
+	{{if .GitInfo -}}
+	<p>Site last rebuilt on {{now.Format "2006-01-02 15:04:05 -0700" }}</p>
+	{{- end}}
+</footer>

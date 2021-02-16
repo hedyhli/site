@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div itemscope itemtype="https://schema.org/BlogPosting" class="h-entry">
+	<article itemprop="mainEntityOfPage">
+		<header id="post-header">
+			<h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
+			{{ $lastmod := .Lastmod -}}
+			{{ if lt .Date $lastmod -}}
+			Posted <time class="dt-published" itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+		{{- with .OutputFormats.Get "gemtext" }}
+		and <a rel="syndication" class="u-syndication" href="{{replace .Permalink "/gemini" "" 1 | safeURL}}">Gemini capsule</a>
+		{{- end -}}
+		<br>
+			Last updated <time itemprop="dateModified" class="dt-updated" datetime="{{ $lastmod.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+			{{ else -}}
+			Posted <a class="u-url" href="{{ .Site.BaseURL }}{{ .RelPermalink }}"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time></a>
+		{{- with .OutputFormats.Get "gemtext" }}
+		and <a href="{{replace .Permalink "/gemini" "" 1 | safeURL}}">Gemini capsule</a>
+		{{- end -}}
+			{{ end }}
+		</header>
+		<section class="e-content" itemprop="articlebody">
+			{{ partial "processed-content" . -}}
+		</section>
+	</article>
+</div>
+<hr>
+<footer>
+	<p>Thanks for reading!</p>
+</footer>
+{{ end }}

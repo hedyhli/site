@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div itemscope itemtype="https://schema.org/BlogPosting" class="h-entry">
+	<article itemprop="mainEntityOfPage">
+		<header id="post-header">
+			<h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
+			{{ $lastmod := .Lastmod -}}
+			{{ if lt .Date $lastmod -}}
+			{{ end }}
+		</header>
+		<section class="e-content" itemprop="articlebody">
+			{{ partial "processed-content" . -}}
+		</section>
+	</article>
+</div>
+{{ end }}
