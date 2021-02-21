@@ -1,11 +1,13 @@
 image: alpine/latest
+packages:
+    - hugo
 oauth: pages.sr.ht/PAGES:RW
 environment:
-  site: site
+    site: site
 tasks:
-- package: |
-    cd $site
-    hugo -D
-    tar -cvz . > ../site.tar.gz
+    - package: |
+        cd $site
+        hugo
+        tar -cvz . > ../site.tar.gz
 - upload: |
     acurl -f https://pages.sr.ht/publish/hedy.srht.site -Fcontent=@site.tar.gz
