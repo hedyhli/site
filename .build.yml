@@ -5,6 +5,7 @@ environment:
 tasks:
 - package: |
     cd $site
+    hugo -D
     tar -cvz . > ../site.tar.gz
 - upload: |
     acurl -f https://pages.sr.ht/publish/hedy.srht.site -Fcontent=@site.tar.gz
