@@ -5,16 +5,16 @@
 	<meta name="author" content="{{ .Site.Author.name }}">
 	<link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}posts/index.xml" title="{{ $.Site.Title }}">
 	<meta name="robots" content="noindex">
+
 	{{/* <link rel="pgpkey" type="application/pgp-keys" href="{{ .Site.BaseURL }}publickey.asc"> */}}
-	{{/* {{ printf `<link rel="stylesheet" href="%s" integrity="%s">` $css.RelPermalink $css.Data.Integrity | safeHTML -}} */}}
-	{{/*  only load syntax-highlighting CSS if this page needs it  */}}
-	{{/* {{ if .Params.highlight -}} */}}
-	{{/* {{ $css_syntax := resources.Get "/css/syntax.css" | minify | resources.Fingerprint "sha384" -}} */}}
-	{{/* {{- printf `<link rel="stylesheet" href="%s" integrity="%s">` $css_syntax.RelPermalink $css_syntax.Data.Integrity | safeHTML }} */}}
-	{{/* {{- end -}} */}}
+
+	{{- $resources := slice -}}
+	{{ $resources = $resources | append (resources.Get "main.css") }}
+	{{ $css := $resources | resources.Concat "css/style.css" | minify | resources.Fingerprint "sha384" }}
+	{{ printf `<link rel="stylesheet" href="%s" integrity="%s">` $css.RelPermalink $css.Data.Integrity | safeHTML }}
+
 	<title>{{ .Title }}</title>
-	{{/*  open graph stuff; used in the Fediverse, Signal link previe */}}
-	     some RSS readers, and a certain large social media company -->
+
 	<meta property="og:title" content="{{ .Title }}">
 	<meta property="og:site_name" content="{{ $.Site.Title }}">
 	{{- if (eq "page" .Kind) }}
