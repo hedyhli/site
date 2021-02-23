@@ -1,9 +1,12 @@
+RSYNC_FLAGS=-av
+GEMINI_DEST=~/public_gemini
+HTML_DEST=~/public_html
+
 .PHONY: gemini
 gemini:
-	tar cvf gemini.tar.gz public/gemini public/*.gmi
+	rsync $(RSYNC_FLAGS) public/*.gmi public/gemini $(GEMINI_DEST)/
+	rsync $(RSYNC_FLAGS) public/posts/gemini.xml $(GEMINI_DEST)/feed.xml
 
 .PHONY: html
 html:
-	cd public
-	ls *.gmi *.tar.gz | xargs tar cvf html.tar.gz . --exclude gemini/ --exclude Makefile --exclude
-	cd ..
+	rsync $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)

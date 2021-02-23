@@ -1,10 +1,10 @@
-baseURL = "http://example.org/"
+baseURL = "https://tilde.team/~hedy"
 languageCode = "en-us"
-title = "My New Hugo Site"
-uglyurls = true
+title = "Hedy's Site"
+uglyurls = false
 
 [permalinks]
-posts = "/:year/:month/:day/:slug"
+posts = "/posts/:slug"
 
 [markup.goldmark.renderer]
 # Allows HTML in Markdown

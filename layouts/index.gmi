@@ -9,4 +9,4 @@
 
 --
 {{ .Site.Params.copyright }}
-=> {{ .Site.Params.src }} Website source code
+=> {{ .Site.Params.src }} Site source code
