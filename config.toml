@@ -23,6 +23,7 @@ mediaType = "text/gemini"
 protocol = "gemini://"
 permalinkable = true
 path = "gemini/"
+noUgly = true
 
 [outputFormats.GEMRSS]
 name = "GEMRSS"
