@@ -11,7 +11,7 @@
 	{{- $resources := slice -}}
 	{{ $resources = $resources | append (resources.Get "main.css") }}
 	{{ $css := $resources | resources.Concat "css/style.css" | minify | resources.Fingerprint "sha384" }}
-	{{ printf `<link rel="stylesheet" href="%s" integrity="%s">` $css.RelPermalink $css.Data.Integrity | safeHTML }}
+	<link rel="stylesheet" href="{{$css.RelPermalink}}" integrity="{{$css.Data.Integrity | safeHTML}}">
 
 	<title>{{ .Title }}</title>
 

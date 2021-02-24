@@ -1,4 +1,4 @@
-{{ if eq .RelPermalink "/posts.html" -}}
+{{ if eq .RelPermalink "/~hedy/posts/" -}}
 <h1>Posts</h1>
 {{ else -}}
 <h2>Posts</h2>
@@ -9,7 +9,7 @@
 		<p>
 		<time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
 		—
-		<a href="{{ .Permalink }}">
+		<a href="{{ .RelPermalink }}">
 			{{ .Title }}
 		</a>
 		</p>
