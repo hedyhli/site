@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{- default "" .Site.LanguageCode -}}"> 
+<html lang="{{- default "" .Site.LanguageCode -}}">
 	{{- partial "head.html" . -}}
 	<body>
+		<h3 class="hideme">
+			Seems that the CSS and paths doesn't work for this URL.
+			Try going to <a href="https://tilde.team/~hedy/">tilde.team/~hedy/</a> instead
+		</h3>
 		{{- partial "header.html" . -}}
 		<main id="content">
 			{{- block "main" . }}{{- end }}

@@ -1,3 +1,7 @@
+.hideme {
+	display: none;
+}
+
 body {
 	font: 16px sans-serif;
 	line-height: 1.5rem;
@@ -5,10 +9,6 @@ body {
 	max-width: 50rem;
 	padding: 0 5%;
 }
-
-//main {
-	//margin: 10%;
-//}
 
 blockquote {
 	border-left: 6px solid #bbb;
