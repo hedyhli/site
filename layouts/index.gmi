@@ -5,7 +5,7 @@
 {{- if .OutputFormats.Get "gemtext" }}
 => {{replace .Permalink "/gemini" "" 1}} {{ .Date.Format "2006-01-02" }}: {{.Title | safeHTML}}{{ end }}{{ end }}
 
-=> posts/index.xml RSS feed
+=> feed.xml RSS feed
 
 --
 {{ .Site.Params.copyright }}

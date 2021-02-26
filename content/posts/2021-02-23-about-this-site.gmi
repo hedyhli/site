@@ -1,8 +1,3 @@
-Second post on my gemlog.
+My gemini capsule is generated using Hugo* along with my web site. It contains my gemlog and some other various related things about me.
 
-hi
-
-> quote
-
-hi
-bye
+=> https://gohugo.io * Hugo (HTTPS) Homepage

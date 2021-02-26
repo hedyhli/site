@@ -1,7 +1,5 @@
-# Hello hugo
-
 hope it works!
 
 *test* <- shouldnt render
 
-=> / root link
+=> ../.. back to index
