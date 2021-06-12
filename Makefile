@@ -17,7 +17,7 @@ html:
 
 .PHONY: gen
 gen:
-	hugo
+	hugo --cacheDir ~/hugo_cache
 
 .PHONY: all
 all: clean gen gemini html
