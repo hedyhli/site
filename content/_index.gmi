@@ -1,1 +1,7 @@
-Hello from gemini index
+hello, this is a WIP hugo-generated gemini static site/capsule
+
+it will be ready soon. I'm still mangling with my css for the web version.
+
+meanwhile, you could check out my gemini capsule on flounder or on rtc while you wait:
+=> gemini://hedy.flounder.online
+=> gemini://rawtext.club/~hedy
