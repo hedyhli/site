@@ -1,7 +1,10 @@
-baseURL = "https://tilde.cafe/~hedy/"
+baseURL = "https://tilde.cafe/~hedy"
 languageCode = "en-us"
 title = "Hedy's Site"
-uglyurls = false
+uglyurls = true
+
+[params]
+src = "https://sr.ht/~hedy/site"
 
 [permalinks]
 posts = "/posts/:slug"

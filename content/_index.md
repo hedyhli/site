@@ -6,4 +6,4 @@ outputs:
 
 Welcome to my hugo site.
 
-Somehow it's still not [working](https://example.com)
+It's still work in progress, check back later :)
