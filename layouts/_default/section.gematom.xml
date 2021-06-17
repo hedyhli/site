@@ -1,0 +1,27 @@
+{{- $pctx := . -}}
+{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
+{{- $pages := slice -}}
+{{- if or $.IsHome $.IsSection -}}
+{{- $pages = $pctx.RegularPages -}}
+{{- else -}}
+{{- $pages = $pctx.Pages -}}
+{{- end -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Hedy's capsule</title>
+	<link href="gemini://hedy.tilde.cafe"/>
+	<updated>{{ .Date.Format "2006-01-02" | safeHTML }}T12:00:00Z</updated>
+	<id>gemini://hedy.tilde.cafe</id>
+	{{- range (where .Site.RegularPages "Section" "posts") -}}
+	{{- $p := . -}}
+	{{- with .OutputFormats.Get "gemtext" }}
+	<entry>
+		{{- $perm := (replace .Permalink "/gemini" "" 1) }}
+		<title>{{ $p.Title }}</title>
+		<link rel="alternate" href="{{ $perm }}" />
+		<id>{{ $perm }}</id>
+		<updated>{{ $p.Date.Format "2006-01-02" }}T12:00:00Z</updated>
+	</entry>
+	{{- end}}
+	{{- end}}
+</feed>

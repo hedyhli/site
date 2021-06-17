@@ -1,4 +1,4 @@
-baseURL = "https://tilde.cafe/~hedy"
+baseURL = "https://hedy.tilde.cafe"
 languageCode = "en-us"
 title = "Hedy's Site"
 uglyurls = true
@@ -26,14 +26,21 @@ mediaType = "text/gemini"
 protocol = "gemini://"
 permalinkable = true
 path = "gemini/"
-noUgly = true
+noUgly = false
 
-[outputFormats.GEMRSS]
-name = "GEMRSS"
-isHTML = false
-mediaType = "application/rss+xml"
+[mediaTypes."application/atom+xml"]
+  suffixes = ["xml"]
+
+[outputFormats.GEMATOM]
+name = "GEMATOM"
+mediaType = "application/atom+xml"
 protocol = "gemini://"
+rel = "alternate"
+isPlainText = false
 path = "gemini/"
+isHTML = false
+noUgly = false
+permalinkable = false
 
 [outputs]
-section = ["HTML", "RSS", "GEMRSS"]
+section = ["HTML", "RSS", "GEMATOM"]

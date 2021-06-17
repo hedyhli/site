@@ -5,7 +5,7 @@
 <h2>Posts</h2>
 {{ end -}}
 <ul class="unstyled-list">
-	{{- range where site.RegularPages "Type" "in" site.Params.mainSections -}}
+	{{ range (where .Site.RegularPages "Section" "posts") }}
 	<li>
 		<p>
 		<time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
