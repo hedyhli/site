@@ -11,7 +11,7 @@ slug: "about-this-site"
 
 This site is where my gemlog/blog (maybe even phlog) live. It is statically generated
 with [Hugo](https://gohugo.io/) and is rsync-ed to my `public_html` and `public_gemini`
-directories for HTML and gemini on [tilde.team](tilde.team) respectively on build.
+directories for HTML and gemini on [tilde.cafe](tilde.cafe) respectively on build.
 
 ### ~team and the Tildeverse
 
