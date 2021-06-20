@@ -5,7 +5,7 @@ draft: true
 outputs:
   - html
   - gemtext
-slug: {{ slicestr (replace .Name "-" " ") 11 }}
+slug: {{ slicestr .Name 11 }}
 
 ---
 

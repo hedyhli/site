@@ -1,0 +1,6 @@
+just to test if my gemini atom feed work.
+
+as always, this site/capsule is *still wip*
+
+checkout my actual gemlog instead:
+=> //hedy.smol.pub
