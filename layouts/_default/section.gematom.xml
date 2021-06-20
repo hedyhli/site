@@ -18,7 +18,7 @@
 	<entry>
 		{{- $perm := (replace .Permalink "/gemini" "" 1) }}
 		<title>{{ $p.Title }}</title>
-		<link rel="alternate" href="{{ $perm }}" />
+		{{- printf `<link rel="alternate" href="%s" />` $perm | safeHTML }}
 		<id>{{ $perm }}</id>
 		<updated>{{ $p.Date.Format "2006-01-02" }}T12:00:00Z</updated>
 	</entry>
