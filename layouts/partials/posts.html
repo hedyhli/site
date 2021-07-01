@@ -10,15 +10,9 @@
 		<p>
 		<time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
 		—
-		{{ if in $outerRel "posts" -}}
-		<a href="{{ slicestr .RelPermalink 13 }}">
+		<a href="{{ .Permalink }}">
 			{{- .Title -}}
 		</a>
-		{{ else -}}
-		<a href="{{ slicestr .RelPermalink 7 }}">
-			{{- .Title -}}
-		</a>
-		{{- end -}}
 		</p>
 	</li>
 	{{- end }}
