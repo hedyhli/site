@@ -9,3 +9,6 @@ meanwhile, you could... water my plant? :D
 => ./key.asc or check out my pgp public key for some reason
 => ./key.txt or check out my ssh public key for fun
 => //hedy.smol.pub or! check out my current gemlog (will move to here when this capsule is ready :D)
+
+=> //hedy.tilde.cafe/spartan spartan -> gemini proxy
+=> //hedy.flounder.online my mine gemini capsule
