@@ -86,9 +86,9 @@ th {
 /* } */
 
 footer {
-	/* I'm shit at making footer sticky. I don't want to mess with flex box so this is what I came up with lol*/
-	margin-top: calc(70vh - 25rem);
+	margin-top: 4rem;
 	margin-bottom: 3.5rem;
+	text-align: center;
 }
 header p {
 	text-align: left;
