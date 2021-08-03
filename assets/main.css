@@ -1,8 +1,22 @@
+/*
+ * Mostly  based on simplecss.org
+ * Also based on cssbed, forgot which theme exactly, might be bamboo or "evenbettermotherfucking"
+*/
+
 :root {
+  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+  --base-fontsize: 1.1rem;
+
+  /* Major third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.25;
+
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
+
   --mono-font: Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --bg: #FFF;
-  --accent-bg: #F5F7FF;
-  --text: #212121;
+  --accent-bg: #efedff;
+  --text: #292929;
   --text-light: #585858;
   --border: #D8DAE1;
   --accent: #3d4573;
@@ -11,12 +25,14 @@
   --preformatted: #444;
   --marked: #FFDD33;
   --disabled: #EFEFEF;
+
+  --shadow-color: #fff;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #212121;
+    --bg: #282a36;
     --accent-bg: #2B2B2B;
-    --text: #DCDCDC;
+    --text: #f8f8f2;
     --text-light: #ABABAB;
     --border: #666;
     --accent: #8be9fd;
@@ -24,6 +40,8 @@
     --code: #F06292;
     --preformatted: #CCC;
     --disabled: #111;
+
+	--shadow-color: #36373b;
   }
 
   img, video {
@@ -31,8 +49,15 @@
   }
 }
 
+nav {
+	background-color: var(--accent-bg);
+	border-radius: 7px;
+	padding: 1rem;
+}
+
 nav a {
 	margin-right: 1rem;
+	transition: .4s;
 }
 
 table {
@@ -60,11 +85,10 @@ th {
 /* 	background: var(--accent-bg); */
 /* } */
 
-.posts, footer {
-	text-align: center;
-}
 footer {
-	margin-top: calc(70vh - 23rem);
+	/* I'm shit at making footer sticky. I don't want to mess with flex box so this is what I came up with lol*/
+	margin-top: calc(70vh - 25rem);
+	margin-bottom: 3.5rem;
 }
 header p {
 	text-align: left;
@@ -74,11 +98,7 @@ header pre {
 	margin-bottom: 2rem;
 	max-width:auto;
 }
-@media (prefers-color-scheme: dark) {
-	header pre, footer pre {
-		color: #f1fa8c;
-	}
-}
+
 /* Use mono font for code like elements */
 code,
 pre,
@@ -93,41 +113,168 @@ samp {
 .post-date {
 	margin-right: 1.5rem;
 }
-
-h1 {
-	margin-top: 2rem;
-	color: #000;
+kbd {
+    color: var(--preformatted);
+    border: 1px solid var(--preformatted);
+    border-bottom: 3px solid var(--preformatted);
+    border-radius: 5px;
+    padding: .1rem;
 }
+
+pre {
+    padding: 1rem 1.4rem;
+    max-width: 100%;
+    overflow: auto;
+    color: var(--preformatted);
+    background: var(--accent-bg);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+/* Fix embedded code within pre */
+pre code {
+    color: var(--preformatted);
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* h1 { */
+/* 	margin-top: 2rem; */
+/* 	color: #000; */
+/* } */
 
 body {
 	margin: auto;
-	background: white;
+	background-color: var(--bg);
 	padding: 0 5%;
-	margin-top: 2rem;
-	color: #292929;
+	/* margin-top: 2rem; */
+	color: var(--text);
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	line-height: 1.8;
-	text-shadow: 0 1px 0 #ffffff;
-	max-width: 47rem;
+	font-size: var(--base-fontsize);
+	line-height: var(--line-height);
+	text-shadow: 0 1px 0 var(--shadow-color);
+	max-width: 47rem; /* lol idk */
 }
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background: #282a36;
-		color: #f8f8f2;
-		text-shadow: 0 1px 0 #181a1f
-	}
-	h1 {
-		color: #fff2f9;
-	}
-	/* a:link {color: #;} */
-	/* a:link { border-bottom: 1px solid #8be9fd; } */
-	/*a:visited {color: #6272a4;}*/
-}
 
 .posts {text-align: left;}
 code {background: white;}
 a {border-bottom: 1px solid var(--accent); color: var(--accent); text-decoration: none;}
 a:hover {border-bottom: 0;}
 header {top: 1px;}
+
+
+mark {
+    padding: 2px 5px;
+    border-radius: 4px;
+    background: var(--marked);
+}
+
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  border: none;
+  border-radius: 5px;
+  background: var(--accent);
+  font-size: 1rem;
+  color: var(--bg);
+  padding: .7rem .9rem;
+  margin: .5rem 0;
+  transition: .4s;
+}
+
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: default;
+	opacity: .5;
+	cursor: not-allowed;
+}
+
+input:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  background: var(--disabled);
+}
+
+input[type="range"] {
+  padding: 0;
+}
+
+/* Set the cursor to '?' while hovering over an abbreviation */
+abbr {
+    cursor: help;
+}
+
+button:focus,
+button:enabled:hover,
+input[type="submit"]:focus,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:focus,
+input[type="reset"]:enabled:hover,
+input[type="button"]:focus,
+input[type="button"]:enabled:hover {
+	opacity: .8;
+}
+
+/* Format the expanding box */
+details {
+	padding: .6rem 1rem;
+	background: var(--accent-bg);
+	border: 1px solid var(--border);
+	border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+summary {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+details[open] {
+	padding-bottom: .75rem;
+}
+
+details[open] summary {
+	margin-bottom: .5rem;
+}
+
+details[open]>*:last-child {
+	margin-bottom: 0;
+}
+
+/* Format headers */
+h1 {
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
+}
+
+h2 {
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
+}
+
+h3 {
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
+}
+
+h4 {
+  font-size: calc(var(--base-fontsize) * var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
+}
+
+h5 {
+  font-size: var(--base-fontsize);
+  margin-top: calc(var(--line-height) * 1.5rem);
+}
+
+h6 {
+  font-size: calc(var(--base-fontsize) / var(--header-scale));
+  margin-top: calc(var(--line-height) * 1.5rem);
+}
