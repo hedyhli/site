@@ -1,87 +1,61 @@
-.hideme {
-	display: none;
+posts, footer {
+	text-align: center;
 }
-
-body {
-	font: 16px sans-serif;
-	line-height: 1.5rem;
-	margin: auto;
-	max-width: 50rem;
-	padding: 0 5%;
+footer {
+	margin-top: calc(70vh - 23rem);
 }
-
-blockquote {
-	border-left: 6px solid #bbb;
-	margin-left: 0;
-	padding-left: 1.5rem;
+header p {
+	text-align: left;
+	/*margin: 1rem 2rem;*/
 }
-
-h1,
-h2,
-h3 {
-	line-height: 1.75rem;
+header pre {
+	margin-bottom: 2rem;
+	max-width:auto;
 }
-
-nav ul {
-	/* nav links should look more prominent than normal links */
-	font-size: 1.25rem;
-}
-
-/* nav links should be easy to tap with fat fingers */
-nav li {
-	padding-right: 0.5rem;
-}
-
-/* Lists without bullets; navlinks, posts lists, webmentions */
-.unstyled-list {
-	padding: 0;
-}
-
-.unstyled-list li {
-	list-style-type: none;
-	margin-bottom: 1rem;
-}
-
-/* Make the home link a bit bigger to serve as a site heading */
-.home {
-	font-weight: bold;
-}
-
-/* single-line nav on widescreen, multi-line nav on narrow screens */
-@media (min-width: 32rem) {
-	nav li {
-		display: inline;
+@media (prefers-color-scheme: dark) {
+	header pre, footer pre {
+		color: #f1fa8c;
 	}
 }
 
-img:not(.u-photo) {
-	display: block;
-	height: auto;
+.post-date {
+	margin-right: 1.5rem;
+}
+
+h1 {
+	margin-top: 2rem;
+	color: #000;
+}
+
+body {
 	margin: auto;
-	max-width: 100%;
+	background: white;
+	padding: 0 5%;
+	margin-top: 2rem;
+	color: #292929;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.8;
+	text-shadow: 0 1px 0 #ffffff;
+	max-width: 47rem;
 }
 
-.u-photo {
-	display: inline-block;
-	vertical-align: -0.1em;
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #282a36;
+		color: #f8f8f2;
+		text-shadow: 0 1px 0 #181a1f
+	}
+	h1 {
+		color: #fff2f9;
+	}
+	a:link {color: #8be9fd;}
+	a:link { border-bottom: 1px solid #8be9fd; }
+	/*a:visited {color: #6272a4;}*/
 }
 
-pre,
-code {
-	border: 1px solid #bbb;
-	padding: 0 0.25rem;
-}
-
-pre code {
-	border: 0; /* don't border each line in a pre block */
-	padding: 0; /* otherwise the first line in a pre block gets indented. */
-}
-
-/* Allow horizontal scroll in a pre block, but don't clip it vertically */
-pre {
-	/* csslint ignore:start */
-	overflow: auto visible;
-
-	/* csslint ignore:end */
-	padding: 0.5rem;
-}
+.posts {text-align: left;}
+code {background: white;}
+a {border-bottom: 1px solid #3d4573; color: #3d4573; text-decoration: none;}
+a:hover {border-bottom: 0;}
+header {top: 1px;}
