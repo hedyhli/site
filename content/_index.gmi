@@ -11,4 +11,27 @@ meanwhile, you could... water my plant? :D
 => //hedy.smol.pub or! check out my current gemlog (will move to here when this capsule is ready :D)
 
 => //hedy.tilde.cafe/spartan spartan -> gemini proxy
-=> //hedy.flounder.online my mine gemini capsule
+=> //hedy.flounder.online my main gemini capsule
+=> spartan://hedy.tilde.cafe:3333 my spartan site (hosted with spsrv)
+
+## projects
+
+almost all my repos are mirrored on tildegit.org, sr.ht and sometimes (just sometimes) on github.
+
+
+## project homepages that happened to be on gemini
+
+=> //hedy.tilde.cafe/spsrv/ spsrv
+
+
+## this capsule, but elsewhere:
+=> https://hedy.tilde.cafe
+=> spartan://hedy.tilde.cafe:3333
+
+
+## misc
+=> //gemini.circumlunar.space Gemini Protocol
+=> //spartan.mozz.us Spartan Protocol
+=> //rawtext.club rawtext.club
+=> //nytpu.com/feed.gmi nytpu's comitium feed
+=> //warmedal.se/~antenna Antenna feed
