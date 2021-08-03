@@ -1,0 +1,40 @@
+She/Her/They
+
+## places online (web)
+
+=> https://tilde.zone/@hedy mastodon
+=> https://sr.ht/~hedy sourcehut
+=> https://github.com/hedyhli github
+=> https://lobste.rs/u/hedy Lobsters
+=> https://tildes.net/user/hedy tildes.net
+
+I'm not always using username "hedy" if you're unsure if someone is me, please contact me
+
+## contact
+
+Use 'hedy' as 'me' unless specified otherwise
+
+* mastodon: me@tilde.zone
+* email: me at tilde dot cafe
+* IRC: me (tilde - preferred. also on libera, ~town, maybe oftc?, ircnow, #!)
+* matrix: me:envs.net
+* xmpp: me@hmm.st
+
+
+## uses
+
+```
+.----------------------------------------------.
+| key           | value                        |
+|---------------+------------------------------|
+| OS            | ubuntu, debian, arch         |
+| Browser       | Firefox, w3m, lynx           |
+| Gemini Client | gelim, amfora                |
+| Editor        | neovim                       |
+| Shell         | fish                         |
+| Theme         | Dracula!!!                   |
+'----------------------------------------------'
+```
+
+You can check out my dotfiles here:
+=> https://sr.ht/~hedy/dotfiles

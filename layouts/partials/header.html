@@ -1,4 +1,8 @@
-<nav>
-	<a rel="home" href="{{ .Site.BaseURL }}">Home</a>
-	<a href="{{ .Site.BaseURL }}/posts.html">Posts</a>
-</nav>
+<header id="banner">
+	<nav>
+		<a rel="home" href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a>
+		{{ range .Site.Menus.main.ByWeight }}
+		{{ .Pre  }}<a href="{{ .URL  }}" title="{{ .Title  }}">{{- .Name -}}</a>{{ .Post  }}
+		{{ end }}
+	</nav>
+</header>
