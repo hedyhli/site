@@ -17,7 +17,7 @@
 <!--{{- printf `<link rel="stylesheet" href="%s" integrity="%s">` $css_syntax.RelPermalink $css_syntax.Data.Integrity | safeHTML }}-->
 <!--{{- end -}}-->
 
-<title>{{ default .Title $.Site.Title }}</title>
+<title>{{- block "title" . }}{{ .Site.Title }}{{ end -}}</title>
 
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:site_name" content="{{ $.Site.Title }}">

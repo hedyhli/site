@@ -6,6 +6,9 @@ uglyurls = true
 [params]
 src = "https://sr.ht/~hedy/site"
 
+[taxonomies]
+tag = "tags"
+
 [permalinks]
 posts = "/posts/:slug"
 
