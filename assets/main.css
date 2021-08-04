@@ -4,7 +4,6 @@
 */
 
 :root {
-  /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
   --base-fontsize: 1rem;
 
   /* Major third scale progression - see https://type-scale.com/ */
@@ -16,7 +15,7 @@
   --mono-font: Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --bg: #FFF;
   --accent-bg: #efedff;
-  --accent-bg-light: #f5f7f7;
+  --accent-bg-light: #f2f2f2;
   --text: #292929;
   --text-light: #585858;
   --border: #D8DAE1;
@@ -33,7 +32,7 @@
   :root {
     --bg: #333437;
     --accent-bg: #44475a;
-    --accent-bg-light: #36363b;
+    --accent-bg-light: #45454b;
     --text: #f8f8f2;
     --text-light: #ABABAB;
     --border: #666;
@@ -55,7 +54,7 @@ nav {
 	padding: 1rem 0.3rem;
 	padding-bottom: 4px;
 	margin-bottom: 3rem;
-	font-weight: 500;
+	font-weight: 400;
 	border-bottom: 1px solid var(--accent-light);
 }
 
@@ -70,9 +69,9 @@ nav a {
 }
 
 blockquote {
-	margin: 2rem 0 2rem 2rem;
-	padding: .4rem .8rem;
-	border-left: .30rem solid var(--accent-bg);
+	margin: .4rem 0 .4rem 2rem;
+	padding: .1rem .8rem;
+	border-left: .35rem solid var(--accent-bg-light);
 	opacity: .8;
 	font-style: italic;
 }
@@ -104,8 +103,11 @@ th {
 
 footer {
 	margin-top: 4rem;
-	margin-bottom: 3.5rem;
 	text-align: center;
+	font-size: .9rem;
+	color: var(--text-light);
+	border-top: 1px solid var(--border);
+	padding: 1rem;
 }
 header p {
 	text-align: left;
@@ -122,7 +124,6 @@ pre,
 pre span,
 kbd,
 samp {
-    font-size: 1.075rem;
     font-family: var(--mono-font);
     color: var(--code);
 }
@@ -176,19 +177,46 @@ body {
 
 
 .posts {text-align: left;}
-code {background: white;}
 a {border-bottom: 1px solid var(--accent); color: var(--accent); text-decoration: none;}
 a:hover {
-	/* border-bottom: 0; */
+	border-bottom: 0;
 	background-color: var(--accent-bg);
 }
 header {top: 1px;}
 
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Misc body elements */
+hr {
+	color: var(--border);
+	border-top: 1px;
+	margin: 1rem auto;
+}
 
 mark {
     padding: 2px 5px;
     border-radius: 4px;
     background: var(--marked);
+}
+
+main img, main video {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: .9rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 a button,
