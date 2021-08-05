@@ -20,9 +20,8 @@ I don't know how everyone else handle different emails in .gitconfig *and* track
 
 First, I have a global ~/.gitconfig with the default user email and some other global settings (by global I mean same cross different computers I work on).
 
-**`~/.gitconfig`**
-
 ```ini
+# ~/.gitconfig
 [user]
 	name = Default Name
 	email = me@default.email
@@ -31,18 +30,16 @@ First, I have a global ~/.gitconfig with the default user email and some other g
 Then for each machine I have a ~/.gitconfig-local file which can override some settings just for that machine, such
 as email, signing key, editor, etc.
 
-**`~/.gitconfig-local`**
-
 ```ini
+# ~/.gitconfig-local
 [user]
 	email = me@special.email
 ```
 
 Back in the global ~/.gitconfig, I have this snippet that tells git to also look for configuration in my ~/.gitconfig-local:
 
-**`~/.gitignore`**
-
 ```ini
+# ~/.gitconfig
 [include]
 	path = ~/.gitconfig-local
 ```
