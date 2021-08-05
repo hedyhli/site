@@ -1,6 +1,6 @@
 ---
 title: "On rants about gemini"
-date: 2021-02-05T23:36:00Z
+date: 2021-06-15
 draft: false
 tags:
   - gemini

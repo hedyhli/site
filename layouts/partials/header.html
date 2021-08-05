@@ -1,6 +1,6 @@
 <nav>
 	<a rel="home" href="{{ .Site.BaseURL  }}">home</a>
 	{{- range .Site.Menus.main.ByWeight }}
-	{{ .Pre  }}<a href="{{ .URL  }}" title="{{ .Title  }}">{{- .Name -}}</a>{{ .Post  }}
+	{{ .Pre  }}<a href="{{ $.Site.BaseURL }}{{ .URL  }}" title="{{ .Title  }}">{{- .Name -}}</a>{{ .Post  }}
 	{{- end }}
 </nav>

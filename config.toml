@@ -22,25 +22,25 @@ posts = "/posts/:slug"
       identifier = "posts"
 	  name = "posts"
 	  title = "posts"
-	  url = "/posts.html"
+	  url = "posts.html"
 	  weight = 10
   [[menu.main]]
       identifier = "about"
 	  name = "about"
 	  title = "about"
-	  url = "/about.html"
+	  url = "about.html"
 	  weight = 20
   [[menu.main]]
       identifier = "projects"
 	  name = "projects"
-	  title = "about"
-	  url = "/projects.html"
+	  title = "projects"
+	  url = "projects.html"
 	  weight = 30
   [[menu.main]]
       identifier = "rss"
 	  name = "rss"
 	  title = "rss"
-	  url = "/posts/index.xml"
+	  url = "posts/index.xml"
 	  weight = "40"
 
 [markup.goldmark.renderer]
