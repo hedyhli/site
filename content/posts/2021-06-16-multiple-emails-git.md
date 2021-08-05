@@ -18,9 +18,29 @@ As someone who code on multiple machines to work on different projects, I like t
 
 I don't know how everyone else handle different emails in .gitconfig *and* track dotfiles in a git repo at the same time, but here's the solution I've come up with.
 
-First, I have a global ~/.gitconfig with the default user email and some other global settings (by global I mean same cross different computers I work on). Then for each machine I have a ~/.gitconfig-local file which can override some settings just for that machine.
+First, I have a global ~/.gitconfig with the default user email and some other global settings (by global I mean same cross different computers I work on).
+
+**`~/.gitconfig`**
+
+```ini
+[user]
+	name = Default Name
+	email = me@default.email
+```
+
+Then for each machine I have a ~/.gitconfig-local file which can override some settings just for that machine, such
+as email, signing key, editor, etc.
+
+**`~/.gitconfig-local`**
+
+```ini
+[user]
+	email = me@special.email
+```
 
 Back in the global ~/.gitconfig, I have this snippet that tells git to also look for configuration in my ~/.gitconfig-local:
+
+**`~/.gitignore`**
 
 ```ini
 [include]

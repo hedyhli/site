@@ -4,18 +4,32 @@ outputs:
   - gemtext
 ---
 
-Welcome to my hugo site.
+# ~hedy
 
-It's still work in progress, check back later :)
+Hey, you've made it to my website! Please look around and enjoy your time here :D
 
-## stuff
+This is my personal website. It's also on gemini:// via the same hostname. This website
+contains my [blog](./posts.html), [about page](./about.html), as well as my [projects page](./projects.html).
 
-* [ssh public key](./key.txt)
-* [pgp public key](./key.asc)
+Keep in mind that many portions of this site is still work in progress, including the CSS.
+I post to my blog here from time to time, generally once or twice every few months. I also
+have a journal where I post shorter, more frequent updates, you can find it here:
+[hedy.flounder.online/journal/](https://hedy.flounder.online/journal/). I might host that
+here one day as well.
 
-## links
+The website source code is FOSS, available here: [sr.ht/~hedy/site](https://sr.ht/~hedy/site).
 
-* [my homepage on flounder](https://hedy.flounder.online)
-* [this site on gemini](gemini://hedy.tilde.cafe/)
-* [my projects](https://sr.ht/~hedy)
-* [my mastodon](https://tilde.zone/@hedy)
+## Contacts
+
+Preferably [email](mailto:hedy@tilde.cafe) ([PGP](./key.asc)) or [mastodon](https://tilde.zone/@hedy).
+Feel free to post comments to any of my posts to [my public inbox](https://lists.sr.ht/~hedy/inbox), note that you'll have to
+[use plain text](https://useplaintext.email).
+You can also chat with me on IRC, XMPP, or matrix.
+
+Go to my about page for more info.
+
+## External links
+
+* [This site on gemini](gemini://hedy.tilde.cafe/): Roughly the same content -- about, gemlog, etc. it also has some CGI scripts
+* [My software projects](https://sr.ht/~hedy/): Not a lot since I still have some not-much-maintained ones on GitHub
+* [My mastodon profile](https://tilde.zone/@hedy): Don't expect me to be super-duper active, but if you have something to say and DM, I see it almost within the same day.

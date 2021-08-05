@@ -1,5 +1,5 @@
 <nav>
-	<a rel="home" href="{{ .Site.BaseURL  }}">{{ .Site.Title  }}</a>
+	<a rel="home" href="{{ .Site.BaseURL  }}">home</a>
 	{{- range .Site.Menus.main.ByWeight }}
 	{{ .Pre  }}<a href="{{ .URL  }}" title="{{ .Title  }}">{{- .Name -}}</a>{{ .Post  }}
 	{{- end }}
