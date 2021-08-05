@@ -9,11 +9,6 @@
 			{{ partial "processed-content" . -}}
 		</section>
 	</article>
-	{{- with .OutputFormats.Get "gemtext" }}
 	<br>
-	<p class="post-meta">
-	Also on <a rel="syndication" class="u-syndication" href="{{replace .Permalink "/gemini" "" 1 | safeURL}}">Gemini capsule</a>
-	</p>
-	{{- end -}}
 </div>
 {{ end }}

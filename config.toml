@@ -1,7 +1,10 @@
-baseURL = "https://hedy.tilde.cafe"
+baseURL = "https://hedy.tilde.cafe/"
 languageCode = "en-us"
 title = "Hedy's Home"
 uglyurls = true
+enableGitInfo = true
+pygmentsUseClasses = true
+pygmentsCodeFences = true
 
 [params]
 src = "https://sr.ht/~hedy/site"

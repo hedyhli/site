@@ -9,6 +9,8 @@ tags:
 date: 2021-06-16T23:50:00Z
 draft: false
 slug: "multiple-emails-git"
+highlight: true
+description: "How to have different git configs depending on the computer and have it tracked with dotfiles"
 
 ---
 
@@ -20,7 +22,7 @@ First, I have a global ~/.gitconfig with the default user email and some other g
 
 Back in the global ~/.gitconfig, I have this snippet that tells git to also look for configuration in my ~/.gitconfig-local:
 
-```reference another git config file in the default ~/.gitconfig
+```gitconfig
 [include]
 	path = ~/.gitconfig-local
 ```

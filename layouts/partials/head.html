@@ -3,19 +3,40 @@
 <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
 <meta name="author" content="{{ .Site.Author.name }}">
 <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}posts/index.xml" title="{{ $.Site.Title }}">
+{{ if ne .Site.BaseURL "https://hedy.tilde.cafe/" -}}
 <meta name="robots" content="noindex">
-
+{{ end -}}
 {{/* <link rel="pgpkey" type="application/pgp-keys" href="{{ .Site.BaseURL }}publickey.asc"> */}}
 
-<!--<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">-->
+<meta name="color-scheme" content="light dark">
 {{ $css := resources.Get "main.css" | minify -}}
-<!-- {{ printf `<link rel="stylesheet" href="%s" integrity="%s">` $css.RelPermalink $css.Data.Integrity | safeHTML -}} -->
 <style>{{ $css.Content | safeCSS }}</style>
-<!-- only load syntax-highlighting CSS if this page needs it -->
-<!--{{- if .Params.highlight -}}-->
-<!--{{ $css_syntax := resources.Get "/css/syntax.css" | minify | resources.Fingerprint "sha384" -}}-->
-<!--{{- printf `<link rel="stylesheet" href="%s" integrity="%s">` $css_syntax.RelPermalink $css_syntax.Data.Integrity | safeHTML }}-->
-<!--{{- end -}}-->
+<!--
+	Syntax Highlighting ZONE :D
+
+	1. has different themes for light and dark mode
+	   light = monokailight
+	   dark = dracula!
+	2. Only adds the syntax css if the page needs it. The highlight param
+	   is turned off by default, hence only posts and pages that have the
+	   "highlight = true" will get this style :)
+	3. Doesn't require an extra request. The two CSS files are saved in my
+	   assets, and is tracked with git.
+	4. IDK why but the dracula file had many classes set as just "{  }" and
+	   makes it super unreadable in dark mode, so I've made all the blank ones
+	   set color to white so it can be read in dark mode :>
+-->
+{{- if .Params.highlight -}}
+{{ $syntaxlight := resources.Get "syntax/light.css" | minify -}}
+{{ $syntaxdark := resources.Get "syntax/dark.css" | minify  -}}
+<style>
+{{ $syntaxlight.Content | safeCSS }}
+@media (prefers-color-scheme: dark) {
+	{{ $syntaxdark.Content | safeCSS }}
+}
+</style>
+{{- end -}}
+<!-- END Syntax Highlighting ZONE!! -->
 
 <title>{{- block "title" . }}{{ .Site.Title }}{{ end -}}</title>
 
@@ -26,11 +47,12 @@
 {{- else }}
 <meta property="og:type" content="website">
 {{- end -}}
+<!-- TODO: Figure out the meta icons shit -->
 {{/* {{ $og_image := resources.Get "/open_graph.png" | resources.Fingerprint "md5" -}} */}}
 {{/* {{ printf `<meta property="og:image" content="%s">` $og_image.Permalink | safeHTML }} */}}
 {{/* <meta property="og:image:type" content="image/png"> */}}
 {{/* <meta property="og:image:height" content="630"> */}}
 {{/* <meta property="og:image:width" content="1200"> */}}
-{{/* <meta property="og:url" content="https://seirdy.one{{ .RelPermalink }}"> */}}
+{{/* <meta property="og:url" content="{{ .Permalink }}"> */}}
 {{/* <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}"> */}}
 {{ hugo.Generator }}

@@ -1,4 +1,9 @@
-<p>Copyright © {{now.Year}} Hedy Li · <a href="{{ .Site.Params.src }}">Website source code</a></p>
+<p>Copyright © {{now.Year}} Hedy Li · <a href="{{ .Site.Params.src }}">Source</a>
+{{- with .OutputFormats.Get "gemtext" }}
+ · <a rel="syndication" class="u-syndication" href="{{replace .Permalink "/gemini" "" 1 | safeURL}}">View on Gemini</a>
+{{- end -}}
+</p>
 {{if .GitInfo -}}
-<p>Site last rebuilt on {{now.Format "2006-01-02 15:04:05 -0700" }}</p>
-{{- end}}
+<p>Site last rebuilt on {{now.Format "2006-01-02 15:04:05 -0700" }}
+{{- end }}
+</p>

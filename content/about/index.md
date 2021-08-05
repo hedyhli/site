@@ -4,6 +4,8 @@ title: "Hedy Li"
 outputs:
   - html
   - gemtext
+description: "Where people can find me online and software I use"
+
 ---
 
 She/Her/They

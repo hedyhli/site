@@ -58,7 +58,7 @@ nav {
 	border-bottom: 1px solid var(--accent-light);
 }
 
-nav a, .meta a, .post-meta a {
+nav a, .meta a, .post-meta a, footer a {
 	color: var(--accent-light);
 	/* border-color: var(--accent-bg); */
 	/* border-radius: 5px; */
@@ -336,7 +336,7 @@ h6 {
 #post-header {
 	margin-bottom: 2rem;
 }
-.post-meta, .meta {
+.post-meta, .meta, footer {
 	font-size: calc(var(--base-fontsize) * 0.8);
 	color: var(--text-light);
 }
