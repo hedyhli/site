@@ -1,6 +1,6 @@
 ---
 date: 2021-08-03
-title: "hedy's projects"
+title: "Projects"
 outputs:
   - html
   - gemtext

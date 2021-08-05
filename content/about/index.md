@@ -1,6 +1,6 @@
 ---
 date: 2021-08-03
-title: "Hedy Li"
+title: "About"
 outputs:
   - html
   - gemtext

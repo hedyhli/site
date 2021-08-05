@@ -3,10 +3,9 @@
 <meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
 <meta name="author" content="{{ .Site.Author.name }}">
 <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}posts/index.xml" title="{{ $.Site.Title }}">
-{{ if ne .Site.BaseURL "https://hedy.tilde.cafe/" -}}
+{{- if ne .Site.BaseURL "https://hedy.tilde.cafe/" -}}
 <meta name="robots" content="noindex">
-{{ end -}}
-{{/* <link rel="pgpkey" type="application/pgp-keys" href="{{ .Site.BaseURL }}publickey.asc"> */}}
+{{- end -}}
 
 <meta name="color-scheme" content="light dark">
 {{ $css := resources.Get "main.css" | minify -}}
@@ -27,19 +26,21 @@
 	   set color to white so it can be read in dark mode :>
 -->
 {{- if .Params.highlight -}}
-{{ $syntaxlight := resources.Get "syntax/light.css" | minify -}}
-{{ $syntaxdark := resources.Get "syntax/dark.css" | minify  -}}
+{{- $syntaxlight := resources.Get "syntax/light.css" | minify -}}
+{{- $syntaxdark := resources.Get "syntax/dark.css" | minify  -}}
 <style>
-{{ $syntaxlight.Content | safeCSS }}
-@media (prefers-color-scheme: dark) {
-	{{ $syntaxdark.Content | safeCSS }}
-}
+	{{ $syntaxlight.Content | safeCSS }}
+	@media (prefers-color-scheme: dark) {
+		{{ $syntaxdark.Content | safeCSS }}
+	}
 </style>
 {{- end -}}
 <!-- END Syntax Highlighting ZONE!! -->
-
-<title>{{- block "title" . }}{{ .Site.Title }}{{ end -}}</title>
-
+{{- if eq .Permalink $.Site.BaseURL -}}
+<title>{{ $.Site.Title }}</title>
+{{- else -}}
+<title>{{ .Title }} ~ hedy</title>
+{{- end -}}
 <meta property="og:title" content="{{ .Title }}">
 <meta property="og:site_name" content="{{ $.Site.Title }}">
 {{- if (eq "page" .Kind) }}
@@ -48,11 +49,4 @@
 <meta property="og:type" content="website">
 {{- end -}}
 <!-- TODO: Figure out the meta icons shit -->
-{{/* {{ $og_image := resources.Get "/open_graph.png" | resources.Fingerprint "md5" -}} */}}
-{{/* {{ printf `<meta property="og:image" content="%s">` $og_image.Permalink | safeHTML }} */}}
-{{/* <meta property="og:image:type" content="image/png"> */}}
-{{/* <meta property="og:image:height" content="630"> */}}
-{{/* <meta property="og:image:width" content="1200"> */}}
-{{/* <meta property="og:url" content="{{ .Permalink }}"> */}}
-{{/* <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}"> */}}
 {{ hugo.Generator }}

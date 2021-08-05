@@ -22,7 +22,7 @@ First, I have a global ~/.gitconfig with the default user email and some other g
 
 Back in the global ~/.gitconfig, I have this snippet that tells git to also look for configuration in my ~/.gitconfig-local:
 
-```gitconfig
+```ini
 [include]
 	path = ~/.gitconfig-local
 ```

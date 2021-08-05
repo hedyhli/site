@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{- default "" .Site.LanguageCode -}}">
 	<head>
-		{{- partial "head.html" . -}}
+		{{ partial "head.html" . }}
 	</head>
 	<body>
 		<header>
-			{{- partial "header.html" . -}}
+			{{ partial "header.html" . }}
 		</header>
 		<main id="content">
-			{{- block "main" . }}{{- end }}
+			{{ block "main" . }}{{ end }}
 		</main>
 		<footer>
-			{{- partial "footer.html" . -}}
+			{{ partial "footer.html" . }}
 		</footer>
 	</body>
 </html>
