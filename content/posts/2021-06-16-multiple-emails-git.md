@@ -8,6 +8,7 @@ tags:
   - setup
 date: 2021-06-16T23:50:00Z
 draft: false
+slug: "multiple-emails-git"
 
 ---
 

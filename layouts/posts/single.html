@@ -3,8 +3,12 @@
 	<article itemprop="mainEntityOfPage">
 		<header id="post-header">
 			<h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
-			<p class="post-meta">Posted <time  itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time></p>
-			<br>
+			<div class="post-meta">
+			<p>
+				<time  itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+			{{ partial "tags.html" . }}
+			</p>
+			</div>
 		</header>
 
 		<section class="e-content" itemprop="articlebody">

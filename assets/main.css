@@ -58,13 +58,16 @@ nav {
 	border-bottom: 1px solid var(--accent-light);
 }
 
-nav a {
+nav a, .meta a, .post-meta a {
 	color: var(--accent-light);
 	/* border-color: var(--accent-bg); */
 	/* border-radius: 5px; */
 	/* border-style: solid; */
 	/* border-bottom: 1px; */
 	border-bottom: 0;
+}
+
+nav a {
 	margin-right: 1rem;
 }
 
@@ -331,9 +334,9 @@ h6 {
 	margin-bottom: 0.4rem;
 }
 #post-header {
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 }
-.post-meta {
+.post-meta, .meta {
 	font-size: calc(var(--base-fontsize) * 0.8);
 	color: var(--text-light);
 }

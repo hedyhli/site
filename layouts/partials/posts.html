@@ -4,6 +4,7 @@
 {{ else -}}
 <h2>Posts</h2>
 {{ end -}}
+<p class="meta"><a href="./tags.html">All tags</a> | <a href="./posts/index.xml">RSS feed</a></p>
 <ul class="unstyled-list">
 	{{ range (where .Site.RegularPages "Section" "posts") }}
 	<li>

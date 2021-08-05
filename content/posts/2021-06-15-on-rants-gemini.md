@@ -7,6 +7,8 @@ tags:
 outputs:
   - html
   - gemtext
+slug: "on-rants-gemini"
+
 ---
 
 Recently there've been some discussions about how Gemini "doesn't fix anything" on Lobste.rs:

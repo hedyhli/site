@@ -5,6 +5,8 @@ draft: false
 outputs:
   - html
   - gemtext
+tags:
+  - test
 slug: another-test
 
 ---
