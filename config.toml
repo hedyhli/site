@@ -10,6 +10,8 @@ disableHugoGeneratorInject = true
 
 [params]
 src = "https://sr.ht/~hedy/site"
+logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
+copyright = "Copyright © 2021 Hedy Li"
 
 [taxonomies]
 tag = "tags"
@@ -78,3 +80,15 @@ permalinkable = false
 
 [outputs]
 section = ["HTML", "RSS", "GEMATOM"]
+
+[webmentions]
+newDir = "public"
+oldDir = "old"
+webmentionsFile = "mentions.json"
+excludeSources = [
+"/tags/*",
+"/",
+]
+excludeDestinations = [
+"https://hedy.tilde.cafe"
+]

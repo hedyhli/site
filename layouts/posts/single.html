@@ -6,7 +6,8 @@
 				<div class="post-meta">
 				<p>
 					<time  itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
-				{{ partial "tags.html" . }}
+					{{ partial "tags.html" . }}
+					{{ partial "lastmod.html" . }}
 				</p>
 				</div>
 			</header>
@@ -14,7 +15,16 @@
 			<section class="e-content" itemprop="articlebody">
 				{{ partial "processed-content" . -}}
 			</section>
-
 		</article>
 	</div>
+{{ end }}
+{{ define "after" }}
+<section class="comments">
+<p>
+	Questions, comments? Send an email to my
+	<a href="mailto:~hedy/inbox@lists.sr.ht">public inbox</a>
+	(with <a href="https://useplaintext.email">plain text</a>)
+	or to me <a href="mailto:hedy@tilde.cafe">directly</a>.
+</p>
+</section>
 {{ end }}

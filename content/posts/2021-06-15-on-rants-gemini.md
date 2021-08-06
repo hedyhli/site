@@ -72,8 +72,6 @@ At the end of the day, the fact that I create and browse content in Geminispace 
 
 You don't have to ditch the web to use Gemini. You get to choose what you write about, but you don't get to choose the color of your headers, or the font size of your body paragraphs. Go use the web if you want that.
 
----
-
 ## Full list of references:
 * [Why Gemini is Not My Favorite Internet Protocol (Lobste.rs)](https://lobste.rs/s/vhlagb/why_gemini_is_not_my_favorite_internet)
 * [Gemini is Useless (Lobste.rs)](https://lobste.rs/s/3nsvkk/gemini_is_useless)

@@ -1,53 +1,53 @@
 /*
  * Mostly  based on simplecss.org
  * Also based on cssbed, forgot which theme exactly, might be bamboo or "evenbettermotherfucking"
-*/
+ */
 
 :root {
-  --base-fontsize: 1rem;
+	--base-fontsize: 1rem;
 
-  /* Major third scale progression - see https://type-scale.com/ */
-  --header-scale: 1.25;
+	/* Major third scale progression - see https://type-scale.com/ */
+	--header-scale: 1.25;
 
-  /* Line height is set to the "Golden ratio" for optimal legibility */
-  --line-height: 1.618;
+	/* Line height is set to the "Golden ratio" for optimal legibility */
+	--line-height: 1.618;
 
-  --mono-font: Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  --bg: #FFF;
-  --accent-bg: #efedff;
-  --accent-bg-light: #f2f2f2;
-  --text: #292929;
-  --text-light: #585858;
-  --border: #D8DAE1;
-  --accent: #3d4573;
-  --accent-light: #3d4573;
-  --code: #D81B60;
-  --preformatted: #444;
-  --marked: #FFDD33;
-  --disabled: #EFEFEF;
+	--mono-font: Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	--bg: #FFF;
+	--accent-bg: #efedff;
+	--accent-bg-light: #f2f2f2;
+	--text: #292929;
+	--text-light: #585858;
+	--border: #D8DAE1;
+	--accent: #3d4573;
+	--accent-light: #3d4573;
+	--code: #D81B60;
+	--preformatted: #444;
+	--marked: #FFDD33;
+	--disabled: #EFEFEF;
 
-  --shadow-color: #fff;
+	--shadow-color: #fff;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #333437;
-    --accent-bg: #44475a;
-    --accent-bg-light: #45454b;
-    --text: #f8f8f2;
-    --text-light: #ABABAB;
-    --border: #666;
-    --accent: #8be9fd;
-    --accent-light: #f1fa8c;
-    --code: #F06292;
-    --preformatted: #CCC;
-    --disabled: #111;
+	:root {
+		--bg: #333437;
+		--accent-bg: #44475a;
+		--accent-bg-light: #45454b;
+		--text: #f8f8f2;
+		--text-light: #ABABAB;
+		--border: #666;
+		--accent: #8be9fd;
+		--accent-light: #f1fa8c;
+		--code: #F06292;
+		--preformatted: #CCC;
+		--disabled: #111;
 
-	--shadow-color: #36373b;
-  }
+		--shadow-color: #36373b;
+	}
 
-  img, video {
-    opacity: .6;
-  }
+	img, video {
+		opacity: .6;
+	}
 }
 
 nav {
@@ -58,7 +58,7 @@ nav {
 	border-bottom: 1px solid var(--accent-light);
 }
 
-nav a, .meta a, .post-meta a, footer a {
+nav a, .meta a, .post-meta a, footer a, .after-content a {
 	color: var(--accent-light);
 	/* border-color: var(--accent-bg); */
 	/* border-radius: 5px; */
@@ -96,7 +96,7 @@ th {
 
 th {
 	background: var(--accent-bg-light);
-  font-weight: bold;
+	font-weight: bold;
 }
 
 /* tr:nth-child(even) { */
@@ -104,8 +104,10 @@ th {
 /* 	background: var(--accent-bg); */
 /* } */
 
+main {
+	margin-bottom: 4rem;
+}
 footer {
-	margin-top: 4rem;
 	text-align: center;
 	font-size: .9rem;
 	color: var(--text-light);
@@ -127,36 +129,36 @@ pre,
 pre span,
 kbd,
 samp {
-    font-family: var(--mono-font);
+	font-family: var(--mono-font);
 }
 
 .post-date {
 	margin-right: 1.5rem;
 }
 kbd {
-    color: var(--preformatted);
-    border: 1px solid var(--preformatted);
-    border-bottom: 3px solid var(--preformatted);
-    border-radius: 5px;
-    padding: .1rem;
+	color: var(--preformatted);
+	border: 1px solid var(--preformatted);
+	border-bottom: 3px solid var(--preformatted);
+	border-radius: 5px;
+	padding: .1rem;
 }
 
 pre {
-    padding: 1rem 1.4rem;
-    max-width: 100%;
-    overflow: auto;
-    color: var(--preformatted);
-    background: var(--accent-bg-light);
-    border: 1px solid var(--border);
-    border-radius: 5px;
+	padding: 1rem 1.4rem;
+	max-width: 100%;
+	overflow: auto;
+	color: var(--preformatted);
+	background: var(--accent-bg-light);
+	border: 1px solid var(--border);
+	border-radius: 5px;
 }
 
 /* Fix embedded code within pre */
 pre code {
-    color: var(--preformatted);
-    background: none;
-    margin: 0;
-    padding: 0;
+	color: var(--preformatted);
+	background: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* h1 { */
@@ -187,9 +189,9 @@ a:hover {
 header {top: 1px;}
 
 fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0;
+	border: 0;
+	padding: 0;
+	margin: 0;
 }
 
 /* Misc body elements */
@@ -200,25 +202,25 @@ hr {
 }
 
 mark {
-    padding: 2px 5px;
-    border-radius: 4px;
-    background: var(--marked);
+	padding: 2px 5px;
+	border-radius: 4px;
+	background: var(--marked);
 }
 
 main img, main video {
-  max-width: 100%;
-  border-radius: 5px;
+	max-width: 100%;
+	border-radius: 5px;
 }
 
 figure {
-  margin: 0;
+	margin: 0;
 }
 
 figcaption {
-  font-size: .9rem;
-  color: var(--text-light);
-  text-align: center;
-  margin-bottom: 1rem;
+	font-size: .9rem;
+	color: var(--text-light);
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 a button,
@@ -226,14 +228,14 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  border: none;
-  border-radius: 5px;
-  background: var(--accent);
-  font-size: 1rem;
-  color: var(--bg);
-  padding: .7rem .9rem;
-  margin: .5rem 0;
-  transition: .4s;
+	border: none;
+	border-radius: 5px;
+	background: var(--accent);
+	font-size: 1rem;
+	color: var(--bg);
+	padding: .7rem .9rem;
+	margin: .5rem 0;
+	transition: .4s;
 }
 
 a button[disabled],
@@ -248,17 +250,17 @@ input[type="button"][disabled] {
 
 input:disabled,
 textarea:disabled {
-  cursor: not-allowed;
-  background: var(--disabled);
+	cursor: not-allowed;
+	background: var(--disabled);
 }
 
 input[type="range"] {
-  padding: 0;
+	padding: 0;
 }
 
 /* Set the cursor to '?' while hovering over an abbreviation */
 abbr {
-    cursor: help;
+	cursor: help;
 }
 
 button:focus,
@@ -278,7 +280,7 @@ details {
 	background: var(--accent-bg);
 	border: 1px solid var(--border);
 	border-radius: 5px;
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 summary {
@@ -303,29 +305,29 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1.1rem;
 }
 h1 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.3rem);
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+	margin-top: calc(var(--line-height) * 1.3rem);
 }
 
 h2 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
-  margin-top: calc(var(--line-height) * 1.1rem);
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+	margin-top: calc(var(--line-height) * 1.1rem);
 }
 
 h3 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
 }
 
 h4 {
-  font-size: calc(var(--base-fontsize) * var(--header-scale));
+	font-size: calc(var(--base-fontsize) * var(--header-scale));
 }
 
 h5 {
-  font-size: var(--base-fontsize);
+	font-size: var(--base-fontsize);
 }
 
 h6 {
-  font-size: calc(var(--base-fontsize) / var(--header-scale));
+	font-size: calc(var(--base-fontsize) / var(--header-scale));
 }
 
 #post-header h1 {
@@ -334,7 +336,11 @@ h6 {
 #post-header {
 	margin-bottom: 2rem;
 }
-.post-meta, .meta, footer {
-	font-size: calc(var(--base-fontsize) * 0.8);
+.post-meta, .meta, footer, .after-content {
+	font-size: .9rem;
 	color: var(--text-light);
+}
+.after-content {
+	border-top: 1px solid var(--border);
+	margin-top: 2rem;
 }

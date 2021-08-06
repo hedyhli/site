@@ -1,15 +1,15 @@
+{{ define "content" }}
 # {{$.Title}}
 
 Posted {{ .Date.Format "2006-01-02" }}.
 {{ $lastmod := .Lastmod -}}
 {{ if lt .Date $lastmod -}}
 Last updated {{ .Lastmod.Format "2006-01-02" }}.
-{{ end }}
+{{ end -}}
+---
 
 {{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
 
 ---
-=> .. home
-=> {{ .Site.Params.src }} site source code
-
-{{ .Site.Params.copyright }}
+=> {{ $.Site.BaseURL }} home
+{{- end }}

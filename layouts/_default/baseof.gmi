@@ -1,0 +1,3 @@
+{{ block "content" . -}}{{ end }}
+=> {{ .Site.Params.src }} Site source code
+{{ .Site.Params.copyright }}

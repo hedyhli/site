@@ -10,6 +10,9 @@
 		<main id="content">
 			{{ block "main" . }}{{ end }}
 		</main>
+		<section class="after-content">
+			{{ block "after" . }}{{ end }}
+		</section>
 		<footer>
 			{{ partial "footer.html" . }}
 		</footer>

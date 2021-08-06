@@ -1,3 +1,4 @@
+{{ define "content" }}
 {{readFile (replace (replace $.File.Path ".md" ".gmi") ".html" ".gmi") | safeHTML}}
 
 ## Gemlog posts
@@ -8,5 +9,4 @@
 => feed.xml atom feed
 
 --
-{{ .Site.Params.copyright }}
-=> {{ .Site.Params.src }} Site source code
+{{- end }}
