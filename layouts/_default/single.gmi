@@ -4,5 +4,5 @@
 {{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
 
 --
-=> {{ $.Site.BaseURL }} home
+=> {{ replace .Site.BaseURL "https:" "" }} home
 {{- end }}

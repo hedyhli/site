@@ -11,5 +11,5 @@ Last updated {{ .Lastmod.Format "2006-01-02" }}.
 {{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
 
 ---
-=> {{ $.Site.BaseURL }} home
+=> .. home
 {{- end }}

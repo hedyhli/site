@@ -6,6 +6,7 @@ outputs:
 tags:
   - git
   - setup
+  - howto
 date: 2021-06-16T23:50:00Z
 draft: false
 slug: "multiple-emails-git"
@@ -23,8 +24,8 @@ First, I have a global ~/.gitconfig with the default user email and some other g
 ```ini
 # ~/.gitconfig
 [user]
-	name = Default Name
-	email = me@default.email
+name = Default Name
+email = me@default.email
 ```
 
 Then for each machine I have a ~/.gitconfig-local file which can override some settings just for that machine, such
@@ -33,7 +34,7 @@ as email, signing key, editor, etc.
 ```ini
 # ~/.gitconfig-local
 [user]
-	email = me@special.email
+email = me@special.email
 ```
 
 Back in the global ~/.gitconfig, I have this snippet that tells git to also look for configuration in my ~/.gitconfig-local:
@@ -41,7 +42,7 @@ Back in the global ~/.gitconfig, I have this snippet that tells git to also look
 ```ini
 # ~/.gitconfig
 [include]
-	path = ~/.gitconfig-local
+path = ~/.gitconfig-local
 ```
 
 Here, I can have ~/.gitconfig tracked in my dotfiles repo, but I do not have ~/.gitconfig-local tracked. This way, I can put anything I like specific to a particular machine in the ~/.gitconfig-local, as well as SMTP settings such as password, which you wouldn't want to end up in a public git repo.
