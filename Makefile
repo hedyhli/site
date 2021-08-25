@@ -8,7 +8,7 @@ clean:
 
 .PHONY: gemini
 gemini:
-	rsync $(RSYNC_FLAGS) public/*.gmi public/gemini/ $(GEMINI_DEST)/
+	rsync $(RSYNC_FLAGS) public/*.gmi public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
 	rsync $(RSYNC_FLAGS) public/posts/gemini.xml $(GEMINI_DEST)/feed.xml
 
 .PHONY: html
