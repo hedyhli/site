@@ -8,7 +8,7 @@
 {{- end -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Hedy's capsule</title>
+	<title>hedy's gemlog</title>
 	<link href="gemini://hedy.tilde.cafe"/>
 	<updated>{{ .Date.Format "2006-01-02" | safeHTML }}T12:00:00Z</updated>
 	<id>gemini://hedy.tilde.cafe</id>
