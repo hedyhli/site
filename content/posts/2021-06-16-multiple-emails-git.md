@@ -5,7 +5,6 @@ outputs:
   - gemtext
 tags:
   - git
-  - setup
   - howto
 date: 2021-06-16T23:50:00Z
 draft: false
