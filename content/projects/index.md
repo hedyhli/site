@@ -5,6 +5,7 @@ outputs:
   - html
   - gemtext
 description: "My Projects"
+draft: true
 
 ---
 

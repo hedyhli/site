@@ -32,18 +32,18 @@ posts = "/posts/:slug"
 	  title = "about"
 	  url = "about.html"
 	  weight = 20
-  [[menu.main]]
-      identifier = "projects"
-	  name = "projects"
-	  title = "projects"
-	  url = "projects.html"
-	  weight = 30
+#  [[menu.main]]
+#      identifier = "projects"
+#	  name = "projects"
+#	  title = "projects"
+#	  url = "projects.html"
+#	  weight = 30
   [[menu.main]]
       identifier = "rss"
 	  name = "rss"
 	  title = "rss"
 	  url = "posts/index.xml"
-	  weight = "40"
+	  weight = 30
 
 [markup.goldmark.renderer]
 # Allows HTML in Markdown
