@@ -1,35 +1,29 @@
 # hedy's capsule on ~cafe
 
-hello, this is a WIP hugo-generated gemini static site/capsule
+Welcome to my gemini capsule!
 
-it will be ready soon. I'm still mangling with my css for the web version.
+This is where I write longish content, link some of my stuff, and show off some other people's stuff which I think is cool.
 
-meanwhile, you could... water my plant? :D
-=> ./water
-=> ./key.asc or check out my pgp public key for some reason
-=> ./key.txt or check out my ssh public key for fun
-=> //hedy.smol.pub or! check out my current gemlog (will move to here when this capsule is ready :D)
+=> https://hedy.tilde.cafe/ hedy.tilde.cafe on the web
+=> spartan://hedy.tilde.cafe:3333/ hedy.tilde.cafe on spartan
 
+## Stuff
+=> ./water water my plant :)
+=> ./key.asc PGP public key
+=> ./key.txt SSH public key
+
+## Services
 => //hedy.tilde.cafe/spartan spartan -> gemini proxy
-=> //hedy.flounder.online my main gemini capsule
-=> spartan://hedy.tilde.cafe:3333 my spartan site (hosted with spsrv)
+=> ./pyhelp lookup python help() for something
+
 
 ## projects
-
 almost all my repos are mirrored on tildegit.org, sr.ht and sometimes (just sometimes) on github.
-
-
-## project homepages that happened to be on gemini
+here are some project homepages that happened to be on gemini
 
 => //hedy.tilde.cafe/spsrv/ spsrv
 
-
-## this capsule, but elsewhere:
-=> https://hedy.tilde.cafe
-=> spartan://hedy.tilde.cafe:3333
-
-
-## misc
+## useful links
 => //gemini.circumlunar.space Gemini Protocol
 => //spartan.mozz.us Spartan Protocol
 => //rawtext.club rawtext.club

@@ -9,7 +9,7 @@ outputs:
 Hey, you've made it to my website! Please look around and enjoy your time here :D
 
 This is my personal website. It's also on gemini:// via the same hostname. This website
-contains my [blog](./posts.html), [about page](./about.html), as well as my [projects page](./projects.html).
+contains my [blog](./posts.html) and [about page](./about.html).
 
 Keep in mind that many portions of this site is still work in progress, including the CSS.
 I post to my blog here from time to time, generally once or twice every few months. I also
