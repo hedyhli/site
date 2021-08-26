@@ -30,10 +30,10 @@
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg: #333437;
+		--bg: #1e1e20;
 		--accent-bg: #44475a;
 		--accent-bg-light: #45454b;
-		--text: #f8f8f2;
+		--text: #d7d7d7;
 		--text-light: #ABABAB;
 		--border: #666;
 		--accent: #8be9fd;
