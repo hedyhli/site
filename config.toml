@@ -2,7 +2,9 @@ baseURL = "https://hedy.tilde.cafe/"
 languageCode = "en-us"
 title = "~hedy's home"
 
-uglyurls = true
+# Yes. Because I like the /folder -> /folder/ redirects
+uglyurls = false
+
 enableGitInfo = true
 pygmentsUseClasses = true
 pygmentsCodeFences = true
@@ -11,7 +13,7 @@ disableHugoGeneratorInject = true
 [params]
 src = "https://sr.ht/~hedy/site"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
-copyright = "Copyright © 2021 Hedy Li"
+copyright = "© 2021 Hedy Li"
 
 [taxonomies]
 tag = "tags"
@@ -24,19 +26,19 @@ posts = "/posts/:slug"
       identifier = "posts"
 	  name = "posts"
 	  title = "posts"
-	  url = "posts.html"
+	  url = "posts/"
 	  weight = 10
   [[menu.main]]
       identifier = "about"
 	  name = "about"
 	  title = "about"
-	  url = "about.html"
+	  url = "about/"
 	  weight = 20
 #  [[menu.main]]
 #      identifier = "projects"
 #	  name = "projects"
 #	  title = "projects"
-#	  url = "projects.html"
+#	  url = "projects/"
 #	  weight = 30
   [[menu.main]]
       identifier = "rss"
@@ -63,6 +65,7 @@ protocol = "gemini://"
 permalinkable = true
 path = "gemini/"
 noUgly = false
+uglyurls = true
 
 [mediaTypes."application/atom+xml"]
   suffixes = ["xml"]

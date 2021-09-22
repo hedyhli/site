@@ -16,12 +16,12 @@
 	{{- $p := . -}}
 	{{- with .OutputFormats.Get "gemtext" }}
 	<entry>
-		{{- $perm := (replace .Permalink "/gemini" "" 1) }}
+		{{- $perm := replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1 }}
 		<title>{{ $p.Title }}</title>
 		{{ printf `<link rel="alternate" href="%s" />` $perm | safeHTML }}
 		<id>{{ $perm }}</id>
 		<updated>{{ $p.Date.Format "2006-01-02" }}T12:00:00Z</updated>
 	</entry>
-	{{- end}}
+	{{end}}
 	{{- end}}
 </feed>

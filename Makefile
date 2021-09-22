@@ -1,23 +1,65 @@
+HUGO=hugo
+HUGO_CACHEDIR=~/hugo_cache
+HUGO_FLAGS=--cleanDestinationDir
+
+RSYNC=rsync
 RSYNC_FLAGS=-av
+
 GEMINI_DEST=~/public_gemini
+GEMINI_DEST_BASE=public_gemini
 HTML_DEST=~/public_html
 
-.PHONY: clean
-clean:
-	rm -rf public/*
+UGLYURL_EXCLUDE=*spsrv*
 
-.PHONY: gemini
-gemini:
-	rsync $(RSYNC_FLAGS) public/*.gmi public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
-	rsync $(RSYNC_FLAGS) public/posts/gemini.xml $(GEMINI_DEST)/feed.xml
+.DEFAULT_GOAL := all
 
-.PHONY: html
-html:
-	rsync $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
+backup:
+	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
+	$(RSYNC) $(RSYNC_FLAGS) $(HTML_DEST) $(HTML_DEST)-back --delete
 
-.PHONY: gen
+nonsymlink-clean:
+	# clean all non-symlink files
+	find ~/public_gemini -not -type l -type f -delete
+
 gen:
-	hugo --cacheDir ~/hugo_cache
+	$(HUGO) $(HUGO_FLAGS) --cacheDir $(HUGO_CACHEDIR)
 
-.PHONY: all
-all: clean gen gemini html
+gemini:
+	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
+	$(RSYNC) $(RSYNC_FLAGS) public/*.gmi public/posts/*.gmi public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
+	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/index.xml $(GEMINI_DEST)/feed.xml
+
+gemini-clean:
+	# This is the target that has caused me the most trouble, literally lost my
+	# entire public_gemini from this when I had a bug here.
+	# So PLEASE PLEASE PLEASE make sure to run make all (or make backup
+	# manually) before using this!
+	#
+	# Remove copied post files
+	find $(GEMINI_DEST) -wholename '*/$(GEMINI_DEST_BASE)/????-??-??-*.gmi' -delete
+	# Use ugly urls, find the dirs that only contains a single 'index.gmi',
+	# excluding the root index.gmi
+	find $(GEMINI_DEST) -wholename '*/index.gmi' -not -wholename '$(UGLYURL_EXCLUDE)' -not -wholename '*/$(GEMINI_DEST_BASE)/index.gmi' -exec echo '{}' \; > out.txt
+	# Copy /blah/index.gmi to blah.gmi then rm /blah/
+	while read line; do \
+		dest=$$( echo $$line | sed 's_/index.gmi$$_.gmi_'); \
+		dir=$$( echo $$line | sed 's_/index.gmi$$__'); \
+		echo Syncing and removing $$(basename $$dir); \
+		rsync $$line $$dest; \
+		rm -rf $$dir; \
+	done < out.txt; \
+	rm out.txt
+	echo done
+
+html:
+	$(RSYNC) $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
+
+finish-clean:
+	rm -rf $(GEMINI_DEST)-back $(HTML_DEST)-back
+
+all: backup gen gemini html gemini-clean
+full: nonsymlink-clean backup gen gemini html gemini-clean
+
+# DO NOT USE THIS LOL
+danger-all: all finish-clean
+danger-full: full finish-clean
