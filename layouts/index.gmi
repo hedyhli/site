@@ -2,11 +2,13 @@
 {{readFile (replace (replace $.File.Path ".md" ".gmi") ".html" ".gmi") | safeHTML}}
 
 ## Gemlog posts
-{{ range (where .Site.RegularPages "Section" "posts") }}
-{{- if .OutputFormats.Get "gemtext" }}
-=> {{replace .Permalink "/gemini" "" 1}} {{ .Date.Format "2006-01-02" }}: {{.Title | safeHTML}}{{ end }}{{ end }}
 
 => feed.xml atom feed
 
+{{ range (where .Site.RegularPages "Section" "posts") }}
+{{- if .OutputFormats.Get "gemtext" }}
+=> {{replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1}} {{ .Date.Format "2006-01-02" }}: {{.Title | safeHTML}}{{ end }}{{ end }}
+
 --
+=> {{ .Site.Params.src }} Site source code
 {{- end }}

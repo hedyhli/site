@@ -14,7 +14,7 @@ I'm not always using username "hedy" if you're unsure if someone is me, please c
 
 Use 'hedy' as 'me' unless specified otherwise
 
-* mastodon: me@tilde.zone
+* mastodon: @me@tilde.zone
 * email: me at tilde dot cafe
 * IRC: me (tilde - preferred. also on libera, ~town, maybe oftc?, ircnow, #!)
 * matrix: me:envs.net
@@ -24,16 +24,18 @@ Use 'hedy' as 'me' unless specified otherwise
 ## uses
 
 ```
-.----------------------------------------------.
-| key           | value                        |
-|---------------+------------------------------|
-| OS            | ubuntu, debian, arch         |
-| Browser       | Firefox, w3m, lynx           |
-| Gemini Client | gelim, amfora                |
-| Editor        | neovim                       |
-| Shell         | fish                         |
-| Theme         | Dracula!!!                   |
-'----------------------------------------------'
+.-----------------------------------------------.
+| key            | value                        |
+|----------------+------------------------------|
+| OS             | ubuntu, debian, arch         |
+| Browser        | Firefox, w3m, eww            |
+| Gemini Client  | Lagrange                     |
+| Spartan Client | gelim                        |
+| Gopher Client  | Bombadillo                   |
+| Editor         | neovim                       |
+| Shell          | fish                         |
+| Theme          | Dracula                      |
+'-----------------------------------------------'
 ```
 
 You can check out my dotfiles here:

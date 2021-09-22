@@ -7,23 +7,31 @@ This is where I write longish content, link some of my stuff, and show off some 
 => https://hedy.tilde.cafe/ hedy.tilde.cafe on the web
 => spartan://hedy.tilde.cafe:3333/ hedy.tilde.cafe on spartan
 
+## Pages
+
+=> about.gmi about.gmi
+
 ## Stuff
+
 => ./water water my plant :)
 => ./key.asc PGP public key
 => ./key.txt SSH public key
 
 ## Services
+
+=> ./help/py lookup python help() for something
 => //hedy.tilde.cafe/spartan spartan -> gemini proxy
-=> ./pyhelp lookup python help() for something
 
 
-## projects
+## Projects
+
 almost all my repos are mirrored on tildegit.org, sr.ht and sometimes (just sometimes) on github.
 here are some project homepages that happened to be on gemini
 
 => //hedy.tilde.cafe/spsrv/ spsrv
 
-## useful links
+## Useful links
+
 => //gemini.circumlunar.space Gemini Protocol
 => //spartan.mozz.us Spartan Protocol
 => //rawtext.club rawtext.club

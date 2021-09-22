@@ -1,3 +1,6 @@
 {{ block "content" . -}}{{ end }}
-=> {{ .Site.Params.src }} Site source code
+{{- with .OutputFormats.Get "html" }}
+{{- $weburl := .Permalink }}
+=> {{$weburl}} view this page on the web
+{{- end }}
 {{ .Site.Params.copyright }}

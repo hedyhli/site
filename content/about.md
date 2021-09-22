@@ -24,7 +24,7 @@ I'm not always using username "hedy" if you're unsure if someone is me, please c
 
 Use 'hedy' as 'me' unless specified otherwise
 
-* mastodon: me@tilde.zone
+* mastodon: @me@tilde.zone
 * email: me at tilde dot cafe
 * IRC: me (tilde - preferred. also on libera, ~town, maybe oftc?, ircnow, #!)
 * matrix: me:envs.net
@@ -37,12 +37,14 @@ Use 'hedy' as 'me' unless specified otherwise
 | key | value |
 |-----|-------|
 | OS  | ubuntu, debian, arch |
-| Browser | Firefox, w3m, lynx |
-| Gemini Client | [gelim](https://sr.ht/~hedy/gelim) |
-| Editor | neovim |
-| Shell | fish |
-| Theme | Dracula!!! |
+| Browser | Firefox, w3m, eww |
+| Gemini Client | [Lagrange](https://gmi.skyjake.fi/lagrange/) |
+| Spartan Client | [gelim](https://github.com/hedyhli/gelim) |
+| Gopher Client | [bombadillo](https://bombadillo.colorfield.space) |
+| Editor | [neovim](https://neovim.io/) |
+| Shell | [fish](https://fishshell.com/) |
+| Primary Theme | [Dracula](https://draculatheme.com/) |
 {{</table>}}
 
-You can check out my dotfiles [here](https://sr.ht/~hedy/dotfiles)
+You can check out my dotfiles [here](https://github.com/~hedy/dotfiles)
 
