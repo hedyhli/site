@@ -23,9 +23,10 @@ The website source code is FOSS, available here: [sr.ht/~hedy/site](https://sr.h
 
 Preferably [email](mailto:hedy@tilde.cafe) ([PGP](./key.asc)) or
 <a rel="me" href="https://tilde.zone/@hedy">mastodon</a>.
-Feel free to post comments to any of my posts to [my public inbox](https://lists.sr.ht/~hedy/inbox), note that you'll have to
-[use plain text](https://useplaintext.email).
-You can also chat with me on IRC, XMPP, or matrix.
+Feel free to post comments to any of my posts to
+[my public inbox](https://lists.sr.ht/~hedy/inbox), note that you'll have to
+[use plain text](https://useplaintext.email). You can also chat with me on IRC,
+XMPP, or matrix.
 
 Go to my about page for more info.
 

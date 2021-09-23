@@ -46,5 +46,5 @@ Use 'hedy' as 'me' unless specified otherwise
 | Primary Theme | [Dracula](https://draculatheme.com/) |
 {{</table>}}
 
-You can check out my dotfiles [here](https://github.com/~hedy/dotfiles)
+You can check out my dotfiles [here](https://github.com/hedyhli/dotfiles)
 

@@ -1,5 +1,5 @@
 hope it works!
 
-*test* <- shouldnt render
+*test* <- shouldn't render as markdown
 
 => ../.. back to index
