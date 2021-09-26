@@ -16,7 +16,7 @@
 	--bg: #FFF;
 	--accent-bg: #efedff;
 	--accent-bg-light: #f2f2f2;
-	--text: #292929;
+	--text: #161616;
 	--text-light: #585858;
 	--border: #D8DAE1;
 	--accent: #3d4573;
@@ -76,7 +76,6 @@ blockquote {
 	padding-left: 1rem;
 	border-left: .35rem solid var(--accent-bg-light);
 	opacity: .8;
-	font-style: italic;
 }
 
 table {
