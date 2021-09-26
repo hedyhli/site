@@ -28,7 +28,7 @@ Use 'hedy' as 'me' unless specified otherwise
 * email: me at tilde dot cafe
 * IRC: me (tilde - preferred. also on libera, ~town, maybe oftc?, ircnow, #!)
 * matrix: me:envs.net
-* xmpp: me@hmm.st
+* xmpp: me at hmm.st
 
 
 ## uses
