@@ -4,6 +4,8 @@ This is my website and gemini capsule source code. Link is currently
 hedy.tilde.cafe on both [web](https://hedy.tilde.cafe) and
 [gemini](gemini://hedy.tilde.cafe).
 
+![screenshot](https://hedy.tilde.cafe/git-post-dark-light-screenshot.png)
+
 It has a blog and a few pages. The blog has mostly the same post for web/gemini
 and the web version has an RSS feed and the gemini version has an atom feed.
 I also have tags, last-update, and changelog link for each post. As to comments
