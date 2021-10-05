@@ -21,6 +21,7 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 
 ## todo
 
-- [ ] post index.md and gmi for content put after the posts list
+- [ ] let gemini version also have a post page at /posts/index.gmi
+- [ ] post-index.md and gmi for content put after the posts list
 - [ ] rethink on the post slugs. currently `/posts/file-name-or-slug/` but I
   might put the date or something in there idk

@@ -150,7 +150,7 @@ kbd {
 	padding: .1rem;
 }
 
-/* This would be overriden by chroma if the page wants highlighting */
+/* This would be overridden by chroma if the page wants highlighting */
 pre {
 	padding: .8rem 1rem;
 	max-width: 100%;
