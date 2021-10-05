@@ -9,6 +9,7 @@ This is where I write longish content, link some of my stuff, and show off some 
 
 ## Pages
 
+=> tinylog.gmi tinylog.gmi
 => about.gmi about.gmi
 
 ## Stuff
