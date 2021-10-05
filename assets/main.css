@@ -16,6 +16,7 @@
 	--bg: #FFF;
 	--accent-bg: #efedff;
 	--accent-bg-light: #f2f2f2;
+    --code-bg: #f2f2f2;
 	--text: #161616;
 	--text-light: #585858;
 	--border: #D8DAE1;
@@ -30,12 +31,13 @@
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg: #1e1e20;
+		--bg: #282a36;
 		--accent-bg: #44475a;
 		--accent-bg-light: #45454b;
+		--code-bg: #3e3e4b;
 		--text: #eee;
 		--text-light: #ABABAB;
-		--border: #666;
+		--border: #555;
 		--accent: #8be9fd;
 		--accent-light: #e4e9a8;
 		--code: #F06292;
@@ -129,11 +131,17 @@ pre span,
 kbd,
 samp {
 	font-family: var(--mono-font);
+	font-size: 98%;
 }
 
-.post-date {
-	margin-right: 1.5rem;
+/* Inline code snips hopefully */
+code:not(pre code), kbd {
+    background-color: var(--code-bg);
+    border: 1px solid var(--code-bg);
+    border-radius: 6px;
+    padding: .01em .1em;
 }
+
 kbd {
 	color: var(--preformatted);
 	border: 1px solid var(--preformatted);
@@ -142,14 +150,15 @@ kbd {
 	padding: .1rem;
 }
 
+/* This would be overriden by chroma if the page wants highlighting */
 pre {
-	padding: 1rem 1.4rem;
+	padding: .8rem 1rem;
 	max-width: 100%;
 	overflow: auto;
 	color: var(--preformatted);
 	background: var(--accent-bg-light);
 	border: 1px solid var(--border);
-	border-radius: 5px;
+	border-radius: 6px;
 }
 
 /* Fix embedded code within pre */
@@ -178,6 +187,9 @@ body {
 	max-width: 47rem; /* lol idk */
 }
 
+.post-date {
+	margin-right: 1.5rem;
+}
 
 .posts {text-align: left;}
 a {border-bottom: 1px solid var(--accent); color: var(--accent); text-decoration: none;}
