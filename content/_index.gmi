@@ -17,6 +17,7 @@ This is where I write longish content, link some of my stuff, and show off some 
 => ./water water my plant :)
 => ./key.asc PGP public key
 => ./key.txt SSH public key
+=> ./tw.txt twtxt feed
 
 ## Services
 

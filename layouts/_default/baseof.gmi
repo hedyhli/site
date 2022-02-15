@@ -3,4 +3,3 @@
 {{- $weburl := .Permalink }}
 => {{$weburl}} view this page on the web
 {{- end }}
-{{ .Site.Params.copyright }}
