@@ -39,7 +39,7 @@ gemini-clean:
 	find $(GEMINI_DEST) -wholename '*/$(GEMINI_DEST_BASE)/????-??-??-*.gmi' -delete
 	# Use ugly urls, find the dirs that only contains a single 'index.gmi',
 	# excluding the root index.gmi
-	find $(GEMINI_DEST) -wholename '*/index.gmi' -not -wholename '$(UGLYURL_EXCLUDE)' -not -wholename '*/$(GEMINI_DEST_BASE)/index.gmi' -exec echo '{}' \; > out.txt
+	find $(GEMINI_DEST) -wholename '*/index.gmi' -not -wholename '$(UGLYURL_EXCLUDE)' -not -wholename '*/posts/index.gmi' -not -wholename '*/$(GEMINI_DEST_BASE)/index.gmi' -exec echo '{}' \; > out.txt
 	# Copy /blah/index.gmi to blah.gmi then rm /blah/
 	while read line; do \
 		dest=$$( echo $$line | sed 's_/index.gmi$$_.gmi_'); \
