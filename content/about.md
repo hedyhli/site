@@ -8,30 +8,30 @@ description: "Where people can find me online and software I use"
 
 ---
 
-She/Her/They
+She/Her
 
-## places online
+## Places online
 
-* [mastodon](https://tilde.zone/@hedy)
-* [sourcehut](https://sr.ht/~hedy)
-* [github](https://github.com/hedyhli)
+* [Mastodon](https://tilde.zone/@hedy)
+* [Sourcehut](https://sr.ht/~hedy)
+* [GitHub](https://github.com/hedyhli)
 * [Lobsters](https://lobste.rs/u/hedy)
 * [tildes.net](https://tildes.net/user/hedy)
 
-I'm not always using username "hedy" if you're unsure if someone is me, please contact me
+I'm not always using username "hedy" so if you're unsure if someone is me, please contact me.
 
-## contact
+## Contact
 
-Use 'hedy' as 'me' unless specified otherwise
+* mastodon: [@hedy@tilde.zone](https://tilde.zone/@hedy)
+* email: hedy at tilde dot cafe
+* IRC: hedy ([tilde.chat](https://tilde.chat) - preferred. also on
+  [libera](https://libera.chat), [~town](https://tilde.town),
+  [ircnow](https://ircnow.org), [#!](https://hashbang.sh))
+* matrix: hedy:envs.net
+* xmpp: hedy at hmm.st
 
-* mastodon: @me@tilde.zone
-* email: me at tilde dot cafe
-* IRC: me (tilde - preferred. also on libera, ~town, maybe oftc?, ircnow, #!)
-* matrix: me:envs.net
-* xmpp: me at hmm.st
 
-
-## uses
+## Uses
 
 {{<table>}}
 | key | value |

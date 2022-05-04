@@ -351,6 +351,16 @@ h6 {
 	font-size: .9rem;
 	color: var(--text-light);
 }
+
+small {
+    font-size: .8rem;
+    color: var(--text-light);
+}
+
+small a {
+	border-bottom: 0;
+}
+
 .after-content {
 	border-top: 1px solid var(--border);
 	margin-top: 2rem;

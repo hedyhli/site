@@ -1,5 +1,10 @@
 {{ block "content" . -}}{{ end }}
+
+=> {{.Params.src}} Source
 {{- with .OutputFormats.Get "html" }}
 {{- $weburl := .Permalink }}
-=> {{$weburl}} view this page on the web
+=> {{$weburl}} View this page on the web
+{{if $.GitInfo -}}
+Capsule last rebuilt on {{now.Format "2006-01-02" }}
+{{- end }}
 {{- end }}

@@ -1,6 +1,6 @@
 She/Her/They
 
-## places online (web)
+## Places online (web)
 
 => https://tilde.zone/@hedy mastodon
 => https://sr.ht/~hedy sourcehut
@@ -8,20 +8,18 @@ She/Her/They
 => https://lobste.rs/u/hedy Lobsters
 => https://tildes.net/user/hedy tildes.net
 
-I'm not always using username "hedy" if you're unsure if someone is me, please contact me
+I'm not always using username "hedy" so if you're unsure if someone is me, please contact me.
 
-## contact
+## Contact
 
-Use 'hedy' as 'me' unless specified otherwise
-
-* mastodon: @me@tilde.zone
-* email: me at tilde dot cafe
-* IRC: me (tilde - preferred. also on libera, ~town, maybe oftc?, ircnow, #!)
-* matrix: me:envs.net
-* xmpp: me@hmm.st
+* mastodon: @hedy@tilde.zone
+* email: hedy at tilde dot cafe
+* IRC: hedy (tilde - preferred. also on libera, ~town, ircnow, #!)
+* matrix: hedy:envs.net
+* xmpp: hedy@hmm.st
 
 
-## uses
+## Uses
 
 ```
 .-----------------------------------------------.

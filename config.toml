@@ -13,7 +13,7 @@ disableHugoGeneratorInject = true
 [params]
 src = "https://sr.ht/~hedy/site"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
-copyright = "© 2021 Hedy Li"
+copyright = "© 2021 CC-BY-SA"
 
 [taxonomies]
 tag = "tags"

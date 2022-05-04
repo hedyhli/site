@@ -1,4 +1,4 @@
-<p>{{ .Site.Params.Copyright }} · <a href="{{ .Site.Params.src }}">Source</a>
+<p>{{ .Site.Params.Copyright }} · <a href="{{ .Site.Params.src }}">Site source</a>
 {{- with .OutputFormats.Get "gemtext" }}
 {{- $gemurl := replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1 }}
  · <a rel="syndication" class="u-syndication" href="{{ $gemurl | safeURL }}">View on Gemini</a>

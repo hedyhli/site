@@ -27,8 +27,8 @@ This is where I write longish content, link some of my stuff, and show off some 
 
 ## Projects
 
-almost all my repos are mirrored on tildegit.org, sr.ht and sometimes (just sometimes) on github.
-here are some project homepages that happened to be on gemini
+Almost all my repos are mirrored on tildegit.org, sr.ht and sometimes (just sometimes) on github.
+Here are some project homepages that happened to be on gemini
 
 => //hedy.tilde.cafe/spsrv/ spsrv
 

@@ -4,12 +4,22 @@
 Posted {{ .Date.Format "2006-01-02" }}
 {{ $lastmod := .Lastmod -}}
 {{ if lt .Date $lastmod -}}
-Last updated {{ .Lastmod.Format "2006-01-02" }}
-{{ end -}}
----
+Last updated {{ .Lastmod.Format "2006-01-02" }}{{ end }}
+{{ $taxonomy := "tags" -}}
+{{- with .Param $taxonomy -}}
+{{- if gt (len .) 1 -}}
+Tags:
+{{- else if gt (len .) 0 -}}
+Tag:
+{{- end -}}
+
+{{ range $index, $tag := . -}}{{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+{{- if $index -}}, {{ end -}}{{ if (not $index) }}{{printf " "}}{{end}}{{ $tag | urlize }}{{- end -}}{{- end }}
+{{- end }}
+--
 
 {{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
 
 --
-=> .. home
+=> .. Home
 {{- end }}
