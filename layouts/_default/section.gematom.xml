@@ -16,8 +16,8 @@
     {{- $p := . -}}
     {{- with .OutputFormats.Get "gemtext" }}
     <author>
-        <name>{{ .Site.Author.Name }}</name>
-        <email>{{ .Site.Author.Email }}</email>
+        <name>{{ $.Site.Author.name }}</name>
+        <email>{{ $.Site.Author.email }}</email>
     </author>
     <entry>
         {{- $perm := replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1 }}
@@ -26,8 +26,8 @@
         <id>{{ $perm }}</id>
         <updated>{{ $p.Date.Format "2006-01-02" }}T12:00:00Z</updated>
         <author>
-            <name>{{ .Site.Author.Name }}</name>
-            <email>{{ .Site.Author.Email }}</email>
+            <name>{{ $.Site.Author.name }}</name>
+            <email>{{ $.Site.Author.email }}</email>
         </author>
     </entry>
     {{end}}
