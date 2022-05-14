@@ -4,7 +4,6 @@ This is my website and gemini capsule source code. Link is currently
 hedy.tilde.cafe on both [web](https://hedy.tilde.cafe) and
 [gemini](gemini://hedy.tilde.cafe).
 
-![screenshot](https://hedy.tilde.cafe/git-post-dark-light-screenshot.png)
 
 It has a blog and a few pages. The blog has mostly the same post for web/gemini
 and the web version has an RSS feed and the gemini version has an atom feed.
@@ -25,3 +24,5 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 - [ ] post-index.md and gmi for content put after the posts list
 - [ ] rethink on the post slugs. currently `/posts/file-name-or-slug/` but I
   might put the date or something in there idk
+
+- [ ] minify images and use WebP
