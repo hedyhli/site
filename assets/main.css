@@ -431,6 +431,8 @@ small a {
 }
 
 .after-content {
-	border-top: 1px solid var(--border);
+    /* TODO: check if the after-content block has any content before adding the
+     * section in _default/baseof.html  */
+	/* border-top: 1px solid var(--border); */
 	margin-top: 2rem;
 }
