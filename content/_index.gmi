@@ -1,8 +1,8 @@
 # hedy's capsule on ~cafe
 
-Welcome to my gemini capsule!
+Hi, I'm hedy. I like to build and design stuff.
 
-This is where I write longish content, link some of my stuff, and show off some other people's stuff which I think is cool.
+Welcome to my gemini capsule, this is where I write longish content, link some of my stuff, and show off some other people's stuff which I think is cool.
 
 => https://hedy.tilde.cafe/ hedy.tilde.cafe on the web
 => spartan://hedy.tilde.cafe:3333/ hedy.tilde.cafe on spartan
@@ -31,6 +31,7 @@ Almost all my repos are mirrored on tildegit.org, sr.ht and sometimes (just some
 Here are some project homepages that happened to be on gemini
 
 => //hedy.tilde.cafe/spsrv/ spsrv
+
 
 ## Useful links
 

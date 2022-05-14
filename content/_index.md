@@ -4,34 +4,55 @@ outputs:
   - gemtext
 ---
 
-# ~hedy
+<img id="pfp" src="https://hedy.tilde.cafe/dotslash.jpg" alt="thumbnail/cover
+picture: my 'dotslash' logo"/>
 
-Hey, you've made it to my website!
 
-This is my personal website. It's also on gemini:// and spartan:// via the same
-hostname. This website contains my [blog](./posts/) and [about page](./about/).
+# Hi, I'm ~hedy
 
-Keep in mind that many portions of this site is still work in progress, including the CSS.
-I post to my blog here from time to time, generally once or twice every few months. I also
-have a journal where I post shorter, more frequent updates, you can find it here:
-[hedy.flounder.online/journal/](https://hedy.flounder.online/journal/). I might host that
-here one day as well.
+I build **FLOSS** (Free, Libre Open Source Software) in my spare time, and I'm
+quite fond of both minimalist **Text User Interface** gems as well as **graphic design** —
+practically opposite sides of the spectrum, huh? 😄
 
-I also have a hand-picked list of cool things on tilde.cafe! Check it out:
+I enjoy tweaking my [configuration and setup](https://github.com/hedyhli) and
+believe that **it is definitely worth spending 30 minutes writing a script that
+only gets used once, for three seconds**.
+
+---
+
+<br>
+
+This website is where I echo long-form thoughts on my [blog](./posts/)
+generally once or twice every few months.
+
+I also have a journal where I post shorter, more frequent updates, you can find
+it here:
+[hedy.flounder.online/journal/](https://hedy.flounder.online/journal/).
+
+Recently, I've made a hand-picked list of cool things on tilde.cafe! Check it out:
 [~Cafe Spotlight](https://hedy.tilde.cafe/cafe-spotlight/)
 
-The website source code is FOSS, available here: [sr.ht/~hedy/site](https://sr.ht/~hedy/site).
+The source code that powers this site is open source, available on SourceHut
+with mirrors on Gitea and GitHub: [sr.ht/~hedy/site](https://sr.ht/~hedy/site).
+
+Alternate versions of the content here are available on
+[gemini://](https://gemini.circumlunar.space) and
+[spartan://](https://portal.mozz.us/gemini/spartan.mozz.us) via the same
+hostname.
+
 
 ## Contacts
 
 Preferably [email](mailto:hedy@tilde.cafe) ([PGP](./key.asc)) or
-<a rel="me" href="https://tilde.zone/@hedy">mastodon</a>.
-Feel free to post comments to any of my posts to
-[my public inbox](https://lists.sr.ht/~hedy/inbox), note that you'll have to
-[use plain text](https://useplaintext.email). You can also chat with me on IRC,
-XMPP, or matrix.
+<a rel="me" href="https://tilde.zone/@hedy">Mastodon</a> on the Fediverse.
 
-Go to my about page for more info.
+Feel free to post comments to any of my posts to [my public
+inbox](https://lists.sr.ht/~hedy/inbox); Note that you'll have to [use plain
+text](https://useplaintext.email), otherwise you may email me privately.
+
+You can also chat with me on IRC, XMPP, or matrix — details on [about
+page](./about/).
+
 
 ## External links
 

@@ -15,6 +15,8 @@ src = "https://sr.ht/~hedy/site"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
 copyright = "© 2021 CC-BY-SA"
 
+shortTitle = "~hedy"
+
 geminiRoot = "gemini://hedy.tilde.cafe"
 
 [author]
