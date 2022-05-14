@@ -60,26 +60,86 @@
 	}
 }
 
+body {
+	background-color: var(--bg);
+	color: var(--text);
+    /* Some users don't even bother to make their default sans-serif readable
+     * in their browser settings, so I help them.
+     * But... that's barely an excuse for me to use a big font-stack, I know */
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-size: var(--base-fontsize);
+	line-height: var(--line-height);
+
+	/* WTH? Who needs text-shadow? */
+	text-shadow: 0 1px 0 var(--shadow-color);
+	margin: auto;
+}
+
+main {
+	padding: 0 5%;
+}
+footer, .after-content {
+    margin: 0 5%;
+}
+
+
+/* Homepage stuff */
+#pfp {
+    /* The dot slash pic */
+    max-width: 20%;
+    border: 5px solid var(--border);
+    border-radius: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 4rem;
+}
+
 nav {
+	margin-right: 5%;
+	margin-left: 5%;
 	padding: 1rem 0.3rem;
 	padding-bottom: 4px;
 	padding-top: 1.5rem;
-	font-weight: 400;
-	border-bottom: 1px solid var(--accent-light);
+	font-weight: 500;
 }
 
+/* Differentiating between normal content links and meta content links */
 nav a, .meta a, .post-meta a, footer a, .after-content a {
 	color: var(--accent-light);
-	/* border-color: var(--accent-bg); */
-	/* border-radius: 5px; */
-	/* border-style: solid; */
-	/* border-bottom: 1px; */
 	border-bottom: 0;
 }
 
 nav a {
-	margin-right: 1rem;
+	margin-right: 1.5rem;
+	padding-bottom: .3rem;
 }
+
+nav .right {
+    float: right;
+}
+
+nav .selected {
+    border-bottom: 2.5px solid;
+}
+
+/********************************************************************
+ * Idea from seirdy.one to have unstyled unordered-list nav
+ * Step 1 to making the single-line nav: remove the bullet padding. */
+nav ul {
+	padding: 0
+}
+/* Step 2: remove bullets and make elements inline.
+ * Also: bump up the line-height and margins to increase space between
+ * tap-targets (SC 2.5.5). Google a11y guidelines require 8 CSS pixels
+ * between tap targets. */
+nav ul li {
+	display: inline-block;
+	margin-right: .375em;
+}
+/* END borrowed code from seirdy.one
+ ********************************************************************/
+
 
 blockquote {
 	margin-left: 0;
@@ -190,29 +250,22 @@ pre code {
 /* 	color: #000; */
 /* } */
 
-body {
-	margin: auto;
-	background-color: var(--bg);
-	padding: 0 5%;
-	/* margin-top: 2rem; */
-	color: var(--text);
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	font-size: var(--base-fontsize);
-	line-height: var(--line-height);
-	text-shadow: 0 1px 0 var(--shadow-color);
-	max-width: 47rem; /* lol idk */
-}
-
 .post-date {
 	margin-right: 1.5rem;
 }
 
 .posts {text-align: left;}
 a {border-bottom: 1px solid var(--accent); color: var(--accent); text-decoration: none;}
-a:hover {
+a:hover:not(nav) {
 	border-bottom: 0;
 	background-color: var(--accent-bg);
 }
+
+nav a:hover {
+	background-color: var(--accent-bg);
+	border-bottom: 2.5px solid;
+}
+
 header {top: 1px;}
 
 fieldset {

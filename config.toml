@@ -30,13 +30,14 @@ posts = "/posts/:slug"
 [menu]
   [[menu.main]]
       identifier = "posts"
-	  name = "posts"
+	  name = "Posts"
 	  title = "posts"
 	  url = "posts/"
 	  weight = 10
+	  pre = "<span class=\"right\">"
   [[menu.main]]
       identifier = "about"
-	  name = "about"
+	  name = "About"
 	  title = "about"
 	  url = "about/"
 	  weight = 20
@@ -48,10 +49,12 @@ posts = "/posts/:slug"
 #	  weight = 30
   [[menu.main]]
       identifier = "rss"
-	  name = "rss"
+	  name = "RSS"
 	  title = "rss"
 	  url = "posts/index.xml"
-	  weight = 30
+	  weight = 100
+	  # pre = "<span class=\"right\">"
+	  post="</span>"
 
 [markup.goldmark.renderer]
 # Allows HTML in Markdown
