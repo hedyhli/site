@@ -1,6 +1,14 @@
 /*
- * Mostly  based on simplecss.org
- * Also based on cssbed, forgot which theme exactly, might be bamboo or "evenbettermotherfucking"
+ * Mostly based on simplecss.org
+ * Also based on cssbed, forgot which theme exactly, might be bamboo or
+ * "evenbettermotherfucking"
+ *
+ * Inspirations:
+ * - seirdy.one
+ * - kevq.uk
+ * - smol.pub
+ * - drewdevault.com
+ * - gregoryhammond.ca
  */
 
 :root {
@@ -13,19 +21,19 @@
 	--line-height: 1.618;
 
 	--mono-font: Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-	--bg: #FFF;
-	--accent-bg: #efedff;
+	--bg: #fff;
+	--accent-bg: #f7f4fb;
 	--accent-bg-light: #f2f2f2;
     --code-bg: #f2f2f2;
-	--text: #161616;
+	--text: #0a0a0a;
 	--text-light: #585858;
-	--border: #D8DAE1;
+	--border: #d8dae1;
 	--accent: #3d4573;
-	--accent-light: #3d4573;
-	--code: #D81B60;
+	--accent-light: #6971a0;
+	--code: #d81b60;
 	--preformatted: #444;
-	--marked: #FFDD33;
-	--disabled: #EFEFEF;
+	--marked: #ffdd33;
+	--disabled: #efefef;
 
 	--shadow-color: #fff;
 }
@@ -36,12 +44,12 @@
 		--accent-bg-light: #45454b;
 		--code-bg: #3e3e4b;
 		--text: #eee;
-		--text-light: #ABABAB;
+		--text-light: #ababab;
 		--border: #555;
 		--accent: #8be9fd;
 		--accent-light: #e4e9a8;
-		--code: #F06292;
-		--preformatted: #CCC;
+		--code: #f06292;
+		--preformatted: #ccc;
 		--disabled: #111;
 
 		--shadow-color: #36373b;
@@ -100,12 +108,20 @@ th {
 	font-weight: bold;
 }
 
+/* No thanks */
 /* tr:nth-child(even) { */
 /* 	/1* Set every other cell slightly darker. Improves readability. *1/ */
 /* 	background: var(--accent-bg); */
 /* } */
 
-main {
+main, .after-content {
+    /* For better reading experience.
+     * I don't want paragraphs to be too narrow, it looks ugly; Though I don't
+     * want them to be too wide, either. Reading experience is important:
+     * https://en.wikipedia.org/wiki/Eye_movement_in_reading */
+	max-width: 45rem;
+
+	margin: auto;
 	margin-bottom: 4rem;
 }
 footer {
