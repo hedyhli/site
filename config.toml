@@ -38,7 +38,6 @@ posts = "/posts/:slug"
 	  title = "posts"
 	  url = "posts/"
 	  weight = 10
-	  pre = "<span class=\"right\">"
   [[menu.main]]
       identifier = "about"
 	  name = "About"
@@ -57,8 +56,6 @@ posts = "/posts/:slug"
 	  title = "rss"
 	  url = "posts/index.xml"
 	  weight = 100
-	  # pre = "<span class=\"right\">"
-	  post="</span>"
 
 [markup.goldmark.renderer]
 # Allows HTML in Markdown
