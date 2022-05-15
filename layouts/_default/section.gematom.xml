@@ -30,6 +30,6 @@
             <email>{{ $.Site.Author.email }}</email>
         </author>
     </entry>
-    {{end}}
-    {{- end}}
+    {{- end }}
+    {{ end }}
 </feed>
