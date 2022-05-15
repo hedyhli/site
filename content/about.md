@@ -22,13 +22,13 @@ I'm not always using username "hedy" so if you're unsure if someone is me, pleas
 
 ## Contact
 
-* mastodon: [@hedy@tilde.zone](https://tilde.zone/@hedy)
-* email: hedy at tilde dot cafe
-* IRC: hedy ([tilde.chat](https://tilde.chat) - preferred. also on
+* Mastodon: [@hedy@tilde.zone](https://tilde.zone/@hedy)
+* Email: hedy at tilde dot cafe
+* IRC: hedy ([tilde.chat](https://tilde.chat) - preferred. Also on
   [libera](https://libera.chat), [~town](https://tilde.town),
   [ircnow](https://ircnow.org), [#!](https://hashbang.sh))
-* matrix: hedy:envs.net
-* xmpp: hedy at hmm.st
+* Matrix: hedy:envs.net
+* XMPP: hedy at hmm.st
 
 
 ## Uses
@@ -46,5 +46,5 @@ I'm not always using username "hedy" so if you're unsure if someone is me, pleas
 | Primary Theme | [Dracula](https://draculatheme.com/) |
 {{</table>}}
 
-You can check out my dotfiles [here](https://github.com/hedyhli/dotfiles)
+For more information on my setup, check out my [dotfiles repository on GitHub](https://github.com/hedyhli/dotfiles) or [on SourceHut](https://sr.ht/~hedy/dotfiles).
 
