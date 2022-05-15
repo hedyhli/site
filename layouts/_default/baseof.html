@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="{{- default "" .Site.LanguageCode -}}">
-	<head>
-		{{ partial "head.html" . }}
-	</head>
-	<body>
-		<header>
-			{{ partial "header.html" . }}
-		</header>
-		<main id="content">
-			{{ block "main" . }}{{ end }}
-		</main>
-		<section class="after-content">
-			{{ block "after" . }}{{ end }}
-		</section>
-		<footer>
-			{{ partial "footer.html" . }}
-		</footer>
-	</body>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body>
+        <header>
+            {{ partial "header.html" . }}
+        </header>
+        <main id="content">
+            {{ block "main" . }}{{ end }}
+        </main>
+        <section class="after-content">
+            {{ block "after" . }}{{ end }}
+        </section>
+        <footer>
+            {{ partial "footer.html" . }}
+        </footer>
+    </body>
 </html>

@@ -1,11 +1,17 @@
-<nav><ul>
-    <li><a rel="home" href="{{ .Site.BaseURL  }}">{{ .Site.Params.shortTitle }}</a></li>
+<nav>
+    <strong><a rel="home" href="{{ .Site.BaseURL  }}">{{ .Site.Params.shortTitle }}</a></strong>
+    <ul>
     {{- $currentPage := . }}
-	{{- range .Site.Menus.main.ByWeight }}
+    {{- range .Site.Menus.main.ByWeight }}
     {{- $url := printf "%s%s" $.Site.BaseURL .URL }}
 
-    {{ .Pre  }}<li><a href="{{ $url }}"
-        {{- if hasPrefix $currentPage.Permalink $url }}class="selected"{{ end -}}
-        title="{{ .Title  }}">{{- .Name -}}</a></li>{{ .Post  }}
-	{{- end }}
-</ul></nav>
+    {{ .Pre -}}
+    <li>
+        <a href="{{ $url }}"
+           {{- if hasPrefix $currentPage.Permalink $url }}class="selected"{{ end -}}
+           title="{{ .Title  }}">{{- .Name -}}</a>
+    </li>
+    {{ .Post  }}
+    {{- end }}
+    </ul>
+</nav>

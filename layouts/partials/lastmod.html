@@ -1,7 +1,5 @@
 {{ if lt .Date .Lastmod -}}
-	&nbsp;|&nbsp;
-	Last updated: <time itemprop="dateModified" class="dt-updated">
-		{{ .Lastmod.Format "2006-01-02" }}</time>
+    &nbsp;|&nbsp;
+    Last updated:
+    <time itemprop="dateModified" class="dt-updated">{{ .Lastmod.Format "2006-01-02" }}</time>
 {{- end -}}
-&nbsp;|&nbsp;
-<a href="{{ .Site.Params.logURLPrefix }}content/{{ .File.Path }}">Changelog</a>
