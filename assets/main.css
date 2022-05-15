@@ -449,3 +449,24 @@ small {
 	/* border-top: 1px solid var(--border); */
 	margin-top: 2rem;
 }
+
+ul li {
+    /* Fix sizing of tap target when i's a list of links */
+    margin-bottom: 0.5rem;
+}
+
+ul.post-list {
+    list-style: none;
+}
+.post-list h3, .post-list h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.post-list p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.post-list .desc {
+    margin-top: 0.5rem;
+}
