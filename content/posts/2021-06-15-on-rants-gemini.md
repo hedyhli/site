@@ -8,7 +8,7 @@ outputs:
   - html
   - gemtext
 slug: "on-rants-gemini"
-description: "A Discussion about some of the complaints of the Gemini Protocol recently"
+description: "A discussion about Gemini and addressing some of the complaints of the Gemini Protocol seen on the internet recently."
 
 ---
 

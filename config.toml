@@ -94,8 +94,15 @@ isHTML = false
 noUgly = false
 permalinkable = false
 
+# https://gist.github.com/lpar/7ded35d8f52fef7490a5be92e6cd6937
+[outputFormats.ATOM]
+name = "ATOM"
+mediaType = "application/atom"
+baseName = "atom"
+isPlainText = false
+
 [outputs]
-section = ["HTML", "RSS", "GEMATOM"]
+section = ["HTML", "RSS", "GEMATOM", "ATOM"]
 
 [webmentions]
 newDir = "public"

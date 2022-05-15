@@ -10,7 +10,7 @@ date: 2021-06-16T23:50:00Z
 draft: false
 slug: "multiple-emails-git"
 highlight: true
-description: "How to have different git configs depending on the computer and have it tracked with dotfiles"
+description: "How to have different git author configurations depending on the computer and have it tracked with dotfiles."
 
 ---
 

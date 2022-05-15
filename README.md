@@ -21,8 +21,13 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 ## todo
 
 - [ ] let gemini version also have a post page at /posts/index.gmi
-- [ ] post-index.md and gmi for content put after the posts list
-- [ ] rethink on the post slugs. currently `/posts/file-name-or-slug/` but I
-  might put the date or something in there idk
-
 - [ ] minify images and use WebP
+- [x] provide atom feed for www
+- [x] show post description in list
+
+- [ ] content improvements
+  - [ ] about
+  - [ ] projects
+  - [ ] syntax hilite post
+  - [ ] gemini post
+- [ ] proper reply via email link

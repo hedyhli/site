@@ -9,7 +9,7 @@ outputs:
 slug: hugo-syntax-highlighting
 tags:
   - howto
-description: "How I've set up syntax highlighting for hugo, powered by chroma."
+description: "How I've set up syntax highlighting for my website with dark mode support."
 
 ---
 

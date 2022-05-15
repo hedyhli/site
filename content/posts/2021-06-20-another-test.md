@@ -1,7 +1,7 @@
 ---
 title: "Another Test"
 date: 2021-06-20T21:33:27+08:00
-draft: false
+draft: true
 outputs:
   - html
   - gemtext
