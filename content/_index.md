@@ -43,7 +43,7 @@ hostname.
 
 ## Contacts
 
-Preferably [email](mailto:hedy@tilde.cafe) ([PGP](./key.asc)) or
+Preferably <a rel="me" href="mailto:hedy@tilde.cafe">email</a> ([PGP](./key.asc)) or
 <a rel="me" href="https://tilde.zone/@hedy">Mastodon</a> on the Fediverse.
 
 Feel free to post comments to any of my posts to [my public
