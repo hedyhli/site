@@ -75,10 +75,10 @@ body {
 	margin: auto;
 }
 
-main {
+main, .after-content {
 	padding: 0 5%;
 }
-footer, .after-content {
+footer {
     margin: 0 5%;
 }
 
