@@ -53,6 +53,8 @@ gemini-clean:
 
 html:
 	$(RSYNC) $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
+	# Manually include gemini tag (because it was excluded above)
+	$(RSYNC) $(RSYNC_FLAGS) public/tags/gemini $(HTML_DEST)/tags/
 
 finish-clean:
 	rm -rf $(GEMINI_DEST)-back $(HTML_DEST)-back
