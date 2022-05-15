@@ -14,7 +14,7 @@ I build **FLOSS** (Free, Libre Open Source Software) in my spare time, and I'm
 quite fond of both minimalist **Text User Interface** gems as well as **graphic design** —
 practically opposite sides of the spectrum, huh? 😄
 
-I enjoy tweaking my [configuration and setup](https://github.com/hedyhli) and
+I enjoy tweaking my [configuration and setup](https://github.com/hedyhli/dotfiles) and
 believe that **it is definitely worth spending 30 minutes writing a script that
 only gets used once, for three seconds**.
 
