@@ -38,6 +38,9 @@
 	--disabled: #efefef;
 
 	--shadow-color: #fff;
+
+	/* My theme stuff */
+	--theme-purple: var(--accent);
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -55,6 +58,7 @@
 		--disabled: #111;
 
 		--shadow-color: #36373b;
+        --theme-purple: #af9dea;
 	}
 
 	img, video {
@@ -88,12 +92,13 @@ footer {
 .pfp-name {
 	text-decoration: none;
 	/* background-color: var(--accent-bg); */
-	color: var(--accent);
+	color: var(--theme-purple);
 	padding-left: 6px;
 	/* padding-right: 6px; */
 	padding-top: 0;
 }
 nav .pfp-name {
+	color: var(--accent-light); /* Consistency with other nav items */
     /* To have the icon and the text (.pfp-text) align */
 	display: table;
 }
