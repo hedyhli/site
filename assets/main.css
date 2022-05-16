@@ -146,8 +146,11 @@ nav strong > a, nav ul li {
 	/* padding-bottom: .3rem; */
 }
 
-nav ul {
-    float: right;
+/* :facepalm: */
+@media screen and (min-width: 368px) {
+    nav ul {
+        float: right;
+    }
 }
 
 nav .selected {
