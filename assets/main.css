@@ -16,6 +16,8 @@
 
 	/* Major third scale progression - see https://type-scale.com/ */
 	--header-scale: 1.25;
+	/* I don't want h1, h2, and h3 to be too big */
+	--header-scale-minor: 1.1;
 
 	/* Line height is set to the "Golden ratio" for optimal legibility */
 	--line-height: 1.618;
@@ -423,17 +425,17 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1.1rem;
 }
 h1 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
 	margin-top: calc(var(--line-height) * 1.3rem);
 }
 
 h2 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale));
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
 	margin-top: calc(var(--line-height) * 1.1rem);
 }
 
 h3 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor));
 }
 
 h4 {
