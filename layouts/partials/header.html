@@ -1,5 +1,14 @@
+{{ $relperm := .RelPermalink | replaceRE "^/~hedy/" "/" -}}
+{{ $home := .Site.Title -}}
+{{ if (ne $relperm "/") -}}
+    {{ if .Site.Params.navHomeUsePFPName -}}
+    {{ $home = partial "pfp-name.html" . -}}
+    {{ else -}}
+    {{ $home = .Site.Params.shortTitle -}}
+    {{ end -}}
+{{ end -}}
 <nav>
-    <strong><a rel="home" href="{{ .Site.BaseURL  }}">{{ .Site.Params.shortTitle }}</a></strong>
+    <strong><a rel="home" href="{{ .Site.BaseURL  }}">{{ $home }}</a></strong>
     <ul>
     {{- $currentPage := . }}
     {{- range .Site.Menus.main.ByWeight }}

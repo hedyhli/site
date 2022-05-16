@@ -83,16 +83,37 @@ footer {
 }
 
 
+.pfp-name {
+	text-decoration: none;
+	/* background-color: var(--accent-bg); */
+	color: var(--accent);
+	padding-left: 6px;
+	/* padding-right: 6px; */
+	padding-top: 0;
+}
+nav .pfp-name {
+    /* To have the icon and the text (.pfp-text) align */
+	display: table;
+}
+nav .pfp-text {
+    /* TODO: Hardcoded alignment is ugly. Please find a better fix */
+    vertical-align: top;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
 /* Homepage stuff */
-#pfp {
-    /* The dot slash pic */
-    max-width: 20%;
-    border: 5px solid var(--border);
-    border-radius: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 4rem;
+.blink {
+    opacity: 0;
+    color: var(--accent-light);
+    animation: blinker 1s step-start 5;
+}
+@keyframes blinker {
+    50% {
+        opacity: 100%;
+    }
 }
 
 nav {
@@ -275,7 +296,8 @@ a:hover:not(nav) {
 nav a:not(nav strong > a):not(nav ul li:last-child a):hover {
 	border-bottom: 2.5px solid;
 }
-nav a:hover {
+nav a:not(.pfp-name a):hover {
+    /* TODO: Don't do this for the pfp on nav */
 	background-color: var(--accent-bg);
 }
 

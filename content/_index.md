@@ -4,11 +4,8 @@ outputs:
   - gemtext
 ---
 
-<img id="pfp" src="https://hedy.tilde.cafe/dotslash.jpg" alt="thumbnail/cover
-picture: my 'dotslash' logo"/>
 
-
-# Hi, I'm ~hedy
+<h1> Hi, I'm {{% pfp-name %}}<span class="blink">▂</span></h1>
 
 I build **FLOSS** (Free, Libre Open Source Software) in my spare time, and I'm
 quite fond of both minimalist **Text User Interface** gems as well as **graphic design** —

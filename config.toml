@@ -21,6 +21,11 @@ suffixTitle = " | ~hedy"  # prepended after page titles
 
 geminiRoot = "gemini://hedy.tilde.cafe"
 
+# true: Use shortcode pfp-name as the home link text in nav bar
+# false: Use shortTitle there instead
+# true if the site is centers around the person, false for non-personal sites basically
+navHomeUsePFPName = true
+
 [author]
 name = "hedy"
 email = "hedy@tilde.cafe"
