@@ -91,10 +91,8 @@ footer {
 
 .pfp-name {
 	text-decoration: none;
-	/* background-color: var(--accent-bg); */
 	color: var(--theme-purple);
 	padding-left: 6px;
-	/* padding-right: 6px; */
 	padding-top: 0;
 }
 nav .pfp-name {
@@ -127,7 +125,6 @@ nav {
 	margin-right: 5%;
 	margin-left: 5%;
 	padding: 1rem 0.3rem;
-	/* padding-bottom: 4px; */
 	margin-bottom: 4rem;
 	padding-top: 1.5rem;
 	font-weight: 500;
@@ -136,7 +133,6 @@ nav {
 /* Differentiating between normal content links and meta content links */
 nav a, .meta a, .post-meta a, footer a, #after-content a {
 	color: var(--accent-light);
-	/* border-bottom: 0; */
 	text-decoration: none;
 }
 
@@ -150,7 +146,6 @@ nav strong > a {
 
 nav strong > a, nav ul li {
 	margin-right: 1.5rem;
-	/* padding-bottom: .3rem; */
 }
 
 /* :facepalm: */
@@ -178,7 +173,6 @@ nav ul, nav a {
  * between tap targets. */
 nav ul li, nav strong > a {
 	display: inline-block;
-	/* margin-right: .375em; */
 }
 /* END borrowed code from seirdy.one
  ********************************************************************/
@@ -231,12 +225,10 @@ footer {
 	text-align: center;
 	font-size: .9rem;
 	color: var(--text-light);
-	/* border-top: 1px solid var(--border); */
 	padding: 1rem 0 1rem 0;
 }
 header p {
 	text-align: left;
-	/*margin: 1rem 2rem;*/
 }
 header pre {
 	margin-bottom: 2rem;
@@ -295,10 +287,8 @@ pre code {
 a {
     /* border-bottom: 1px solid var(--accent); */
     color: var(--accent);
-    /* text-decoration: none; */
 }
 a:hover:not(nav) {
-	/* border-bottom: 0; */
 	text-decoration: none;
 	background-color: var(--accent-bg);
 }
@@ -325,7 +315,6 @@ hr {
 	border-color: var(--border);
 	border-style: solid;
 	border-width: 1px;
-	/* border-top: 1px; */
 	margin: 1rem auto;
 }
 
@@ -405,7 +394,6 @@ input[type="button"]:enabled:hover {
 /* Format the expanding box */
 details {
 	padding: .6rem 1rem;
-	/* background: var(--accent-bg); */
 	border: 1px solid var(--border);
 	border-radius: 5px;
 	margin-bottom: 1rem;
@@ -477,7 +465,6 @@ small {
 #after-content {
     /* TODO: check if the #after-content block has any content before adding the
      * section in _default/baseof.html  */
-	/* border-top: 1px solid var(--border); */
 	margin-top: 2rem;
 }
 
