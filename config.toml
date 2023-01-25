@@ -57,6 +57,12 @@ posts = "/posts/:slug"
 #	  url = "projects/"
 #	  weight = 30
   [[menu.main]]
+      identifier = "misc"
+	  name = "Misc"
+	  title = "misc"
+	  url = "misc/"
+	  weight = 40
+  [[menu.main]]
       identifier = "rss"
 	  name = "RSS"
 	  title = "rss"

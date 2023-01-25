@@ -1,0 +1,22 @@
+
+## Spellbinding and other games
+
+By ~spellbinding (stack)
+
+=> gemini://tilde.cafe/~spellbinding/
+
+## Software alternatives
+
+By ~cyber
+
+=> gemini://tilde.cafe/~cyber/hm/map
+
+## Proxied Gemini specs
+
+By ~jan6
+
+=> gemini://tilde.cafe/~jan6/spec.cgi
+
+***
+
+Broken links or submissions? Let me know!

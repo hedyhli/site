@@ -4,12 +4,16 @@ date: 2022-03-27T15:50:41+08:00
 draft: false
 outputs:
   - html
+  - gemtext
 slug: cafe-spotlight
 description: "Shiny cool stuff by fellow tilde.cafe users"
 
 ---
 
-Here are some cool stuff made by fellow tilde.cafe users that I found.
+View on gemini to check out the spotlight for gemini://tilde.cafe!
+
+Here are some cool stuff on the web made by fellow tilde.cafe users that I
+found.
 
 
 ## Gallery <small>by [~tweska](https://tilde.cafe/~tweska/)</small>
