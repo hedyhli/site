@@ -3,6 +3,9 @@
         <article itemprop="mainEntityOfPage">
             <header id="post-header">
                 <h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
+                {{ with .Description -}}
+                <div class="post-description"><p><em>{{ . }}</em></p></div>
+                {{- end }}
                 <div class="post-meta">
                 <p>
                     <time  itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
@@ -12,8 +15,8 @@
                     <a href="{{ .Site.Params.logURLPrefix }}content/{{ .File.Path }}">Changelog</a>
                 </p>
                 </div>
+                <hr>
             </header>
-
             <section class="e-content" itemprop="articlebody">
                 {{ partial "processed-content" . -}}
             </section>
@@ -21,6 +24,7 @@
     </div>
 {{ end }}
 {{- define "after" }}
+<p id="#EOF">EOF</p>
 <section class="comments">
 <p>
     Questions, comments? Send an email to my

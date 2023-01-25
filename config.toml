@@ -14,7 +14,8 @@ disableHugoGeneratorInject = true
 description = "hedy's home: Personal website with blog, projects, and links to hedy's other online presences."
 src = "https://sr.ht/~hedy/site"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
-copyright = "© 2021 CC-BY-SA"
+copyright = "CC-BY-SA"
+copyrightYearStart = "2021"
 
 shortTitle = "~hedy"
 suffixTitle = " | ~hedy"  # prepended after page titles
