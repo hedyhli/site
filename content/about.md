@@ -37,7 +37,8 @@ I'm not always using username "hedy" so if you're unsure if someone is me, pleas
 | key | value |
 |-----|-------|
 | OS  | ubuntu, debian, arch |
-| Browser | Firefox, w3m, eww |
+| Browser | [qutebrowser](https://www.qutebrowser.org/index.html), w3m, eww |
+| Terminal | [Kitty](https://sw.kovidgoyal.net/kitty/) |
 | Gemini Client | [Lagrange](https://gmi.skyjake.fi/lagrange/) |
 | Spartan Client | [gelim](https://github.com/hedyhli/gelim) |
 | Gopher Client | [bombadillo](https://bombadillo.colorfield.space) |

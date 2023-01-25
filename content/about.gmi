@@ -20,13 +20,11 @@ I'm not always using username "hedy" so if you're unsure if someone is me, pleas
 
 
 ## Uses
-
 ```
 .-----------------------------------------------.
-| key            | value                        |
-|----------------+------------------------------|
 | OS             | ubuntu, debian, arch         |
-| Browser        | Firefox, w3m, eww            |
+| Browser        | qutebrowser, w3m, eww        |
+| Terminal       | Kitty                        |
 | Gemini Client  | Lagrange                     |
 | Spartan Client | gelim                        |
 | Gopher Client  | Bombadillo                   |
