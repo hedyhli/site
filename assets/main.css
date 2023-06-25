@@ -29,9 +29,9 @@
     --code-bg: #f2f2f2;
 	--text: #0a0a0a;
 	--text-light: #585858;
-	--border: #d8dae1;
-	--accent: #3d4573;
-	--accent-light: #6971a0;
+	--border: #bbb;
+	--accent: #5c659b;
+	--accent-light: #7890c1;
 	--code: #d81b60;
 	--preformatted: #444;
 	--marked: #ffdd33;
@@ -39,8 +39,12 @@
 
 	--shadow-color: #fff;
 
+	--link: #3c63e8;
+	--link-visited: #6971a0;
+	--nav-link: var(--link);
+
 	/* My theme stuff */
-	--theme-purple: var(--accent);
+	--theme-purple: #3d4573;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -59,9 +63,17 @@
 
 		--shadow-color: #36373b;
         --theme-purple: #af9dea;
+
+        --link: var(--accent);
+        --link-visited: #a5beff;
+        /* Why doesn't the dracula pink look better? #ff79c6 */
+        --nav-link: var(--accent-light);
+
+        --accent-alt: #ff91d0;
+        --accent-alt-light: #c188a9;
 	}
 
-	img, video {
+	img:not(.pfp), video {
 		opacity: .6;
 	}
 }
@@ -73,11 +85,10 @@ body {
      * in their browser settings, so I help them.
      * But... that's barely an excuse for me to use a big font-stack, I know */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* font-family: Roboto, sans-serif; */
 	font-size: var(--base-fontsize);
 	line-height: var(--line-height);
 
-	/* WTH? Who needs text-shadow? */
-	text-shadow: 0 1px 0 var(--shadow-color);
 	margin: auto;
 }
 
@@ -88,15 +99,26 @@ footer {
     margin: 0 5%;
 }
 
+h1 .pfp {
+    height: 1em;
+    vertical-align: text-top;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    h1 .pfp {
+        border: 1px solid var(--border);
+    }
+}
 
 .pfp-name {
 	text-decoration: none;
-	color: var(--theme-purple);
+	/* color: var(--theme-purple); */
 	padding-left: 6px;
 	padding-top: 0;
 }
 nav .pfp-name {
-	color: var(--accent-light); /* Consistency with other nav items */
+	/* color: var(--accent-light); /1* Consistency with other nav items *1/ */
     /* To have the icon and the text (.pfp-text) align */
 	display: table;
 }
@@ -131,9 +153,22 @@ nav {
 }
 
 /* Differentiating between normal content links and meta content links */
-nav a, .meta a, .post-meta a, footer a, #after-content a {
-	color: var(--accent-light);
+.meta a, .post-meta a, footer a, #after-content a {
 	text-decoration: none;
+    @media (prefers-color-scheme: dark) {
+        color: var(--accent-alt);
+    }
+}
+.meta a:hover, .post-meta a:hover, footer a:hover, #after-content a:hover {
+    color: var(--accent-light);
+    @media (prefers-color-scheme: dark) {
+        color: var(--accent-alt-light);
+    }
+}
+
+nav a {
+	text-decoration: none;
+	color: var(--nav-link);
 }
 
 /* To have the left nav item (homepage) and right items (other pages) display
@@ -180,9 +215,8 @@ nav ul li, nav strong > a {
 
 blockquote {
 	margin-left: 0;
-	padding-left: 1rem;
-	border-left: .35rem solid var(--accent-bg-light);
-	opacity: .8;
+	padding-left: 1.25rem;
+	border-left: 4px solid var(--text-light);
 }
 
 table {
@@ -246,9 +280,9 @@ samp {
 }
 
 /* Inline code snips hopefully */
-code:not(pre code), kbd {
+:not(pre)>code, :not(pre)>samp, kbd {
     background-color: var(--code-bg);
-    border: 1px solid var(--code-bg);
+    border: 1px solid var(--border);
     /* border-radius: 6px; */
     padding: .01em .1em;
 }
@@ -288,19 +322,29 @@ pre code {
 
 a {
     /* border-bottom: 1px solid var(--accent); */
-    color: var(--accent);
+    color: var(--link);
 }
-a:hover:not(nav) {
+a:visited {
+    color: var(--link-visited);
+}
+@media (prefers-color-scheme: dark) {
+    nav a:visited {
+        color: var(--nav-link);
+    }
+}
+a:hover {
 	text-decoration: none;
-	background-color: var(--accent-bg);
+}
+a:focus:not(nav), form:focus {
+    outline: 2px solid var(--border);
+	text-decoration: none;
 }
 
-nav a:not(nav strong > a):not(nav ul li:last-child a):hover {
+/* nav a:not(nav strong > a):not(nav ul li:last-child a):hover { */
+/* 	border-bottom: 2.5px solid; */
+/* } */
+nav li a:hover {
 	border-bottom: 2.5px solid;
-}
-nav a:not(.pfp-name a):hover {
-    /* TODO: Don't do this for the pfp on nav */
-	background-color: var(--accent-bg);
 }
 
 header {top: 1px;}
