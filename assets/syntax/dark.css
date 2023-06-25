@@ -72,11 +72,11 @@
 /* GenericEmph */ .chroma .ge { text-decoration: underline }
 /* GenericError */ .chroma .gr { color: #fff }
 /* GenericHeading */ .chroma .gh { font-weight: bold }
-/* GenericInserted */ .chroma .gi { font-weight: bold }
+/* GenericInserted */ .chroma .gi { color: #50fa7b; font-weight: bold }
 /* GenericOutput */ .chroma .go { color: #44475a }
 /* GenericPrompt */ .chroma .gp { color: #fff }
 /* GenericStrong */ .chroma .gs { color: #fff }
-/* GenericSubheading */ .chroma .gu { font-weight: bold }
+/* GenericSubheading */ .chroma .gu { color: #ff79c6; font-weight: bold }
 /* GenericTraceback */ .chroma .gt { color: #fff }
 /* GenericUnderline */ .chroma .gl { text-decoration: underline }
 /* TextWhitespace */ .chroma .w { color: #fff }

@@ -46,11 +46,11 @@
 	:root {
 		--bg: #282a36;
 		--accent-bg: #44475a;
-		--accent-bg-light: #45454b;
+		--accent-bg-light: #303035;
 		--code-bg: #3e3e4b;
 		--text: #eee;
 		--text-light: #ababab;
-		--border: #555;
+		--border: #aaa;
 		--accent: #8be9fd;
 		--accent-light: #e4e9a8;
 		--code: #f06292;
@@ -249,7 +249,7 @@ samp {
 code:not(pre code), kbd {
     background-color: var(--code-bg);
     border: 1px solid var(--code-bg);
-    border-radius: 6px;
+    /* border-radius: 6px; */
     padding: .01em .1em;
 }
 
@@ -269,7 +269,7 @@ pre {
 	color: var(--preformatted);
 	background: var(--accent-bg-light);
 	border: 1px solid var(--border);
-	border-radius: 6px;
+	border-radius: 0;
 }
 
 /* Fix embedded code within pre */
@@ -278,6 +278,8 @@ pre code {
 	background: none;
 	margin: 0;
 	padding: 0;
+
+	tab-size: 4;
 }
 
 .post-date {
@@ -395,7 +397,7 @@ input[type="button"]:enabled:hover {
 details {
 	padding: .6rem 1rem;
 	border: 1px solid var(--border);
-	border-radius: 5px;
+	/* border-radius: 5px; */
 	margin-bottom: 1rem;
 }
 
@@ -495,6 +497,5 @@ ul.post-list {
 }
 .chroma .lntable {
     border: 1px solid var(--border);
-    border-radius: 6px;
     padding: .01em .1em;
 }
