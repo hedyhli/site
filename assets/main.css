@@ -53,7 +53,7 @@
 		--accent-bg-light: #303035;
 		--code-bg: #3e3e4b;
 		--text: #eee;
-		--text-light: #ababab;
+		--text-light: #cecece;
 		--border: #aaa;
 		--accent: #8be9fd;
 		--accent-light: #e4e9a8;
@@ -105,10 +105,9 @@ h1 .pfp {
 }
 
 
-@media (prefers-color-scheme: dark) {
-    h1 .pfp {
-        border: 1px solid var(--border);
-    }
+.pfp {
+    border: 1px solid var(--border);
+    border-radius: 6px;
 }
 
 .pfp-name {
@@ -143,15 +142,6 @@ nav .pfp-text {
     }
 }
 
-nav {
-	margin-right: 5%;
-	margin-left: 5%;
-	padding: 1rem 0.3rem;
-	margin-bottom: 4rem;
-	padding-top: 1.5rem;
-	font-weight: 500;
-}
-
 /* Differentiating between normal content links and meta content links */
 .meta a, .post-meta a, footer a, #after-content a {
 	text-decoration: none;
@@ -178,15 +168,32 @@ nav strong > a {
     font-weight: 650;
     padding-bottom: 0;
 }
-
 nav strong > a, nav ul li {
-	margin-right: 1.5rem;
+    margin-right: 1.5rem;
 }
 
-/* :facepalm: */
-@media screen and (min-width: 368px) {
+nav {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 4rem;
+    padding: 1rem 0.3rem;
+    padding-top: 1.5rem;
+    font-weight: 500;
+}
+@media (min-width: 601px) {
     nav ul {
         float: right;
+    }
+}
+@media (max-width: 600px) {
+    /* Center-aligned nav on mobile */
+    nav {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    nav a .pfp-name {
+        color: var(--text);
     }
 }
 
@@ -327,10 +334,9 @@ a {
 a:visited {
     color: var(--link-visited);
 }
-@media (prefers-color-scheme: dark) {
-    nav a:visited {
-        color: var(--nav-link);
-    }
+/* Don't change colors for visited links on nav, it makes nav bar look inconsistent */
+nav a:visited {
+    color: var(--nav-link);
 }
 a:hover {
 	text-decoration: none;
