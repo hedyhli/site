@@ -60,11 +60,11 @@
 /* Operator */ .chroma .o { color: #ff79c6 }
 /* OperatorWord */ .chroma .ow { color: #ff79c6 }
 /* Punctuation */ .chroma .p { color: #fff }
-/* Comment */ .chroma .c { color: #6272a4 }
-/* CommentHashbang */ .chroma .ch { color: #6272a4 }
-/* CommentMultiline */ .chroma .cm { color: #6272a4 }
-/* CommentSingle */ .chroma .c1 { color: #6272a4 }
-/* CommentSpecial */ .chroma .cs { color: #6272a4 }
+/* Comment */ .chroma .c { color: #b7c7fb }
+/* CommentHashbang */ .chroma .ch { color: #b7c7fb }
+/* CommentMultiline */ .chroma .cm { color: #b7c7fb }
+/* CommentSingle */ .chroma .c1 { color: #b7c7fb }
+/* CommentSpecial */ .chroma .cs { color: #b7c7fb }
 /* CommentPreproc */ .chroma .ccp { color: #ff79c6 }
 /* CommentPreprocFile */ .chroma .cpf { color: #ff79c6 }
 /* Generic */ .chroma .g { color: #fff }
