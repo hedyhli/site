@@ -12,10 +12,12 @@
 
 <!--favicon-->
 {{ $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}
-{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml">` $favicon_svg.Permalink | safeHTML }}
-{{ $favicon := resources.Get "/favicon.png" -}}
-{{ $favicon_base64 := $favicon.Content | base64Encode }}
-{{ printf `<link rel="icon" sizes="32x32" href="data:image/png;base64,%s" type="image/png">` $favicon_base64 | safeHTML }}
+{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml" />` $favicon_svg.Permalink | safeHTML }}
+{{ $favicon_png := resources.Get "/favicon.png" | resources.Fingerprint "md5" }}
+{{- printf `<link rel="icon" sizes="192x192" href="%s" type="image/png" />` $favicon_png.Permalink | safeHTML -}}
+
+<meta name="color-scheme" content="light dark" />
+<meta name="format-detection" content="telephone=no" />
 
 <link rel="webmention" href="https://webmention.io/hedy.tilde.cafe/webmention" />
 <link rel="pingback" href="https://webmention.io/hedy.tilde.cafe/xmlrpc" />
