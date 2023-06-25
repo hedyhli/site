@@ -104,6 +104,11 @@ h1 .pfp {
     vertical-align: text-top;
 }
 
+nav .pfp {
+    height: 1.3rem;
+    vertical-align: middle;
+}
+
 
 .pfp {
     border: 1px solid var(--border);

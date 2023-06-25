@@ -1,2 +1,3 @@
 {{ $pfp := resources.Get "/dotslash-brush.svg" | resources.Fingerprint "md5" -}}
-<img alt="./" class="pfp" width="32" height="32" src="{{ $pfp.Permalink }}">
+<img alt="./" class="pfp" src="{{ $pfp.Permalink }}">
+{# should this set a default size? #}
