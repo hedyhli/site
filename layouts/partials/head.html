@@ -9,6 +9,9 @@
 {{ if lt .Date .Lastmod -}}
 <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
 {{- end -}}
+<!--Have concerns? Drop me an email with your constructive criticism.-->
+<script data-goatcounter="https://ultimategopher.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
 <!--favicon-->
 {{ $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}
