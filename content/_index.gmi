@@ -2,6 +2,8 @@
 
 Hi, I'm hedy. I like to build and design stuff.
 
+=> mailto:hedy@tilde.cafe contact — email (preferred)
+
 => https://tilde.zone/@hedy @hedy@tilde.zone (fedi)
 => https://github.com/hedyhli hedyhli (github and discord)
 => https://sr.ht/~hedy ~hedy (sourcehut)
@@ -12,16 +14,20 @@ Hi, I'm hedy. I like to build and design stuff.
 
 ## Pages
 
-=> tinylog.gmi tinylog.gmi
-=> about.gmi about.gmi
-=> misc.gmi misc.gmi
-
-## Stuff
-
-=> ./water water my plant :)
+=> about.gmi about.gmi (and methods of contact)
 => ./key.asc PGP public key
 => ./key.txt SSH public key
+
+=> tinylog.gmi tinylog.gmi
 => ./tw.txt twtxt feed
+
+=> misc.gmi misc.gmi
+
+
+## Other Stuff
+
+=> ./water water my plant :)
+
 
 ## Services
 
@@ -31,13 +37,19 @@ Hi, I'm hedy. I like to build and design stuff.
 
 ## Projects
 
-Almost all my repos are mirrored on tildegit.org, sr.ht and sometimes (just sometimes) on github.
-Here are some project homepages that happened to be on gemini
+Almost all my repos are mirrored on tildegit.org, sr.ht and sometimes on github.
+
+Here are my projects with gemini homepages:
 
 => //hedy.tilde.cafe/spsrv/ spsrv
 
+All public projects:
 
-## Useful links
+=> https://sr.ht/~hedy
+=> https://github.com/hedyhli
+
+
+## Useful links to outer space
 
 => //gemini.circumlunar.space Gemini Protocol
 => //spartan.mozz.us Spartan Protocol

@@ -21,5 +21,11 @@ Tag:
 {{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
 
 --
+
+Questions/comments:
+
+=> mailto:~hedy/posts@lists.sr.ht Public gemlog mailing list (plain-text only)
+=> mailto:hedy@tilde.cafe Or email me directly
+
 => .. Home
 {{- end }}

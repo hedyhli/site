@@ -346,7 +346,7 @@ nav a:visited {
 a:hover {
 	text-decoration: none;
 }
-a:focus:not(nav), form:focus {
+:not(nav) a:focus, form:focus {
     outline: 2px solid var(--border);
 	text-decoration: none;
 }

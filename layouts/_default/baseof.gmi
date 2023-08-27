@@ -1,6 +1,6 @@
 {{ block "content" . -}}{{ end }}
 
-=> {{.Params.src}} Source
+=> {{.Site.Params.src}} Source
 {{- with .OutputFormats.Get "html" }}
 {{- $weburl := .Permalink }}
 => {{$weburl}} View this page on the web
