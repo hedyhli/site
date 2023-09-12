@@ -2,7 +2,7 @@ She/Her/They
 
 ## Places online (web)
 
-=> https://tilde.zone/@hedy mastodon
+=> https://tilde.zone/@hedy fediverse (mastodon)
 => https://sr.ht/~hedy sourcehut
 => https://github.com/hedyhli github
 => https://lobste.rs/u/hedy Lobsters
@@ -12,7 +12,9 @@ I'm not always using username "hedy" so if you're unsure if someone is me, pleas
 
 ## Contact
 
-* Mastodon: @hedy@tilde.zone
+Preferred method of contact: Email
+
+* Fediverse (Mastodon): @hedy@tilde.zone
 * Email: hedy at tilde dot cafe
 * IRC: hedy (tilde - preferred. Also on libera, ~town, ircnow, #!)
 * Matrix: hedy:envs.net
@@ -22,15 +24,15 @@ I'm not always using username "hedy" so if you're unsure if someone is me, pleas
 ## Uses
 ```
 .-----------------------------------------------.
-| OS             | ubuntu, debian, arch         |
-| Browser        | qutebrowser, w3m, eww        |
-| Terminal       | Kitty                        |
-| Gemini Client  | Lagrange                     |
+| OS             | MacOS, ubuntu, arch          |
+| Browser        | Arc, qutebrowser             |
+| Terminal       | EAT (Emacs), Kitty           |
+| Gemini Client  | gelim, Lagrange              |
 | Spartan Client | gelim                        |
-| Gopher Client  | Bombadillo                   |
-| Editor         | neovim                       |
-| Shell          | fish                         |
-| Theme          | Dracula                      |
+| Gopher Client  | Lagrange                     |
+| Editor         | emacs, neovim                |
+| Shell          | fish, eshell (emacs)         |
+| Theme          | Dracula, Spacegray, Atom One |
 '-----------------------------------------------'
 ```
 
