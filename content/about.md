@@ -43,8 +43,7 @@ Preferred method of contact: **Email**
 | Gopher Client | [Lagrange](https://gmi.skyjake.fi/lagrange/) |
 | Editor | [Neovim](https://neovim.io/), [Emacs](https://www.gnu.org/software/emacs/), [Helix](https://helix-editor.com/) |
 | Shell | [fish](https://fishshell.com/), [eshell](https://www.gnu.org/software/emacs/manual/html_mono/eshell.html) |
-| Theme | [Dracula](https://draculatheme.com/), [Tundra (neovim)](https://github.com/sam4llis/nvim-tundra),
-[EF Themes (emacs)](https://protesilaos.com/emacs/ef-themes) |
+| Theme | [Dracula](https://draculatheme.com/), [Tundra (neovim)](https://github.com/sam4llis/nvim-tundra), [EF Themes (emacs)](https://protesilaos.com/emacs/ef-themes) |
 {{</table>}}
 
 For more information on my setup, check out my [dotfiles repository on GitHub](https://github.com/hedyhli/dotfiles) or [on SourceHut](https://sr.ht/~hedy/dotfiles).
