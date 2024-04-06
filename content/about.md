@@ -23,10 +23,9 @@ I'm not always using username "hedy" so if you're unsure if someone is me, pleas
 Preferred method of contact: **Email**
 
 * Fediverse (mastodon): [@hedy@tilde.zone](https://tilde.zone/@hedy)
-* Email: hedy at tilde dot cafe
+* Email: hedy dot dev at protonmail.com
 * IRC: hedy ([tilde.chat](https://tilde.chat) - preferred. Also on
-  [libera](https://libera.chat), [~town](https://tilde.town),
-  [ircnow](https://ircnow.org), [#!](https://hashbang.sh))
+  [libera](https://libera.chat), [teapot](https://teapot.chat), and more)
 * Matrix: hedy:envs.net
 * XMPP: hedy at hmm.st
 
@@ -37,18 +36,15 @@ Preferred method of contact: **Email**
 | key | value |
 |-----|-------|
 | OS  | MacOS, ubuntu, arch |
-| Browser | [Arc](https://arc.net), [qutebrowser](https://www.qutebrowser.org/index.html) |
-| Terminal | [EAT](https://github.com/kephale/emacs-eat), [Kitty](https://sw.kovidgoyal.net/kitty/) |
+| Browser | [Arc](https://arc.net), [Min](https://minbrowser.org/), [Qutebrowser](https://www.qutebrowser.org/index.html) |
+| Terminal | [Kitty](https://sw.kovidgoyal.net/kitty/), [EAT](https://github.com/kephale/emacs-eat) |
 | Gemini Client | [gelim](https://github.com/hedyhli/gelim), [Lagrange](https://gmi.skyjake.fi/lagrange/) |
 | Spartan Client | [gelim](https://github.com/hedyhli/gelim) |
 | Gopher Client | [Lagrange](https://gmi.skyjake.fi/lagrange/) |
-| Editor | [emacs](https://www.gnu.org/software/emacs/), [neovim](https://neovim.io/) |
+| Editor | [Neovim](https://neovim.io/), [Emacs](https://www.gnu.org/software/emacs/), [Helix](https://helix-editor.com/) |
 | Shell | [fish](https://fishshell.com/), [eshell](https://www.gnu.org/software/emacs/manual/html_mono/eshell.html) |
-| Theme | [Dracula](https://draculatheme.com/), Spacegray, Atom One Dark, Modus
-Vivendi |
+| Theme | [Dracula](https://draculatheme.com/), [Tundra (neovim)](https://github.com/sam4llis/nvim-tundra),
+[EF Themes (emacs)](https://protesilaos.com/emacs/ef-themes) |
 {{</table>}}
 
 For more information on my setup, check out my [dotfiles repository on GitHub](https://github.com/hedyhli/dotfiles) or [on SourceHut](https://sr.ht/~hedy/dotfiles).
-
-
-She/Her

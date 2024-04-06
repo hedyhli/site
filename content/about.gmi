@@ -1,4 +1,4 @@
-She/Her/They
+Pronouns: She/Her/They
 
 ## Places online (web)
 
@@ -8,15 +8,13 @@ She/Her/They
 => https://lobste.rs/u/hedy Lobsters
 => https://tildes.net/user/hedy tildes.net
 
-I'm not always using username "hedy" so if you're unsure if someone is me, please contact me.
-
 ## Contact
 
 Preferred method of contact: Email
 
 * Fediverse (Mastodon): @hedy@tilde.zone
-* Email: hedy at tilde dot cafe
-* IRC: hedy (tilde - preferred. Also on libera, ~town, ircnow, #!)
+* Email: hedy dot dev at protonmail.com
+* IRC: hedy (tilde - preferred. Also on libera, teapot)
 * Matrix: hedy:envs.net
 * XMPP: hedy@hmm.st
 
@@ -25,17 +23,17 @@ Preferred method of contact: Email
 ```
 .-----------------------------------------------.
 | OS             | MacOS, ubuntu, arch          |
-| Browser        | Arc, qutebrowser             |
-| Terminal       | EAT (Emacs), Kitty           |
+| Browser        | Arc, Min, Qutebrowser        |
+| Terminal       | Kitty, EAT (Emacs)           |
 | Gemini Client  | gelim, Lagrange              |
 | Spartan Client | gelim                        |
 | Gopher Client  | Lagrange                     |
-| Editor         | emacs, neovim                |
+| Editor         | neovim, emacs, helix         |
 | Shell          | fish, eshell (emacs)         |
-| Theme          | Dracula, Spacegray, Atom One |
+| Theme          | Dracula, Tundra, EF Themes   |
 '-----------------------------------------------'
 ```
 
-For more information on my setup, check out my dotfiles repository on GitHub or on SourceHut.
+For more information on my setup, check out my dotfiles.
 => https://github.com/hedyhli/dotfiles Dotfiles on GitHub
 => https://sr.ht/~hedy/dotfiles Dotfiles on SourceHut
