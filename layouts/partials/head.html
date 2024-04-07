@@ -15,9 +15,9 @@
 
 <!--favicon-->
 {{ $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}
-{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml" />` $favicon_svg.Permalink | safeHTML }}
+{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml" />` $favicon_svg.RelPermalink | safeHTML }}
 {{ $favicon_png := resources.Get "/favicon.png" | resources.Fingerprint "md5" }}
-{{- printf `<link rel="icon" sizes="192x192" href="%s" type="image/png" />` $favicon_png.Permalink | safeHTML -}}
+{{- printf `<link rel="icon" sizes="192x192" href="%s" type="image/png" />` $favicon_png.RelPermalink | safeHTML -}}
 
 <meta name="color-scheme" content="light dark" />
 <meta name="format-detection" content="telephone=no" />
@@ -52,6 +52,7 @@
 {{ $syntaxdark := resources.Get "syntax/dark.css" | minify  -}}
 <style>
 	{{- $syntaxlight.Content | safeCSS }}
+
 	@media (prefers-color-scheme: dark) {
 		{{- $syntaxdark.Content | safeCSS -}}
 	}

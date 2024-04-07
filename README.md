@@ -31,3 +31,25 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
   - [ ] syntax hilite post
   - [ ] gemini post
 - [ ] proper reply via email link
+
+## writing
+
+```sh
+bin/post
+```
+
+## deploy
+
+Also see [gemcgi](../gemcgi)
+
+```sh
+make all deploy
+```
+
+### twtxt
+
+Hardcodes destination host and gemini directory.
+
+```sh
+bin/twt
+```

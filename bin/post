@@ -38,14 +38,19 @@ yesno () {
     fi
 }
 
-read -p "$(blue filename:\ )" filename
+read -p "$(blue slug:\ )" filename
 filename=posts/$(date "+%Y-%m-%d")-"$filename".md
-hugo new "$filename"
+created=$(hugo new "$filename" | sed 's/.*"\(.*\)".*/\1/')
 
-if ! yesno "$(blue 'draft?')" y; then
-    sed -i 's/draft: true/draft: false/' "$filename"
-fi
+# do I just suck at shell scripting or is shell scripting so f'ed up that it
+# just refuses to work??
+# echo "$created"
+#
+# if ! yesno "$(blue 'draft?')" y; then
+#     # Not using in-place here because of MacOS vs GNU sed mess
+#     cat "$created" | sed 's/draft: true/draft: false/' > $created
+# fi
 
 if yesno "$(blue edit?)" y; then
-    "${EDITOR:-vim}" "$filename"
+    "${EDITOR:-vim}" "$created"
 fi

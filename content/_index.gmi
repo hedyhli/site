@@ -1,38 +1,35 @@
-# hedy's capsule on ~cafe
+# hedy's gemlog
 
-Hi, I'm hedy. I like to build and design stuff.
+Hi, I'm hedy. This is where I occasionally post long-form articles and
+thoughts.
 
-=> mailto:hedy@tilde.cafe contact — email (preferred)
+=> mailto:hedy.dev@protonmail.com contact — email (preferred)
 
 => https://tilde.zone/@hedy @hedy@tilde.zone (fedi)
-=> https://github.com/hedyhli hedyhli (github and discord)
+=> https://github.com/hedyhli hedyhli (github)
 => https://sr.ht/~hedy ~hedy (sourcehut)
 
-=> https://hedy.tilde.cafe/ hedy.tilde.cafe on the web
-=> spartan://hedy.tilde.cafe:3333/ hedy.tilde.cafe on spartan
+=> https://home.hedy.dev/ home.hedy.dev (weblog)
+=> spartan://do.hedy.dev/ spartan
 
 
 ## Pages
 
 => about.gmi about.gmi (and methods of contact)
-=> ./key.asc PGP public key
-=> ./key.txt SSH public key
+=> //do.hedy.dev/pgp.asc PGP public key
+=> //do.hedy.dev/sshkey.txt SSH public key
 
-=> tinylog.gmi tinylog.gmi
-=> ./tw.txt twtxt feed
+=> //do.hedy.dev/tinylog.gmi tinylog.gmi
+=> //do.hedy.dev/tw.txt twtxt feed
 
 => misc.gmi misc.gmi
 
 
-## Other Stuff
-
-=> ./water water my plant :)
-
-
 ## Services
 
-=> ./help/py lookup python help() for something
-=> //hedy.tilde.cafe/spartan spartan -> gemini proxy
+=> //do.hedy.dev/help/py lookup python help() for something
+=> //do.hedy.dev/spartan spartan -> gemini proxy
+=> //do.hedy.dev/pyjoke get a random programming joke
 
 
 ## Projects
@@ -41,7 +38,7 @@ Almost all my repos are mirrored on tildegit.org, sr.ht and sometimes on github.
 
 Here are my projects with gemini homepages:
 
-=> //hedy.tilde.cafe/spsrv/ spsrv
+=> //do.hedy.dev/spsrv spsrv
 
 All public projects:
 
@@ -52,7 +49,7 @@ All public projects:
 ## Useful links to outer space
 
 => //gemini.circumlunar.space Gemini Protocol
-=> //spartan.mozz.us Spartan Protocol
-=> //rawtext.club rawtext.club
 => //nytpu.com/feed.gmi nytpu's comitium feed
 => //warmedal.se/~antenna Antenna feed
+=> //rawtext.club rawtext.club
+=> //spartan.mozz.us Spartan Protocol

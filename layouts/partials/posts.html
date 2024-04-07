@@ -25,7 +25,7 @@ Comments can be sent to my <a href="https://lists.sr.ht/~hedy/posts">public mail
       {{ else -}}
       <h3>
         {{ end -}}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{ if in $outerRel "posts" -}}
     </h2>
     {{ else -}}

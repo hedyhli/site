@@ -1,4 +1,4 @@
-baseURL = "https://hedy.tilde.cafe/"
+baseURL = "https://home.hedy.dev/"
 languageCode = "en-us"
 title = "~hedy's home"
 
@@ -11,7 +11,7 @@ pygmentsCodeFences = true
 disableHugoGeneratorInject = true
 
 [params]
-description = "hedy's home: Personal website with blog, projects, and links to hedy's other online presences."
+description = "~hedy's home: hedy's canonical web presence including contact information and a blog."
 src = "https://sr.ht/~hedy/site"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
 copyright = "CC-BY-SA"
@@ -20,7 +20,7 @@ copyrightYearStart = "2021"
 shortTitle = "~hedy"
 suffixTitle = " | ~hedy"  # prepended after page titles
 
-geminiRoot = "gemini://hedy.tilde.cafe"
+geminiRoot = "gemini://home.hedy.dev"
 
 # true: Use shortcode pfp-name as the home link text in nav bar
 # false: Use shortTitle there instead
@@ -29,7 +29,7 @@ navHomeUsePFPName = true
 
 [author]
 name = "hedy"
-email = "hedy@tilde.cafe"
+email = "hedy.dev@protonmail.com"
 
 [taxonomies]
 tag = "tags"
@@ -122,5 +122,5 @@ excludeSources = [
 "/",
 ]
 excludeDestinations = [
-"https://hedy.tilde.cafe"
+"https://do.hedy.dev"
 ]

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+date=$(date -Iseconds)
+dest=deploy@do.hedy.dev
+destdir="~/static"
+
+read -p ">>   "
+
+if [ -z "$REPLY" ]; then
+    echo cancelled
+    exit
+fi
+
+rsync --port 22 $dest:"$destdir"/tw.txt .
+echo "$date	$REPLY" >> tw.txt
+echo [...]
+tail -n2 tw.txt
+
+echo rsync tw.txt -rav --port 22 $dest:"$destdir"
+rsync tw.txt -rav --port 22 $dest:"$destdir"
+
+echo gelim -I 'gemini://warmedal.se/~antenna/submit' -i 'gemini://do.hedy.dev/tw.txt'
+gelim -I 'gemini://warmedal.se/~antenna/submit' -i 'gemini://do.hedy.dev/tw.txt'

@@ -8,5 +8,5 @@
     Tag:
     {{- end }}
     {{ range $index, $tag := . -}}{{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-    {{- if $index -}}, {{ end -}}<a href="{{ .Permalink }}">{{ $tag | urlize }}</a>{{- end -}}{{- end }}
+    {{- if $index -}}, {{ end -}}<a href="{{ .RelPermalink }}">{{ $tag | urlize }}</a>{{- end -}}{{- end }}
 {{- end -}}

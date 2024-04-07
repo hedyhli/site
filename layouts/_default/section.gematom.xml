@@ -20,7 +20,7 @@
     {{- $p := . -}}
     {{- with .OutputFormats.Get "gemtext" }}
     <entry>
-        {{- $perm := replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1 }}
+        {{- $perm := replace (replace .RelPermalink "/gemini" "" 1) "/index.gmi" ".gmi" 1 }}
         <title>{{ $p.Title }}</title>
         {{ printf `<link rel="alternate" href="%s" />` $perm | safeHTML }}
         <id>{{ $perm }}</id>

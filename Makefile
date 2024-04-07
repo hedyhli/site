@@ -5,13 +5,31 @@ HUGO_FLAGS=--cleanDestinationDir
 RSYNC=rsync
 RSYNC_FLAGS=-av
 
+HUT=hut
+
 GEMINI_DEST=~/public_gemini
 GEMINI_DEST_BASE=public_gemini
 HTML_DEST=~/public_html
 
-UGLYURL_EXCLUDE=*spsrv*
+UGLYURL_EXCLUDE=*no-used-anymore*
+
+DEPLOY_DOMAIN=home.hedy.dev
+DEPLOY_HTML_DIST=html.tar.gz
+DEPLOY_GEMINI_DIST=gemini.tar.gz
 
 .DEFAULT_GOAL := all
+
+deploy-html:
+	tar -C $(HTML_DEST) -cvz . > $(DEPLOY_HTML_DIST)
+	$(HUT) pages publish --protocol HTTPS -d $(DEPLOY_DOMAIN) $(DEPLOY_HTML_DIST)
+	rm $(DEPLOY_HTML_DIST)
+
+deploy-gemini:
+	tar -C $(GEMINI_DEST) -cvz . > $(DEPLOY_GEMINI_DIST)
+	$(HUT) pages publish --protocol GEMINI -d $(DEPLOY_DOMAIN) $(DEPLOY_GEMINI_DIST)
+	rm $(DEPLOY_GEMINI_DIST)
+
+deploy: deploy-html deploy-gemini
 
 backup:
 	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
@@ -19,7 +37,7 @@ backup:
 
 nonsymlink-clean:
 	# clean all non-symlink files
-	find ~/public_gemini -not -type l -type f -delete
+	find $(GEMINI_DEST) -not -type l -type f -delete
 
 gen:
 	$(HUGO) $(HUGO_FLAGS) --cacheDir $(HUGO_CACHEDIR)

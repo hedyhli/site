@@ -17,7 +17,7 @@
     {{ .Pre -}}
     <li>
         <a href="{{ $url }}"
-           {{- if hasPrefix $currentPage.Permalink $url }}class="selected"{{ end -}}
+           {{- if hasPrefix $currentPage.RelPermalink $url }}class="selected"{{ end -}}
            title="{{ .Title  }}">{{- .Name -}}</a>
     </li>
     {{ .Post  }}

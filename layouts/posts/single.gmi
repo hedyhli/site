@@ -25,7 +25,7 @@ Tag:
 Questions/comments:
 
 => mailto:~hedy/posts@lists.sr.ht Public gemlog mailing list (plain-text only)
-=> mailto:hedy@tilde.cafe Or email me directly
+=> mailto:{{ .Site.Author.Email }} Or email me directly
 
 => .. Home
 {{- end }}
