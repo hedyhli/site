@@ -1,7 +1,6 @@
 # hedy's gemlog
 
-Hi, I'm hedy. This is where I occasionally post long-form articles and
-thoughts.
+Hi, I'm hedy. This is where I occasionally post long-form articles and thoughts.
 
 => mailto:hedy.dev@protonmail.com contact — email (preferred)
 
