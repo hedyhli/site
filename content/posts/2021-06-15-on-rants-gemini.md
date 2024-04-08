@@ -32,12 +32,13 @@ Let's take a look at each in detail.
 
 ## Replacing the web
 
-> [The web is] an organically grown mess of 25 years – but it will never be replaced by a dead-simple solution such as Gemini.
-([source](https://lobste.rs/s/ivryqt/what_is_this_gemini_thing_anyway_why_am_i))
+> [The web is] an organically grown mess of 25 years – but it will never be
+> replaced by a dead-simple solution such as Gemini.
+> ([source](https://lobste.rs/s/ivryqt/what_is_this_gemini_thing_anyway_why_am_i))
 
-And in response to that as mieum had said:
+And in response to that as mieum writes:
 
-> almost all of these posts are obsessed with the same strawman: some supposed audacity of Gemini to attempt replacing the web. It's hilarious that these authors (and commentors) have such poor reading comprehension.
+> Almost all of these posts are obsessed with the same strawman: some supposed audacity of Gemini to attempt replacing the web. It's hilarious that these authors (and commentors) have such poor reading comprehension.
 
 As clearly as is written at the top on the Gemini homepage, people seem to forget that it neither wants nor tries to replace the web.
 
@@ -51,8 +52,7 @@ In my opinion, Gemini is just a virtual space to put your content and read other
 In regards to gemtext limitations, we have to keep in mind that Gemini is a protocol. Gemtext is a markup language. You can serve whatever you like on Gemini -- HTML, markdown, etc. And you can also view your HTML content over Gemini with a client that supports HTML. As far as I can tell, most features that gemtext lacks had been discussed in the mailing list before, all of which, I'm pretty sure, alternatives or workarounds were suggested. I think this comment by Alex summarises it well:
 
 > Everyone wants something added to Gemini but disagrees what that something is. Personally, I think it should be in-line images and footnotes, but if Gemini became more complex, it would lose many of the traits that make it interesting. Gemini is a technology that invites us not to try and improve or optimize it, but to accept it as it is and work around its limitations – it is intentionally austere, and this is a feature, not a bug.
-
-([source](https://lobste.rs/s/3nsvkk/gemini_is_useless#c_1zpxad))
+> ([source](https://lobste.rs/s/3nsvkk/gemini_is_useless#c_1zpxad))
 
 For me, I'm fine with not having inline images, footnotes, or maybe even syntax highlighting in preformatted text. But as to tables, yes, that could make it look better, and easier to copy contents, but it would lose its simplicity and ease of developing new software around it. If gemtext was to support a similar type of table syntax as markdown, for example, the table would look extremely broken for clients that do not support it. Unless it is put in a preformatted block, though in which case that wouldn't solve the problem of horizontal scrolling in small screens.
 
@@ -67,12 +67,11 @@ For me personally, I like fresh starts. So sure, a new protocol, new ways to thi
 At the end of the day, the fact that I create and browse content in Geminispace every now and then does not mean I've decided to not use the web at all, nor does it mean that all of the good content is in Geminispace instead of the web. Like mozz said on Station:
 
 > I'm not here because I hate the web, I'm here because I like Gemini.
-
-([source](gemini://station.martinrue.com/mozz/d29f6cf900b04aef9e7a2332c2098f13))
+> ([source](gemini://station.martinrue.com/mozz/d29f6cf900b04aef9e7a2332c2098f13))
 
 You don't have to ditch the web to use Gemini. You get to choose what you write about, but you don't get to choose the color of your headers, or the font size of your body paragraphs. Go use the web if you want that.
 
-## Full list of references:
+## Full list of references
 * [Why Gemini is Not My Favorite Internet Protocol (Lobste.rs)](https://lobste.rs/s/vhlagb/why_gemini_is_not_my_favorite_internet)
 * [Gemini is Useless (Lobste.rs)](https://lobste.rs/s/3nsvkk/gemini_is_useless)
 * [Gemini is Useless (HN)](https://news.ycombinator.com/item?id=27490769)

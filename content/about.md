@@ -33,7 +33,7 @@ Preferred method of contact: **Email**
 ## Uses
 
 {{<table>}}
-| key | value |
+| | |
 |-----|-------|
 | OS  | MacOS, ubuntu, arch |
 | Browser | [Arc](https://arc.net), [Min](https://minbrowser.org/), [Qutebrowser](https://www.qutebrowser.org/index.html) |
