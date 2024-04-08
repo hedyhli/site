@@ -1,13 +1,13 @@
 {{ $outerRel := .RelPermalink -}}
+
 {{ if in $outerRel "posts" -}}
-<h1>Posts</h1>
+{{ partial "anchor-heading.html" (dict "Text" "Posts" "Level" 1 "Anchor" "posts") }}
+{{ .Content }}
+
 {{ else -}}
-<h2>Posts</h2>
+{{ partial "anchor-heading.html" (dict "Text" "Posts" "Level" 2 "Anchor" "posts") }}
+{{ (.Site.GetPage "posts").Content }}
 {{- end }}
-
-<p>These are my long-form musings. I aim to write at least twice a year, but over the past two years I have clearly failed in this aspect. I'll try to write more often.</p>
-
-<p>Comments can be sent to my <a href="https://lists.sr.ht/~hedy/posts">public mailing list</a> where I'll also send new posts (after 2023) as plain text to. If you subscribe to the list, it acts like a newsletter where you'll receive new posts from your inbox. Posting and subscribing happen solely through emails. No external auth required.</p>
 
 <p class="meta">
 <a href="{{ .Site.BaseURL }}tags/">Tags</a> |
