@@ -1,5 +1,4 @@
-{{ block "content" . -}}{{ end }}
-
+{{- block "content" . }}{{ end }}
 => {{.Site.Params.src}} Source
 {{- with .OutputFormats.Get "html" }}
 {{- $weburl := .Permalink }}

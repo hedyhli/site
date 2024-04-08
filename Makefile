@@ -46,6 +46,7 @@ gemini:
 	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
 	$(RSYNC) $(RSYNC_FLAGS) public/*.gmi public/posts/*.gmi public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
 	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/index.xml $(GEMINI_DEST)/feed.xml
+	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/index.gmi $(GEMINI_DEST)/posts/index.gmi
 
 gemini-clean:
 	@# This is the target that has caused me the most trouble, literally lost my
@@ -54,6 +55,7 @@ gemini-clean:
 	@# manually) before using this!
 	@#
 	@# Remove copied post files
+	find $(GEMINI_DEST) -wholename '*/$(GEMINI_DEST_BASE)/posts/????-??-??-*.gmi' -delete
 	find $(GEMINI_DEST) -wholename '*/$(GEMINI_DEST_BASE)/????-??-??-*.gmi' -delete
 	@# Use ugly urls, find the dirs that only contains a single 'index.gmi',
 	@# excluding the root index.gmi

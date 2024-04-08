@@ -15,14 +15,14 @@ thoughts.
 
 ## Pages
 
+=> /posts/ gemlog
 => about.gmi about.gmi (and methods of contact)
+=> misc.gmi misc.gmi
+
 => //do.hedy.dev/pgp.asc PGP public key
 => //do.hedy.dev/sshkey.txt SSH public key
-
 => //do.hedy.dev/tinylog.gmi tinylog.gmi
 => //do.hedy.dev/tw.txt twtxt feed
-
-=> misc.gmi misc.gmi
 
 
 ## Services

@@ -1,0 +1,13 @@
+{{ if hasPrefix .File.Path "posts" -}}
+# Gemlog
+{{- else -}}
+## Gemlog posts
+{{- end }}
+
+{{ trim (readFile (replace (.Site.GetPage "posts").File.Path ".md" ".gmi")) "\n" | safeHTML }}
+--
+
+=> /feed.xml Atom feed
+{{ range (where .Site.RegularPages "Section" "posts") }}
+{{- if .OutputFormats.Get "gemtext" }}
+=> {{replace (replace .RelPermalink "/gemini" "" 1) "/index.gmi" ".gmi" 1}} {{ .Date.Format "2006-01-02" }}: {{.Title | safeHTML}}{{ end }}{{- end }}

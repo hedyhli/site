@@ -1,13 +1,7 @@
-{{ define "content" }}
-{{readFile (replace (replace $.File.Path ".md" ".gmi") ".html" ".gmi") | safeHTML}}
+{{ define "content" -}}
+{{ readFile (replace (replace $.File.Path ".md" ".gmi") ".html" ".gmi") | safeHTML }}
 
-## Gemlog posts
-
-=> feed.xml atom feed
-
-{{ range (where .Site.RegularPages "Section" "posts") }}
-{{- if .OutputFormats.Get "gemtext" }}
-=> {{replace (replace .RelPermalink "/gemini" "" 1) "/index.gmi" ".gmi" 1}} {{ .Date.Format "2006-01-02" }}: {{.Title | safeHTML}}{{ end }}{{ end }}
+{{ partial "posts.gmi" . }}
 
 --
 {{- end }}

@@ -22,7 +22,7 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 
 ## todo
 
-- [ ] let gemini version also have a post page at /posts/index.gmi
+- [x] let gemini version also have a post page at /posts/index.gmi
 - [ ] minify images and use WebP
 - [x] provide atom feed for www
 - [x] show post description in list

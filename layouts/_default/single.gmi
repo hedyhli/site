@@ -1,4 +1,5 @@
 {{ define "content" -}}
+
 # {{ .Title }}
 
 {{ $lastmod := .Lastmod -}}
@@ -9,5 +10,5 @@ Last updated {{ .Lastmod.Format "2006-01-02" }}{{ end }}
 {{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
 
 --
-=> {{ replace .Site.BaseURL "https:" "" }} Home
+=> {{ replace .Site.BaseURL "https:" "gemini:" }} Home
 {{- end }}

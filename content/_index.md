@@ -1,4 +1,5 @@
 ---
+title: home
 outputs:
   - html
   - gemtext

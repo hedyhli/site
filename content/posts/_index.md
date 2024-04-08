@@ -1,5 +1,10 @@
 ---
 title: Posts
+outputs:
+  - html
+  - gemtext
+  - gematom
+  - rss
 
 ---
 
