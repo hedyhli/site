@@ -26,12 +26,6 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 - [ ] minify images and use WebP
 - [x] provide atom feed for www
 - [x] show post description in list
-
-- [ ] content improvements
-  - [ ] about
-  - [ ] projects
-  - [ ] syntax hilite post
-  - [ ] gemini post
 - [ ] proper reply via email link
 
 ## writing
