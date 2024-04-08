@@ -23,7 +23,7 @@ The site source is always linked at the footer, pointing to the SourceHut repo. 
 => https://github.com/hedyhli/site
 
 
-## Tilde.Cafe and the Tildeverse
+## tilde.cafe and the Tildeverse
 
 > [The Tildeverse is] a loose association of like-minded tilde communities. *Tildes* are pubnixes in the spirit of tilde.club, which was created in 2014 by Paul Ford.
 
@@ -31,7 +31,7 @@ The site source is always linked at the footer, pointing to the SourceHut repo. 
 => gemini://tilde.club/
 => https://medium.com/message/tilde-club-i-had-a-couple-drinks-and-woke-up-with-1-000-nerds-a8904f0a2ebf
 
-A **Pubnix** is a Public Access Unix System — in other words, a unix machine on the internet that provides access to other people on the internet — which started before WWW and even the public internet. Pubnixes you may have heard of SDF, Circumlunar.Space (yes, the very same one of the former gemini homepage), and Tilde.Club.
+A **Pubnix** is a Public Access Unix System — in other words, a unix machine on the internet that provides access to other people on the internet — which started before WWW and even the public internet. Pubnixes you may have heard of SDF, Circumlunar.Space (yes, the very same one of the former gemini homepage), and tilde.club.
 
 => gemini://sdf.org
 => https://circumlunar.space/
@@ -47,7 +47,7 @@ There are a lot of pubnixes that have joined the Tildeverse since the the ~club 
 
 => https://tilde.team
 
-Most Tildes have open registerations. Users are provided around 1 GB of disk space along with SSH access and are able to host their own static site with CGI under the main tilde domain, together with services like email, gemini/gopher hosting, pastbin, and more.
+Most tildes have open registerations. Users are provided around 1 GB of disk space along with SSH access and are able to host their own static site with CGI under the main tilde domain, together with services like email, gemini/gopher hosting, pastbin, and more.
 
 However, the true value of tildes lie not in the services they provide but the people and community. The tildeverse has an official IRC network, tilde.chat, which most tildes use for their main channel of communication. They also have a radio, a mastodon instance, gitea instance, among other services. The latter two from the above are both hosted by ~ben the owner and one of the sudoers of ~team.
 
