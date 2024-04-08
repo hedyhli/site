@@ -36,7 +36,7 @@ bin/post
 
 ## deploy
 
-Also see [gemcgi](../gemcgi)
+Also see [gemcgi](https://git.sr.ht/~hedy/gemcgi)
 
 ```sh
 make all deploy
