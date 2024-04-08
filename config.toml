@@ -15,6 +15,7 @@ description = "~hedy's home: hedy's canonical web presence including contact inf
 src = "https://sr.ht/~hedy/site"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
 copyright = "CC-BY-SA"
+copyrightLink = "https://creativecommons.org/licenses/by-sa/4.0/"
 copyrightYearStart = "2021"
 
 shortTitle = "~hedy"
@@ -24,7 +25,6 @@ geminiRoot = "gemini://home.hedy.dev"
 
 # true: Use shortcode pfp-name as the home link text in nav bar
 # false: Use shortTitle there instead
-# true if the site is centers around the person, false for non-personal sites basically
 navHomeUsePFPName = true
 
 [author]
@@ -42,31 +42,25 @@ posts = "/posts/:slug"
       identifier = "posts"
 	  name = "Posts"
 	  title = "posts"
-	  url = "posts/"
+	  url = "/posts/"
 	  weight = 10
   [[menu.main]]
       identifier = "about"
 	  name = "About"
 	  title = "about"
-	  url = "about/"
+	  url = "/about/"
 	  weight = 20
-#  [[menu.main]]
-#      identifier = "projects"
-#	  name = "projects"
-#	  title = "projects"
-#	  url = "projects/"
-#	  weight = 30
   [[menu.main]]
       identifier = "misc"
 	  name = "Misc"
 	  title = "misc"
-	  url = "misc/"
+	  url = "/misc/"
 	  weight = 40
   [[menu.main]]
       identifier = "rss"
 	  name = "RSS"
 	  title = "rss"
-	  url = "posts/index.xml"
+	  url = "/posts/index.xml"
 	  weight = 100
 
 [markup.goldmark.renderer]

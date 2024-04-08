@@ -1,26 +1,24 @@
-{{ $relperm := .RelPermalink | replaceRE "^/~hedy/" "/" -}}
 {{ $home := .Site.Title -}}
-{{ if (ne $relperm "/") -}}
+{{ if (ne .RelPermalink "/") -}}
+    {{ $home = .Site.Title -}}
     {{ if .Site.Params.navHomeUsePFPName -}}
-    {{ $home = partial "pfp-name.html" . -}}
-    {{ else -}}
-    {{ $home = .Site.Params.shortTitle -}}
+        {{ $home = partial "pfp-name.html" . -}}
     {{ end -}}
 {{ end -}}
 <nav>
-    <strong><a rel="home" href="{{ .Site.BaseURL  }}">{{ $home }}</a></strong>
+    <strong><a title="home" id="home" href="{{ .Site.BaseURL  }}">{{ $home }}</a></strong>
     <ul>
     {{- $currentPage := . }}
+
     {{- range .Site.Menus.main.ByWeight }}
     {{- $url := printf "%s%s" $.Site.BaseURL .URL }}
-
-    {{ .Pre -}}
+    {{- .Pre }}
     <li>
         <a href="{{ $url }}"
-           {{- if hasPrefix $currentPage.RelPermalink $url }}class="selected"{{ end -}}
+           {{- if hasPrefix $currentPage.RelPermalink .URL }}class="selected"{{ end -}}
            title="{{ .Title  }}">{{- .Name -}}</a>
     </li>
-    {{ .Post  }}
+    {{ .Post  -}}
     {{- end }}
     </ul>
 </nav>

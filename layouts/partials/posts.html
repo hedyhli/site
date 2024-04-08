@@ -3,13 +3,11 @@
 <h1>Posts</h1>
 {{ else -}}
 <h2>Posts</h2>
-{{ end -}}
+{{- end }}
 
-<p>
-These are my long-form musings. I aim to write at least twice a year, but over the past two years I have clearly failed in this aspect. I'll try to write more often 🤞
-</p><p>
-Comments can be sent to my <a href="https://lists.sr.ht/~hedy/posts">public mailing list</a> where I'll also send new posts (after 2023) as plain text to. If you subscribe to the list, it acts like a newsletter where you'll receive new posts from your inbox. Posting and subscribing happen solely through emails. No external auth required.
-</p>
+<p>These are my long-form musings. I aim to write at least twice a year, but over the past two years I have clearly failed in this aspect. I'll try to write more often.</p>
+
+<p>Comments can be sent to my <a href="https://lists.sr.ht/~hedy/posts">public mailing list</a> where I'll also send new posts (after 2023) as plain text to. If you subscribe to the list, it acts like a newsletter where you'll receive new posts from your inbox. Posting and subscribing happen solely through emails. No external auth required.</p>
 
 <p class="meta">
 <a href="{{ .Site.BaseURL }}tags/">Tags</a> |
@@ -31,10 +29,7 @@ Comments can be sent to my <a href="https://lists.sr.ht/~hedy/posts">public mail
     {{ else -}}
       </h3>
       {{ end -}}
-      <p>Posted:
-      <time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
-      {{ partial "lastmod.html" . }}
-      </p>
+      <p class="post-meta"><time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time></p>
       <p class="desc">{{ .Description }}</p>
   </li>
   {{- end }}

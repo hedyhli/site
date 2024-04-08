@@ -1,14 +1,14 @@
 <p>
-© {{ with .Site.Params.CopyrightYearStart }}{{ . }}-{{ end -}}
+Copyright © {{ with .Site.Params.CopyrightYearStart }}{{ . }}-{{ end -}}
 {{ now.Format "2006" }}
-{{ .Site.Params.Copyright }} · <a href="{{ .Site.Params.src }}">Site source</a>
+</p>
+<p>
+ <a href="{{ .Site.Params.CopyrightLink }}">{{ .Site.Params.Copyright }}</a>
+ <a href="/sitemap.xml">Sitemap</a>
+ <a href="{{ .Site.Params.src }}">Source code</a>
 
 {{- with .OutputFormats.Get "gemtext" }}
 {{- $gemurl := replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1 }}
- · <a rel="syndication" class="u-syndication" href="{{ $gemurl | safeURL }}">View on Gemini</a>
+ <a rel="syndication" class="u-syndication" href="{{ $gemurl | safeURL }}">View on Gemini</a>
 {{- end }}
 </p>
-
-{{- if .GitInfo -}}
-<p>Site last rebuilt on {{ now.Format "2006-01-02" }}</p>
-{{- end }}

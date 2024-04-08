@@ -28,8 +28,11 @@
 	--accent-bg-light: #f2f2f2;
     --code-bg: #f2f2f2;
 	--text: #0a0a0a;
-	--text-light: #585858;
+	--text-light: #787878;
+	--non-text-light: #95aac0;
+
 	--border: #bbb;
+	--border-light: var(--border);
 	--accent: #5c659b;
 	--accent-light: #7890c1;
 	--code: #d81b60;
@@ -40,23 +43,28 @@
 	--shadow-color: #fff;
 
 	--link: #3c63e8;
+	--link-hover: #93aaf9;
 	--link-visited: #6971a0;
-	--nav-link: var(--link);
+
+	--link-alt: var(--link);
 
 	/* My theme stuff */
 	--theme-purple: #3d4573;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-		--bg: #282a36;
+		--bg: #232326;
 		--accent-bg: #44475a;
 		--accent-bg-light: #303035;
 		--code-bg: #3e3e4b;
 		--text: #eee;
 		--text-light: #cecece;
+		--non-text-light: #999fbf;
+
 		--border: #aaa;
+		--border-light: #565656;
 		--accent: #8be9fd;
-		--accent-light: #e4e9a8;
+		--accent-light: #ece1a1;
 		--code: #f06292;
 		--preformatted: #ccc;
 		--disabled: #111;
@@ -64,13 +72,11 @@
 		--shadow-color: #36373b;
         --theme-purple: #af9dea;
 
-        --link: var(--accent);
-        --link-visited: #a5beff;
+        --link: #cddfff;
+        --link-hover: #8c9cba;
+        --link-visited: #c3b1ff;
         /* Why doesn't the dracula pink look better? #ff79c6 */
-        --nav-link: var(--accent-light);
-
-        --accent-alt: #ff91d0;
-        --accent-alt-light: #c188a9;
+        --link-alt: var(--accent-light);
 	}
 
 	img:not(.pfp), video {
@@ -105,14 +111,14 @@ h1 .pfp {
 }
 
 nav .pfp {
-    height: 1.3rem;
+    height: 1.7rem;
     vertical-align: middle;
 }
 
 
 .pfp {
     border: 1px solid var(--border);
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 .pfp-name {
@@ -138,7 +144,7 @@ nav .pfp-text {
 /* Homepage stuff */
 .blink {
     opacity: 0;
-    color: var(--accent-light);
+    color: var(--text-light);
     animation: blinker 1s step-start 5;
 }
 @keyframes blinker {
@@ -151,19 +157,20 @@ nav .pfp-text {
 .meta a, .post-meta a, footer a, #after-content a {
 	text-decoration: none;
     @media (prefers-color-scheme: dark) {
-        color: var(--accent-alt);
+        color: var(--link-alt);
     }
 }
 .meta a:hover, .post-meta a:hover, footer a:hover, #after-content a:hover {
     color: var(--accent-light);
+    text-decoration: underline;
     @media (prefers-color-scheme: dark) {
-        color: var(--accent-alt-light);
+        opacity: .75;
     }
 }
 
 nav a {
 	text-decoration: none;
-	color: var(--nav-link);
+	color: var(--link-alt);
 }
 
 /* To have the left nav item (homepage) and right items (other pages) display
@@ -211,8 +218,7 @@ nav .selected {
  * Step 1 to making the single-line nav: remove the bullet padding. */
 nav ul, nav a {
 	padding: 0;
-	/* from nav {} */
-	padding-bottom: 0.3rem;
+	padding-bottom: 0.5rem;
 }
 /* Step 2: remove bullets and make elements inline.
  * Also: bump up the line-height and margins to increase space between
@@ -228,12 +234,13 @@ nav ul li, nav strong > a {
 blockquote {
 	margin-left: 0;
 	padding-left: 1.25rem;
-	border-left: 4px solid var(--text-light);
+	border-left: 3px solid var(--text-light);
+	opacity: .9;
 }
 
 table {
 	border-collapse: collapse;
-	width: 100%
+	width: 100%;
 }
 table caption {
 	font-weight: bold;
@@ -241,11 +248,13 @@ table caption {
 }
 td,
 th {
-	border: 1px solid var(--border);
+	border: 1px solid var(--border-light);
 	text-align: left;
 	padding: .5rem;
 }
-
+th:empty {
+    visibility: hidden;
+}
 th {
 	background: var(--accent-bg-light);
 	font-weight: bold;
@@ -273,6 +282,10 @@ footer {
 	color: var(--text-light);
 	padding: 1rem 0 1rem 0;
 }
+footer a {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
 header p {
 	text-align: left;
 }
@@ -294,7 +307,7 @@ samp {
 /* Inline code snips hopefully */
 :not(pre)>code, :not(pre)>samp, kbd {
     background-color: var(--code-bg);
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-light);
     /* border-radius: 6px; */
     padding: .01em .1em;
 }
@@ -314,7 +327,7 @@ pre {
 	overflow: auto;
 	color: var(--preformatted);
 	background: var(--accent-bg-light);
-	border: 1px solid var(--border);
+	border: 1px solid var(--border-light);
 	border-radius: 0;
 }
 
@@ -341,14 +354,20 @@ a:visited {
 }
 /* Don't change colors for visited links on nav, it makes nav bar look inconsistent */
 nav a:visited {
-    color: var(--nav-link);
+    color: var(--link-alt);
 }
-a:hover {
+main a:hover {
+	opacity: .75;
+}
+nav a#home:hover {
+	opacity: .75;
+}
+a:focus, form:focus {
+    outline: 1px solid var(--border);
 	text-decoration: none;
 }
-:not(nav) a:focus, form:focus {
-    outline: 2px solid var(--border);
-	text-decoration: none;
+nav a:focus {
+    outline: none;
 }
 
 /* nav a:not(nav strong > a):not(nav ul li:last-child a):hover { */
@@ -368,8 +387,8 @@ fieldset {
 
 /* Misc body elements */
 hr {
-	color: var(--border);
-	border-color: var(--border);
+	color: var(--border-light);
+	border-color: var(--border-light);
 	border-style: solid;
 	border-width: 1px;
 	margin: 1rem auto;
@@ -451,7 +470,7 @@ input[type="button"]:enabled:hover {
 /* Format the expanding box */
 details {
 	padding: .6rem 1rem;
-	border: 1px solid var(--border);
+	border: 2px solid var(--border-light);
 	/* border-radius: 5px; */
 	margin-bottom: 1rem;
 }
@@ -501,6 +520,16 @@ h5 {
 
 h6 {
 	font-size: calc(var(--base-fontsize) / var(--header-scale));
+}
+
+a.anchor {
+    text-decoration: none;
+    color: var(--non-text-light);
+    padding-right: .2rem;
+}
+
+a.anchor:hover {
+    text-decoration: underline;
 }
 
 #post-header h1 {

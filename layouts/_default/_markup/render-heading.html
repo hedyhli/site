@@ -1,0 +1,7 @@
+{{ if ne .Level 1 -}}
+{{ $id := .Anchor | safeURL }}
+<h{{ .Level }} id="{{ $id }}">
+  <a class="anchor" href="#{{ $id }}" rel="nofollow">#</a>
+  {{ .Text | safeHTML -}}
+</h{{ .Level }}>
+{{- end }}
