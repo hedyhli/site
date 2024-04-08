@@ -14,10 +14,9 @@ description: "How I've set up syntax highlighting for my website with dark mode 
 ---
 
 Hugo uses [chroma](https://github.com/alecthomas/chroma) as its syntax
-highlighter, and it's mostly compatible with pygments. All you basically need
-for having your code highlighted is to let chroma put the syntax classes in the
-generated HTML, for the correct language, and then make sure you have
-corresponding CSS for those classes.
+highlighter. All you basically need for having your code highlighted is to let
+chroma put the syntax classes in the generated HTML, for the correct language,
+and then make sure you have corresponding CSS for those classes.
 
 Let's start by enabling syntax highlighting in your configuration file.
 
@@ -151,11 +150,6 @@ This tells hugo to only load the resource and put the CSS in `<style>` if the pa
 
 ## Read more
 
-There are many configuration options for syntax highlighting, read this page
-on Hugo docs for more information: [gohugo.io/getting-started/configuration-markup#highlight](https://gohugo.io/getting-started/configuration-markup#highlight)
-
-If you'd like to highlight specific lines in code snippets, you can read about
-how to do that here: [gohugo.io/content-management/syntax-highlighting/#example-highlight-shortcode](https://gohugo.io/content-management/syntax-highlighting/#example-highlight-shortcode)
-
-There is also a `highlight` shortcode shipped with Hugo that lets you manually
-highlight code with chroma: [gohugo.io/content-management/shortcodes/#highlight](https://gohugo.io/content-management/shortcodes/#highlight).
+- [Configuration options for syntax highlighting](https://gohugo.io/getting-started/configuration-markup#highlight)
+- [Highlighting specific lines in code snippets](https://gohugo.io/content-management/syntax-highlighting/#example-highlight-shortcode)
+- [The built-in `highlight` shortcode for manual highlighting](https://gohugo.io/content-management/shortcodes/#highlight)
