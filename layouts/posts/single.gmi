@@ -24,7 +24,7 @@ Tag:
 Questions/comments:
 
 => mailto:~hedy/posts@lists.sr.ht Public gemlog mailing list (plain-text only)
-=> mailto:{{ .Site.Author.Email }} Or email me directly
+=> mailto:{{ .Site.Author.email }} Or email me directly
 
 => .. Home
 {{- end }}

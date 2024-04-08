@@ -1,4 +1,4 @@
-{{ define "main" }}
+{{ define "main" -}}
 <div itemscope itemtype="https://schema.org/BlogPosting" class="h-entry">
   <article itemprop="mainEntityOfPage">
     <header id="post-header">
@@ -7,8 +7,8 @@
       <div class="post-description"><p><em>{{ . }}</em></p></div>
       {{- end }}
       <div class="post-meta">
-        <p>
-        <time  itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
+        <p>Posted on
+        <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
         {{ partial "tags.html" . }}
         {{ partial "lastmod.html" . }}
         &nbsp;|&nbsp;
@@ -22,7 +22,7 @@
     </section>
   </article>
 </div>
-{{ end }}
+{{- end }}
 {{- define "after" }}
 <p id="#EOF">EOF</p>
 <section class="comments">
@@ -30,7 +30,7 @@
   Questions, comments? Send an email to my
   <a href="mailto:~hedy/posts@lists.sr.ht">blog-post mailing list</a>
   (with <a href="https://useplaintext.email">plain text</a>)
-  or to me <a href="mailto:hedy@tilde.cafe">directly</a>.
+  or to me <a href="mailto:{{ .Site.Author.email }}">directly</a>.
   </p>
 </section>
 {{- end }}
