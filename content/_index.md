@@ -5,15 +5,13 @@ outputs:
   - gemtext
 ---
 
+<center class="hero" style="margin-bottom: 5rem;">
 
-<h1> Hi, I'm {{% pfp-name %}}<span class="blink">▂</span></h1>
+<h1><span style="font-size: 2.2rem;">{{% pfp-name %}}</span><span class="blink" style="font-family: var(--mono-font)">▂</span></h1>
 
-I enjoying tinkering with FLOSS, reading manuals and articles, and hanging
-around my `$HOME`.
+[Fediverse](https://tilde.zone/@hedy) ⋅ [GitHub](https://github.com/hedyhli) ⋅ [SourceHut](https://sr.ht/~hedy)
 
-Follow the rabbit hole sobre mí... [@hedy@tilde.zone](https://tilde.zone/@hedy)
-/ [hedyhli (github and discord)](https://github.com/hedyhli) /
-[sourcehut](https://sr.ht/~hedy)
+</center>
 
 ---
 
@@ -22,15 +20,10 @@ Follow the rabbit hole sobre mí... [@hedy@tilde.zone](https://tilde.zone/@hedy)
 Preferably <a rel="me" href="mailto:hedy.dev@protonmail.com">email</a> or
 <a rel="me" href="https://tilde.zone/@hedy">Mastodon</a> on the Fediverse.
 
-My interests range from dev tooling, math, cryptology to physics, linguistics
-and graphic design. I try to post at least once a year, but sometimes life
-happens.
-
 You can also chat with me on IRC, XMPP, or matrix — details on my [about
-page](./about/).
+page](/about/).
 
-Alternate versions of the content here are available on
-[gemini://](https://gemini.circumlunar.space) and
-[spartan://](https://portal.mozz.us/gemini/spartan.mozz.us) via the same
-hostname.
+Alternate versions of this site are available on
+[gemini://](https://gemini.circumlunar.space) (linked at the footer),
+[spartan://](https://portal.mozz.us/gemini/spartan.mozz.us), and gopher.
 

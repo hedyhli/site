@@ -106,7 +106,7 @@ footer {
 }
 
 h1 .pfp {
-    height: 1em;
+    height: 2.5rem;
     vertical-align: text-top;
 }
 
@@ -118,7 +118,7 @@ nav .pfp {
 
 .pfp {
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: .35em;
 }
 
 .pfp-name {
