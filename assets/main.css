@@ -356,6 +356,9 @@ a:visited {
 nav a:visited {
     color: var(--link-alt);
 }
+.post-meta a:visited, .meta a:visited, footer a:visited, .after-content a:visited {
+    color: var(--link-alt);
+}
 main a:hover {
 	opacity: .75;
 }
