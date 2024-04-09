@@ -47,3 +47,7 @@ Preferred method of contact: **Email**
 {{</table>}}
 
 For more information on my setup, check out my [dotfiles repository on GitHub](https://github.com/hedyhli/dotfiles) or [on SourceHut](https://sr.ht/~hedy/dotfiles).
+
+The code blocks on this site use [Emacs Modus themes by
+Protesilaos](https://protesilaos.com/emacs/modus-themes) for syntax
+highlighting.
