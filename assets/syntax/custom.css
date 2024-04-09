@@ -1,0 +1,12 @@
+/* Overrides for light/dark.css */
+
+:root {
+    --chroma-bg: #f9f9f9;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --chroma-bg: #28282f;
+    }
+}
+/* Background */ .bg { color: #ffffff; background-color: var(--chroma-bg); }
+/* PreWrapper */ .chroma { color: #ffffff; background-color: var(--chroma-bg); }
