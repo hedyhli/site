@@ -17,7 +17,7 @@ This is where my gemlog and blog lives. It is statically generated with Hugo and
 => https://gohugo.io Hugo Homepage
 => //tilde.cafe
 
-The site source is always linked at the footer, pointing to the SourceHut repo. It is also mirroed on GitHub.
+The site source is always linked at the footer, pointing to the SourceHut repo. It is also mirrored on GitHub.
 
 => https://git.sr.ht/~hedy/site
 => https://github.com/hedyhli/site
