@@ -1,0 +1,2 @@
+{{ $src := $.Page.Resources.GetMatch (.Get 0) -}}
+{{ printf "/posts/assets/%s_%s" $.Page.Slug $src.Name -}}

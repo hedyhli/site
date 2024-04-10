@@ -20,6 +20,22 @@ design. It has a few custom colors, a sans-serif font stack, and some styling in
 the footer and nav. Everything else is partially based on top of [simple
 css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 
+## hardcoded values
+
+In WWW, posts' resources are stored under the same directory as the post:
+- `/posts/my-slug/index.html` (the post itself)
+- `/posts/my-slug/resource-1.png`
+- `/posts/my-slug/resource-2.svg`
+
+In gemini, posts' resources are stored together under a separate folder:
+- `/posts/my-slug.gmi` (the post itself)
+- `/posts/assets/my-slug_resource-1.png`
+- `/posts/assets/my-slug_resource-2.png`
+
+These files might need to be changed to customize this:
+- `bin/gemini-clean.py`
+- `layouts/shortcodes/get-resource-link.*`
+
 ## todo
 
 - [x] let gemini version also have a post page at /posts/index.gmi
