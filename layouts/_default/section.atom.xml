@@ -10,7 +10,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>hedy's blog</title>
     <link href="{{ .RelPermalink }}"/>
-    <updated>{{ .Date.Format "2006-01-02" | safeHTML }}T12:00:00Z</updated>
+    <updated>{{ time.Now | time.Format "2006-01-02" | safeHTML }}T12:00:00Z</updated>
     <id>{{ .RelPermalink }}</id>
     <author>
         <name>{{ $.Site.Author.name }}</name>
