@@ -8,13 +8,13 @@
             {{ partial "header.html" . }}
         </header>
         <main id="content">
-            {{ block "main" . }}{{ end }}
+            <div id="main">
+                {{ block "main" . }}{{ end }}
+            </div>
         </main>
-        <section id="after-content">
-            {{ block "after" . }}{{ end }}
-        </section>
+        <!-- Don't use line breaks here, we want to hide this section if 'after' is empty. -->
+        <section id="after-content">{{- block "after" . }}{{ end }}</section>
         <footer>
-        <hr>
             {{ partial "footer.html" . }}
         </footer>
     </body>
