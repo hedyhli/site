@@ -49,27 +49,7 @@ gemini:
 	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/index.gmi $(GEMINI_DEST)/posts/index.gmi
 
 gemini-clean:
-	@# This is the target that has caused me the most trouble, literally lost my
-	@# entire public_gemini from this when I had a bug here.
-	@# So PLEASE PLEASE PLEASE make sure to run make all (or make backup
-	@# manually) before using this!
-	@#
-	@# Remove copied post files
-	find $(GEMINI_DEST) -wholename '*/$(GEMINI_DEST_BASE)/posts/????-??-??-*.gmi' -delete
-	find $(GEMINI_DEST) -wholename '*/$(GEMINI_DEST_BASE)/????-??-??-*.gmi' -delete
-	@# Use ugly urls, find the dirs that only contains a single 'index.gmi',
-	@# excluding the root index.gmi
-	find $(GEMINI_DEST) -wholename '*/index.gmi' -not -wholename '$(UGLYURL_EXCLUDE)' -not -wholename '*/posts/index.gmi' -not -wholename '*/$(GEMINI_DEST_BASE)/index.gmi' -exec echo '{}' \; > out.txt
-	@# Copy /blah/index.gmi to blah.gmi then rm /blah/
-	@while read line; do \
-		dest=$$( echo $$line | sed 's_/index.gmi$$_.gmi_'); \
-		dir=$$( echo $$line | sed 's_/index.gmi$$__'); \
-		echo Syncing and removing $$(basename $$dir); \
-		rsync $$line $$dest; \
-		rm -rf $$dir; \
-	done < out.txt; \
-	rm out.txt
-	@echo done
+	GEMINI_DEST=$(GEMINI_DEST) python3 bin/gemini-clean.py
 
 html:
 	$(RSYNC) $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
