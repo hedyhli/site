@@ -553,7 +553,7 @@ a.anchor:hover {
 
 #content div#main {
     border-bottom: 2px solid var(--border-light);
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .footnotes {
@@ -561,14 +561,11 @@ a.anchor:hover {
 	font-size: .9rem;
     color: var(--text-light);
 }
-.footnotes hr {
-    display: none;
+.footnotes #footnotes-heading {
+    margin-top: 1.5rem;
 }
 .footnotes ol {
     margin-top: none;
-}
-.footnotes::before {
-    content: "Footnotes"
 }
 
 small {
