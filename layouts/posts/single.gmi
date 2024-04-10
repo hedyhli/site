@@ -2,14 +2,15 @@
 # {{ $.Title }}
 
 Posted {{ .Date.Format "2006-01-02" }}
-{{ $lastmod := .Lastmod -}}
-{{ if lt .Date $lastmod -}}
-Last updated {{ .Lastmod.Format "2006-01-02" }}{{ end }}
-{{ $taxonomy := "tags" -}}
-{{- with .Param $taxonomy -}}
-{{- if gt (len .) 1 -}}
+{{- $lastmod := .Lastmod }}
+{{- if lt .Date $lastmod }}
+Last updated {{ .Lastmod.Format "2006-01-02" }}
+{{- end }}
+{{- $taxonomy := "tags" }}
+{{- with .Param $taxonomy }}
+{{- if gt (len .) 1 }}
 Tags:
-{{- else if gt (len .) 0 -}}
+{{- else if gt (len .) 0 }}
 Tag:
 {{- end -}}
 
@@ -36,5 +37,5 @@ Questions/comments:
 => mailto:~hedy/posts@lists.sr.ht Public gemlog mailing list (plain-text only)
 => mailto:{{ .Site.Author.email }} Or email me directly
 
-=> .. Home
+=> / Home
 {{- end }}
