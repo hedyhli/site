@@ -2,6 +2,7 @@
 {{ $title := slicestr (replace .Name "-" " ") 11 -}}
 title = {{ $title | title }}
 description = {{ strings.FirstUpper $title }}
+tags = []
 highlight = false
 draft = true
 

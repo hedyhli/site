@@ -20,7 +20,34 @@ design. It has a few custom colors, a sans-serif font stack, and some styling in
 the footer and nav. Everything else is partially based on top of [simple
 css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 
+## requirements
+
+### build
+- **hugo** - generate files
+
+- **rsync** - separate HTML & gemini files into dedicated destinations
+  perhaps I'll just switch to plain copying in the future. This was a relic of
+  the old deployment system where I kept some extra files (such as CGI scripts)
+  in the destination which should not be deleted.
+
+  what this means is that I'll have to do `rm -rf DEST/*` periodically to clean
+  up old files
+
+- **python3** - postprocessing on the gemini files
+
+- **prettier** - format HTML files
+  this requires my template HTMl files not rely on newline for spacing.
+
+  to test, simply remove the prettier command from Makefile, run `make gen &&
+  mkdir public2 && cp -r public public2` and run prettier on `public2`, make
+  sure everything in `public2` looks the same as `public`.
+
+### deploy
+- **hut** - publishes HTML/gemini files to srht.site
+
 ## hardcoded values
+
+### resources
 
 In WWW, posts' resources are stored under the same directory as the post:
 - `/posts/my-slug/index.html` (the post itself)
@@ -40,28 +67,26 @@ These files might need to be changed to customize this:
 
 - [x] let gemini version also have a post page at /posts/index.gmi
 - [ ] minify images and use WebP
+- [ ] lint
+- [ ] better a11y
 - [x] provide atom feed for www
 - [x] show post description in list
 - [ ] proper reply via email link
 
-## writing
+## Workflows
+
+### posts
 
 ```sh
 bin/post
 ```
 
-## deploy
+resources should be put in the same directory as the post. Link to them within
+markdown ad gemini files using the `get-resource-link.{gmi|html}` shortcode
+which returns the relative permalink of the file. (see [resources](#resources).)
 
-Also see [gemcgi](https://git.sr.ht/~hedy/gemcgi)
+### deploy
 
 ```sh
 make all deploy
-```
-
-### twtxt
-
-Hardcodes destination host and gemini directory.
-
-```sh
-bin/twt
 ```

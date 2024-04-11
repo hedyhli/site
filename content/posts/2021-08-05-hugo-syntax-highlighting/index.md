@@ -5,7 +5,7 @@ draft = false
 highlight = true
 outputs = ['html', 'gemtext']
 slug = 'hugo-syntax-highlighting'
-tags = ['howto']
+tags = ['howto', 'hugo']
 title = 'Setting up syntax highlighting for Hugo'
 +++
 

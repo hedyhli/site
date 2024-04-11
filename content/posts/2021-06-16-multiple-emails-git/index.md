@@ -5,7 +5,7 @@ draft = false
 highlight = true
 outputs = ['html', 'gemtext']
 slug = 'multiple-emails-git'
-tags = ['git', 'howto']
+tags = ['howto', 'git']
 title = 'Managing multiple emails for git across different computers'
 +++
 

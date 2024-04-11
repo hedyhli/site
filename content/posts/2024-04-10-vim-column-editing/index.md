@@ -5,7 +5,7 @@ draft = false
 footnotes_heading = 'Footnotes'
 outputs = ['html', 'gemtext']
 slug = 'vim-column-editing'
-tags = ['howto']
+tags = ['howto', 'terminal']
 title = 'Vim visual block mode for column editing'
 EOF = false
 +++

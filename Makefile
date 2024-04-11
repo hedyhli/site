@@ -2,6 +2,8 @@ HUGO=hugo
 HUGO_CACHEDIR=~/hugo_cache
 HUGO_FLAGS=--cleanDestinationDir
 
+PRETTIER=prettier
+
 RSYNC=rsync
 RSYNC_FLAGS=-a
 
@@ -55,6 +57,7 @@ html:
 	$(RSYNC) $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
 	@# Manually include gemini tag (because it was excluded above)
 	$(RSYNC) $(RSYNC_FLAGS) public/tags/gemini $(HTML_DEST)/tags/
+	$(PRETTIER) --write $(HTML_DEST)"/**/*.html"
 
 finish-clean:
 	rm -rf $(GEMINI_DEST)-back $(HTML_DEST)-back
