@@ -1,7 +1,5 @@
 {{ define "content" -}}
-{{ readFile (replace (replace $.File.Path ".md" ".gmi") ".html" ".gmi") | safeHTML }}
-
-{{ partial "posts.gmi" . }}
+{{ partial "processed-content.gmi" . }}
 
 --
 {{- end }}

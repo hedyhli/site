@@ -44,6 +44,24 @@ All public projects:
 => https://sr.ht/~hedy
 => https://github.com/hedyhli
 
+{{< posts-list >}}
+
+## Orbits (webrings)
+
+=> gemini://raek.se/orbits/space-elevator/ The Space Elevator
+=> gemini://raek.se/orbits/space-elevator/prev?home.hedy.dev Previous
+=> gemini://raek.se/orbits/space-elevator/random?home.hedy.dev Random
+=> gemini://raek.se/orbits/space-elevator/next?home.hedy.dev Next
+
+=> gemini://tilde.team/~khuxkm/leo/ LEO Orbit
+=> gemini://tilde.team/~khuxkm/leo/prev.cgi?home.hedy.dev Previous
+=> gemini://tilde.team/~khuxkm/leo/rand.cgi?home.hedy.dev Random
+=> gemini://tilde.team/~khuxkm/leo/next.cgi?home.hedy.dev Next
+
+=> gemini://fediring.net/ Fediring
+=> gemini://fediring.net/previous/@hedy@tilde.zone Previous
+=> gemini://fediring.net/random Random
+=> gemini://fediring.net/next/@hedy@tilde.zone Next
 
 ## Useful links to outer space
 
