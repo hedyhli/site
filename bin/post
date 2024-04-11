@@ -1,56 +1,9 @@
 #!/usr/bin/env bash
-
-BLUE=$(tput setaf 12)
-RED=$(tput setaf 9)
-GREEN=$(tput setaf 10)
-RESET=$(tput sgr0)
-
-blue() {
-    echo ${BLUE}"$@"${RESET}
-}
-
-yesno () {
-    prompt="$1"
-    if [[ "$2" == n ]]; then
-        prompt="$prompt"' [y/N] '
-    else
-        if [[ "$2" == y ]]; then
-            prompt="$prompt"' [Y/n] '
-        else
-            prompt="$prompt"' [y/n] '
-        fi
-    fi
-    read -p "$prompt"
-
-    REPLY=$(echo "$REPLY" | tr A-Z a-z)
-    if [[ -z "$REPLY" ]]; then
-        REPLY="$2" # default
-    fi
-
-    if [[ "$REPLY" =~ ^y$ ]]; then
-        echo y; return 0
-    else
-        if [[ "$REPLY" =~ ^n$ ]]; then
-            echo n; return 1
-        fi
-        echo ${RED}Invalid option!${RESET} > /dev/stderr
-        yesno "$@"
-    fi
-}
-
-read -p "$(blue slug:\ )" filename
-filename=posts/$(date "+%Y-%m-%d")-"$filename".md
-created=$(hugo new "$filename" | sed 's/.*"\(.*\)".*/\1/')
-
-# do I just suck at shell scripting or is shell scripting so f'ed up that it
-# just refuses to work??
-# echo "$created"
 #
-# if ! yesno "$(blue 'draft?')" y; then
-#     # Not using in-place here because of MacOS vs GNU sed mess
-#     cat "$created" | sed 's/draft: true/draft: false/' > $created
-# fi
+# Create a new post with hugo given slug, and open it with an editor
 
-if yesno "$(blue edit?)" y; then
-    "${EDITOR:-vim}" "$created"
-fi
+read -p "slug: " filename
+filename=posts/$(date "+%Y-%m-%d")-"$(echo $filename | tr ' ' '-' )"
+created=$(hugo new "$filename/index.md" | sed 's/.*"\(.*\)".*/\1/')
+touch "$(dirname $created)/index.gmi"
+"${EDITOR:-vim}" "$created"
