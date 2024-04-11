@@ -5,6 +5,7 @@ draft = false
 outputs = ['html', 'gemtext']
 tags = ['test']
 title = 'Hello world'
+slug = 'hello'
 +++
 
 Hello hugo
