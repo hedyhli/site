@@ -1,6 +1,6 @@
 +++
-title = "{{ replace .Name "-" " " | title }}"
-date = {{ .Date }}
+title = '{{ replace .Name '-' ' ' | title }}'
+date = {{ .Date.Format "2006-01-02" }}
 draft = true
 outputs = ['html', 'gemtext']
 slug = {{ .Name }}

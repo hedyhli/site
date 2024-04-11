@@ -29,7 +29,10 @@
     {{ else -}}
       </h3>
       {{ end -}}
-      <p class="post-meta"><time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time></p>
+      <p class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+      &nbsp;·&nbsp; {{ partial "tags.html" . }}
+    </p>
       <p class="desc">{{ .Description }}</p>
   </li>
   {{- end }}

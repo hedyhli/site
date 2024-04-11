@@ -3,19 +3,14 @@
   <article itemprop="mainEntityOfPage">
     <header id="post-header">
       <h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
-      {{ with .Description -}}
-      <div class="post-description"><p>{{ . }}</p></div>
-      {{- end }}
       <div class="post-meta">
-        <p>Posted on
-        <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006-01-02" }}</time>
-        {{ partial "tags.html" . }}
-        {{ partial "lastmod.html" . }}
-        &nbsp;|&nbsp;
-        <a href="{{ .Site.Params.logURLPrefix }}content/{{ .File.Path }}">Changelog</a>
+        <p>
+        <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+          {{ partial "lastmod.html" (dict "Page" . "Prefix" "&nbsp;·&nbsp;" ) }}
+          &nbsp;·&nbsp; {{ .WordCount }} words
         </p>
+        <hr>
       </div>
-      <hr>
     </header>
     <section class="e-content" itemprop="articlebody">
       {{ partial "processed-content" . -}}
@@ -24,7 +19,7 @@
 </div>
 {{- end }}
 {{- define "after" }}
-<p id="#EOF">EOF</p>
+{{ if (eq .Params.EOF false) }}{{ else }}<p id="#EOF">EOF</p>{{ end }}
 <section class="comments">
   <p>
   Questions, comments? Send an email to my

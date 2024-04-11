@@ -1,5 +1,4 @@
-{{ if lt .Date .Lastmod -}}
-    &nbsp;|&nbsp;
-    Last updated on
-    <time itemprop="dateModified" class="dt-updated">{{ .Lastmod.Format "2006-01-02" }}</time>
+{{ if lt .Page.Date .Page.Lastmod -}}
+    {{ .Prefix | safeHTML }}Last updated on
+    <time itemprop="dateModified" class="dt-updated">{{ .Page.Lastmod.Format "Jan 2, 2006" }}</time>
 {{- end -}}

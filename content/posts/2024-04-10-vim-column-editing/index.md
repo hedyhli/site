@@ -7,6 +7,7 @@ outputs = ['html', 'gemtext']
 slug = 'vim-column-editing'
 tags = ['howto']
 title = 'Vim visual block mode for column editing'
+EOF = false
 +++
 
 The visual block mode in Vim lets you edit text simultaneously across adjacent

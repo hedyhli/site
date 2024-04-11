@@ -1,7 +1,5 @@
 {{ $taxonomy := "tags" -}}
-{{ with .Param $taxonomy -}}
-    &nbsp;|&nbsp;
-    Tagged
+{{ with .Param $taxonomy -}}<span class="tags">
     {{ range $index, $tag := . -}}{{- with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
     {{- if $index -}}, {{ end -}}<a href="{{ .RelPermalink }}">{{ $tag | urlize }}</a>{{- end -}}{{- end }}
-{{- end -}}
+</span>{{- end -}}
