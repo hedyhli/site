@@ -20,7 +20,7 @@ def log(fn):
         if DRY_RUN:
             print("would", end=" ")
         print(fn.__name__.replace('_', ' '),
-              '->'.join(p.removeprefix(GMI_DEST) for p in args))
+              ' -> '.join(p.removeprefix(GMI_DEST) for p in args))
         if not DRY_RUN:
             fn(*args)
     return inner
