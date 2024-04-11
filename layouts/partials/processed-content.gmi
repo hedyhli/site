@@ -1,0 +1,11 @@
+{{- /*
+     * https://discourse.gohugo.io/t/using-renderstring-to-expand-shortcodes/40994/7
+     * support for using shortcodes in gemtext whilst having content as raw text.
+     */ -}}
+{{- $content := printf "~~~\n\n%s\n~~~"  (trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML) | .Page.RenderString | htmlUnescape }}
+{{- $lines := split $content "\n" }}
+{{- range $i, $_ := $lines }}
+{{- if and $i (ne $i (sub (len $lines) 1)) }}
+{{ . }}
+{{- end -}}
+{{- end -}}
