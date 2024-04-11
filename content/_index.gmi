@@ -49,9 +49,9 @@ All public projects:
 ## Orbits (webrings)
 
 => gemini://raek.se/orbits/space-elevator/ The Space Elevator
-=> gemini://raek.se/orbits/space-elevator/prev?home.hedy.dev Previous
-=> gemini://raek.se/orbits/space-elevator/random?home.hedy.dev Random
-=> gemini://raek.se/orbits/space-elevator/next?home.hedy.dev Next
+=> gemini://raek.se/orbits/space-elevator/prev?gemini%3A%2F%2Fhome.hedy.dev%2F Previous
+=> gemini://raek.se/orbits/space-elevator/random?gemini%3A%2F%2Fhome.hedy.dev%2F Random
+=> gemini://raek.se/orbits/space-elevator/next?gemini%3A%2F%2Fhome.hedy.dev%2F Next
 
 => gemini://tilde.team/~khuxkm/leo/ LEO Orbit
 => gemini://tilde.team/~khuxkm/leo/prev.cgi?home.hedy.dev Previous
