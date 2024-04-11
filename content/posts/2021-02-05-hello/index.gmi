@@ -1,5 +1,5 @@
+Hello hugo
+
 hope it works!
 
 *test* <- shouldn't render as markdown
-
-=> ../.. back to index
