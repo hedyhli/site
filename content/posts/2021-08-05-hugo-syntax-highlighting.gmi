@@ -1,4 +1,4 @@
-Hugo uses chroma[1] as its syntax highlighter, and it's mostly compatible with pygments. All you basically need for having your code highlighted is to let chroma put the syntax classes in the generated HTML, for the correct language, and then make sure you have corresponding CSS for those classes.
+Hugo uses chroma[1] as its syntax highlighter. All you basically need for having your code highlighted is to let chroma put the syntax classes in the generated HTML, for the correct language, and then make sure you have corresponding CSS for those classes.
 
 => https://github.com/alecthomas/chroma 1: https://github.com/alecthomas/chroma
 
