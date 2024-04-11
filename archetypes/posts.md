@@ -6,7 +6,7 @@ tags = []
 highlight = false
 draft = true
 
-date = {{ .Date.Format "2006-01-02T15:04:05Z" }}
+date = {{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}
 draft = true
 outputs = ['html', 'gemtext']
 # Filename after the date

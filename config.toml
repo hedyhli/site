@@ -1,6 +1,7 @@
 baseURL = "https://home.hedy.dev/"
-languageCode = "en-us"
 title = "~hedy's home"
+languageCode = "en-us"
+timeZone = "UTC"
 
 # Yes. Because I like the /folder -> /folder/ redirects
 uglyurls = false

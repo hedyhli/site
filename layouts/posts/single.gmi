@@ -1,7 +1,7 @@
 {{ define "content" -}}
 # {{ $.Title }}
 
-{{ .Date.Format "Jan 02, 2006" }} · {{ .WordCount }} words
+{{ .Date.UTC.Format "Jan 02, 2006" }} · {{ .WordCount }} words
 {{ partial "lastmod.gmi" (dict "Page" . "Postfix" ".") }}
 --
 {{ partial "processed-content.gmi" . }}
