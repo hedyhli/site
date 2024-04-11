@@ -1,14 +1,11 @@
----
-title: "Tilde.Cafe Spotlight"
-date: 2022-03-27T15:50:41+08:00
-draft: false
-outputs:
-  - html
-  - gemtext
-slug: cafe-spotlight
-description: "Shiny cool stuff by fellow tilde.cafe users"
-
----
++++
+date = '2022-03-27T15:50:41+08:00'
+description = 'Shiny cool stuff by fellow tilde.cafe users'
+draft = false
+outputs = ['html', 'gemtext']
+slug = 'cafe-spotlight'
+title = 'Tilde.Cafe Spotlight'
++++
 
 View on gemini to check out the spotlight for gemini://tilde.cafe!
 

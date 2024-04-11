@@ -1,9 +1,7 @@
----
-title: home
-outputs:
-  - html
-  - gemtext
----
++++
+outputs = ['html', 'gemtext']
+title = 'home'
++++
 
 <center class="hero" style="margin-bottom: 5rem;">
 

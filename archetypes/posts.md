@@ -1,15 +1,14 @@
----
++++
 {{ $title := slicestr (replace .Name "-" " ") 11 -}}
-title: {{ $title | title }}
-description: {{ strings.FirstUpper $title }}
-highlight: false
-draft: true
+title = {{ $title | title }}
+description = {{ strings.FirstUpper $title }}
+highlight = false
+draft = true
 
-date: {{ .Date }}
-outputs:
-  - html
-  - gemtext
-slug: {{ slicestr .Name 11 }}
+date = {{ .Date }}
+draft = true
+outputs = ['html', 'gemtext']
+slug = {{ slicestr .Name 11 }}
++++
 
----
 

@@ -1,12 +1,9 @@
----
-date: 2021-08-03
-title: "About"
-outputs:
-  - html
-  - gemtext
-description: "Where people can find me online and software I use"
-
----
++++
+date = '2021-08-03'
+description = 'Where people can find me online and software I use'
+outputs = ['html', 'gemtext']
+title = 'About'
++++
 
 ## Places online
 

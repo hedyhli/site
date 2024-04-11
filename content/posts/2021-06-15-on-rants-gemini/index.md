@@ -1,16 +1,12 @@
----
-title: "On rants about gemini"
-date: 2021-06-15
-draft: false
-tags:
-  - gemini
-outputs:
-  - html
-  - gemtext
-slug: "on-rants-gemini"
-description: "A discussion about Gemini and addressing some of the complaints of the Gemini Protocol seen on the internet recently."
-
----
++++
+date = '2021-06-15'
+description = 'A discussion about Gemini and addressing some of the complaints of the Gemini Protocol seen on the internet recently.'
+draft = false
+outputs = ['html', 'gemtext']
+slug = 'on-rants-gemini'
+tags = ['gemini']
+title = 'On rants about gemini'
++++
 
 Recently there've been some discussions about how Gemini "doesn't fix anything" on Lobste.rs:
 

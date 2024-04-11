@@ -1,17 +1,13 @@
----
-title: "Setting up syntax highlighting for Hugo"
-highlight: true
-date: 2021-08-22
-draft: false
-outputs:
-  - html
-  - gemtext
-slug: hugo-syntax-highlighting
-tags:
-  - howto
-description: "How I've set up syntax highlighting for my website with dark mode support."
-
----
++++
+date = '2021-08-22'
+description = "How I've set up syntax highlighting for my website with dark mode support."
+draft = false
+highlight = true
+outputs = ['html', 'gemtext']
+slug = 'hugo-syntax-highlighting'
+tags = ['howto']
+title = 'Setting up syntax highlighting for Hugo'
++++
 
 Hugo uses [chroma](https://github.com/alecthomas/chroma) as its syntax
 highlighter. All you basically need for having your code highlighted is to let

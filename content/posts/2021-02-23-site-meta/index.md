@@ -1,14 +1,11 @@
----
-title: "How this site works"
-description: "A walkthrough of my workflows for the site and a gentle introduction to tilde.cafe and the Tildeverse."
-date: 2021-02-23
-draft: false
-outputs:
-  - html
-  - gemtext
-slug: "site-meta"
-
----
++++
+date = '2021-02-23'
+description = 'A walkthrough of my workflows for the site and a gentle introduction to tilde.cafe and the Tildeverse.'
+draft = false
+outputs = ['html', 'gemtext']
+slug = 'site-meta'
+title = 'How this site works'
++++
 
 <details open>
 <summary>2023 Update</summary>

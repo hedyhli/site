@@ -1,12 +1,7 @@
----
-title: Posts
-outputs:
-  - html
-  - gemtext
-  - gematom
-  - rss
-
----
++++
+outputs = ['html', 'gemtext', 'gematom', 'rss']
+title = 'Posts'
++++
 
 These are my long-form musings. I aim to write at least twice a year, but over
 the past two years I have clearly failed in this aspect. I'll try to write more

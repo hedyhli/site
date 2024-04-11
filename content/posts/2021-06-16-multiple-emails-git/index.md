@@ -1,18 +1,13 @@
----
-title: "Managing multiple emails for git across different computers"
-outputs:
-  - html
-  - gemtext
-tags:
-  - git
-  - howto
-date: 2021-06-16T23:50:00Z
-draft: false
-slug: "multiple-emails-git"
-highlight: true
-description: "How to have different git author configurations depending on the computer and have it tracked with dotfiles."
-
----
++++
+date = '2021-06-16T23:50:00Z'
+description = 'How to have different git author configurations depending on the computer and have it tracked with dotfiles.'
+draft = false
+highlight = true
+outputs = ['html', 'gemtext']
+slug = 'multiple-emails-git'
+tags = ['git', 'howto']
+title = 'Managing multiple emails for git across different computers'
++++
 
 As someone who code on multiple machines to work on different projects, I like to commit with different emails.
 

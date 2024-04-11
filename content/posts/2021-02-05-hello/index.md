@@ -1,14 +1,11 @@
----
-title: "Hello"
-date: 2021-02-05T01:44:15Z
-draft: false
-description: "I'm alive!"
-tags:
-  - test
-outputs:
-  - html
-  - gemtext
----
++++
+date = '2021-02-05T01:44:15Z'
+description = "I'm alive!"
+draft = false
+outputs = ['html', 'gemtext']
+tags = ['test']
+title = 'Hello'
++++
 
 Hello hugo
 

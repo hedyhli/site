@@ -1,17 +1,13 @@
----
-title: "Vim visual block mode for column editing"
-description: The visual block mode in Vim/Neovim is quite powerful. You can use it for "column" editing and vertically pasting blocks of text similar to paste(1).
-date: 2024-04-10T13:22:46+08:00
-draft: false
-outputs:
-  - html
-  - gemtext
-tags:
-  - howto
-slug: vim-column-editing
-footnotes_heading: Footnotes
-
----
++++
+date = '2024-04-10T05:22:46Z'
+description = 'The visual block mode in Vim/Neovim is quite powerful. You can use it for "column" editing and vertically pasting blocks of text similar to paste(1).'
+draft = false
+footnotes_heading = 'Footnotes'
+outputs = ['html', 'gemtext']
+slug = 'vim-column-editing'
+tags = ['howto']
+title = 'Vim visual block mode for column editing'
++++
 
 The visual block mode in Vim lets you edit text simultaneously across adjacent
 lines, similar to the "Alt-drag" feature in modern editors, but there's more you
