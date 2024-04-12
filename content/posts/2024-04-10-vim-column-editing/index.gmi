@@ -101,7 +101,7 @@ List title 1 List title 2
 - Item 3     - Item 3
 ```
 
-_Voila!_ The two lists are now merged into two columns side by side.
+Voila! The two lists are now merged into two columns side by side.
 
 You can easily adjust the spacing between the columns using visual block mode. Place your cursor on the space in-between the two list titles:
 
