@@ -45,6 +45,10 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 ### deploy
 - **hut** - publishes HTML/gemini files to srht.site
 
+### lint
+- `pnpm` - install dev dependencies in `package.json`
+- `ruby >= 2.7` - for `htmlproofer`
+
 ## hardcoded values
 
 ### resources

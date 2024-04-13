@@ -1,0 +1,18 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+      "doctype-style": ["off"],
+      "void-style": ["error", { "style": "selfclosing" }],
+      "valid-id": ["warn", { "relaxed": true}],
+      "no-autoplay": ["warn"],
+      "no-inline-style": ["warn", { "allowedProperties": [
+          "display",
+          "font-size",
+          "font-family",
+          "margin-bottom",
+          "margin-top",
+          "margin-left",
+          "margin-right"
+      ] }]
+  }
+}

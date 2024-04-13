@@ -1,3 +1,6 @@
 public/
 resources/
 .hugo_build.lock
+tmp
+node_modules
+hint-report

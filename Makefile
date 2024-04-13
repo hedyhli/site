@@ -21,6 +21,17 @@ DEPLOY_GEMINI_DIST=gemini.tar.gz
 
 .DEFAULT_GOAL := all
 
+lint-css:
+	pnpm exec stylelint --config .config/stylelint.json --rd --rdd assets/main.css
+
+lint-html-validate:
+	pnpm exec html-validate --config .config/htmlvalidate.json $(HTML_DEST)
+
+lint-html-proofer:
+	htmlproofer $(HTML_DEST) --checks Links,Images,Scripts,Favicon,OpenGraph --no-allow-missing-href --no-ignore-empty-alt
+
+lint: lint-css lint-html-validate lint-html-proofer
+
 deploy-html:
 	tar -C $(HTML_DEST) -cvz . > $(DEPLOY_HTML_DIST)
 	$(HUT) pages publish --protocol HTTPS -d $(DEPLOY_DOMAIN) $(DEPLOY_HTML_DIST)
@@ -58,7 +69,7 @@ html:
 	$(RSYNC) $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
 	@# Manually include gemini tag (because it was excluded above)
 	$(RSYNC) $(RSYNC_FLAGS) public/tags/gemini $(HTML_DEST)/tags/
-	$(PRETTIER) --write $(HTML_DEST)"/**/*.html"
+	$(PRETTIER) --config .config/prettier.toml --write $(HTML_DEST)"/**/*.html"
 
 finish-clean:
 	rm -rf $(GEMINI_DEST)-back $(HTML_DEST)-back
