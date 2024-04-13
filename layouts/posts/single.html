@@ -5,7 +5,7 @@
       <h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
       <div class="post-meta">
         <p>
-        <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
+        <time itemprop="datePublished" datetime="{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
           {{- partial "lastmod.html" (dict "Page" . "Prefix" "&nbsp; · &nbsp;" ) }}
           &nbsp;·&nbsp; {{ .WordCount }} words
         </p>
