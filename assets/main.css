@@ -12,76 +12,65 @@
  */
 
 :root {
-	--base-fontsize: 1rem;
+    --base-fontsize: 1rem;
 
-	/* Major third scale progression - see https://type-scale.com/ */
-	--header-scale: 1.25;
-	/* I don't want h1, h2, and h3 to be too big */
-	--header-scale-minor: 1.1;
+    /* Major third scale progression - see https://type-scale.com/ */
+    --header-scale: 1.25;
+    /* I don't want h1, h2, and h3 to be too big */
+    --header-scale-minor: 1.1;
 
-	/* Line height is set to the "Golden ratio" for optimal legibility */
-	--line-height: 1.618;
+    /* Line height is set to the "Golden ratio" for optimal legibility */
+    --line-height: 1.618;
 
-	--mono-font: Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-	--bg: #fff;
-	--accent-bg: #f7f4fb;
-	--accent-bg-light: #f2f2f2;
+    --mono-font: Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    --bg: #fff;
+    --accent-bg: #f7f4fb;
+    --accent-bg-light: #f2f2f2;
     --code-bg: #f2f2f2;
-	--text: #0a0a0a;
-	--text-light: #787878;
-	--non-text-light: #95aac0;
+    --text: #0a0a0a;
+    --text-light: #787878;
+    --non-text-light: #95aac0;
 
-	--border: #bbb;
-	--border-light: var(--border);
-	--accent: #5c659b;
-	--accent-light: #7890c1;
-	--code: #d81b60;
-	--preformatted: #444;
-	--marked: #ffdd33;
-	--disabled: #efefef;
+    --border: #bbb;
+    --border-light: var(--border);
+    --accent: #5c659b;
+    --accent-light: #7890c1;
+    --code: #d81b60;
+    --preformatted: #444;
+    --marked: #ffdd33;
+    --disabled: #efefef;
 
-	--shadow-color: #fff;
-
-	--link: #3c63e8;
-	--link-hover: #93aaf9;
-	--link-visited: #6971a0;
-
-	--link-alt: var(--link);
-
-	/* My theme stuff */
-	--theme-purple: #3d4573;
+    --link: #3c63e8;
+    --link-visited: #6971a0;
+    --link-alt: var(--link);
 }
+
 @media (prefers-color-scheme: dark) {
-	:root {
-		--bg: #232326;
-		--accent-bg: #44475a;
-		--accent-bg-light: #303035;
-		--code-bg: #3e3e4b;
-		--text: #eee;
-		--text-light: #cecece;
-		--non-text-light: #999fbf;
+    :root {
+        --bg: #232326;
+        --accent-bg: #44475a;
+        --accent-bg-light: #303035;
+        --code-bg: #3e3e4b;
+        --text: #eee;
+        --text-light: #cecece;
+        --non-text-light: #999fbf;
 
-		--border: #aaa;
-		--border-light: #565656;
-		--accent: #8be9fd;
-		--accent-light: #ece1a1;
-		--code: #f06292;
-		--preformatted: #ccc;
-		--disabled: #111;
-
-		--shadow-color: #36373b;
-        --theme-purple: #af9dea;
+        --border: #aaa;
+        --border-light: #565656;
+        --accent: #8be9fd;
+        --accent-light: #ece1a1;
+        --code: #f06292;
+        --preformatted: #ccc;
+        --disabled: #111;
 
         --link: #cddfff;
-        --link-hover: #8c9cba;
         --link-visited: #c3b1ff;
-        /* Why doesn't the dracula pink look better? #ff79c6 */
         --link-alt: var(--accent-light);
-	}
+    }
 
-	img:not(.pfp), video {
-		opacity: .6;
-	}
+    img:not(.pfp), video {
+        opacity: .6;
+    }
 }
 
 body {
@@ -91,149 +80,38 @@ body {
      * in their browser settings, so I help them.
      * But... that's barely an excuse for me to use a big font-stack, I know */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    /* font-family: Roboto, sans-serif; */
 	font-size: var(--base-fontsize);
 	line-height: var(--line-height);
 
 	margin: auto;
 }
 
-main, #after-content {
-	padding: 0 5%;
+/*******************************************************************
+ * Body elements
+ */
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 1.1rem;
 }
-footer {
-    margin: 0 5%;
+h1 {
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
+	margin-top: calc(var(--line-height) * 1.3rem);
 }
-
-h1 .pfp {
-    height: 2.5rem;
-    vertical-align: text-top;
+h2 {
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
+	margin-top: calc(var(--line-height) * 1.1rem);
 }
-
-nav .pfp {
-    height: 1.7rem;
-    vertical-align: middle;
+h3 {
+	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor));
 }
-
-
-.pfp {
-    border: 1px solid var(--border);
-    border-radius: .35em;
+h4 {
+	font-size: calc(var(--base-fontsize) * var(--header-scale));
 }
-
-.pfp-name {
-	text-decoration: none;
-	/* color: var(--theme-purple); */
-	padding-left: 6px;
-	padding-top: 0;
+h5 {
+	font-size: var(--base-fontsize);
 }
-nav .pfp-name {
-	/* color: var(--accent-light); /1* Consistency with other nav items *1/ */
-    /* To have the icon and the text (.pfp-text) align */
-	display: table;
+h6 {
+	font-size: calc(var(--base-fontsize) / var(--header-scale));
 }
-nav .pfp-text {
-    /* TODO: Hardcoded alignment is ugly. Please find a better fix */
-    vertical-align: top;
-    padding-left: 0.5rem;
-    padding-top: 0.1rem;
-    font-size: 1.1rem;
-    display: inline-block;
-}
-
-/* Homepage stuff */
-.blink {
-    opacity: 0;
-    color: var(--text-light);
-    animation: blinker 1s step-start 5;
-}
-@keyframes blinker {
-    50% {
-        opacity: 100%;
-    }
-}
-
-/* Differentiating between normal content links and meta content links */
-.meta a, .post-meta :not(.tags) a, footer a, #after-content a {
-	text-decoration: none;
-    @media (prefers-color-scheme: dark) {
-        color: var(--link-alt);
-    }
-}
-.meta a:hover, .post-meta :not(.tags) a:hover, footer a:hover, #after-content a:hover {
-    color: var(--accent-light);
-    text-decoration: underline;
-    @media (prefers-color-scheme: dark) {
-        opacity: .75;
-    }
-}
-.post-meta .tags a, .post-meta .tags a:visited {
-    text-decoration: underline;
-    color: var(--text-light);
-}
-
-nav a {
-	text-decoration: none;
-	color: var(--link-alt);
-}
-
-/* To have the left nav item (homepage) and right items (other pages) display
- * on same line */
-nav strong > a {
-    margin-top: 1rem;
-    font-weight: 650;
-    padding-bottom: 0;
-}
-nav strong > a, nav ul li {
-    margin-right: 1.5rem;
-}
-
-nav {
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 4rem;
-    padding: 1rem 0.3rem;
-    padding-top: 1.5rem;
-    font-weight: 500;
-}
-@media (min-width: 601px) {
-    nav ul {
-        float: right;
-    }
-}
-@media (max-width: 600px) {
-    /* Center-aligned nav on mobile */
-    nav {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    nav a .pfp-name {
-        color: var(--text);
-    }
-}
-
-nav .selected {
-    border-bottom: 2.5px solid;
-}
-
-/********************************************************************
- * Idea from seirdy.one to have unstyled unordered-list nav
- * Step 1 to making the single-line nav: remove the bullet padding. */
-nav ul, nav a {
-	padding: 0;
-	padding-bottom: 0.5rem;
-}
-/* Step 2: remove bullets and make elements inline.
- * Also: bump up the line-height and margins to increase space between
- * tap-targets (SC 2.5.5). Google a11y guidelines require 8 CSS pixels
- * between tap targets. */
-nav ul li, nav strong > a {
-	display: inline-block;
-}
-/* END borrowed code from seirdy.one
- ********************************************************************/
-
 
 blockquote {
 	margin-left: 0;
@@ -264,43 +142,14 @@ th {
 	font-weight: bold;
 }
 
-/* No thanks */
-/* tr:nth-child(even) { */
-/* 	/1* Set every other cell slightly darker. Improves readability. *1/ */
-/* 	background: var(--accent-bg); */
-/* } */
+small {
+    font-size: .8rem;
+    color: var(--text-light);
+}
 
-main, #after-content {
-    /* For better reading experience.
-     * I don't want paragraphs to be too narrow, it looks ugly; Though I don't
-     * want them to be too wide, either. Reading experience is important:
-     * https://en.wikipedia.org/wiki/Eye_movement_in_reading */
-	max-width: 45rem;
-
-	margin: auto;
-}
-#after-content {
-	margin-bottom: 4rem;
-}
-#after-content:empty {
-    display: none;
-}
-footer {
-	text-align: center;
-	font-size: .9rem;
-	color: var(--text-light);
-	padding: 1rem 0 1rem 0;
-}
-footer a {
-    padding-left: .5rem;
-    padding-right: .5rem;
-}
-header p {
-	text-align: left;
-}
-header pre {
-	margin-bottom: 2rem;
-	max-width:auto;
+ul li {
+    /* Fix sizing of tap target when it's a list of links */
+    margin-bottom: 0.5rem;
 }
 
 /* Use mono font for code like elements */
@@ -350,54 +199,12 @@ pre code {
 	tab-size: 4;
 }
 
-.post-date {
-	margin-right: 1.5rem;
-}
-
-a {
-    /* border-bottom: 1px solid var(--accent); */
-    color: var(--link);
-}
-a:visited {
-    color: var(--link-visited);
-}
-/* Don't change colors for visited links on nav, it makes nav bar look inconsistent */
-nav a:visited {
-    color: var(--link-alt);
-}
-.post-meta a:visited, .meta a:visited, footer a:visited, .after-content a:visited {
-    color: var(--link-alt);
-}
-main a:hover {
-	opacity: .75;
-}
-nav a#home:hover {
-	opacity: .75;
-}
-a:focus, form:focus {
-    outline: 1px solid var(--border);
-	text-decoration: none;
-}
-nav a:focus {
-    outline: none;
-}
-
-/* nav a:not(nav strong > a):not(nav ul li:last-child a):hover { */
-/* 	border-bottom: 2.5px solid; */
-/* } */
-nav li a:hover {
-	border-bottom: 2.5px solid;
-}
-
-header {top: 1px;}
-
 fieldset {
 	border: 0;
 	padding: 0;
 	margin: 0;
 }
 
-/* Misc body elements */
 hr {
 	color: var(--border-light);
 	border-color: var(--border-light);
@@ -448,7 +255,6 @@ button[disabled],
 input[type="submit"][disabled],
 input[type="reset"][disabled],
 input[type="button"][disabled] {
-	cursor: default;
 	opacity: .5;
 	cursor: not-allowed;
 }
@@ -504,34 +310,222 @@ details[open]>*:last-child {
 	margin-bottom: 0;
 }
 
-/* Format headers */
-h1, h2, h3, h4, h5, h6 {
-	margin-bottom: 1.1rem;
-}
-h1 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
-	margin-top: calc(var(--line-height) * 1.3rem);
-}
-
-h2 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
-	margin-top: calc(var(--line-height) * 1.1rem);
+/*******************************************************************
+ * Nav
+ */
+nav {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 4rem;
+    padding: 1rem 0.3rem;
+    padding-top: 1.5rem;
+    font-weight: 500;
 }
 
-h3 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor));
+nav div {
+    display: inline;
 }
 
-h4 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale));
+nav a {
+	text-decoration: none;
+	color: var(--link-alt);
 }
 
-h5 {
-	font-size: var(--base-fontsize);
+/* To have the left nav item (homepage) and right items (other pages) display
+ * on same line */
+nav .nav-left a {
+    margin-top: 1rem;
+    font-weight: 650;
+    padding-bottom: 0;
+}
+nav .nav-left a, nav ul li {
+    margin-right: 1.5rem;
 }
 
-h6 {
-	font-size: calc(var(--base-fontsize) / var(--header-scale));
+@media (min-width: 601px) {
+    nav .nav-right {
+        float: right;
+    }
+}
+@media (max-width: 600px) {
+    /* Center-aligned nav on mobile */
+    nav {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    nav a .pfp-name {
+        color: var(--text);
+    }
+}
+
+nav .selected {
+    border-bottom: 2.5px solid;
+}
+
+/* Idea from seirdy.one to have unstyled unordered-list nav */
+nav ul, nav a {
+	padding: 0;
+	padding-bottom: 0.5rem;
+}
+nav ul li, nav strong > a {
+	display: inline-block;
+}
+
+.pfp {
+    border: 1px solid var(--border);
+    border-radius: .35em;
+}
+
+.pfp-name {
+	text-decoration: none;
+	padding-left: 6px;
+	padding-top: 0;
+}
+
+nav .pfp {
+    height: 1.7rem;
+    vertical-align: middle;
+}
+
+nav .pfp-name {
+	/* color: var(--accent-light); /1* Consistency with other nav items *1/ */
+    /* To have the icon and the text (.pfp-text) align */
+	display: table;
+}
+
+h1 .pfp {
+    height: 2.5rem;
+    vertical-align: text-top;
+}
+
+nav .pfp-text {
+    /* TODO: Hardcoded alignment is ugly. Please find a better fix */
+    vertical-align: top;
+    padding-left: 0.5rem;
+    padding-top: 0.1rem;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+/*******************************************************************
+ * Homepage
+ */
+.hero {
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+}
+
+.blink {
+    opacity: 0;
+    color: var(--text-light);
+    animation: blinker 1s step-start 5;
+    font-family: var(--mono-font);
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 100%;
+    }
+}
+
+/*******************************************************************
+ * Page sections
+ */
+/* Differentiating between normal content links and meta content links */
+.meta a, .post-meta :not(.tags) a, footer a, #after-content a {
+	text-decoration: none;
+    @media (prefers-color-scheme: dark) {
+        color: var(--link-alt);
+    }
+}
+.meta a:hover, .post-meta :not(.tags) a:hover, footer a:hover, #after-content a:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+    @media (prefers-color-scheme: dark) {
+        opacity: .75;
+    }
+}
+.post-meta .tags a, .post-meta .tags a:visited {
+    text-decoration: underline;
+    color: var(--text-light);
+}
+
+main, #after-content {
+    /* For better reading experience.
+     * I don't want paragraphs to be too narrow, it looks ugly; Though I don't
+     * want them to be too wide, either. Reading experience is important:
+     * https://en.wikipedia.org/wiki/Eye_movement_in_reading */
+	max-width: 45rem;
+
+	margin: auto;
+	padding: 0 5%;
+}
+#after-content {
+	margin-bottom: 4rem;
+}
+#after-content:empty {
+    display: none;
+}
+footer {
+	text-align: center;
+	font-size: .9rem;
+	color: var(--text-light);
+	padding: 1rem 0 1rem 0;
+    margin: 0 5%;
+}
+footer a {
+    padding-left: .5rem;
+    padding-right: .5rem;
+}
+header p {
+	text-align: left;
+}
+header pre {
+	margin-bottom: 2rem;
+	max-width:auto;
+}
+
+.post-date {
+	margin-right: 1.5rem;
+}
+
+/*******************************************************************
+ * Links
+ */
+a {
+    color: var(--link);
+}
+a:visited {
+    color: var(--link-visited);
+}
+/* Don't change colors for visited links on nav, it makes nav bar look inconsistent */
+nav a:visited {
+    color: var(--link-alt);
+}
+.post-meta a:visited, .meta a:visited, footer a:visited, .after-content a:visited {
+    color: var(--link-alt);
+}
+main a:hover {
+	opacity: .75;
+}
+nav a#home:hover {
+	opacity: .75;
+}
+a:focus, form:focus {
+    outline: 1px solid var(--border);
+	text-decoration: none;
+}
+nav a:focus {
+    outline: none;
+}
+
+nav li a:hover {
+	border-bottom: 2.5px solid;
 }
 
 a.anchor {
@@ -544,6 +538,9 @@ a.anchor:hover {
     text-decoration: underline;
 }
 
+/*******************************************************************
+ * Post components
+ */
 #post-header h1 {
 	margin-bottom: 0.4rem;
 }
@@ -572,16 +569,6 @@ a.anchor:hover {
     margin-top: none;
 }
 
-small {
-    font-size: .8rem;
-    color: var(--text-light);
-}
-
-ul li {
-    /* Fix sizing of tap target when i's a list of links */
-    margin-bottom: 0.5rem;
-}
-
 ul.post-list {
     list-style: none;
     padding-left: 0;
@@ -598,6 +585,9 @@ ul.post-list {
 .post-list .post-meta {
     color: var(--text);
 }
+/*******************************************************************
+ * Chroma
+ */
 .chroma .lntable pre {
     border: 0;
     padding: 0;
