@@ -11,57 +11,41 @@
 {{- end -}}
 <!--Have concerns? Drop me an email with your constructive criticism.-->
 <script data-goatcounter="https://ultimategopher.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="https://gc.zgo.at/count.js"></script>
 
 <!--favicon-->
 {{ $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}
-{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml" />` $favicon_svg.RelPermalink | safeHTML }}
+{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml">` $favicon_svg.RelPermalink | safeHTML }}
 {{ $favicon_png := resources.Get "/favicon.png" | resources.Fingerprint "md5" }}
-{{- printf `<link rel="icon" sizes="192x192" href="%s" type="image/png" />` $favicon_png.RelPermalink | safeHTML -}}
+{{- printf `<link rel="icon" sizes="192x192" href="%s" type="image/png">` $favicon_png.RelPermalink | safeHTML -}}
 
-<meta name="color-scheme" content="light dark" />
-<meta name="format-detection" content="telephone=no" />
+<meta name="color-scheme" content="light dark">
+<meta name="format-detection" content="telephone=no">
 
-<link rel="webmention" href="https://webmention.io/home.hedy.dev/webmention" />
-<link rel="pingback" href="https://webmention.io/ome.hedy.dev/xmlrpc" />
-<link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}posts/index.xml" title="{{ $.Site.Title }}">
+<link rel="webmention" href="https://webmention.io/home.hedy.dev/webmention">
+<link rel="pingback" href="https://webmention.io/ome.hedy.dev/xmlrpc">
+<link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="{{ $.Site.Title }}">
 {{- if ne .Site.BaseURL "https://home.hedy.dev/" -}}
 <meta name="robots" content="noindex">
 {{- end -}}
 
 <meta name="color-scheme" content="light dark">
 {{ $css := resources.Get "main.css" | minify -}}
-<style>{{ $css.Content | safeCSS }}</style>
-<!--
-	Syntax Highlighting ZONE :D
-
-	1. has different themes for light and dark mode
-	   light = monokailight
-	   dark = dracula!
-	2. Only adds the syntax css if the page needs it. The highlight param
-	   is turned off by default, hence only posts and pages that have the
-	   "highlight = true" will get this style :)
-	3. Doesn't require an extra request. The two CSS files are saved in my
-	   assets, and is tracked with git.
-	4. IDK why but the dracula file had many classes set as just "{  }" and
-	   makes it super unreadable in dark mode, so I've made all the blank ones
-	   set color to white so it can be read in dark mode :>
--->
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
 {{ if .Params.highlight -}}
 {{ $syntaxlight := resources.Get "syntax/light.css" | minify -}}
 {{ $syntaxdark := resources.Get "syntax/dark.css" | minify  -}}
 {{ $syntaxcustom := resources.Get "syntax/custom.css" | minify  -}}
 <style>
 	{{- $syntaxlight.Content | safeCSS }}
-
 	@media (prefers-color-scheme: dark) {
 		{{- $syntaxdark.Content | safeCSS -}}
 	}
 	{{- $syntaxcustom.Content | safeCSS }}
 </style>
 {{ end -}}
-<!-- END Syntax Highlighting ZONE!! -->
-{{ if eq .Permalink $.Site.BaseURL -}}
+
+{{ if eq .RelPermalink "/" -}}
 <title>{{ $.Site.Title }}</title>
 {{ else -}}
 <title>{{ .Title }}{{ .Site.Params.suffixTitle }}</title>
