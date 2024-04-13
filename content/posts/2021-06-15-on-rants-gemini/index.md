@@ -15,8 +15,8 @@ Recently there've been some discussions about how Gemini "doesn't fix anything" 
 
 As well as a few posts related to that on smol.pub:
 
-* [bentsai.smol.pub/embracing-constraints](//bentsai.smol.pub/embracing-constraints)
-* [mieum.smol.pub/for-the-love-of-gemini](//mieum.smol.pub/for-the-love-of-gemini)
+* [bentsai.smol.pub/embracing-constraints](https://bentsai.smol.pub/embracing-constraints)
+* [mieum.smol.pub/for-the-love-of-gemini](https://mieum.smol.pub/for-the-love-of-gemini)
 
 I think that those comments on Lobsters can be summarized into these main points:
 
@@ -71,8 +71,8 @@ You don't have to ditch the web to use Gemini. You get to choose what you write 
 * [Why Gemini is Not My Favorite Internet Protocol (Lobste.rs)](https://lobste.rs/s/vhlagb/why_gemini_is_not_my_favorite_internet)
 * [Gemini is Useless (Lobste.rs)](https://lobste.rs/s/3nsvkk/gemini_is_useless)
 * [Gemini is Useless (HN)](https://news.ycombinator.com/item?id=27490769)
-* [bentsai.smol.pub/embracing-constraints](//bentsai.smol.pub/embracing-constraints)
-* [mieum.smol.pub/for-the-love-of-gemini](//mieum.smol.pub/for-the-love-of-gemini)
+* [bentsai.smol.pub/embracing-constraints](https://bentsai.smol.pub/embracing-constraints)
+* [mieum.smol.pub/for-the-love-of-gemini](https://mieum.smol.pub/for-the-love-of-gemini)
 * [What is this Gemini thing anyway, and why am I excited about it?  (Lobste.rs)](https://lobste.rs/s/ivryqt/what_is_this_gemini_thing_anyway_why_am_i)
-* [mozz's message posted on Station (via Gemini to HTTP Proxy)](https://proxy.flounder.online/station.martinrue.com/mozz/d29f6cf900b04aef9e7a2332c2098f13)
+* [mozz's message posted on Station (via Gemini to HTTP Proxy)](https://portal.mozz.us/gemini/station.martinrue.com/mozz/d29f6cf900b04aef9e7a2332c2098f13)
 * [Beyond Gemini? (In response to "Why Gemini is not my favourite internet protocol")](https://thomask.sdf.org/blog/2021/06/12/beyond-gemini.html)

@@ -38,7 +38,8 @@ differences, remains mostly accurate.
 
 This is where my gemlog/blog lives. It is statically generated
 with [Hugo](https://gohugo.io/) and rsync-ed to my `public_html` and `public_gemini`
-directories for HTML and gemini on [tilde.cafe](tilde.cafe) respectively on build.
+directories for HTML and gemini on [tilde.cafe](https://tilde.cafe) respectively
+on build.
 
 The site source is always linked at the footer, pointing to the [sourcehut
 repo](https://sr.ht/~hedy/site) though the repo is also mirrored on
@@ -55,9 +56,10 @@ repo](https://sr.ht/~hedy/site) though the repo is also mirrored on
 A **Pubnix** is a Public Access Unix System — in other words, a unix machine on
 the internet that provides access to other people on the internet — which
 started before WWW and even the public internet. Pubnixes you may have heard of
-[SDF](https://sdf.org), [Circumlunar.Space](https://circumlunar.space/) (yes,
-the very same one of the [gemini homepage](https://gemini.circumlunar.space)),
-and [tilde.club](https://tilde.club).
+[SDF](https://sdf.org),
+[Circumlunar.Space](https://portal.mozz.us/gopher/circumlunar.space/) (yes, the
+very same one of the [gemini homepage](https://gemini.circumlunar.space)), and
+[tilde.club](https://tilde.club).
 
 [~cmccabe](https://tilde.team/~cmccabe/) has a [Pubnix History
 Project](https://gopher.mills.io/rawtext.club/1/~cmccabe/pubnixhist/) for you to

@@ -34,7 +34,7 @@ The site source is always linked at the footer, pointing to the SourceHut repo. 
 A **Pubnix** is a Public Access Unix System — in other words, a unix machine on the internet that provides access to other people on the internet — which started before WWW and even the public internet. Pubnixes you may have heard of SDF, Circumlunar.Space (yes, the very same one of the former gemini homepage), and tilde.club.
 
 => gemini://sdf.org
-=> https://circumlunar.space/
+=> gopher://circumlunar.space/
 => gemini://gemini.circumlunar.space
 
 ~cmccabe has a Pubnix History Project for you to explore if you're interested in learning more about pubnixes.

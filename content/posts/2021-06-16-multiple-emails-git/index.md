@@ -6,7 +6,7 @@ highlight = true
 outputs = ['html', 'gemtext']
 slug = 'multiple-emails-git'
 tags = ['howto', 'git']
-title = 'Managing multiple emails for git across different computers'
+title = 'Multiple emails in git for different computers'
 +++
 
 As someone who code on multiple machines to work on different projects, I like to commit with different emails.
