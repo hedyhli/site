@@ -22,10 +22,10 @@
 {{ if (eq .Params.EOF false) }}{{ else }}<p id="#EOF">EOF</p>{{ end }}
 <section class="comments">
   <p>
-  Questions, comments? Send an email to my
-  <a href="mailto:~hedy/posts@lists.sr.ht">blog-post mailing list</a>
+  Questions, comments? Send an email to my{{ $subject := printf "Re: %s" .Title }}
+  <a href="mailto:~hedy/posts@lists.sr.ht?subject={{ $subject }}">blog-post mailing list</a>
   (with <a href="https://useplaintext.email">plain text</a>)
-  or to me <a href="mailto:{{ .Site.Author.email }}">directly</a>.
+  or to me <a href="mailto:{{ .Site.Author.email }}?subject={{ $subject }}">privately</a>.
   </p>
 </section>
 {{- end }}

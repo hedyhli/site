@@ -9,7 +9,10 @@ often.
 
 Comments can be sent to my [public mailing
 list](https://lists.sr.ht/~hedy/posts) where I'll also send new posts (after
-2023) as plain text to. If you subscribe to the list, it acts like a newsletter
-where you'll receive new posts from your inbox. Posting and subscribing happen
-solely through emails. No external auth required.
+2023) as plain text. If you subscribe to the list, it acts like a newsletter
+where you'll receive new posts from your inbox, and you can reply to the email
+to start a public discussion.
+
+Subscribing and adding comments happen solely through emails. No external auth
+required.
 

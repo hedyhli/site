@@ -42,6 +42,7 @@ nonsymlink-clean:
 	find $(GEMINI_DEST) -not -type l -type f -delete
 
 gen:
+	rm -rf $(HUGO_CACHEDIR)/site/filecache/getresource
 	$(HUGO) $(HUGO_FLAGS) --cacheDir $(HUGO_CACHEDIR)
 
 gemini:
