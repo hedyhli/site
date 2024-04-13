@@ -10,5 +10,5 @@ Last updated {{ .Lastmod.UTC.Format "2006-01-02" }}{{ end }}
 {{ trim (readFile (replace $.File.Path ".md" ".gmi")) "\n" | safeHTML }}
 
 --
-=> {{ replace .Site.BaseURL "https:" "gemini:" }} Home
+=> / Home
 {{- end }}
