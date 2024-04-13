@@ -3,16 +3,6 @@ outputs = ['html', 'gemtext']
 title = 'home'
 +++
 
-<center class="hero" style="margin-bottom: 5rem;">
-
-<h1><span style="font-size: 2.2rem;">{{% pfp-name %}}</span><span class="blink" style="font-family: var(--mono-font)">▂</span></h1>
-
-[Fediverse](https://tilde.zone/@hedy) ⋅ [GitHub](https://github.com/hedyhli) ⋅ [SourceHut](https://sr.ht/~hedy)
-
-</center>
-
----
-
 ## Contacts
 
 Preferably <a rel="me" href="mailto:hedy.dev@protonmail.com">email</a> or
