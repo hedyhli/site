@@ -3,4 +3,5 @@
 {{ $old := "<table>" -}}
 {{ $new := printf "<table class=\"%s\">" $class -}}
 {{ $htmlTable := replace $htmlTable $old $new -}}
+{{ "<!-- [html-validate-disable-block wcag/h63: markdown does not generate tables with scope attribute] -->" | safeHTML }}
 {{ $htmlTable | safeHTML  }}
