@@ -1,5 +1,5 @@
 +++
-outputs = ['html', 'gemtext', 'gematom', 'rss']
+outputs = ['html', 'gemtext', 'gematom', 'rss', 'atom']
 title = 'Posts'
 +++
 
