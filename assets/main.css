@@ -595,10 +595,9 @@ ul.post-list {
     margin-top: 0;
     margin-bottom: 0;
 }
-.post-list .desc {
-    margin-top: 0.5rem;
+.post-list .post-meta {
+    color: var(--text);
 }
-
 .chroma .lntable pre {
     border: 0;
     padding: 0;

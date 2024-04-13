@@ -31,10 +31,8 @@
       </h3>
       {{ end -}}
       <p class="post-meta">
-      <time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-      {{- partial "tags.html" (dict "Page" . "Prefix" "&nbsp; · &nbsp;") -}}
+      <time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time>&nbsp; · &nbsp;<span class="desc">{{ .Description }}</span>
       </p>
-      <p class="desc">{{ .Description }}</p>
   </li>
   {{- end }}
 </ul>
