@@ -1,2 +1,1 @@
-{{ $lastmod := .Page.Lastmod -}}
-{{- if lt .Page.Date $lastmod }}{{ with .Prefix }}{{ . }}{{ end }}Last updated on {{ $lastmod.Format "Jan 02, 2006" }}{{ with .Postfix }}{{ . }}{{ end }}{{ end -}}
+{{ $lastmod := .Page.Lastmod -}}{{ if lt .Page.Date $lastmod }}{{ with .Prefix }}{{ . }}{{ end }}{{ $lastmod.Format "Jan 02, 2006" }}{{ with .Postfix }}{{ . }}{{ end }}{{ end -}}

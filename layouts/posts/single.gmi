@@ -1,17 +1,20 @@
 {{ define "content" -}}
 # {{ $.Title }}
 
-{{ .Date.UTC.Format "Jan 02, 2006" }} · {{ .WordCount }} words
-{{ partial "lastmod.gmi" (dict "Page" . "Postfix" ".") }}
---
+{{ .Date.UTC.Format "Jan 02, 2006" }}
+
 {{ partial "processed-content.gmi" . }}
 
---
+***
+
 EOF
 {{ $subject := urlquery (printf "Re: %s" .Title) }}
 => {{ with .Params.publicReplyTo }}{{ . |safeHTML }}{{ else }}mailto:~hedy/posts@lists.sr.ht?subject={{ $subject }}{{ end }} Reply via email publicly (plain-text only)
 => mailto:{{ .Site.Author.email }}?subject={{ $subject }} Reply via email privately
 
+{{ .WordCount }} words
+{{ partial "lastmod.gmi" (dict "Page" . "Prefix" "This post was last updated on " "Postfix" ".") }}
 
-=> / Home
+=> . ← Gemlog
+=> / ← Capsule home
 {{- end }}
