@@ -1,7 +1,7 @@
 # ~hedy's site
 
 This is my website and gemini capsule source code. Link is currently
-hedy.tilde.cafe on both [web](https://home.hedy.dev) and
+home.hedy.dev on both [web](https://home.hedy.dev) and
 [gemini](gemini://home.hedy.dev).
 
 As of now, static site hosting is provided by srht.site.
