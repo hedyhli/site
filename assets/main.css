@@ -51,7 +51,7 @@
         --accent-bg: #44475a;
         --accent-bg-light: #303035;
         --code-bg: #3e3e4b;
-        --text: #eee;
+        --text: #dfdfe6;
         --text-light: #b8b8c6;
         --non-text-light: #999fbf;
 
@@ -80,6 +80,7 @@ body {
      * in their browser settings, so I help them.
      * But... that's barely an excuse for me to use a big font-stack, I know */
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-family: ui-sans-serif,system-ui,apple color emoji,segoe ui emoji,segoe ui symbol,"Segoe UI",Roboto,noto color emoji,sans-serif;
 	font-size: var(--base-fontsize);
 	line-height: var(--line-height);
 
@@ -117,7 +118,7 @@ blockquote {
 	margin-left: 0;
 	padding-left: 1.25rem;
 	border-left: 3px solid var(--text-light);
-	opacity: .9;
+	opacity: .82;
 }
 
 table {
