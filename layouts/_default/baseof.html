@@ -12,8 +12,10 @@
                 {{ block "main" . }}{{ end }}
             </div>
         </main>
-        <!-- Don't use line breaks here, we want to hide this section if 'after' is empty. -->
-        <section id="after-content">{{- block "after" . }}{{ end }}</section>
+        <section id="after-content">
+            {{- block "after" . }}{{ end }}
+            <hr style="margin-top: 4rem; margin-bottom: 0;"/>
+        </section>
         <footer>
             {{ partial "footer.html" . }}
         </footer>

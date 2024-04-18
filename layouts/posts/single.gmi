@@ -1,7 +1,7 @@
 {{ define "content" -}}
 # {{ $.Title }}
 
-{{ .Date.UTC.Format "Jan 02, 2006" }}
+{{ .Date.UTC.Format "Jan 02, 2006" }}{{ partial "lastmod.gmi" (dict "Page" . "Prefix" " (updated on " "Postfix" ")") }}
 
 {{ partial "processed-content.gmi" . }}
 
@@ -12,8 +12,7 @@ EOF
 => {{ with .Params.publicReplyTo }}{{ . |safeHTML }}{{ else }}mailto:~hedy/posts@lists.sr.ht?subject={{ $subject }}{{ end }} Reply via email publicly (plain-text only)
 => mailto:{{ .Site.Author.email }}?subject={{ $subject }} Reply via email privately
 
-{{ .WordCount }} words
-{{ partial "lastmod.gmi" (dict "Page" . "Prefix" "This post was last updated on " "Postfix" ".") }}
+{{ .WordCount }} words{{ partial "tags.gmi" (dict "Page" . "Prefix" " · ") }}
 
 => . ← Gemlog
 => / ← Capsule home

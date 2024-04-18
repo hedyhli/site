@@ -52,7 +52,7 @@
         --accent-bg-light: #303035;
         --code-bg: #3e3e4b;
         --text: #eee;
-        --text-light: #cecece;
+        --text-light: #b8b8c6;
         --non-text-light: #999fbf;
 
         --border: #aaa;
@@ -436,25 +436,6 @@ nav .pfp-text {
 /*******************************************************************
  * Page sections
  */
-/* Differentiating between normal content links and meta content links */
-.meta a, .post-meta :not(.tags) a, footer a, #after-content a {
-	text-decoration: none;
-    @media (prefers-color-scheme: dark) {
-        color: var(--link-alt);
-    }
-}
-.meta a:hover, .post-meta :not(.tags) a:hover, footer a:hover, #after-content a:hover {
-    color: var(--accent-light);
-    text-decoration: underline;
-    @media (prefers-color-scheme: dark) {
-        opacity: .75;
-    }
-}
-.post-meta .tags a, .post-meta .tags a:visited {
-    text-decoration: underline;
-    color: var(--text-light);
-}
-
 main, #after-content {
     /* For better reading experience.
      * I don't want paragraphs to be too narrow, it looks ugly; Though I don't
@@ -465,17 +446,40 @@ main, #after-content {
 	margin: auto;
 	padding: 0 5%;
 }
-#after-content {
-	margin-bottom: 4rem;
+
+/* Differentiating between normal content links and meta content links */
+.meta a, footer a, #after-content a {
+	text-decoration: none;
+    @media (prefers-color-scheme: dark) {
+        color: var(--link-alt);
+    }
 }
-#after-content:empty {
-    display: none;
+.meta a:hover, footer a:hover, #after-content a:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+    @media (prefers-color-scheme: dark) {
+        opacity: .75;
+    }
 }
+
+/* Tags */
+#after-content .tags a, #after-content .tags a:visited {
+    padding: .2rem .5rem;
+    color: var(--text-light);
+    background-color: var(--accent-bg);
+}
+#after-content .tags a:hover {
+    text-decoration: none;
+    @media (prefers-color-scheme: light) {
+        filter: brightness(95%);
+    }
+}
+
 footer {
 	text-align: center;
 	font-size: .9rem;
 	color: var(--text-light);
-	padding: 1rem 0 1rem 0;
+	padding: .5rem 0 1rem 0;
     margin: 0 5%;
 }
 footer a {
@@ -553,17 +557,14 @@ a.anchor:hover {
 }
 
 #content div#main {
-    border-bottom: 2px solid var(--border-light);
     padding-bottom: 1rem;
+    margin-bottom: 5rem;
 }
 
 .footnotes {
     margin-top: 3rem;
 	font-size: .9rem;
     color: var(--text-light);
-}
-.footnotes #footnotes-heading {
-    margin-top: 1.5rem;
 }
 .footnotes ol {
     margin-top: none;

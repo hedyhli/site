@@ -1,4 +1,4 @@
 {{ $taxonomy := "tags" -}}
 {{ with .Page.Param $taxonomy -}}{{ with $.Prefix }}{{ . | safeHTML }}{{ end }}
 {{- range $index, $tag := . -}}{{- with $.Page.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-{{- if $index -}}, {{ end -}}#{{ $tag | urlize }}{{ end }}{{ end }}{{ with $.Postfix }}{{ . | safeHTML }}{{ end }}{{ end }}
+{{- if $index -}}, {{ end -}}#{{ $tag | urlize }}{{ end }}{{ end }}{{ with $.Postfix }}{{ . | safeHTML }}{{ end }}{{ end -}}

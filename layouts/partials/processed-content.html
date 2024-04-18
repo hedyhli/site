@@ -1,5 +1,5 @@
 {{ $footnotes := `(<div class="footnotes" role="doc-endnotes">
 <hr>)` -}}
-{{ $footnotesWithHeading := printf `<div class="footnotes" role="doc-endnotes">
-<hr><p id="footnotes-heading">%s</p>` "Footnotes" -}}
+{{ $footnotesWithHeading := printf `<hr style="display: none;"><div class="footnotes" role="doc-endnotes">
+<p id="footnotes-heading"><strong>%s</strong></p>` "Footnotes" -}}
 {{ .Content | replaceRE $footnotes $footnotesWithHeading | safeHTML -}}

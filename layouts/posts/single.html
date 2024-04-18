@@ -19,7 +19,7 @@
 </div>
 {{- end }}
 {{- define "after" }}
-{{ if (eq .Params.EOF false) }}{{ else }}<p id="#EOF">EOF</p>{{ end }}
+<p>{{ partial "tags.html" (dict "Page" .) }}</p>
 <section class="comments">
   <p>
   Questions, comments? Send an email to my{{ $subject := printf "Re: %s" .Title }}
