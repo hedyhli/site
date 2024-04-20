@@ -22,7 +22,7 @@ srcURLPrefix = "https://git.sr.ht/~hedy/site/tree/master/item/"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
 
 shortTitle = "~hedy"
-suffixTitle = " | ~hedy"  # prepended after page titles
+suffixTitle = " | ~hedy"  # appended after specific page titles
 
 geminiRoot = "gemini://home.hedy.dev"
 
@@ -41,38 +41,40 @@ tag = "tags"
 posts = "/posts/:slug"
 
 [menu]
-  [[menu.main]]
-      identifier = "posts"
-	  name = "Posts"
-	  title = "posts"
-	  url = "/posts/"
-	  weight = 10
-  [[menu.main]]
-      identifier = "about"
-	  name = "About"
-	  title = "about"
-	  url = "/about/"
-	  weight = 20
-  [[menu.main]]
-      identifier = "misc"
-	  name = "Misc"
-	  title = "misc"
-	  url = "/misc/"
-	  weight = 40
-  [[menu.main]]
-      identifier = "rss"
-	  name = "RSS"
-	  title = "rss"
-	  url = "/posts/index.xml"
-	  weight = 100
+[[menu.main]]
+identifier = "posts"
+name = "Posts"
+title = "posts"
+url = "/posts/"
+weight = 10
+[[menu.main]]
+identifier = "about"
+name = "About"
+title = "about"
+url = "/about/"
+weight = 20
+[[menu.main]]
+identifier = "misc"
+name = "Misc"
+title = "misc"
+url = "/misc/"
+weight = 40
+[[menu.main]]
+identifier = "rss"
+name = "RSS"
+title = "rss"
+url = "/posts/index.xml"
+weight = 100
 
 [markup.goldmark.renderer]
-# Allows HTML in Markdown
+# Allow HTML in Markdown
 unsafe = true
 
 [mediaTypes]
 [mediaTypes."text/gemini"]
 suffixes = ["gmi"]
+[mediaTypes."application/atom+xml"]
+suffixes = ["xml"]
 
 [outputFormats]
 [outputFormats.Gemini]
@@ -83,11 +85,11 @@ mediaType = "text/gemini"
 protocol = "gemini://"
 permalinkable = true
 path = "gemini/"
+# No /slug/index.gmi, please.
+# Even though I specify this explicitly here, it doesn't actually work.
+# I clean this up in the site build process using ./bin/gemini-clean.py.
 noUgly = false
 uglyurls = true
-
-[mediaTypes."application/atom+xml"]
-  suffixes = ["xml"]
 
 [outputFormats.GEMATOM]
 name = "GEMATOM"
@@ -110,14 +112,7 @@ isPlainText = false
 [outputs]
 section = ["HTML", "RSS", "GEMATOM", "ATOM"]
 
-[webmentions]
-newDir = "public"
-oldDir = "old"
-webmentionsFile = "mentions.json"
-excludeSources = [
-"/tags/*",
-"/",
-]
-excludeDestinations = [
-"https://do.hedy.dev"
-]
+[minify]
+minifyOutput = true
+disableXML = true
+disableHTML = true
