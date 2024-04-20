@@ -1,8 +1,7 @@
 {{ define "content" -}}
-# {{ $.Title }}
-
 {{ .Date.UTC.Format "Jan 02, 2006" }}{{ partial "lastmod.gmi" (dict "Page" . "Prefix" " (updated on " "Postfix" ")") }}
 
+# {{ $.Title }}
 {{ partial "processed-content.gmi" . }}
 
 ***
