@@ -71,11 +71,11 @@ These files might need to be changed to customize this:
 
 - [x] let gemini version also have a post page at /posts/index.gmi
 - [ ] minify images and use WebP
-- [ ] lint
+- [x] lint
 - [ ] better a11y
 - [x] provide atom feed for www
 - [x] show post description in list
-- [ ] proper reply via email link
+- [x] proper reply via email link
 
 ## Workflows
 
