@@ -70,12 +70,12 @@ These files might need to be changed to customize this:
 ## todo
 
 - [x] let gemini version also have a post page at /posts/index.gmi
-- [ ] minify images and use WebP
 - [x] lint
-- [ ] better a11y
 - [x] provide atom feed for www
 - [x] show post description in list
 - [x] proper reply via email link
+- [ ] better a11y
+- [ ] minify images and use WebP
 
 ## Workflows
 
