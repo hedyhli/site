@@ -8,7 +8,7 @@
 {{- end -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>hedy's blog</title>
+    <title>{{ .Site.Params.feedTitle }}</title>
     <link href="{{ .RelPermalink }}"/>
     <updated>{{ time.Now.UTC | time.Format "2006-01-02T15:04:05Z" | safeHTML }}</updated>
     <id>{{ .RelPermalink }}</id>

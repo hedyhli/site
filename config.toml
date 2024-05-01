@@ -24,6 +24,9 @@ logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
 shortTitle = "~hedy"
 suffixTitle = " | ~hedy"  # appended after specific page titles
 
+feedTitle = "~hedy"
+feedPrefixTitle = "~hedy: "
+
 geminiRoot = "gemini://home.hedy.dev"
 
 # true: Use shortcode pfp-name as the home link text in nav bar

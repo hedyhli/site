@@ -13,9 +13,19 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>{{ if eq  .Title  .Site.Title }}{{ .Site.Title }}{{ else }}{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}{{ end }}</title>
+        <title>
+            {{- $title := .Site.Params.feedTitle }}
+            {{- with .Title }}
+                {{- $title = printf "%s%s" $.Site.Params.feedPrefixTitle . }}
+            {{- end }}
+            {{- if eq .Title "Posts" }}
+                {{- .Site.Params.feedTitle }}
+            {{- else }}
+                {{- $title }}
+            {{- end -}}
+        </title>
         <link>{{ .RelPermalink }}</link>
-        <description>Recent content {{ if ne  .Title  .Site.Title }}{{ with .Title }}in {{.}} {{ end }}{{ end }}on {{ .Site.Title }}</description>
+        <description>Recent content in {{ $title }}</description>
         <ttl>1440</ttl>
         <generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
         <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
