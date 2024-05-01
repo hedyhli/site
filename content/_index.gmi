@@ -3,6 +3,7 @@
 Hi, I'm hedy. This is where I occasionally post long-form articles and thoughts.
 
 => mailto:hedy.dev@protonmail.com contact — email (preferred)
+=> //do.hedy.dev/pgp.asc PGP
 
 => https://tilde.zone/@hedy @hedy@tilde.zone (fedi)
 => https://github.com/hedyhli hedyhli (github)

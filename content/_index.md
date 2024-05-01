@@ -5,8 +5,9 @@ title = 'home'
 
 ## Contacts
 
-Preferably <a rel="me" href="mailto:hedy.dev@protonmail.com">email</a> or
-<a rel="me" href="https://tilde.zone/@hedy">Mastodon</a> on the Fediverse.
+Preferably <a rel="me" href="mailto:hedy.dev@protonmail.com">email</a> (<a
+href="https://meta.sr.ht/~hedy.pgp">PGP</a>) or <a rel="me"
+href="https://tilde.zone/@hedy">Mastodon</a> on the Fediverse.
 
 You can also chat with me on IRC, XMPP, or matrix — details on my [about
 page](/about/).
