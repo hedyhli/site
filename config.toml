@@ -2,6 +2,7 @@ baseURL = "https://home.hedy.dev/"
 title = "~hedy's home"
 languageCode = "en-us"
 timeZone = "UTC"
+copyright = "© ~hedy, CC-BY-SA"
 
 # Yes. Because I like the /folder -> /folder/ redirects
 uglyurls = false
