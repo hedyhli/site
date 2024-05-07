@@ -4,18 +4,61 @@ This is my website and gemini capsule source code. Link is currently
 home.hedy.dev on both [web](https://home.hedy.dev) and
 [gemini](gemini://home.hedy.dev).
 
-As of now, static site hosting is provided by srht.site.
+## philosophy
 
+### architecture
 
-It has a blog and a few pages. The blog has mostly the same post for web/gemini
-and the web version has an RSS feed and the gemini version has an atom feed.
-I also have tags, last-update, and changelog link for each post. As to comments
-it's currently via email, though I plan to setup CGI-based like/comment system
-for gemini. Webmentions are planned too, I have linked the pingback etc links
-in the `<head>` but I don't have them setup and working yet. I also want to
-make this a lightweight CGI-based solution.
+- remain a static site, without *any* javascript unless *absolutely necessary*
+  (ie, if the chosen solution (say, with SSR or JS) is the *best* option with
+  minimal trade-offs, adopting principles of [Digital
+  Minimalism](https://calnewport.com/on-digital-minimalism/), also see [use boring
+  technology](https://boringtechnology.club)).
+- serving of content should be performant, there is no application logic or
+  related bottlenecks.
+- use minimal and maintainable CSS and HTML templates.
 
-That's about it! Nothing fancy. The CSS is *pretty* minimal, but not brutalist
+### design
+
+- no user-tracking or analytics whatsoever, for both WWW and gemini, unless it's
+  minimal and privacy-respecting
+- I might not be able to adhere to the strictest accessibility standards, but
+  the WWW site should designed with accessibility in mind -- such as avoiding
+  low-contrast and small text, or abusing element semantics
+- it should support open standards, screen readers, and reader mode to the best
+  balance between aesthetics, maintability and compliance.
+- for WWW: design to look *decent* (usable) in *most* TUI browsers (that I know
+  of, and can test)
+- for gemini: stick to providing content and avoid using hacks or text
+  formatting outside of preformatted blocks to design with both constant width
+  clients and variable width clients in mind.
+- good support for common screen sizes
+- for WWW: minimal custom color scheme, especially for dark mode. enough to
+  provide semantics and a light touch of "branding", though.
+- all this does not in anyway the lack of personality or the 'personal website'
+  quirky feel of it all! should definitely be less afraid of introducing changes
+  like that in addition to the blinking underscore on the front page.
+
+## features
+
+It has a blog and a few pages. The blog has mostly the same post for web/gemini.
+
+WWW provides both an atom feed and an RSS feed whilst gemini provides a standard
+gemini atom feed.
+
+Tags, last modification dates and changelog links are implemented. but may not
+currently provide public-facing direct links per-post.
+
+Comments currently run through email and and a mailing list, with links to
+external discussions (if any) in each post.
+
+A dynamic or pre-fetched comment system is *not currently planned* for both WWW
+and gemini.
+
+Webmentions and pingbacks and supported using hosted -aaS links though I plan to
+switch to self-hosted solutions in the future, such as a lightweight CGI
+implementation.
+
+That's about it! Nothing fancy. The CSS is *pretty* minimal, but not a brutalist
 design. It has a few custom colors, a sans-serif font stack, and some styling in
 the footer and nav. Everything else is partially based on top of [simple
 css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
@@ -46,8 +89,8 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 - **hut** - publishes HTML/gemini files to srht.site
 
 ### lint
-- `pnpm` - install dev dependencies in `package.json`
-- `ruby >= 2.7` - for `htmlproofer`
+- **pnpm** - install dev dependencies in `package.json`
+- **ruby** (`>= 2.7` for `htmlproofer`)
 
 ## hardcoded values
 
