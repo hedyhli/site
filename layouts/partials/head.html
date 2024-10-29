@@ -9,9 +9,9 @@
 {{ if lt .Date .Lastmod -}}
 <meta property="article:modified_time" content="{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z" | safeHTML }}">
 {{- end -}}
-<!--Have concerns? Drop me an email with your constructive criticism.-->
-<script data-goatcounter="https://ultimategopher.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
+<!-- Have concerns? My inbox is open. -->
+<script data-goatcounter="https://stats.hedy.dev/count"
+        async src="{{ (resources.Get "/goat.js").RelPermalink | safeHTML }}"></script>
 
 <!--favicon-->
 {{ $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}

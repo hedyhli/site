@@ -574,8 +574,7 @@ a.anchor:hover {
 
 .footnotes {
     margin-top: 3rem;
-	font-size: .9rem;
-    color: var(--text-light);
+	  font-size: .9rem;
 }
 .footnotes ol {
     margin-top: none;

@@ -69,7 +69,9 @@ List title 1
 
 ```
 
-Now, we prepare the first list to be able to paste the second list that was just deleted. Pad spaces at the end of each line of the first list. Spaces will be shown as `_` throughout the example.
+Now, we prepare the first list to be able to paste the second list that was just deleted. Pad spaces at the end of each line of the first list[^1]. Spaces will be shown as `_` throughout the example.
+
+[^1]: Alternatively, you can skip this step by using `:set virtualedit=all`. Thanks to Martin Bays for pointing it out.
 
 If you don't already have Vim/Neovim setup to highlight trailing spaces, you can do so temporarily now by running `:match Underlined '\s\+$'`.
 
@@ -132,9 +134,9 @@ List title 1    List title 2
 
 ## Removing columns
 
-Let's transform the text in reverse[^1]. We'll break these two columns up and have them show up one following another vertically like what we've started with. This might be needed when the first or second list becomes too long and you decide to stop having them show up side by side.
+Let's transform the text in reverse[^2]. We'll break these two columns up and have them show up one following another vertically like what we've started with. This might be needed when the first or second list becomes too long and you decide to stop having them show up side by side.
 
-[^1]: If you actually just want to reverse the process without any editing in between, you should of course use a few undo commands ;-)
+[^2]: If you actually just want to reverse the process without any editing in between, you should of course use a few undo commands ;-)
 
 First, place your cursor at the beginning of the third item on the second list.
 
