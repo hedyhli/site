@@ -86,7 +86,7 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
   sure everything in `public2` looks the same as `public`.
 
 ### deploy
-- **hut** - publishes HTML/gemini files to srht.site
+- **hut** - publishes gemini files to srht.site
 
 ### lint
 - **pnpm** - install dev dependencies in `package.json`

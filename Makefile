@@ -15,9 +15,9 @@ HTML_DEST=~/public_html
 
 UGLYURL_EXCLUDE=*no-used-anymore*
 
-DEPLOY_DOMAIN=home.hedy.dev
-DEPLOY_HTML_DIST=html.tar.gz
-DEPLOY_GEMINI_DIST=gemini.tar.gz
+DEPLOY_HTML=home.hedy.dev
+DEPLOY_HTML_REPO=/Users/hedy/projects/site-public
+DEPLOY_GEMINI=gmi.hedy.dev
 
 .DEFAULT_GOAL := all
 
@@ -33,16 +33,18 @@ lint-html-proofer:
 lint: lint-css lint-html-validate lint-html-proofer
 
 deploy-html:
-	tar -C $(HTML_DEST) -cvz . > $(DEPLOY_HTML_DIST)
-	$(HUT) pages publish --protocol HTTPS -d $(DEPLOY_DOMAIN) $(DEPLOY_HTML_DIST)
-	rm $(DEPLOY_HTML_DIST)
+	$(RSYNC) -rav $(HTML_DEST)/ $(DEPLOY_HTML_REPO)
+	echo '$(DEPLOY_HTML)' > $(DEPLOY_HTML_REPO)/.domains
+	cd $(DEPLOY_HTML_REPO) && git add -A
+	cd $(DEPLOY_HTML_REPO) && git commit -m 'make deploy-html'
+	cd $(DEPLOY_HTML_REPO) && git push
 
 deploy-gemini:
 	tar -C $(GEMINI_DEST) -cvz . > $(DEPLOY_GEMINI_DIST)
 	$(HUT) pages publish --protocol GEMINI -d $(DEPLOY_DOMAIN) $(DEPLOY_GEMINI_DIST)
 	rm $(DEPLOY_GEMINI_DIST)
 
-deploy: deploy-html deploy-gemini
+deploy: deploy_html deploy-gemini
 
 backup:
 	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
