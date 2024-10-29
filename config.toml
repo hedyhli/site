@@ -83,22 +83,16 @@ suffixes = ["gmi"]
 suffixes = ["xml"]
 
 [outputFormats]
-[outputFormats.Gemini]
-name = "GEMTEXT"
+[outputFormats.gemtext]
 isPlainText = true
 isHTML = false
 mediaType = "text/gemini"
 protocol = "gemini://"
 permalinkable = true
 path = "gemini/"
-# No /slug/index.gmi, please.
-# Even though I specify this explicitly here, it doesn't actually work.
-# I clean this up in the site build process using ./bin/gemini-clean.py.
-noUgly = false
-uglyurls = true
+ugly = true
 
 [outputFormats.GEMATOM]
-name = "GEMATOM"
 mediaType = "application/atom+xml"
 protocol = "gemini://"
 rel = "alternate"
@@ -110,7 +104,6 @@ permalinkable = false
 
 # https://gist.github.com/lpar/7ded35d8f52fef7490a5be92e6cd6937
 [outputFormats.ATOM]
-name = "ATOM"
 mediaType = "application/atom"
 baseName = "atom"
 isPlainText = false

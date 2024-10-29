@@ -5,7 +5,7 @@ HUGO_FLAGS=--cleanDestinationDir
 PRETTIER=prettier
 
 RSYNC=rsync
-RSYNC_FLAGS=-a
+RSYNC_FLAGS=-rav
 
 HUT=hut
 
@@ -61,12 +61,11 @@ gen:
 
 gemini:
 	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
-	$(RSYNC) $(RSYNC_FLAGS) public/*.gmi public/posts/*.gmi public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
-	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/index.xml $(GEMINI_DEST)/feed.xml
-	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/index.gmi $(GEMINI_DEST)/posts/index.gmi
+	$(RSYNC) $(RSYNC_FLAGS) public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
+	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/* public/posts/*.gmi $(GEMINI_DEST)/posts --exclude _index.gmi
 
 gemini-clean:
-	GEMINI_DEST=$(GEMINI_DEST) python3 bin/gemini-clean.py
+	GEMINI_DEST=$(GEMINI_DEST) PUBLIC=public python3 bin/gemini-clean.py -n
 
 html:
 	$(RSYNC) $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)

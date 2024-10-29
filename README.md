@@ -64,7 +64,7 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
 ## requirements
 
 ### build
-- **hugo** - generate files
+- **hugo** - generate files - `hugo v0.133.1`
 
 - **rsync** - separate HTML & gemini files into dedicated destinations
   perhaps I'll just switch to plain copying in the future. This was a relic of

@@ -6,9 +6,8 @@ tags = []
 highlight = false
 draft = true
 
-date = {{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}
-draft = true
-outputs = ['html', 'gemtext']
+date = {{ time.Now.UTC.Format "2006-01-02T15:04:05Z" }}
+outputs = ['html', 'gemini']
 # Filename after the date
 slug = {{ slicestr .Name 11 }}
 # The "EOF" after the hr at the end of a post.

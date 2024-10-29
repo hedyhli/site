@@ -3,8 +3,6 @@ date = '2024-04-10T05:22:46Z'
 description = 'The visual block mode in Vim/Neovim is quite powerful. You can use it for "column" editing and vertically pasting blocks of text similar to paste(1).'
 draft = false
 
-hasFootnotes = true
-
 outputs = ['html', 'gemtext']
 slug = 'vim-column-editing'
 tags = ['howto', 'terminal']
