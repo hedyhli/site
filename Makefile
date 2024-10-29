@@ -41,6 +41,7 @@ deploy-html:
 	cd $(DEPLOY_HTML_REPO) && git push
 
 deploy-gemini:
+	$(RSYNC) $(RSYNC_FLAGS) ../spsrv/README.gmi $(GEMINI_DEST)/spsrv/index.gmi
 	tar -C $(GEMINI_DEST) -cvz . > $(DEPLOY_GEMINI_DIST)
 	$(HUT) pages publish --protocol GEMINI -d $(DEPLOY_GEMINI) $(DEPLOY_GEMINI_DIST)
 	rm $(DEPLOY_GEMINI_DIST)

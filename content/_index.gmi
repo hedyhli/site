@@ -38,7 +38,7 @@ Almost all my repos are mirrored on tildegit.org, sr.ht and sometimes on github.
 
 Here are my projects with gemini homepages:
 
-=> //do.hedy.dev/spsrv spsrv
+=> /spsrv/ spsrv
 
 All public projects:
 

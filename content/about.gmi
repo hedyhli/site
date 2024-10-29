@@ -1,39 +1,39 @@
-Pronouns: She/Her/They
+Pronouns: She/Her/They/Them
 
 ## Places online (web)
 
-=> https://tilde.zone/@hedy fediverse (mastodon)
+=> https://tilde.zone/@hedy fediverse
+=> https://lemmy.sdf.org/u/hedy lemmy
 => https://sr.ht/~hedy sourcehut
 => https://github.com/hedyhli github
-=> https://lobste.rs/u/hedy Lobsters
+=> https://lobste.rs/u/hedy lobste.rs
 => https://tildes.net/user/hedy tildes.net
 
 ## Contact
 
-Preferred method of contact: Email
+Preferred method of contact:
+=> mailto:hedy.dev@protonmail.com Email: hedy.dev@protonmail.com
 
-* Fediverse (Mastodon): @hedy@tilde.zone
-* Email: hedy dot dev at protonmail.com
-* IRC: hedy (tilde - preferred. Also on libera, teapot)
+* Fediverse: @hedy@tilde.zone
+* IRC: hedy on tilde.chat, libera.chat, and more
 * Matrix: hedy:envs.net
 * XMPP: hedy@hmm.st
 
 
 ## Uses
 ```
-.-----------------------------------------------.
-| OS             | MacOS, ubuntu, arch          |
-| Browser        | Arc, Min, Qutebrowser        |
-| Terminal       | Kitty, EAT (Emacs)           |
-| Gemini Client  | gelim, Lagrange              |
-| Spartan Client | gelim                        |
-| Gopher Client  | Lagrange                     |
-| Editor         | neovim, emacs, helix         |
-| Shell          | fish, eshell (emacs)         |
-| Theme          | Dracula, Tundra, EF Themes   |
-'-----------------------------------------------'
+.---------------------------------------------------.
+| OS             | MacOS, Ubuntu, Nix               |
+| Browser        | Zen, Vivaldi                     |
+| Terminal       | Kitty, EAT (Emacs)               |
+| Gemini Client  | Lagrange, gelim                  |
+| Spartan Client | gelim                            |
+| Gopher Client  | Lagrange                         |
+| Editor         | Helix, Neovim, Emacs             |
+| Shell          | Fish, Nu, Eshell (Emacs)         |
+| Theme          | Catppuccin Mocha, Tundra (Neovim)|
+'---------------------------------------------------'
 ```
 
-For more information on my setup, check out my dotfiles.
 => https://github.com/hedyhli/dotfiles Dotfiles on GitHub
 => https://sr.ht/~hedy/dotfiles Dotfiles on SourceHut
