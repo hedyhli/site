@@ -1,8 +1,6 @@
 # ~hedy's site
 
-This is my website and gemini capsule source code. Link is currently
-home.hedy.dev on both [web](https://home.hedy.dev) and
-[gemini](gemini://home.hedy.dev).
+My [website](https://home.hedy.dev/) and [gemini capsule](gemini://gmi.hedy.dev/).
 
 ## philosophy
 
