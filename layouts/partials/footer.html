@@ -7,8 +7,12 @@ Copyright © {{ with .Site.Params.CopyrightYearStart }}{{ . }}-{{ end -}}
  <a href="/sitemap.xml">Sitemap</a>
  <a href="{{ .Site.Params.src }}">Source code</a>
 
+{{ if eq .RelPermalink "/" }}
+ <a rel="syndication" class="u-syndication" href="gemini://gmi.hedy.dev/">View on Gemini</a>
+{{- else }}
 {{- with .OutputFormats.Get "gemtext" }}
-{{- $gemurl := replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1 }}
+{{- $gemurl := replace (replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1) $.Site.Params.htmlBaseDomain $.Site.Params.geminiBaseDomain 1 }}
  <a rel="syndication" class="u-syndication" href="{{ $gemurl | safeURL }}">View on Gemini</a>
+{{- end }}
 {{- end }}
 </p>
