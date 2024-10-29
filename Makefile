@@ -18,6 +18,7 @@ UGLYURL_EXCLUDE=*no-used-anymore*
 DEPLOY_HTML=home.hedy.dev
 DEPLOY_HTML_REPO=/Users/hedy/projects/site-public
 DEPLOY_GEMINI=gmi.hedy.dev
+DEPLOY_GEMINI_DIST=gmi.tar.gz
 
 .DEFAULT_GOAL := all
 
@@ -41,10 +42,10 @@ deploy-html:
 
 deploy-gemini:
 	tar -C $(GEMINI_DEST) -cvz . > $(DEPLOY_GEMINI_DIST)
-	$(HUT) pages publish --protocol GEMINI -d $(DEPLOY_DOMAIN) $(DEPLOY_GEMINI_DIST)
+	$(HUT) pages publish --protocol GEMINI -d $(DEPLOY_GEMINI) $(DEPLOY_GEMINI_DIST)
 	rm $(DEPLOY_GEMINI_DIST)
 
-deploy: deploy_html deploy-gemini
+deploy: deploy-html deploy-gemini
 
 backup:
 	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
