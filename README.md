@@ -22,10 +22,12 @@ My [website](https://home.hedy.dev/) and [gemini capsule](gemini://gmi.hedy.dev/
 - I might not be able to adhere to the strictest accessibility standards, but
   the WWW site should designed with accessibility in mind -- such as avoiding
   low-contrast and small text, or abusing element semantics
+  - https://pinkvampyr.leprd.space/accessiblenet/guidelines.php -- following most, if not all
+  - https://seirdy.one/meta/site-design/ -- some to most
 - it should support open standards, screen readers, and reader mode to the best
   balance between aesthetics, maintability and compliance.
 - for WWW: design to look *decent* (usable) in *most* TUI browsers (that I know
-  of, and can test)
+  of, and can test on)
 - for gemini: stick to providing content and avoid using hacks or text
   formatting outside of preformatted blocks to design with both constant width
   clients and variable width clients in mind.
