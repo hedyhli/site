@@ -30,48 +30,48 @@ page that supports it),
 <tr>
 <td><a href="https://fediring.net">Fediring</a></td>
 <td>
-<a href="https://fediring.net/previous?host=home.hedy.dev">←Previous</a>
-<a href="https://fediring.net/random">Random</a>
-<a href="https://fediring.net/next?host=home.hedy.dev">Next→</a>
+<a referrerpolicy="strict-origin" href="https://fediring.net/previous?host=home.hedy.dev">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://fediring.net/random">Random</a>
+<a referrerpolicy="strict-origin" href="https://fediring.net/next?host=home.hedy.dev">Next→</a>
 </td>
 </tr>
 <tr>
 <td><a href="https://cs.sjoy.lol/">CSS JOY</a></td>
 <td>
-<a href="https://webri.ng/webring/cssjoy/previous?via=https://home.hedy.dev/">←Previous</a>
-<a href="https://webri.ng/webring/cssjoy/random?via=https://home.hedy.dev/">Random</a>
-<a href="https://webri.ng/webring/cssjoy/next?via=https://home.hedy.dev/">Next→</a>
+<a referrerpolicy="strict-origin" href="https://webri.ng/webring/cssjoy/previous?via=https://home.hedy.dev/">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://webri.ng/webring/cssjoy/random?via=https://home.hedy.dev/">Random</a>
+<a referrerpolicy="strict-origin" href="https://webri.ng/webring/cssjoy/next?via=https://home.hedy.dev/">Next→</a>
 </td>
 </tr>
 <tr>
 <td><a href="https://loop.graycot.dev/webring.html?action=home">Loopring</a></td>
 <td>
-<a href="https://loop.graycot.dev/webring.html?action=prev">←Previous</a>
-<a href="https://loop.graycot.dev/webring.html?action=rand">Random</a>
-<a href="https://loop.graycot.dev/webring.html?action=next">Next→</a>
+<a referrerpolicy="strict-origin" href="https://loop.graycot.dev/webring.html?action=prev">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://loop.graycot.dev/webring.html?action=rand">Random</a>
+<a referrerpolicy="strict-origin" href="https://loop.graycot.dev/webring.html?action=next">Next→</a>
 </td>
 </tr>
 <tr>
 <td><a href="https://webring.bucketfish.me/">Bucket webring</a></td>
 <td>
-<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=~hedy">←Previous</a>
-<a href="https://webring.bucketfish.me/redirect.html?to=random&name=~hedy">Random</a>
-<a href="https://webring.bucketfish.me/redirect.html?to=next&name=~hedy">Next→</a>
+<a referrerpolicy="strict-origin" href="https://webring.bucketfish.me/redirect.html?to=prev&name=~hedy">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://webring.bucketfish.me/redirect.html?to=random&name=~hedy">Random</a>
+<a referrerpolicy="strict-origin" href="https://webring.bucketfish.me/redirect.html?to=next&name=~hedy">Next→</a>
 </td>
 </tr>
 <tr>
 <td><a href="https://webring.dinhe.net/">Retronaut webring</a></td>
 <td>
-<a href="https://webring.dinhe.net/prev/https://home.hedy.dev/">←Previous</a>
-<a href="https://webring.dinhe.net/next/https://home.hedy.dev/">Next→</a>
+<a referrerpolicy="strict-origin" href="https://webring.dinhe.net/prev/https://home.hedy.dev/">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://webring.dinhe.net/next/https://home.hedy.dev/">Next→</a>
 </td>
 </tr>
 <tr>
-<td><a rel="external" href="https://a11y-webring.club/">a11y-webring.club</a></td>
+<td><a href="https://a11y-webring.club/">a11y-webring.club</a></td>
 <td>
-<a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/prev">←Previous</a>
-<a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/random">Random</a>
-<a rel="external" referrerpolicy="strict-origin" href="https://a11y-webring.club/next">Next→</a>
+<a referrerpolicy="strict-origin" href="https://a11y-webring.club/prev">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://a11y-webring.club/random">Random</a>
+<a referrerpolicy="strict-origin" href="https://a11y-webring.club/next">Next→</a>
 </td>
 </tr>
 </tbody>
