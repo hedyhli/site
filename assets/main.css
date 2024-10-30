@@ -71,6 +71,10 @@
     img:not(.pfp), video {
         opacity: .6;
     }
+
+    .badges img {
+        opacity: 1;
+    }
 }
 
 body {
@@ -444,6 +448,14 @@ nav .pfp-text {
 	display: flex;
 	justify-content: space-around;
 	gap: 1rem;
+}
+
+.badges {
+    height: 30px;
+}
+
+.badges img {
+    height: 100%;
 }
 
 /*******************************************************************

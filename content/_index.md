@@ -51,12 +51,23 @@ page that supports it),
 <a href="https://loop.graycot.dev/webring.html?action=next">Next →</a>
 </td>
 </tr>
+<tr>
+<td><a href="https://webring.bucketfish.me/">Bucket webring</a></td>
+<td>
+<a href="https://webring.bucketfish.me/redirect.html?to=prev&name=~hedy">← Previous</a>
+<a href="https://webring.bucketfish.me/redirect.html?to=random&name=~hedy">Random</a>
+<a href="https://webring.bucketfish.me/redirect.html?to=next&name=~hedy">Next →</a>
+</td>
+</tr>
 </tbody>
 </table>
 
 My [gemini capsule](gemini://gmi.hedy.dev/) is part of a few other "web"-rings.
 
-## Member sites
+## Member sites & badges
 
+<div class="badges">
 <a href="https://512kb.club"><img src="https://512kb.club/assets/images/green-team.svg" alt="a proud member of the green team of 512KB club" /></a>
 <a href='https://www.beepbird.net/index.html'><img src="https://www.beepbird.net/webring/focusfirst.png" alt="Focus First Index"></a>
+<a href='https://notbyai.fyi/'><img src="/created-by-human_white.png" alt="Created By Human, Not By AI"></a>
+</div>
