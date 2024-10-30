@@ -57,8 +57,7 @@ A **Pubnix** is a Public Access Unix System — in other words, a unix machine o
 the internet that provides access to other people on the internet — which
 started before WWW and even the public internet. Pubnixes you may have heard of
 [SDF](https://sdf.org),
-[Circumlunar.Space](https://portal.mozz.us/gopher/circumlunar.space/) (yes, the
-very same one of the [gemini homepage](https://gemini.circumlunar.space)), and
+[Circumlunar.Space](https://portal.mozz.us/gopher/circumlunar.space/), and
 [tilde.club](https://tilde.club).
 
 [~cmccabe](https://tilde.team/~cmccabe/) has a [Pubnix History

@@ -63,7 +63,7 @@ All public projects:
 
 ## Useful links to outer space
 
-=> //gemini.circumlunar.space Gemini Protocol
+=> //geminiprotocol.net Gemini Protocol
 => //nytpu.com/feed.gmi nytpu's comitium feed
 => //warmedal.se/~antenna Antenna feed
 => //rawtext.club rawtext.club
