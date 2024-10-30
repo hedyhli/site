@@ -59,6 +59,13 @@ page that supports it),
 <a href="https://webring.bucketfish.me/redirect.html?to=next&name=~hedy">Next →</a>
 </td>
 </tr>
+<tr>
+<td><a href="https://webring.dinhe.net/">Retronaut webring</a></td>
+<td>
+<a href="https://webring.dinhe.net/prev/home.hedy.dev">← Previous</a>
+<a href="https://webring.dinhe.net/next/home.hedy.dev">Next →</a>
+</td>
+</tr>
 </tbody>
 </table>
 
