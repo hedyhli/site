@@ -18,7 +18,7 @@ copyright = "CC-BY-SA"
 copyrightLink = "https://creativecommons.org/licenses/by-sa/4.0/"
 copyrightYearStart = "2021"
 
-src = "https://sr.ht/~hedy/site"
+src = "https://github.com/hedyhli/site"
 srcURLPrefix = "https://git.sr.ht/~hedy/site/tree/master/item/"
 logURLPrefix = "https://git.sr.ht/~hedy/site/log/master/item/"
 
