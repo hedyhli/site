@@ -33,7 +33,7 @@ lint-html-proofer:
 
 lint: lint-css lint-html-validate lint-html-proofer
 
-deploy-html: html-prettier
+deploy-html: html-prettify
 	$(RSYNC) -rav $(HTML_DEST)/ $(DEPLOY_HTML_REPO)
 	echo '$(DEPLOY_HTML)' > $(DEPLOY_HTML_REPO)/.domains
 	cd $(DEPLOY_HTML_REPO) && git add -A
