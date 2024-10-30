@@ -62,8 +62,8 @@ page that supports it),
 <tr>
 <td><a href="https://webring.dinhe.net/">Retronaut webring</a></td>
 <td>
-<a href="https://webring.dinhe.net/prev/home.hedy.dev">← Previous</a>
-<a href="https://webring.dinhe.net/next/home.hedy.dev">Next →</a>
+<a href="https://webring.dinhe.net/prev/https://home.hedy.dev/">← Previous</a>
+<a href="https://webring.dinhe.net/next/https://home.hedy.dev/">Next →</a>
 </td>
 </tr>
 </tbody>
