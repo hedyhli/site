@@ -3,7 +3,7 @@
 Hi, I'm hedy. This is where I occasionally post long-form articles and thoughts.
 
 => mailto:hedy.dev@protonmail.com contact — email (preferred)
-=> //do.hedy.dev/pgp.asc PGP
+=> https://meta.sr.ht/~hedy.pgp PGP
 
 => https://tilde.zone/@hedy @hedy@tilde.zone (fedi)
 => https://github.com/hedyhli hedyhli (github)
@@ -16,16 +16,13 @@ Hi, I'm hedy. This is where I occasionally post long-form articles and thoughts.
 ## Pages
 
 => /posts/ gemlog
-=> about.gmi about.gmi (and methods of contact)
-=> misc.gmi misc.gmi
-
-=> //do.hedy.dev/pgp.asc PGP public key
-=> //do.hedy.dev/sshkey.txt SSH public key
-=> //do.hedy.dev/tinylog.gmi tinylog.gmi
-=> //do.hedy.dev/tw.txt twtxt feed
+=> about.gmi about me, methods of contact, and the software I use
+=> misc.gmi misc
 
 
 ## Services
+
+Note that these are currently unavailable.
 
 => //do.hedy.dev/help/py lookup python help() for something
 => //do.hedy.dev/spartan spartan -> gemini proxy
@@ -50,14 +47,14 @@ All public projects:
 ## Orbits (webrings)
 
 => gemini://raek.se/orbits/space-elevator/ The Space Elevator
-=> gemini://raek.se/orbits/space-elevator/prev?gemini%3A%2F%2Fhome.hedy.dev%2F Previous
-=> gemini://raek.se/orbits/space-elevator/random?gemini%3A%2F%2Fhome.hedy.dev%2F Random
-=> gemini://raek.se/orbits/space-elevator/next?gemini%3A%2F%2Fhome.hedy.dev%2F Next
+=> gemini://raek.se/orbits/space-elevator/prev?gemini%3A%2F%2Fgmi.hedy.dev%2F Previous
+=> gemini://raek.se/orbits/space-elevator/random?gemini%3A%2F%2Fgmi.hedy.dev%2F Random
+=> gemini://raek.se/orbits/space-elevator/next?gemini%3A%2F%2Fgmi.hedy.dev%2F Next
 
 => gemini://tilde.team/~khuxkm/leo/ LEO Orbit
-=> gemini://tilde.team/~khuxkm/leo/prev.cgi?home.hedy.dev Previous
-=> gemini://tilde.team/~khuxkm/leo/rand.cgi?home.hedy.dev Random
-=> gemini://tilde.team/~khuxkm/leo/next.cgi?home.hedy.dev Next
+=> gemini://tilde.team/~khuxkm/leo/prev.cgi?gmi.hedy.dev Previous
+=> gemini://tilde.team/~khuxkm/leo/rand.cgi?gmi.hedy.dev Random
+=> gemini://tilde.team/~khuxkm/leo/next.cgi?gmi.hedy.dev Next
 
 => gemini://fediring.net/ Fediring
 => gemini://fediring.net/previous/@hedy@tilde.zone Previous

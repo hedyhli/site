@@ -427,11 +427,23 @@ nav .pfp-text {
     animation: blinker 1s step-start 5;
     font-family: var(--mono-font);
 }
-
 @keyframes blinker {
     50% {
         opacity: 100%;
     }
+}
+
+.webrings {
+    width: initial;
+    border: 1px solid var(--border-light);
+}
+.webrings td {
+    border: none;
+}
+.webrings td:nth-child(2) {
+	display: flex;
+	justify-content: space-around;
+	gap: 1rem;
 }
 
 /*******************************************************************
