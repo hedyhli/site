@@ -1,5 +1,22 @@
+<!-- From: https://git.sr.ht/~seirdy/seirdy.one/tree/master/item/layouts/partials/processed-content.html -->
+<!--
+	Descriptive footnote link names, remove unused class, put
+	backlink id in <a> since <a> is focusable, remove unused class.
+-->
+{{- $badNoteRef := `<sup id="fnref([0-9\:]*)"><a( [^>]*)class="footnote-ref" role="doc-noteref">([0-9]*)</a>` -}}
+{{- $goodNoteRef := `<sup><a${2}id="fnref${1}" role="doc-noteref">note&#160;${3}</a>` -}}
+
+<!--
+	Give footnote backlinks accessible names.
+	The backlinks should be located *outside* the footnote paragraphs.
+-->
+{{- $footnoteBacklinksBad  :=  ` ?<a href="#fnref:([0-9]*)" class="footnote-backref"(.*role="doc-backlink"(?:[^>]*)?)>([^<]*)</a></p>` -}}
+{{- $footnoteBacklinksGood :=  `<br/><a href="#fnref:${1}" aria-labelledby="bl1-${1} bl2-${1}"${2}><span id="bl1-${1}">Back</span><span id="bl2-${1}" hidden=""> to reference ${1}</span></a></p>` -}}
+
+<!-- Footnote heading -->
 {{ $footnotes := `(<div class="footnotes" role="doc-endnotes">
 <hr>)` -}}
 {{ $footnotesWithHeading := printf `<hr style="display: none;"><div class="footnotes" role="doc-endnotes">
-<p id="footnotes-heading"><strong>%s</strong></p>` "Footnotes" -}}
-{{ .Content | replaceRE $footnotes $footnotesWithHeading | safeHTML -}}
+<h2>%s</h2>` "Footnotes" -}}
+
+{{- .Content | replaceRE $badNoteRef $goodNoteRef | replaceRE $footnoteBacklinksBad $footnoteBacklinksGood | replaceRE $footnotes $footnotesWithHeading | safeHTML }}
