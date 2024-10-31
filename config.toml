@@ -13,6 +13,7 @@ pygmentsCodeFences = true
 disableHugoGeneratorInject = true
 
 [params]
+canonicalBaseURL = "https://home.hedy.dev/"
 description = "~hedy's home: hedy's canonical web presence including contact information and a blog."
 copyright = "CC-BY-SA"
 copyrightLink = "https://creativecommons.org/licenses/by-sa/4.0/"

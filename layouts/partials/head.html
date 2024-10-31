@@ -1,6 +1,15 @@
+{{ $canonicalRelPermalink := .RelPermalink | replaceRE "^/~hedy/" "/" -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}">
+{{ $description := "" -}}
+{{- if .Params.description -}}
+    {{- $description = .Params.Description -}}
+{{- else if .IsHome -}}
+    {{- $description = .Site.Params.Description -}}
+{{- else if .Summary -}}
+    {{- $description = .Summary | replaceRE `\n` ` ` | replaceRE `\&rsquo;` `’` | replaceRE `\&nbsp;` `\&#160;` | replaceRE `\&ldquo;` `“` | replaceRE `\&rdquo;` `”` | replaceRE `\&hellip;` `—` | replaceRE `\&mdash;` `—` | replaceRE `\&shy;` `\&#173;` | replaceRE `&lsquo;` `‘` | truncate 160 | replaceRE ` ([^ ]*)?$` `` | safeHTML -}}
+{{- end -}}
+<meta name="description" content="{{ $description }}">
 <meta name="author" content="{{ .Site.Author.name }}">
 <meta property="article:author" content="{{ .Site.Author.name }}">
 {{ if gt .Date 0 -}}
@@ -15,9 +24,10 @@
 
 <!--favicon-->
 {{ $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}
-{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml">` $favicon_svg.RelPermalink | safeHTML }}
-{{ $favicon_png := resources.Get "/favicon.png" | resources.Fingerprint "md5" }}
-{{- printf `<link rel="icon" sizes="192x192" href="%s" type="image/png">` $favicon_png.RelPermalink | safeHTML -}}
+{{ $favicon192_png := resources.Get "/favicon192.png" | resources.Fingerprint "md5" }}
+{{ $favicon512_png := resources.Get "/favicon512.png" | resources.Fingerprint "md5" }}
+{{- printf `<link rel="icon" sizes="any" href="%s" type="image/svg+xml">` $favicon_svg.Permalink | safeHTML }}
+{{- printf `<link rel="icon" sizes="192x192" href="%s" type="image/png">` $favicon192_png.Permalink | safeHTML -}}
 
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f2f2f2" media="(prefers-color-scheme:light)"><!--(accent-bg-light)-->
@@ -59,5 +69,10 @@
 {{ else -}}
 <meta property="og:type" content="website">
 {{ end -}}
-<!-- TODO: Figure out the meta icons shit -->
-{{ hugo.Generator }}
+
+{{ printf `<meta property="og:image" content="%s" />` $favicon512_png.Permalink | safeHTML }}
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:height" content="{{ $favicon512_png.Height }}" /><meta property="og:image:width" content="{{ $favicon512_png.Width }}" />
+<meta property="og:url" content="{{ .Site.Params.canonicalBaseURL }}{{ $canonicalRelPermalink }}" />
+<meta property="og:description" content="{{ $description }}" />
+{{ hugo.Generator | replaceRE ">" " />" | safeHTML}}

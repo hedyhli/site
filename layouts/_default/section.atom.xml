@@ -12,7 +12,7 @@
     {{- $title := printf "%s on %s" .Section .Site.Title }}
 {{- end}}
 {{- $favicon_svg := resources.Get "/favicon.svg" }}
-{{- $favicon_png := resources.Get "/favicon.png" }}
+{{- $favicon_png := resources.Get "/favicon192.png" }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <feed
     xmlns="http://www.w3.org/2005/Atom"
