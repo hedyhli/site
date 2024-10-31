@@ -46,7 +46,7 @@ visual block mode to do something similar to paste(1) (see the
 Here's a video demonstration.
 
 <video controls="" name="media">
-    <source src="{{< get-resource-link "demo.webm">}}" alt="demo video" type="video/webm">
+    <source src="{{< get-resource-link "demo.webm">}}" alt="demo video" type="video/webm"/>
 </video>
 
 

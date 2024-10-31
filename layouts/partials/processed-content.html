@@ -19,4 +19,4 @@
 {{ $footnotesWithHeading := printf `<hr style="display: none;"><div class="footnotes" role="doc-endnotes">
 <h2>%s</h2>` "Footnotes" -}}
 
-{{- .Content | replaceRE $badNoteRef $goodNoteRef | replaceRE $footnoteBacklinksBad $footnoteBacklinksGood | replaceRE $footnotes $footnotesWithHeading | replace `\&rsquo;` `’` | replace `\&nbsp;` `&#160;` | replace `\&ldquo;` `“` | replace `\&rdquo;` `”` | replace `\&hellip;` `…` | replace `\&mdash;` `—` | replace `\&shy;` `&#173;` | replace `&lsquo;` `‘` | safeHTML }}
+{{- .Content | replaceRE $badNoteRef $goodNoteRef | replaceRE $footnoteBacklinksBad $footnoteBacklinksGood | replaceRE $footnotes $footnotesWithHeading | replaceRE `\&rsquo;` `’` | replaceRE `\&nbsp;` `&#160;` | replaceRE `\&ldquo;` `“` | replaceRE `\&rdquo;` `”` | replaceRE `\&hellip;` `…` | replaceRE `\&mdash;` `—` | replaceRE `\&shy;` `&#173;` | replaceRE `&lsquo;` `‘` | safeHTML }}
