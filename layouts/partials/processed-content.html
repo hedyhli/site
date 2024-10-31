@@ -11,12 +11,12 @@
 	The backlinks should be located *outside* the footnote paragraphs.
 -->
 {{- $footnoteBacklinksBad  :=  ` ?<a href="#fnref:([0-9]*)" class="footnote-backref"(.*role="doc-backlink"(?:[^>]*)?)>([^<]*)</a></p>` -}}
-{{- $footnoteBacklinksGood :=  `<br/><a href="#fnref:${1}" aria-labelledby="bl1-${1} bl2-${1}"${2}><span id="bl1-${1}">Back</span><span id="bl2-${1}" hidden> to reference ${1}</span></a></p>` -}}
+{{- $footnoteBacklinksGood :=  `<br/><a href="#fnref:${1}" aria-labelledby="bl1-${1} bl2-${1}"${2}><span id="bl1-${1}">Back</span><span id="bl2-${1}" hidden=""> to reference ${1}</span></a></p>` -}}
 
 <!-- Footnote heading -->
 {{ $footnotes := `(<div class="footnotes" role="doc-endnotes">
 <hr>)` -}}
-{{ $footnotesWithHeading := printf `<hr style="display: none;"><div class="footnotes" role="doc-endnotes">
+{{ $footnotesWithHeading := printf `<hr style="display: none;"/><div class="footnotes" role="doc-endnotes">
 <h2>%s</h2>` "Footnotes" -}}
 
-{{- .Content | replaceRE $badNoteRef $goodNoteRef | replaceRE $footnoteBacklinksBad $footnoteBacklinksGood | replaceRE $footnotes $footnotesWithHeading | replaceRE `\&rsquo;` `’` | replaceRE `\&nbsp;` `&#160;` | replaceRE `\&ldquo;` `“` | replaceRE `\&rdquo;` `”` | replaceRE `\&hellip;` `…` | replaceRE `\&mdash;` `—` | replaceRE `\&shy;` `&#173;` | replaceRE `&lsquo;` `‘` | safeHTML }}
+{{- .Content | replaceRE $badNoteRef $goodNoteRef | replaceRE $footnoteBacklinksBad $footnoteBacklinksGood | replaceRE $footnotes $footnotesWithHeading | replaceRE `\&rsquo;` `’` | replaceRE `\&nbsp;` `&#160;` | replaceRE `\&ldquo;` `“` | replaceRE `\&rdquo;` `”` | replaceRE `\&hellip;` `…` | replaceRE `\&mdash;` `—` | replaceRE `\&ndash;` `—` | replaceRE `\&shy;` `&#173;` | replaceRE `&lsquo;` `‘` | safeHTML }}

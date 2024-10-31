@@ -17,7 +17,7 @@ found.
 
 A gallery of all WWW user homepages on ~cafe
 
-[Take a look >>>>](https://tilde.cafe/~tweska/gallery/)
+[Take a look →](https://tilde.cafe/~tweska/gallery/)
 
 
 ## Brainfuck online <small>by [~samhunter](https://tilde.cafe/~samhunter)</small>

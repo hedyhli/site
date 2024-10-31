@@ -37,18 +37,18 @@
         <copyright>{{.}}</copyright>{{end}}
         <lastBuildDate>{{ time.Now.UTC.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
         {{- with .OutputFormats.Get "RSS" }}
-        {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .RelPermalink .MediaType | safeHTML }}
+        {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
         {{- end }}
         {{- range where .Site.Pages "Kind" "page" }}
         {{- if or (eq .Section "posts") (eq .Section "post") }}
         <item>
             <title>{{ .Title }}</title>
-            <link>{{ .RelPermalink }}</link>
+            <link>{{ .Permalink }}</link>
             <pubDate>{{ .Date.UTC.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
             {{ with .Site.Author.email -}}
             <author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
             <guid>{{ .Permalink }}</guid>
-            <description>{{ .Content | html }}</description>
+            <description xml:base="{{ .Permalink }}">{{ .Content | html }}</description>
         </item>
         {{- end }}
         {{- end }}

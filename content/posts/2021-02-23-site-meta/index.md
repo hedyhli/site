@@ -8,7 +8,7 @@ slug = 'site-meta'
 title = 'How this site works'
 +++
 
-<details open>
+<details open="">
 <summary>2023 Update</summary>
 
 I started writing this post on 2021, February 23 but I never completed it. So in
@@ -21,7 +21,7 @@ Excuse the odd placing of this post, but otherwise, enjoy the read~
 
 </details>
 
-<details open>
+<details open="">
 <summary>2024 March Update</summary>
 
 I no longer host my website, gemini capsule and spartan content on tilde.cafe.
@@ -34,7 +34,7 @@ differences, remains mostly accurate.
 
 </details>
 
-<br>
+<br />
 
 This is where my gemlog/blog lives. It is statically generated
 with [Hugo](https://gohugo.io/) and rsync-ed to my `public_html` and `public_gemini`
