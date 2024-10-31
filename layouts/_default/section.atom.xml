@@ -1,33 +1,54 @@
-{{- $pctx := . -}}
-{{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
-{{- $pages := slice -}}
-{{- if or $.IsHome $.IsSection -}}
-{{- $pages = $pctx.RegularPages -}}
-{{- else -}}
-{{- $pages = $pctx.Pages -}}
-{{- end -}}
+{{- $pages := (where site.RegularPages "Section" .Section) }}
+{{- $title := .Site.Params.feedTitle }}
+{{- if ne .Section "posts" }}
+    {{- $title := printf "%s on %s" .Section .Site.Title }}
+{{- end}}
+{{- $favicon_svg := resources.Get "/favicon.svg" }}
+{{- $favicon_png := resources.Get "/favicon.png" }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <title>{{ .Site.Params.feedTitle }}</title>
-    <link href="{{ .RelPermalink }}"/>
+<feed
+    xmlns="http://www.w3.org/2005/Atom"
+    xmlns:cf="http://www.microsoft.com/schemas/rss/core/2005"
+    xml:lang="{{ .Site.LanguageCode }}"
+    xmlns:webfeeds="http://webfeeds.org/rss/1.0">
+    <title>{{ $title }}</title>
+    <subtitle>{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Site.Params.Description }}{{ end }}</subtitle>
+    <link rel="self" type="application/atom+xml" href="{{ .Permalink }}"/>
     <updated>{{ time.Now.UTC | time.Format "2006-01-02T15:04:05Z" | safeHTML }}</updated>
-    <id>{{ .RelPermalink }}</id>
+    <id>{{ .Permalink }}</id>
+    <webfeeds:icon>{{ $favicon_png.Permalink }}</webfeeds:icon>
+    <webfeeds:cover>{{ $favicon_svg.Permalink }}</webfeeds:cover>
+    <logo>{{ $favicon_svg.Permalink }}</logo>
+    <webfeeds:accentColor>232326</webfeeds:accentColor>
+    <cf:treatAs>list</cf:treatAs>
+    <cf:listinfo>
+        <cf:sort
+            ns="http://www.w3.org/2005/Atom"
+            element="published" data-type="date" label="Date published" default="true"/>
+    </cf:listinfo>
     <author>
         <name>{{ $.Site.Author.name }}</name>
         <email>{{ $.Site.Author.email }}</email>
+        <uri>{{ $.Site.BaseURL }}</uri>
     </author>
     {{- range where .Site.Pages "Kind" "page" }}
-    {{- if or (eq .Section "posts") (eq .Section "post") }}
     <entry>
         <title>{{ .Title }}</title>
-        {{ printf `<link rel="alternate" href="%s" />` .RelPermalink | safeHTML }}
-        <id>{{ .RelPermalink }}</id>
-        <updated>{{ .Date.Format "2006-01-02T15:04:05Z" }}</updated>
+        {{ printf `<link rel="alternate" href="%s" />` .Permalink | safeHTML }}
+        <id>{{ .Permalink }}</id>
+        <published>{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}</published>
+        <updated>{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z" }}</updated>
+        {{ with .Description }}<summary type="text">{{ . }}</summary>{{- end }}
         <author>
             <name>{{ $.Site.Author.name }}</name>
             <email>{{ $.Site.Author.email }}</email>
+            <uri>{{ $.Site.BaseURL }}</uri>
         </author>
+        <content type="xhtml" xml:base="{{ .Permalink }}">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+                {{- partial "processed-content.html" . | replaceRE `(?: )?(?:item(type|scope|prop|id|ref)="[^"]*"|class="language-figure")` "" | replaceRE `<meta content="true" ?/>` "" | safeHTML -}}
+            </div>
+        </content>
     </entry>
-    {{- end }}
     {{- end }}
 </feed>
