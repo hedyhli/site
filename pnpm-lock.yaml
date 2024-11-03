@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
     devDependencies:
       '@hint/hint-doctype':
         specifier: ^3.3.26
@@ -21,6 +17,9 @@ importers:
       html-validate:
         specifier: ^8.18.1
         version: 8.18.1
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
       stylelint:
         specifier: ^14.16.1
         version: 14.16.1
