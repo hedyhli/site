@@ -4,7 +4,7 @@
 	backlink id in <a> since <a> is focusable, remove unused class.
 -->
 {{- $badNoteRef := `<sup id="fnref([0-9\:]*)"><a( [^>]*)class="footnote-ref" role="doc-noteref">([0-9]*)</a>` -}}
-{{- $goodNoteRef := `<sup><a${2}id="fnref${1}" role="doc-noteref">note&#160;${3}</a>` -}}
+{{- $goodNoteRef := `<sup><a${2}id="fnref${1}" role="doc-noteref">[${3}]</a>` -}}
 
 <!--
 	Give footnote backlinks accessible names.

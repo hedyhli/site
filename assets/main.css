@@ -473,17 +473,26 @@ main, #after-content {
 }
 
 /* Tags */
-#after-content .tags a, #after-content .tags a:visited {
-    padding: .2rem .5rem;
+.post-list .tags, .post-list time {
+	font-size: .9rem;
+}
+.tags a,
+.tags a:visited {
+    text-decoration: none;
     color: var(--text-light);
+}
+#after-content .tags a,
+#after-content .tags a:visited {
+    padding: .2rem .5rem;
     background-color: var(--accent-bg);
 }
+.tags a:hover,
 #after-content .tags a:hover {
     text-decoration: none;
     color: var(--text-light);
 }
 @media (prefers-color-scheme: light) {
-    #after-content .tags a:hover {
+    .tags a:hover, #after-content .tags a:hover {
         filter: brightness(95%);
     }
 }
@@ -615,10 +624,10 @@ ul.post-list {
 }
 .post-list p {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: .3rem;
 }
-.post-list .post-meta {
-    color: var(--text);
+.post-list time {
+    color: var(--text-light);
 }
 /*******************************************************************
  * Chroma
