@@ -7,4 +7,5 @@ slug = 'misc'
 title = 'Misc'
 +++
 
-- [~Cafe Spotlight](../cafe-spotlight/) — Showcase of cool things on tilde.cafe
+- [Meta](/meta/) -- Meta information for this website
+- [~Cafe Spotlight](../cafe-spotlight/) -- Showcase of cool things on tilde.cafe
