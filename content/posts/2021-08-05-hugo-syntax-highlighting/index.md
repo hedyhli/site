@@ -88,7 +88,7 @@ You can have different styles of syntax highlighting for dark mode and light
 mode.
 
 First you have to export or save your CSS for dark mode and light mode in
-separate files .  Then, change the part in your `<head>` where you've included
+separate files. Then, change the part in your `<head>` where you've included
 the styles:
 
 ```tmpl

@@ -63,7 +63,7 @@ Remember to include the file type when putting code in markdown.
 
 You can have different styles of syntax highlighting for dark mode and light mode.
 
-First you have to export or save your CSS for dark mode and light mode in separate files .  Then, change the part in your `<head>` where you've included the styles:
+First you have to export or save your CSS for dark mode and light mode in separate files.  Then, change the part in your `<head>` where you've included the styles:
 
 ```
 {{- $syntaxlight := resources.Get "syntax/light.css" | minify -}}
