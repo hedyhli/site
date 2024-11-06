@@ -5,7 +5,7 @@
     <span class="tags">
     {{- range $index, $tag := $tags -}}
         {{- $taglink := $.Page.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-        {{- if $index -}}&nbsp;&nbsp;{{ end -}}<a class="tag" href="{{ $taglink.RelPermalink }}">#{{ $tag | urlize }}</a>
+        {{- if $index -}}&nbsp;&nbsp;{{ end -}}<a rel="category tag" class="p-category tag" href="{{ $taglink.RelPermalink }}">#{{ $tag | urlize }}</a>
     {{- end }}
     </span>
 {{- end }}

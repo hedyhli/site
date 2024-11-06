@@ -12,7 +12,7 @@ Copyright © {{ with .Site.Params.CopyrightYearStart }}{{ . }}-{{ end -}}
 {{- else }}
 {{- with .OutputFormats.Get "gemtext" }}
 {{- $gemurl := replace (replace (replace .Permalink "/gemini" "" 1) "/index.gmi" ".gmi" 1) $.Site.Params.htmlBaseDomain $.Site.Params.geminiBaseDomain 1 }}
- <a rel="alternate" href="{{ $gemurl | safeURL }}">View on Gemini</a>
+ <a rel="alternate" class="u-syndication" href="{{ $gemurl | safeURL }}">View on Gemini</a>
 {{- end }}
 {{- end }}
 </p>

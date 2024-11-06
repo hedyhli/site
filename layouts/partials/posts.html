@@ -2,7 +2,7 @@
 
 {{ if in $outerRel "posts" -}}
 {{ partial "anchor-heading.html" (dict "Text" "Posts" "Level" 1 "Anchor" "posts") }}
-{{ .Content }}
+<div class="p-summary">{{ .Content }}</div>
 
 {{ else -}}
 {{ partial "anchor-heading.html" (dict "Text" "Posts" "Level" 2 "Anchor" "posts") }}
@@ -18,14 +18,16 @@
 
 <ul class="post-list">
   {{- range (where .Site.RegularPages "Section" "posts") }}
-  <li>
-    {{ if in $outerRel "posts" -}}<h2>{{ else -}}<h3>{{ end -}}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <li class="h-entry hentry" itemprop="item" itemscope="" itemtype="https://schema.org/BlogPosting" itemid="{{ .Permalink }}">
+    {{ if in $outerRel "posts" -}}
+    <h2 itemprop="name headline" class="p-name">{{ else -}}
+    <h3 itemprop="name headline" class="p-name">{{ end -}}
+      <a itemprop="url" rel="bookmark" class="u-url" href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ if in $outerRel "posts" -}}</h2>{{ else -}}</h3>{{ end -}}
       <p>
-        <time datetime="{{ .Date.Format "2006-01-02 15:04:05Z07:00" }}">{{ .Date.Format "Jan 02, 2006" }}</time>{{ partial "tags.html" (dict "Page" . "Prefix" "&nbsp; · &nbsp;") -}}
+        <time class="dt-published published" datetime="{{ .Date.Format "2006-01-02 15:04:05Z" }}">{{ .Date.Format "Jan 02, 2006" }}</time>{{ partial "tags.html" (dict "Page" . "Prefix" "&nbsp; · &nbsp;") -}}
       </p>
-      <p>{{ .Description }}</p>
+      <p class="p-summary">{{ .Description }}</p>
   </li>
   {{- end }}
 </ul>
