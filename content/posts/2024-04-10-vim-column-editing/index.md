@@ -8,7 +8,8 @@ slug = 'vim-column-editing'
 tags = ['howto', 'terminal']
 title = 'Vim visual block mode for column editing'
 
-publicReplyTo = "mailto:~hedy/posts@lists.sr.ht?cc=hedy%20%3Chedy.dev%40protonmail.com%3E&in-reply-to=%3Cn7UVukOUgCClct4d56HGVviI9Ig0QFF1dp0XIjC1EHZkOq9kBq4oHhA_CpVUa1LKxD73wJAZn4kUaTBoIQtENvNDF6RiSUsMfbN8fT4y2fI%3D%40protonmail.com%3E&subject=Re%3A%20Vim%20visual%20block%20mode%20for%20column%20editing"
+[[syndications]]
+list = "https://lists.sr.ht/~hedy/posts/%3Cn7UVukOUgCClct4d56HGVviI9Ig0QFF1dp0XIjC1EHZkOq9kBq4oHhA_CpVUa1LKxD73wJAZn4kUaTBoIQtENvNDF6RiSUsMfbN8fT4y2fI=@protonmail.com%3E"
 +++
 
 The visual block mode in Vim lets you edit text simultaneously across adjacent

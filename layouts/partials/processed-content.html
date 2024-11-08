@@ -16,7 +16,7 @@
 <!-- Footnote heading -->
 {{ $footnotes := `(<div class="footnotes" role="doc-endnotes">
 <hr>)` -}}
-{{ $footnotesWithHeading := printf `<hr style="display: none;"/><div class="footnotes" role="doc-endnotes">
-<h2>%s</h2>` "Footnotes" -}}
+{{ $footnotesWithHeading := printf `<div class="footnotes" role="doc-endnotes"><hr />
+<p><strong>%s</strong></p>` "Footnotes" -}}
 
 {{- .Content | replaceRE $badNoteRef $goodNoteRef | replaceRE $footnoteBacklinksBad $footnoteBacklinksGood | replaceRE $footnotes $footnotesWithHeading | replaceRE `\&rsquo;` `’` | replaceRE `\&nbsp;` `&#160;` | replaceRE `\&ldquo;` `“` | replaceRE `\&rdquo;` `”` | replaceRE `\&hellip;` `…` | replaceRE `\&mdash;` `—` | replaceRE `\&ndash;` `—` | replaceRE `\&shy;` `&#173;` | replaceRE `&lsquo;` `‘` | safeHTML }}

@@ -12,73 +12,85 @@
  */
 
 :root {
-    --base-fontsize: 1rem;
+  --base-fontsize: 1rem;
 
-    /* Major third scale progression - see https://type-scale.com/ */
-    --header-scale: 1.25;
-    /* I don't want h1, h2, and h3 to be too big */
-    --header-scale-minor: 1.1;
+  /* Major third scale progression - see https://type-scale.com/ */
+  --header-scale: 1.25;
+  /* I don't want h1, h2, and h3 to be too big */
+  --header-scale-minor: 1.1;
 
-    /* Line height is set to the "Golden ratio" for optimal legibility */
-    --line-height: 1.618;
+  /* Line height is set to the "Golden ratio" for optimal legibility */
+  --line-height: 1.618;
+  --standard-border-radius: 0;
 
 	--text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 	--alt-font: "IBM Plex Sans", var(--text-font);
 	--heading-font: "IBM Plex Sans", var(--text-font);
 	--body-font: var(--text-font);
-    --mono-font: "IBM Plex Mono", "Fira Code", Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    --bg: #fff;
-    --accent-bg: #f7f4fb;
-    --accent-bg-light: #f2f2f2;
-    --code-bg: #f2f2f2;
-    --text: #0a0a0a;
-    --text-light: #787878;
-    --non-text-light: #95aac0;
+  --mono-font: "IBM Plex Mono", "Fira Code", Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --bg: #fff;
+  --accent-bg: #f7f4fb;
+  --accent-bg-light: #f2f2f2;
+  --code-bg: #f2f2f2;
+  --text: #0a0a0a;
+  --text-light: #787878;
+  --non-text-light: #95aac0;
 
-    --border: #bbb;
-    --border-light: var(--border);
-    --accent: #5c659b;
-    --accent-light: #7890c1;
-    --code: #d81b60;
-    --preformatted: #444;
-    --marked: #ffdd33;
-    --disabled: #efefef;
+  --border: #bbb;
+  --border-light: var(--border);
+  --accent: #5c659b;
+  --accent-light: #7890c1;
+  --button-bg: var(--accent-light);
+  --button-border: var(--accent);
+  --button-text: var(--text);
+  --button-hover: var(--bg);
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
 
-    --link: #3c63e8;
-    --link-visited: #6971a0;
-    --link-alt: var(--link);
+  --link: #3c63e8;
+  --link-visited: #6971a0;
+  --link-alt: var(--link);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #232326;
-        --accent-bg: #44475a;
-        --accent-bg-light: #303035;
-        --code-bg: #3e3e4b;
-        --text: #dfdfe6;
-        --text-light: #b8b8c6;
-        --non-text-light: #999fbf;
+  :root {
+    --bg: #232326;
+    --accent-bg: #44475a;
+    --accent-bg-light: #303035;
+    --code-bg: #3e3e4b;
+    --text: #dfdfe6;
+    --text-light: #b8b8c6;
+    --non-text-light: #999fbf;
 
-        --border: #aaa;
-        --border-light: #565656;
-        --accent: #8be9fd;
-        --accent-light: #ece1a1;
-        --code: #f06292;
-        --preformatted: #ccc;
-        --disabled: #111;
+    --button-bg: #555a79;
+    --button-border: #a5aac6;
 
-        --link: #cddfff;
-        --link-visited: #c3b1ff;
-        --link-alt: var(--accent-light);
-    }
+    --border: #aaa;
+    --border-light: #565656;
+    --accent: #8be9fd;
+    --accent-light: #ece1a1;
+    --code: #f06292;
+    --preformatted: #ccc;
+    --disabled: #111;
 
-    img:not(.pfp), video {
-        opacity: .6;
-    }
+    --link: #cddfff;
+    --link-visited: #c3b1ff;
+    --link-alt: var(--accent-light);
+  }
 
-    .badges img {
-        opacity: 1;
-    }
+  img:not(.pfp), video {
+    opacity: .6;
+  }
+
+  .interactions img {
+    opacity: 1;
+  }
+
+  .badges img {
+    opacity: 1;
+  }
 }
 
 body {
@@ -241,61 +253,10 @@ figcaption {
 	margin-bottom: 1rem;
 }
 
-a button,
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-	border: none;
-	border-radius: 5px;
-	background: var(--accent);
-	font-size: 1rem;
-	color: var(--bg);
-	padding: .7rem .9rem;
-	margin: .5rem 0;
-	transition: .4s;
-}
-
-a button[disabled],
-button[disabled],
-input[type="submit"][disabled],
-input[type="reset"][disabled],
-input[type="button"][disabled] {
-	opacity: .5;
-	cursor: not-allowed;
-}
-
-input:disabled,
-textarea:disabled {
-	cursor: not-allowed;
-	background: var(--disabled);
-}
-
-input[type="range"] {
-	padding: 0;
-}
-
-/* Set the cursor to '?' while hovering over an abbreviation */
-abbr {
-	cursor: help;
-}
-
-button:focus,
-button:enabled:hover,
-input[type="submit"]:focus,
-input[type="submit"]:enabled:hover,
-input[type="reset"]:focus,
-input[type="reset"]:enabled:hover,
-input[type="button"]:focus,
-input[type="button"]:enabled:hover {
-	opacity: .8;
-}
-
 /* Format the expanding box */
 details {
 	padding: .6rem 1rem;
 	border: 2px solid var(--border-light);
-	/* border-radius: 5px; */
 	margin-bottom: 1rem;
 }
 
@@ -462,7 +423,7 @@ nav .pfp-text {
 /*******************************************************************
  * Page sections
  */
-main, #after-content {
+main, .after-content {
     /* For better reading experience.
      * I don't want paragraphs to be too narrow, it looks ugly; Though I don't
      * want them to be too wide, either. Reading experience is important:
@@ -480,22 +441,17 @@ main, #after-content {
 .tags a,
 .tags a:visited {
     text-decoration: none;
-    color: var(--text-light);
+    color: var(--text-light) !important;
 }
-#after-content .tags a,
-#after-content .tags a:visited {
-    padding: .2rem .5rem;
-    background-color: var(--accent-bg);
-}
+/* .after-content .tags a, */
+/* .after-content .tags a:visited { */
+/*     padding: .2rem .5rem; */
+/*     background-color: var(--accent-bg); */
+/* } */
 .tags a:hover,
-#after-content .tags a:hover {
-    text-decoration: none;
+.after-content .tags a:hover {
+    text-decoration: underline;
     color: var(--text-light);
-}
-@media (prefers-color-scheme: light) {
-    .tags a:hover, #after-content .tags a:hover {
-        filter: brightness(95%);
-    }
 }
 
 footer {
@@ -538,7 +494,7 @@ nav a:visited {
     color: var(--link-alt);
 }
 
-main a:hover {
+main a:hover, .after-content .interactions a:hover {
 	opacity: .75;
 }
 
@@ -547,20 +503,26 @@ nav a#home:hover {
 }
 
 /* Differentiating between normal content links and meta content links */
-.meta a, footer a, #after-content a {
+.meta a, footer a, .after-content a {
 	text-decoration: none;
 }
 @media (prefers-color-scheme: dark) {
-    .meta a, footer a, #after-content a {
+    .meta a, footer a, .after-content a {
         color: var(--link-alt);
     }
+    .after-content .interactions a {
+        color: var(--link);
+    }
 }
-.meta a:hover, footer a:hover, #after-content a:hover {
+.meta a:hover, footer a:hover, .after-content a:hover {
     color: var(--accent-light);
     text-decoration: underline;
 }
+.after-content .interactions a:hover {
+  color: var(--link);
+}
 @media (prefers-color-scheme: dark) {
-    .meta a:hover, footer a:hover, #after-content a:hover {
+    .meta a:hover, footer a:hover, .after-content a:hover {
         opacity: .75;
     }
 }
@@ -600,17 +562,18 @@ a.anchor:hover {
 .post-meta, .post-list time, .tags {
     font-family: var(--alt-font);
 }
-.post-meta, .meta, footer, #after-content {
+.post-meta, .meta, footer {
 	font-size: .9rem;
 	color: var(--text-light);
 }
+
 section[itemprop="articlebody"] {
     font-family: var(--body-font);
 }
 
 #content div#main {
     padding-bottom: 1rem;
-    margin-bottom: 5rem;
+    margin-bottom: 1rem;
 }
 
 .footnotes {
@@ -637,6 +600,36 @@ ul.post-list {
 .post-list time {
     color: var(--text-light);
 }
+.after-content {
+  font-size: .9rem;
+}
+.interactions img:not(.icon) {
+  height: 20px;
+  width: auto;
+  vertical-align: text-bottom;
+}
+.interactions img.icon {
+  border-radius: 100%;
+}
+.after-content .interactions a:has(img):hover {
+  text-decoration: none;
+}
+.interactions .interaction {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: end;
+}
+.interactions .interaction:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.interactions .interaction time {
+  color: var(--text-light);
+  font-family: var(--alt-font);
+}
 /*******************************************************************
  * Chroma
  */
@@ -647,4 +640,176 @@ ul.post-list {
 .chroma .lntable {
     border: 1px solid var(--border);
     padding: .01em .1em;
+}
+
+/*******************************************************************
+ * Forms
+ */
+textarea,
+select,
+input,
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+button,
+.button,
+a.button, /* extra specificity to override a */
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  border: 1px solid var(--button-border);
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  padding: 0.5rem 0.9rem;
+  text-decoration: none;
+  line-height: normal;
+	transition: .4s;
+}
+
+.button[aria-disabled="true"],
+input:disabled,
+textarea:disabled,
+select:disabled,
+button[disabled] {
+  cursor: not-allowed;
+  background-color: var(--disabled);
+  border-color: var(--disabled);
+  color: var(--text-light);
+}
+input[type="range"] {
+  padding: 0;
+}
+/* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
+abbr[title] {
+  cursor: help;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+button:enabled:hover,
+.button:not([aria-disabled="true"]):hover,
+input[type="submit"]:enabled:hover,
+input[type="reset"]:enabled:hover,
+input[type="button"]:enabled:hover {
+  background-color: var(--button-hover);
+  cursor: pointer;
+}
+
+.button:focus-visible,
+button:focus-visible:where(:enabled),
+input:enabled:focus-visible:where(
+  [type="submit"],
+  [type="reset"],
+  [type="button"]
+) {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+textarea,
+select,
+input,
+button,
+.button {
+  font-size: inherit;
+  font-family: inherit;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: var(--standard-border-radius);
+  box-shadow: none;
+  max-width: 100%;
+  display: inline-block;
+}
+textarea,
+select,
+input {
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+}
+label {
+  display: block;
+}
+textarea:not([cols]) {
+  width: 100%;
+}
+
+/* Add arrow to drop-down */
+select:not([multiple]) {
+  background-image: linear-gradient(45deg, transparent 49%, var(--text) 51%),
+    linear-gradient(135deg, var(--text) 51%, transparent 49%);
+  background-position: calc(100% - 15px), calc(100% - 10px);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-inline-end: 25px;
+}
+*[dir="rtl"] select:not([multiple]) {
+  background-position: 10px, 15px;
+}
+
+/* checkbox and radio button style */
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
+  position: relative;
+  width: min-content;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+}
+
+input[type="radio"] {
+  border-radius: 100%;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  background-color: var(--accent);
+}
+
+input[type="checkbox"]:checked::after {
+  /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
+  content: " ";
+  width: 0.18em;
+  height: 0.32em;
+  border-radius: 0;
+  position: absolute;
+  top: 0.05em;
+  left: 0.17em;
+  background-color: transparent;
+  border-right: solid var(--bg) 0.08em;
+  border-bottom: solid var(--bg) 0.08em;
+  font-size: 1.8em;
+  transform: rotate(45deg);
+}
+input[type="radio"]:checked::after {
+  /* creates a colored circle for the checked radio button  */
+  content: " ";
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.125em;
+  background-color: var(--bg);
+  left: 0.125em;
+  font-size: 32px;
+}
+/* Makes input fields wider on smaller screens */
+@media only screen and (max-width: 720px) {
+  textarea,
+  select,
+  input {
+    width: 100%;
+  }
+}
+/* Set a height for color input */
+input[type="color"] {
+  height: 2.5rem;
+  padding:  0.2rem;
+}
+/* do not show border around file selector button */
+input[type="file"] {
+  border: 0;
 }

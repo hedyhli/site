@@ -8,6 +8,9 @@ draft = false
 date = "2024-11-04T01:58:05Z"
 outputs = ['html', 'gemtext']
 slug = "typing-vs-writing"
+
+[[syndications]]
+list = "https://lists.sr.ht/~hedy/posts/%3CSudkC_dyorlydIqGlWjJWyk7dtk2Ty-kPT3hqrWI-kpGPXXtYCBxW8o_PdlH_go6V5NIl4kBLRm7jLfGY_ayrXQL3BgcJPSf06ArXG4QUoc=@protonmail.com%3E"
 +++
 
 I type faster than I can write. But regardless of how I put my thoughts down, the speed at which my thoughts can keep up with me putting them down is the same[^speed]. I believe that my speed of thought is right in-between the speed of my handwriting and typing; and this effects how I perceive the general act of writing[^writing] on my abilities to articulate.
