@@ -44,7 +44,7 @@ Some people include information about their site in a dedicated section of their
 - The site is built with a custom static site generator
 - Fonts used throughout their site
 
-[Jeremy Friesen](https://takeonrules.com/) has a [Colophon page](https://takeonrules.com/about/colophon/) that details their journey in blogging with links to blog posts for each major change in the website. He even has dedicated [updates](https://takeonrules.com/site-map/updates/) and [changelog](https://takeonrules.com/site-map/changelog/) pages.
+[Jeremy Friesen](https://takeonrules.com/) has a [Colophon page](https://takeonrules.com/about/colophon/) that details their journey in blogging with links to blog posts for each major change in the website. He even has a dedicated [changelog](https://takeonrules.com/site-map/changelog/) page.
 
 [My personal website](https://home.hedy.dev/) contains a [/meta page](https://home.hedy.dev/meta/) that includes:
 - How my site is built and where it is hosted
