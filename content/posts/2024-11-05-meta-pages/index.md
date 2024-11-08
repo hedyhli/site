@@ -34,10 +34,6 @@ Some people include information about their site in a dedicated section of their
 - His site design and inspiration
 - What his site is built on and what it runs on
 
-[Hund](https://hunden.linuxkompis.se/) has a brief section in their [about page](https://hunden.linuxkompis.se/about/) where they mention:
-- What they use to make their site
-- Where their site is hosted, and a note about carbon footprints and (lack of) user tracking
-
 [Gregory Hammond](https://gregoryhammond.ca/) mentions why he writes on his blog on his [about page](https://gregoryhammond.ca/about/), he also has a list of [policies](https://gregoryhammond.ca/policies/) he follows including:
 - An accessibility statement
 - An AI statement
@@ -47,6 +43,8 @@ Some people include information about their site in a dedicated section of their
 - The site is self-hosted
 - The site is built with a custom static site generator
 - Fonts used throughout their site
+
+[Jeremy Friesen](https://takeonrules.com/) has a [Colophon page](https://takeonrules.com/about/colophon/) that details their journey in blogging with links to blog posts for each major change in the website. He even has dedicated [updates](https://takeonrules.com/site-map/updates/) and [changelog](https://takeonrules.com/site-map/changelog/) pages.
 
 [My personal website](https://home.hedy.dev/) contains a [/meta page](https://home.hedy.dev/meta/) that includes:
 - How my site is built and where it is hosted
