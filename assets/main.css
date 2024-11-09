@@ -577,6 +577,28 @@ section[itemprop="articlebody"].mono {
   background-color: var(--accent-bg-light);
   padding: 1rem 2rem;
 }
+div.callout {
+  background-color: var(--accent-bg-light);
+  padding: .5rem 2rem;
+  padding-bottom: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--standard-border-radius);
+}
+div.callout::before {
+  font-family: var(--alt-text);
+  color: var(--text-light);
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+div.callout p:first-child {
+  margin-top: .5rem;
+}
+div.callout.note::before {
+  content: "NOTE";
+}
+div.callout.note {
+  border-left: 3px solid var(--accent);
+}
 
 #content div#main {
     padding-bottom: 1rem;
