@@ -9,6 +9,9 @@ date = "2024-11-08T10:14:45Z"
 outputs = ['html']
 # Filename after the date
 slug = "hugo-custom-highlight-with-tree-sitter"
+
+[[syndications]]
+mastodon = 'https://tilde.zone/@hedy/113446849760023150'
 +++
 
 I recently helped migrate the homepage of [Cognate](https://cognate-lang.github.io), a stack-based, lisp- and ML-inspired programming language, to Hugo. Here's how I added Cognate language syntax highlighting for our Hugo site.

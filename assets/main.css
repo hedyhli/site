@@ -611,6 +611,11 @@ ul.post-list {
 .interactions img.icon {
   border-radius: 100%;
 }
+@media (max-width: 900px) {
+  .interaction div:has(img.icon) {
+    display: none;
+  }
+}
 .after-content .interactions a:has(img):hover {
   text-decoration: none;
 }
