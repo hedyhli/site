@@ -577,6 +577,9 @@ section[itemprop="articlebody"].mono {
   background-color: var(--accent-bg-light);
   padding: 1rem 2rem;
 }
+section[itemprop="articlebody"].mono :is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--body-mono-font);
+}
 div.callout {
   background-color: var(--accent-bg-light);
   padding: .5rem 2rem;

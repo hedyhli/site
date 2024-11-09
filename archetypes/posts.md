@@ -6,7 +6,7 @@ date = "{{ time.Now.UTC.Format "2006-01-02T15:04:05Z" }}"
 
 draft = true
 outputs = ['html', 'gemini']
-{{- /* Filename after the date */ }}
+{{/* Filename after the date */}}
 slug = "{{ slicestr .Name 11 }}"
 tags = []
 
