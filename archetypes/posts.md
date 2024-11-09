@@ -11,6 +11,7 @@ slug = "{{ slicestr .Name 11 }}"
 tags = []
 
 highlight = false
+# font = "mono"
 
 # [[syndications]]
 # list =

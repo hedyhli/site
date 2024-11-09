@@ -43,12 +43,19 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 <meta name="color-scheme" content="light dark">
 {{ $css := resources.Get "main.css" | minify -}}
-{{ $fonts_css := resources.Get "fonts.css" | minify -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-<link rel="stylesheet" href="{{ $fonts_css.RelPermalink }}">
+{{ $fonts_css := resources.Get "fonts.css" | minify -}}
+<style>{{ $fonts_css.Content | safeCSS }}</style>
+
+{{ if eq "mono" .Params.font -}}
+{{ $iawriter_css := resources.Get "iawriter.css" | minify -}}
+<style>{{ $iawriter_css.Content | safeCSS }}</style>
+{{- end }}
+
 {{ if .Params.highlight -}}
 {{ $syntaxlight := resources.Get "syntax/light.css" | minify -}}
 {{ $syntaxdark := resources.Get "syntax/dark.css" | minify  -}}

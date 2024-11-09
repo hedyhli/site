@@ -28,6 +28,7 @@
 	--heading-font: "IBM Plex Sans", var(--text-font);
 	--body-font: var(--text-font);
   --mono-font: "IBM Plex Mono", "Fira Code", Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --body-mono-font: "iA Writer Duo", "iA Writer Mono", var(--mono-font);
   --bg: #fff;
   --accent-bg: #f7f4fb;
   --accent-bg-light: #f2f2f2;
@@ -569,6 +570,12 @@ a.anchor:hover {
 
 section[itemprop="articlebody"] {
     font-family: var(--body-font);
+}
+
+section[itemprop="articlebody"].mono {
+  font-family: var(--body-mono-font);
+  background-color: var(--accent-bg-light);
+  padding: 1rem 2rem;
 }
 
 #content div#main {

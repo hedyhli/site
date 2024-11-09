@@ -8,6 +8,7 @@ draft = false
 date = "2024-11-04T01:58:05Z"
 outputs = ['html', 'gemtext']
 slug = "typing-vs-writing"
+font = "mono"
 
 [[syndications]]
 list = "https://lists.sr.ht/~hedy/posts/%3CSudkC_dyorlydIqGlWjJWyk7dtk2Ty-kPT3hqrWI-kpGPXXtYCBxW8o_PdlH_go6V5NIl4kBLRm7jLfGY_ayrXQL3BgcJPSf06ArXG4QUoc=@protonmail.com%3E"
