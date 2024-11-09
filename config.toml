@@ -116,3 +116,24 @@ section = ["HTML", "RSS", "GEMATOM", "ATOM"]
 minifyOutput = true
 disableXML = true
 disableHTML = true
+
+[webmentions]
+webmentionsFile = "mentions.json"
+excludeSources = [
+	"/tags/*",                    # only trailing * are supported at the moment
+	"/posts/*",                   # this only excludes /posts/index.html, not /posts/somepost/
+	"/",                          # same as "/index.html"
+]
+excludeDestinations = [
+  "https://home.hedy.dev/",    # this still allows mentioning pages other than the homepage
+  "/posts/",
+  "/tags/",
+  "mailto:",
+  "gemini:",
+  "https://lists.sr.ht/~hedy/posts",
+  "https://github.com/",
+]
+excludeSelectors = [
+  ".interactions",
+]
+newDir = "public"

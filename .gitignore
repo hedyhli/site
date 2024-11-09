@@ -4,3 +4,4 @@ resources/
 tmp
 node_modules
 hint-report
+mentions.json
