@@ -137,3 +137,10 @@ which returns the relative permalink of the file. (see [resources](#resources).)
 ```sh
 make all deploy
 ```
+
+### webmentions
+
+```sh
+curl 'https://webmention.io/api/mentions?target={permalink of page}' | jq '.links' > new-entries.json
+jq -n '[ inputs ] | add' assets/data/{slug}/webmentions.json new-entries.json > merged.json
+```
