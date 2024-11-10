@@ -13,6 +13,8 @@ GEMINI_DEST=~/public_gemini
 GEMINI_DEST_BASE=public_gemini
 HTML_DEST=~/public_html
 
+DATA_BAK_DEST=pgs.sh:/site-data
+
 UGLYURL_EXCLUDE=*no-used-anymore*
 
 DEPLOY_HTML=home.hedy.dev
@@ -39,6 +41,7 @@ deploy-html: html-prettify
 	cd $(DEPLOY_HTML_REPO) && git add -A
 	cd $(DEPLOY_HTML_REPO) && git commit -m 'make deploy-html'
 	cd $(DEPLOY_HTML_REPO) && git push
+	$(RSYNC) -rv assets/data $(DATA_BAK_DEST)
 
 deploy-gemini:
 	$(RSYNC) $(RSYNC_FLAGS) ../spsrv/README.gmi $(GEMINI_DEST)/spsrv/index.gmi

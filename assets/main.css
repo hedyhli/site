@@ -663,7 +663,7 @@ ul.post-list {
 .interactions .interaction:not(:last-child) {
   margin-bottom: 2rem;
 }
-.interactions .interaction time {
+.interactions time {
   color: var(--text-light);
   font-family: var(--alt-font);
 }

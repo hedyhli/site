@@ -1,24 +1,24 @@
-{{ $url := printf "%s%s" "https://webmention.io/api/mentions?target=" .Permalink }}
-{{ $data := dict }}
-{{ with resources.GetRemote $url }}
+{{ $path := printf "data/%swebmentions.json" .Page.RelPermalink }}
+{{ $data := slice }}
+{{ with resources.Get $path }}
   {{ with .Err }}
-    {{ errorf "Error fetching webmentions.io: %s" . }}
+    {{ errorf "Error fetching webmentions: %s" . }}
   {{ else }}
     {{ $data = . | transform.Unmarshal }}
   {{ end }}
-{{ else }}
-  {{ errorf "Unable to fetch %q" $url }}
 {{ end }}
 
-{{ if eq (len $data.links) 0 }}
+{{ if eq (len $data) 0 }}
 <p>There are no webmentions for this post yet.</p>
 {{ else }}
   {{ $likes := slice }}
   {{ $hasLikes := false }}
   {{ $reposts := slice }}
   {{ $hasReposts := false }}
+  {{ $links := slice }}
+  {{ $hasLinks := false }}
   {{ $others := slice }}
-  {{ range $data.links }}
+  {{ range $data }}
     {{ if eq .activity.type "like" }}
       {{ $likes = $likes | append . }}
       {{ $hasLikes = true }}
@@ -27,7 +27,12 @@
         {{ $reposts = $reposts | append . }}
         {{ $hasReposts = true }}
       {{ else }}
-        {{ $others = $others | append . }}
+        {{ if eq .activity.type "link" }}
+          {{ $links = $links | append . }}
+          {{ $hasLinks = true }}
+        {{ else }}
+          {{ $others = $others | append . }}
+        {{ end }}
       {{ end }}
     {{ end }}
   {{ end }}
@@ -55,9 +60,21 @@
     </p>
   </details>
   {{ end }}
+  {{ if $hasLinks }}
+  <details open="" class="interactions">
+    <summary>Links ({{ len $links }})</summary>
+    <ul style="list-style: none; padding-left: 0;">
+    {{ range $links }}
+      <li>
+        <p><time class="dt-published published" datetime="{{ time.Format "2006-01-02 15:04:05Z" .data.published }}">{{ time.Format "Jan 02, 2006" .data.published }}</time> · <a href="{{ .data.url }}">{{ .data.name }}</a></p>
+      </li>
+    {{ end }}
+    </ul>
+  </details>
+  {{ end }}
   {{ if ne (len $others) 0 }}
   <details open="" class="interactions">
-    <summary>Responses and other mentions ({{ len $others }})</summary>
+    <summary>Other mentions ({{ len $others }})</summary>
     {{ range $others }}
       {{ $date := "" }}
       {{ if isset .data "published" }}
@@ -71,7 +88,7 @@
         </div>
         <div style="flex-grow: 1;">
           <span>
-            <a href="{{ .data.author.url }}">{{ .data.author.name }}</a> · <time class="dt-published published" datetime="{{ .Date.Format "2006-01-02 15:04:05Z" }}">{{ time.Format "Jan 02, 2006" $date }}</time>
+            <a href="{{ .data.author.url }}">{{ .data.author.name }}</a> · <time class="dt-published published" datetime="{{ time.Format "2006-01-02 15:04:05Z" $date }}">{{ time.Format "Jan 02, 2006" $date }}</time>
           </span>
           {{ with .data.content }}
           <blockquote class="content">{{ . | safeHTML }}</blockquote>

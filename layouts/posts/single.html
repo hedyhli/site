@@ -63,6 +63,6 @@
       </div>
     </form>
   </details>
-  {{ partial "webmentions.html" (dict "Permalink" .Permalink) }}
+  {{ partial "webmentions.html" (dict "Page" .) }}
 </section>
 {{- end }}
