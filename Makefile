@@ -54,6 +54,7 @@ deploy: deploy-html deploy-gemini
 backup:
 	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
 	$(RSYNC) $(RSYNC_FLAGS) $(HTML_DEST) $(HTML_DEST)-back --delete
+	$(RSYNC) $(RSYNC_FLAGS) assets/data $(HTML_DEST)-back/data
 
 nonsymlink-clean:
 	# clean all non-symlink files

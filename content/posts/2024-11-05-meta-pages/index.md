@@ -14,6 +14,13 @@ mastodon = "https://tilde.zone/@hedy/113430153626263981"
 list = "https://lists.sr.ht/~hedy/posts/%3CRVhDhyDzZC28FkwJjJkSiG7jzSOf3Gm5iLQVaLDVnIdOR96UXZwuTcdmwSKGVUMYUVcX2av7MkzjBrirnvcpX1wXzL9Sfl7xZp4kHNMfPr4=@protonmail.com%3E"
 +++
 
+<details open=""><summary>Update (2024-11-11)</summary>
+
+I've made a webring! Read more about this topic at
+[meta-ring.hedy.dev](https://meta-ring.hedy.dev/)
+
+</details>
+
 If you have a personal website, chances are, you take great care into making your site *yours*. You update it frequently, you might have a workflow for posting on your blog. You might have made sure to properly implement features you care a lot about.
 
 What tools do you use to draft your blog posts? Where do you [syndicate](https://indieweb.org/POSSE) your content? What are some inspirations or standards you follow for your site's design?
@@ -55,4 +62,3 @@ Some people include information about their site in a dedicated section of their
 <br />
 
 Now it's your turn! If you've been blogging for a while you may have come across common questions such as people asking about the tools you use to build you site, or how you host it. You can now simply link them to that page :)
-
