@@ -74,6 +74,14 @@ page that supports it),
 <a referrerpolicy="strict-origin" href="https://a11y-webring.club/next">Next→</a>
 </td>
 </tr>
+<tr>
+<td><a href="https://meta-ring.hedy.dev/">Meta Ring</a></td>
+<td>
+<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/previous">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/random">Random</a>
+<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/next">Next→</a>
+</td>
+</tr>
 </tbody>
 </table>
 
