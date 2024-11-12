@@ -56,8 +56,8 @@ Mono.
 
 ## Member sites and badges
 
+<a href="https://512kb.club"><img height="30" src="https://512kb.club/assets/images/green-team.svg" alt="a proud member of the green team of 512KB club" /></a>
 <div class="badges">
-<a href="https://512kb.club"><img src="https://512kb.club/assets/images/green-team.svg" alt="a proud member of the green team of 512KB club" /></a>
 <a href='https://www.beepbird.net/index.html'><img src="https://www.beepbird.net/webring/focusfirst.png" alt="Focus First Index"></a>
 <a href='https://notbyai.fyi/'><img src="/created-by-human_white.png" alt="Created By Human, Not By AI"></a>
 <a href='https://kalechips.net/responsive/index'><img src="https://kalechips.net/responsive/buttons/8831-1.png" alt="Responsive Web Directory"></a>
