@@ -75,6 +75,14 @@ page that supports it),
 </td>
 </tr>
 <tr>
+<td><a href="https://baccyflap.com/noai">No AI Webring</a></td>
+<td>
+<a referrerpolicy="strict-origin" href="https://baccyflap.com/noai/?prv&s=dsh">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://baccyflap.com/noai/?rnd">Random</a>
+<a referrerpolicy="strict-origin" href="https://baccyflap.com/noai/?nxt&s=dsh">Next→</a>
+</td>
+</tr>
+<tr>
 <td><a href="https://meta-ring.hedy.dev/">Meta Ring</a></td>
 <td>
 <a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/previous">←Previous</a>
