@@ -12,9 +12,9 @@ tags = []
 highlight = false
 # font = "mono"
 
-# [[syndications]]
+[[syndications]]
 # list =
-# mastodon =
+mastodon = 'https://tilde.zone/@hedy/113473523167094682'
 +++
 
 Following up on my [recent post about colophons ("meta" pages)](https://home.hedy.dev/posts/meta-pages/), I've decided to create a webring to gather more personal websites through opt-ins.
