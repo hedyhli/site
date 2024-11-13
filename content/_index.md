@@ -67,7 +67,7 @@ page that supports it),
 </td>
 </tr>
 <tr>
-<td><a href="https://a11y-webring.club/">a11y-webring.club</a></td>
+<td><a href="https://a11y-webring.club/">a11y webring</a></td>
 <td>
 <a referrerpolicy="strict-origin" href="https://a11y-webring.club/prev">←Previous</a>
 <a referrerpolicy="strict-origin" href="https://a11y-webring.club/random">Random</a>
