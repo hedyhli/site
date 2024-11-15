@@ -13,8 +13,8 @@
     <updated>{{ time.Now.UTC | time.Format "2006-01-02T15:04:05Z" | safeHTML }}</updated>
     <id>{{ .Site.Params.geminiRoot }}</id>
     <author>
-        <name>{{ $.Site.Author.name }}</name>
-        <email>{{ $.Site.Author.email }}</email>
+        <name>{{ $.Site.Params.author.name }}</name>
+        <email>{{ $.Site.Params.author.email }}</email>
     </author>
     {{- range (where .Site.RegularPages "Section" "posts") -}}
     {{- $p := . -}}
@@ -26,8 +26,8 @@
         <id>{{ $perm }}</id>
         <updated>{{ $p.Date.Format "2006-01-02T15:04:05Z" }}</updated>
         <author>
-            <name>{{ $.Site.Author.name }}</name>
-            <email>{{ $.Site.Author.email }}</email>
+            <name>{{ $.Site.Params.author.name }}</name>
+            <email>{{ $.Site.Params.author.email }}</email>
         </author>
     </entry>
     {{- end }}

@@ -31,9 +31,9 @@
         <generator>Hugo -- gohugo.io</generator>
         {{ with .Site.LanguageCode -}}
         <language>{{.}}</language>{{end}}
-        {{ with .Site.Author.email -}}
-        <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>
-        <webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}
+        {{ with .Site.Params.author.email -}}
+        <managingEditor>{{.}}{{ with $.Site.Params.author.name }} ({{.}}){{end}}</managingEditor>
+        <webMaster>{{.}}{{ with $.Site.Params.author.name }} ({{.}}){{end}}</webMaster>{{end}}
         {{ with .Site.Copyright -}}
         <copyright>{{.}}</copyright>{{end}}
         <atom:icon>{{ $favicon_png.Permalink }}</atom:icon>
@@ -47,8 +47,7 @@
             <title>{{ .Title }}</title>
             <link>{{ .Permalink }}</link>
             <pubDate>{{ .Date.UTC.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-            {{ with .Site.Author.email -}}
-            <author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
+            <author>{{ .Site.Params.author.name }} ({{ .Site.Params.author.email }})</author>
             <guid>{{ .Permalink }}</guid>
             <description xml:base="{{ .Permalink }}">{{ .Content | html }}</description>
         </item>

@@ -12,7 +12,7 @@ EOF
 
 {{ $subject := urlquery (printf "Re: %s" .Title) }}
 => {{ with .Params.publicReplyTo }}{{ . |safeHTML }}{{ else }}mailto:~hedy/posts@lists.sr.ht?subject={{ $subject }}{{ end }} Reply via email publicly (plain-text only)
-=> mailto:{{ .Site.Author.email }}?subject={{ $subject }} Reply via email privately
+=> mailto:{{ .Site.Params.author.email }}?subject={{ $subject }} Reply via email privately
 => {{ .Site.Params.srcURLPrefix }}content/{{ .File.Path }} Suggest an edit
 
 => . ← Gemlog
