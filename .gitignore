@@ -5,4 +5,4 @@ tmp
 node_modules
 hint-report
 mentions.json
-assets/data/**/webmentions.json
+assets/data

@@ -664,6 +664,20 @@ ul.post-list {
   font-family: var(--alt-font);
 }
 /*******************************************************************
+ * Bookmarks
+ */
+.bookmarks h3 {
+  margin-bottom: 0;
+}
+.bookmarks .excerpt, .bookmarks .date {
+  color: var(--text-light);
+  font-family: var(--alt-font);
+  font-size: .9rem;
+}
+.bookmarks .excerpt {
+  margin-top: 0;
+}
+/*******************************************************************
  * Chroma
  */
 .chroma .lntable pre {

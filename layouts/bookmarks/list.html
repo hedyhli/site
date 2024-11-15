@@ -1,0 +1,35 @@
+{{ define "main" }}
+{{ $path := "data/bm.csv" }}
+{{ $data := slice }}
+{{ with resources.Get $path }}
+  {{ with .Err }}
+    {{ errorf "Error fetching bookmarks: %s" . }}
+  {{ else }}
+    {{ $data = . | transform.Unmarshal }}
+  {{ end }}
+{{ end }}
+<div itemscope itemtype="https://schema.org/BlogPosting" class="h-entry">
+  <article itemprop="mainEntityOfPage">
+    <header id="post-header">
+      <h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
+    </header>
+    <section class="e-content bookmarks" itemprop="articlebody">
+      {{ partial "processed-content" . -}}
+      <hr />
+      <br />
+      {{/* id,title,note,excerpt,url,tags,created,cover,highlights,favorite */}}
+      {{ range (after 1 $data) }}
+      <h3><a href="{{ index . 4 }}">{{ index . 1 }}</a></h3>
+      {{ with index . 3 }}
+      <p class="excerpt">{{ . }}</p>
+      {{ end }}
+      {{ with index . 2 }}
+      <div class="callout">{{ . | markdownify }}</div>
+      {{ end }}
+      <p class="date dt-published">Bookmarked <time>{{ index . 6 | time.Format "2006-01-02" }}</time></p>
+      {{ end }}
+    </section>
+  </article>
+  <br />
+</div>
+{{ end }}

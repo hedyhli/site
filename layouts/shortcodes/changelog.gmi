@@ -1,0 +1,16 @@
+{{ $path := "changelog.yml" }}
+{{ $data := slice }}
+{{ with resources.Get $path }}
+  {{ with .Err }}
+    {{ errorf "Error fetching changelog: %s" . }}
+  {{ else }}
+    {{ $data = . | transform.Unmarshal }}
+  {{ end }}
+{{ end }}
+(reverse-chronological)
+{{ range $data }}
+{{ .date }}
+```markdown
+{{ .desc }}
+```
+{{ end }}

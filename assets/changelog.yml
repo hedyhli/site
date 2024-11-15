@@ -1,0 +1,15 @@
+- date: 2024-11-15
+  desc: |
+    Added this changelog.
+- date: 2024-11-15
+  desc: |
+    Added a [bookmarks](/bookmarks/) page that is generated from Raindrop's CSV
+    export for WWW, and is manually updated for the gemini version.
+- date: 2024-11-15
+  desc: |
+    Added a [blogroll](/blogroll/) page for interesting WWW personal sites as
+    well as one for gemini and gopher sites on the gemini version.
+- date: 2024-11-05
+  desc: |
+    [Added](/posts/meta-pages/) a meta page, inspired by [Seirdy's
+    site](https://seirdy.one/meta/).

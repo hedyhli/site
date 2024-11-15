@@ -1,0 +1,19 @@
+{{ $path := "changelog.yml" }}
+{{ $data := slice }}
+{{ with resources.Get $path }}
+  {{ with .Err }}
+    {{ errorf "Error fetching changelog: %s" . }}
+  {{ else }}
+    {{ $data = . | transform.Unmarshal }}
+  {{ end }}
+{{ end }}
+<ul>
+{{ range $data }}
+  <li>
+    <p>
+      <time>{{ .date }}</time> —
+      {{ .desc | markdownify }}
+    </p>
+  </li>
+{{ end }}
+</ul>

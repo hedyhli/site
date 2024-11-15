@@ -66,3 +66,7 @@ Mono.
 
 Feel free to [let me know](/about/) if you'd like me to join your webring or
 directory.
+
+## Changelog
+
+{{% changelog %}}
