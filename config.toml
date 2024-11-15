@@ -68,7 +68,7 @@ url = "/meta/"
 weight = 30
 [[menu.main]]
 identifier = "misc"
-name = "Misc"
+name = "More…"
 title = "misc"
 url = "/misc/"
 weight = 100

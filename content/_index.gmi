@@ -2,6 +2,14 @@
 
 Hi, I'm hedy. This is where I occasionally post long-form articles and thoughts.
 
+=> /posts/ 📔 gemlog
+=> about.gmi 💬 about me, methods of contact, and the software I use
+=> bookmarks.gmi 🔖 bookmarks
+=> blogroll.gmi 📚 "gemlog and phlog"-roll
+=> misc.gmi 📄 other pages on this capsule
+
+## Links
+
 => mailto:hedy.dev@protonmail.com contact — email (preferred)
 => https://meta.sr.ht/~hedy.pgp PGP
 
@@ -11,13 +19,6 @@ Hi, I'm hedy. This is where I occasionally post long-form articles and thoughts.
 
 => https://home.hedy.dev/ home.hedy.dev (weblog)
 => spartan://do.hedy.dev/ spartan
-
-
-## Pages
-
-=> /posts/ gemlog
-=> about.gmi about me, methods of contact, and the software I use
-=> misc.gmi misc
 
 
 ## Services
