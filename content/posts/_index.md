@@ -3,6 +3,9 @@ outputs = ['html', 'gemtext', 'gematom', 'rss', 'atom']
 title = 'Posts'
 +++
 
+These are my long-form musings. Expect posts no less frequent than yearly but
+never more frequent than daily.
+
 Comments can be sent to my
 [public mailing list](https://lists.sr.ht/~hedy/posts) where I'll also send new
 posts as plain text. If you subscribe to the list, it acts like a newsletter
