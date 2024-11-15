@@ -8,5 +8,6 @@ title = 'Misc'
 +++
 
 - [Meta](/meta/) -- Meta information for this website
+- [Bookmarks](/bookmarks/) -- Collection of bookmarks exported from Raindrop.io
 - [Blogroll](/blogroll/) -- A selection of personal websites and blogs I enjoy
 - [~Cafe Spotlight](../cafe-spotlight/) -- Showcase of cool things on tilde.cafe

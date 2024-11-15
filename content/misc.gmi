@@ -1,3 +1,4 @@
 
-=> cafe-spotlight.gmi ~Cafe Spotlight — Showcase of cool things on tilde.cafe
+=> bookmarks.gmi Smolnet bookmarks
 => blogroll.gmi "Blog"-roll — cool gemini capsules and gopher holes
+=> cafe-spotlight.gmi ~Cafe Spotlight — Showcase of cool things on tilde.cafe
