@@ -1,0 +1,27 @@
+Here are some people whose gemini capsules or gopher holes I enjoy!
+
+Check out the WWW version of this page for personal websites and blogs instead.
+
+Corrections, suggestions:
+=> mailto:hedy.dev@protonmail.com
+
+Sorted in reverse-alphabetical order.
+
+=> gopher://gopher.black/ Tomasino's gopher.black
+=> gemini://perso.pw/blog/ Solene
+=> gopher://colorfield.space/1/~sloum/ Sloum at colorfield.space
+=> gopher://zaibatsu.circumlunar.space/1/~sloum/ Sloum at circumlunar.space
+=> gemini://idiomdrottning.org/ Sandra at idiomdrottning.org
+=> gemini://ploum.net Ploum
+=> gemini://nytpu.com/ nytpu
+=> gopher://box.matto.nl Matto
+=> gemini://gemini.cyberbot.space/gemlog/ kelbot
+=> gemini://freeshell.de/ JBanana
+=> gemini://warmedal.se/~bjorn/ ew0k
+=> gemini://gmi.bacardi55.io/ bacardi55
+=> gemini://alexschroeder.ch/ Alex Schroeder
+
+Similar list of gemini capsules and gopher holes:
+=> gemini://nytpu.com/feed.gmi
+=> gopher://box.matto.nl:70/1/burrows-of-interest
+=> gopher://box.matto.nl:70/1/phlogroll

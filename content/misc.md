@@ -8,4 +8,5 @@ title = 'Misc'
 +++
 
 - [Meta](/meta/) -- Meta information for this website
+- [Blogroll](/blogroll/) -- A selection of personal websites and blogs I enjoy
 - [~Cafe Spotlight](../cafe-spotlight/) -- Showcase of cool things on tilde.cafe

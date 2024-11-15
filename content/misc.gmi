@@ -1,2 +1,3 @@
 
 => cafe-spotlight.gmi ~Cafe Spotlight — Showcase of cool things on tilde.cafe
+=> blogroll.gmi "Blog"-roll — cool gemini capsules and gopher holes
