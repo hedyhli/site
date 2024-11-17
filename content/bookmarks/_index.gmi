@@ -1,9 +1,11 @@
 This page is currently edited by hand, until I find a solution that can store dates and provides a chronological export option.
 
 Last updated:
-2024-11-15 15:05:10
+2024-11-17
 
-=> gemini://ploum.net/2023-03-03-bluesky.gmi
+## November
+
+=> gemini://ploum.net/2023-03-03-bluesky.gmi About Bluesky and Decentralisation (ploum.net)
 => gopher://gopher.black:70/0/archive/rfc/1436.txt
 => gopher://gopherproject.org:70/1/
 => spartan://ascii.mozz.us:7070/

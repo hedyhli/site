@@ -11,12 +11,14 @@ Sorted in reverse-alphabetical order.
 => gemini://perso.pw/blog/ Solene
 => gopher://colorfield.space/1/~sloum/ Sloum at colorfield.space
 => gopher://zaibatsu.circumlunar.space/1/~sloum/ Sloum at circumlunar.space
+=> gemini://skyjake.fi/ Skyjake
 => gemini://idiomdrottning.org/ Sandra at idiomdrottning.org
 => gemini://ploum.net Ploum
 => gemini://nytpu.com/ nytpu
 => gopher://box.matto.nl Matto
 => gemini://gemini.cyberbot.space/gemlog/ kelbot
 => gemini://freeshell.de/ JBanana
+=> gemini://tilde.town/~hush/ ~hush
 => gemini://warmedal.se/~bjorn/ ew0k
 => gemini://gmi.bacardi55.io/ bacardi55
 => gemini://alexschroeder.ch/ Alex Schroeder
@@ -25,3 +27,4 @@ Similar list of gemini capsules and gopher holes:
 => gemini://nytpu.com/feed.gmi
 => gopher://box.matto.nl:70/1/burrows-of-interest
 => gopher://box.matto.nl:70/1/phlogroll
+=> gemini://gemini.cyberbot.space/links.gmi
