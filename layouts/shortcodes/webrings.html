@@ -7,19 +7,21 @@
     {{ $data = . | transform.Unmarshal }}
   {{ end }}
 {{ end }}
-<table class="webrings">
-<tbody>
+<div class="webrings">
+  <ul>
     {{ range $data }}
-    <tr>
-      <td><a href="{{ .url }}">{{ .name }}</a></td>
-      <td>
-        <a referrerpolicy="strict-origin" href="{{ .previous }}">←Previous</a>
-        {{ with .random }}
-        <a referrerpolicy="strict-origin" href="{{ . }}">Random</a>
-        {{ end }}
-        <a referrerpolicy="strict-origin" href="{{ .next }}">Next→</a>
-      </td>
-    </tr>
+    <li>
+      <p>
+        <a aria-label="previous" class="arrow" referrerpolicy="strict-origin" href="{{ .previous }}">⇐</a>
+        <span>
+          <a href="{{ .url }}">{{ .name }}</a>
+          {{ with .random }}
+          <a aria-label="random" referrerpolicy="strict-origin" href="{{ . }}">🔀</a>
+          {{ end }}
+        </span>
+        <a aria-label="next" class="arrow" referrerpolicy="strict-origin" href="{{ .next }}">⇒</a>
+      </p>
+    </li>
     {{ end }}
-</tbody>
-</table>
+  </ul>
+</div>

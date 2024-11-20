@@ -401,16 +401,58 @@ nav .pfp-text {
 }
 
 .webrings {
-    width: initial;
-    border: 1px solid var(--border-light);
+  text-align: center;
 }
-.webrings td {
-    border: none;
+.webrings ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.webrings td:nth-child(2) {
+@media (min-width: 601px) {
+  /* Two columns on desktop */
+  .webrings ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .webrings li {
+    width: calc(50% - 0.5rem);
+  }
+  .webrings li p {
+    margin: 0;
+  }
+  .webrings li:nth-child(odd) {
+    margin-right: 1rem;
+  }
+  /* If there's an even number of children, make the first one take the full
+   * width */
+  .webrings :has(li :last-child:nth-child(odd)) li:first-child {
+    width: 100%;
+  }
+  .webrings :has(li :last-child:nth-child(odd)) li:nth-child(odd) {
+    margin-right: 0;
+  }
+  .webrings :has(li :last-child:nth-child(odd)) li:nth-child(even) {
+    margin-right: 1rem;
+  }
+}
+.webrings li p {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	gap: 1rem;
+  text-align: center;
+	vertical-align: middle;
+  margin-top: 0;
+	padding: 0.2rem 1rem;
+	border: 2px solid var(--border-light);
+	background-color: var(--accent-bg-light);
+}
+.webrings li {
+  margin-bottom: 1.2rem;
+}
+.webrings a.arrow {
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .badges img {
