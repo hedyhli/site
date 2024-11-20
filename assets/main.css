@@ -306,8 +306,8 @@ nav .nav-left a {
     font-weight: 650;
     padding-bottom: 0;
 }
-nav .nav-left a, nav ul li {
-    margin-right: 1.5rem;
+nav ul li:not(:last-child) {
+  margin-right: 1.5rem;
 }
 
 @media (min-width: 601px) {
@@ -345,21 +345,22 @@ nav ul li, nav strong > a {
     border-radius: .35em;
 }
 
+nav .pfp {
+  height: 1.7rem;
+  vertical-align: middle;
+}
+
 .pfp-name {
 	text-decoration: none;
 	padding-left: 6px;
 	padding-top: 0;
 }
 
-nav .pfp {
-    height: 1.7rem;
-    vertical-align: middle;
-}
-
 nav .pfp-name {
 	/* color: var(--accent-light); /1* Consistency with other nav items *1/ */
     /* To have the icon and the text (.pfp-text) align */
 	display: table;
+	padding-left: 0;
 }
 
 h1 .pfp {
