@@ -2,7 +2,7 @@
 date = '2024-11-05'
 description = 'Site Meta'
 outputs = ['html']
-title = 'Meta'
+title = 'A peek behind the curtains, a colophon'
 +++
 
 <div class="callout note">
