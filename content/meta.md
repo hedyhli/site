@@ -35,10 +35,10 @@ account](https://tilde.zone/@hedy), especially if I'm currently participating in
 [#100DaysToOffload](https://100daystooffload.com/) or other writing challenges.
 
 I write my drafts in [Obsidian](https://obsidian.md/) with a live-preview
-markdown editor and iA Writer Duo. The Obsidian vault I use serves both as a
-drafting environment and as a digital journal. Some posts might end up here on
-my website, in which case, I would create a new post with a shell script, paste
-the markdown, locally build, and finally publish in a single command. My
+markdown editor and the iA Writer Duo font. The Obsidian vault I use serves both
+as a drafting environment and as a digital journal. Some posts might end up here
+on my website, in which case, I would create a new post with a shell script,
+paste the markdown, locally build, and finally publish in a single command. My
 publishing process is simply git-pushing to my Codeberg Pages repo.
 
 ### Fonts

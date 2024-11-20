@@ -28,6 +28,14 @@ page that supports it),
 <table class="webrings">
 <tbody>
 <tr>
+<td><a href="https://meta-ring.hedy.dev/">Meta Ring</a></td>
+<td>
+<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/previous">←Previous</a>
+<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/random">Random</a>
+<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/next">Next→</a>
+</td>
+</tr>
+<tr>
 <td><a href="https://fediring.net">Fediring</a></td>
 <td>
 <a referrerpolicy="strict-origin" href="https://fediring.net/previous?host=home.hedy.dev">←Previous</a>
@@ -83,11 +91,11 @@ page that supports it),
 </td>
 </tr>
 <tr>
-<td><a href="https://meta-ring.hedy.dev/">Meta Ring</a></td>
+<td><a href="https://geekring.net/">Geek Ring</a></td>
 <td>
-<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/previous">←Previous</a>
-<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/random">Random</a>
-<a referrerpolicy="strict-origin" href="https://meta-ring.hedy.dev/next">Next→</a>
+<a referrerpolicy="strict-origin" href="http://geekring.net/site/429/previous">←Previous</a>
+<a referrerpolicy="strict-origin" href="http://geekring.net/site/429/random">Random</a>
+<a referrerpolicy="strict-origin" href="http://geekring.net/site/429/next">Next→</a>
 </td>
 </tr>
 </tbody>
