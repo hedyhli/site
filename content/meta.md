@@ -44,9 +44,10 @@ publishing process is simply git-pushing to my Codeberg Pages repo.
 ### Fonts
 
 Some posts that are better suited to be considered public journal entries,
-rather than articles are displayed in iA Writer Duo font. All content uses
-Inter, meta information and headings use IBM Plex Sans, and code uses IBM Plex
-Mono.
+rather than articles are displayed in [iA
+Writer](https://github.com/iaolo/iA-Fonts) Duo font. All content uses
+[Inter](https://github.com/rsms/inter), meta information and headings use [IBM
+Plex](https://github.com/IBM/type) Sans, and code uses IBM Plex Mono.
 
 ## Webrings
 
