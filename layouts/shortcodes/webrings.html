@@ -1,0 +1,25 @@
+{{ $path := "webrings.yml" }}
+{{ $data := slice }}
+{{ with resources.Get $path }}
+  {{ with .Err }}
+    {{ errorf "Error fetching webrings: %s" . }}
+  {{ else }}
+    {{ $data = . | transform.Unmarshal }}
+  {{ end }}
+{{ end }}
+<table class="webrings">
+<tbody>
+    {{ range $data }}
+    <tr>
+      <td><a href="{{ .url }}">{{ .name }}</a></td>
+      <td>
+        <a referrerpolicy="strict-origin" href="{{ .previous }}">←Previous</a>
+        {{ with .random }}
+        <a referrerpolicy="strict-origin" href="{{ . }}">Random</a>
+        {{ end }}
+        <a referrerpolicy="strict-origin" href="{{ .next }}">Next→</a>
+      </td>
+    </tr>
+    {{ end }}
+</tbody>
+</table>
