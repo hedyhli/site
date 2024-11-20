@@ -5,6 +5,8 @@ outputs = ['html', 'gemtext']
 title = 'About'
 +++
 
+A little background on yours truly.
+
 ## Places online
 
 * [Fediverse](https://tilde.zone/@hedy)
@@ -15,9 +17,6 @@ title = 'About'
 * [Lobste.rs](https://lobste.rs/u/hedy)
 * [Tildes](https://tildes.net/user/hedy)
 
-I'm not always using username "hedy" so if you're unsure if someone is me,
-please contact me.
-
 ## Contact
 
 Preferred method of contact: [Email
@@ -26,7 +25,7 @@ Preferred method of contact: [Email
 Other methods, in order of preference:
 * Fediverse: [@hedy@tilde.zone](https://tilde.zone/@hedy)
 * Matrix: [hedy:envs.net](matrix:u/hedy:envs.net)
-* Bluesky: hedy.dev
+* Bluesky: @hedy.dev
 * IRC: hedy ([tilde.chat](https://tilde.chat),
   [libera.chat](https://libera.chat))
 * XMPP: hedy at hmm.st

@@ -2,8 +2,20 @@
 date = '2024-11-05'
 description = 'Site Meta'
 outputs = ['html']
-title = 'A peek behind the curtains, a colophon'
+title = 'A peek behind the curtains: a colophon'
 +++
+
+This is my personal website. It is crafted with love and dedication and I try my
+best to make it work the way I want it to look on all web clients I can get my
+hands on. Generally, this includes about five desktop GUI browsers, three web
+engines, and a handful of TUI clients.
+
+My personal site is where I explore accessibility and web design and experiment
+with how far I can go with sticking with a `border-radius` of 0. I also write
+[blog posts](/posts/), share [interesting links](/bookmarks/), shoutout to [cool
+blogs](/blogroll/), among other things.
+
+This page talks about how I do all of that.
 
 <div class="callout note">
 
