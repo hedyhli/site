@@ -89,7 +89,7 @@
     opacity: 1;
   }
 
-  .badges img {
+  .badges img, img.no-dim {
     opacity: 1;
   }
 }

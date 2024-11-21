@@ -69,13 +69,14 @@ Plex](https://github.com/IBM/type) Sans, and code uses IBM Plex Mono.
 
 ## Member sites and badges
 
-<a href="https://512kb.club"><img height="30" src="https://512kb.club/assets/images/green-team.svg" alt="a proud member of the green team of 512KB club" /></a>
+<a href="https://512kb.club"><img class="no-dim" height="30" src="https://512kb.club/assets/images/green-team.svg" alt="a proud member of the green team of 512KB club" /></a>
 <div class="badges">
 <a href='https://www.beepbird.net/index.html'><img src="https://www.beepbird.net/webring/focusfirst.png" alt="Focus First Index"></a>
 <a href='https://notbyai.fyi/'><img src="/created-by-human_white.png" alt="Created By Human, Not By AI"></a>
 <a href='https://kalechips.net/responsive/index'><img src="https://kalechips.net/responsive/buttons/8831-1.png" alt="Responsive Web Directory"></a>
 <a href='https://pinkvampyr.leprd.space/accessiblenet/index'><img src="https://www.beepbird.net/outlinks/badges/accessible-net.webp" alt="Accessible Net Directory"></a>
 </div>
+<a href="https://www.htmlhobbyist.com/"><img class="no-dim" src="https://www.htmlhobbyist.com/images/html-hobbyist-badge.svg" height="100" width="100" alt="I am an HTML Hobbyist" /></a>
 
 Feel free to [let me know](/about/) if you'd like me to join your webring or
 directory.
