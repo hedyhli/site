@@ -6,3 +6,4 @@ node_modules
 hint-report
 mentions.json
 assets/data
+.envrc

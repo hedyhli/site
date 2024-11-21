@@ -62,6 +62,7 @@ nonsymlink-clean:
 
 gen:
 	rm -rf $(HUGO_CACHEDIR)/site/filecache/getresource
+	bin/getraindrop.sh
 	$(HUGO) $(HUGO_FLAGS) --cacheDir $(HUGO_CACHEDIR)
 
 gemini:

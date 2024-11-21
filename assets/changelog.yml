@@ -1,3 +1,7 @@
+- date: 2024-11-21
+  desc: |
+    Put fetching of bookmarks part of the build script by using Raindrop's API,
+    which then processes JSON rather than CSV.
 - date: 2024-11-15
   desc: |
     Added this changelog.

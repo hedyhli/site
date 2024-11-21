@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ $path := "data/bm.csv" }}
+{{ $path := "data/bookmarks.json" }}
 {{ $data := slice }}
 {{ with resources.Get $path }}
   {{ with .Err }}
@@ -18,15 +18,26 @@
       <hr />
       <br />
       {{/* id,title,note,excerpt,url,tags,created,cover,highlights,favorite */}}
-      {{ range (after 1 $data) }}
-      <h3><a href="{{ index . 4 }}">{{ index . 1 }}</a></h3>
-      {{ with index . 3 }}
-      <p class="excerpt">{{ . }}</p>
-      {{ end }}
-      {{ with index . 2 }}
-      <div class="callout">{{ . | markdownify }}</div>
-      {{ end }}
-      <p class="date dt-published">Bookmarked <time>{{ index . 6 | time.Format "2006-01-02" }}</time></p>
+      {{ range $data }}
+        <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+        {{ with .excerpt }}
+          {{ $maxlen := 250 }}
+          {{ $e := . }}
+          {{ if gt (len $e) $maxlen }}
+            {{ $e = slicestr $e 0 $maxlen }}
+            {{ if gt (countwords $e) 1 }}
+              {{/* Chomp last word */}}
+              {{ $e = replaceRE ` [^ ]*$` "" $e }}
+            {{ end }}
+            {{ $e = printf "%s…" $e }}
+          {{ end }}
+          <p class="excerpt">{{ $e }}</p>
+        {{ end }}
+        {{ with .note }}
+          <div class="callout">{{ . | markdownify }}</div>
+        {{ end }}
+        <p class="date dt-published">Bookmarked
+          <time>{{ .created | time.Format "2006-01-02" }}</time></p>
       {{ end }}
     </section>
   </article>

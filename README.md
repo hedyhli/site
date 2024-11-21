@@ -85,6 +85,15 @@ css](https://simplecss.org) and sometimes [seirdy's site](https://seirdy.one).
   mkdir public2 && cp -r public public2` and run prettier on `public2`, make
   sure everything in `public2` looks the same as `public`.
 
+#### Bookmarks
+
+```sh
+mkdir assets/data
+cp .envrc.example .envrc
+# Edit .envrc
+direnv allow
+```
+
 ### deploy
 - **hut** - publishes gemini files to srht.site
 
