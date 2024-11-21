@@ -19,7 +19,7 @@
       <br />
       {{/* id,title,note,excerpt,url,tags,created,cover,highlights,favorite */}}
       {{ range $data }}
-        <h3><a href="{{ .url }}">{{ .title }}</a></h3>
+        <h3><a href="{{ .link }}">{{ .title }}</a></h3>
         {{ with .excerpt }}
           {{ $maxlen := 250 }}
           {{ $e := . }}
