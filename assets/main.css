@@ -140,7 +140,6 @@
   img.icon {
     opacity: 1;
   }
-
   .interactions img {
     opacity: 1;
   }
@@ -553,9 +552,10 @@ main, .after-content {
 }
 
 footer {
-	font-size: .9rem;
+  font-size: .9rem;
   padding: 1.5rem 5%;
-	color: var(--text-light);
+  padding-bottom: 2.5rem;
+  color: var(--text-light);
 }
 @media (prefers-color-scheme: light) {
   footer {
@@ -620,7 +620,7 @@ a:visited {
 
 a:hover,
 :is(.meta, footer, .after-content, .after-content .interactions) a:hover {
-	opacity: .75;
+	opacity: .7;
 	transition: .25s;
 }
 
