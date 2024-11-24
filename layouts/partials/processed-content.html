@@ -11,7 +11,7 @@
 	The backlinks should be located *outside* the footnote paragraphs.
 -->
 {{- $footnoteBacklinksBad  :=  ` ?<a href="#fnref:([0-9]*)" class="footnote-backref"(.*role="doc-backlink"(?:[^>]*)?)>([^<]*)</a></p>` -}}
-{{- $footnoteBacklinksGood :=  `<br/><a href="#fnref:${1}" aria-labelledby="bl1-${1} bl2-${1}"${2}><span id="bl1-${1}">Back</span><span id="bl2-${1}" hidden=""> to reference ${1}</span></a></p>` -}}
+{{- $footnoteBacklinksGood :=  `<a class="back" href="#fnref:${1}" aria-labelledby="bl1-${1} bl2-${1}"${2}><span id="bl1-${1}">[↩]</span></a></p>` -}}
 
 <!-- Footnote heading -->
 {{ $footnotes := `(<div class="footnotes" role="doc-endnotes">

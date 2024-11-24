@@ -21,7 +21,7 @@ It's nice to set up your digital workspace again sometimes, from scratch. One th
 
 Pubnixes[^pubnix] provide you a shell account and web, sometimes gemini and gopher hosting. When you log in with SSH, you are presented with a new home. A shell that may be different to your primary workstation, none of your familiar aliases and shell scripts, only some CLI programs you know and love are installed and there are some tools you've never heard of.
 
-[^pubnix]: A pubnix, or a public access unix system, such as SDF: https://en.wikipedia.org/wiki/SDF_Public_Access_Unix_System, or the tildes of the [Tildeverse](https://tildeverse.org/)
+[^pubnix]: A pubnix, or a public access unix system, such as SDF: https://en.wikipedia.org/wiki/SDF_Public_Access_Unix_System, or the tildes of the [Tildeverse](https://tildeverse.org/).
 
 You feel a responsibility to tend to your new digital garden that is your public home page. You explore the local services, such as decentralized chat, a local forum, a wiki, and you start to discover foreign workflows you consider adopting.
 

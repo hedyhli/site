@@ -137,6 +137,9 @@
   img:not(.pfp), video {
     opacity: .6;
   }
+  img.icon {
+    opacity: 1;
+  }
 
   .interactions img {
     opacity: 1;
@@ -192,7 +195,13 @@ blockquote {
 	margin-left: 0;
 	padding-left: 1.25rem;
 	border-left: 3px solid var(--text-light);
-	opacity: .82;
+	opacity: .85;
+}
+
+@media (max-width: 600px) {
+  blockquote {
+    margin: 0;
+  }
 }
 
 table {
@@ -262,8 +271,8 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	color: var(--preformatted);
-	background: var(--accent-bg-light);
-	border: 2px solid var(--border-light);
+	background: var(--code-bg);
+	border: 1px solid var(--border-light);
 	border-radius: 0;
 }
 
@@ -380,7 +389,7 @@ nav a:not(:has(.pfp)):hover, nav a:not(:has(.pfp)):visited:hover {
         margin: 0;
         margin-top: 1.25rem;
         padding-top: 0;
-        padding-left: 1rem;
+        padding-left: .5rem;
         padding-right: 1rem;
     }
     nav li:has(#home) {
@@ -609,8 +618,10 @@ a:visited {
     color: var(--link-alt);
 }
 
-a:hover, .after-content .interactions a:hover {
+a:hover,
+:is(.meta, footer, .after-content, .after-content .interactions) a:hover {
 	opacity: .75;
+	transition: .25s;
 }
 
 /* Differentiating between normal content links and meta content links */
@@ -628,11 +639,6 @@ a:hover, .after-content .interactions a:hover {
 .after-content .interactions a:hover {
   color: var(--link);
 }
-/* @media (prefers-color-scheme: dark) { */
-    .meta a:hover, footer a:hover, .after-content a:hover {
-        opacity: .75;
-    }
-/* } */
 
 a:focus, form:focus {
   background-color: var(--accent-bg-light);
@@ -658,13 +664,19 @@ a.anchor {
  */
 #post-header h1 {
 	margin-bottom: 0.4rem;
-    font-family: var(--heading-font);
+  font-family: var(--heading-font);
 }
 #post-header {
-	margin-bottom: 2.5rem;
+	margin-bottom: 1.5rem;
 }
 .post-meta, .post-list time, .tags {
     font-family: var(--alt-font);
+}
+.post-meta {
+  margin-top: 1rem;
+}
+.post-meta p {
+  margin: 0;
 }
 .post-meta, .meta, footer {
 	font-size: .9rem;
@@ -677,8 +689,12 @@ section[itemprop="articlebody"] {
 
 section[itemprop="articlebody"].mono {
   font-family: var(--body-mono-font);
-  background-color: var(--accent-bg-light);
-  padding: 1rem 2rem;
+}
+@media (min-width: 600px) {
+  section[itemprop="articlebody"].mono {
+    padding: 1rem 2rem;
+    background-color: var(--accent-bg-light);
+  }
 }
 section[itemprop="articlebody"].mono :is(h1, h2, h3, h4, h5, h6) {
 	font-family: var(--body-mono-font);
@@ -686,9 +702,12 @@ section[itemprop="articlebody"].mono :is(h1, h2, h3, h4, h5, h6) {
 div.callout {
   background-color: var(--accent-bg-light);
   padding: .5rem 2rem;
-  padding-bottom: .5rem;
-  /* border: 1px solid var(--border); */
   border-radius: var(--standard-border-radius);
+}
+@media (max-width: 600px) {
+  div.callout {
+    padding: .25rem .5rem;
+  }
 }
 div.callout::before {
   font-family: var(--alt-text);
@@ -698,6 +717,10 @@ div.callout::before {
 }
 div.callout p:first-child {
   margin-top: .5rem;
+}
+div.callout.note {
+  padding-left: 1rem;
+  padding-top: .5rem; /* for the label */
 }
 div.callout.note::before {
   content: "NOTE";
@@ -718,6 +741,10 @@ div.callout.note {
 .footnotes ol {
     margin-top: none;
 }
+.footnotes a.back {
+  color: var(--link-alt);
+  text-decoration: none;
+}
 
 ul.post-list {
     list-style: none;
@@ -732,8 +759,8 @@ ul.post-list {
     margin-top: 0;
     margin-bottom: .3rem;
 }
-.post-list time {
-    color: var(--text-light);
+.post-list p:has(time) {
+  color: var(--text-light);
 }
 .after-content {
   font-size: .9rem;

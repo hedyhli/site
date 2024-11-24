@@ -2,20 +2,22 @@
 <div itemscope itemtype="https://schema.org/BlogPosting" class="h-entry">
   <article itemprop="mainEntityOfPage">
     <header id="post-header">
-      <h1 itemprop="name headline" class="p-name">{{ .Title }}</h1>
-      <div class="post-meta">
+      <div class="post-meta" style="margin-top: 0">
         <p>
         <time itemprop="datePublished" datetime="{{ .Date.UTC.Format "2006-01-02T15:04:05Z" }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-          {{- partial "lastmod.html" (dict "Page" . "Prefix" "&nbsp; · &nbsp;" ) }}
-          &nbsp;·&nbsp; {{ .WordCount }} words
         </p>
-  <p>{{ partial "tags.html" (dict "Page" .) }}</p>
-        <hr />
       </div>
+      <h1 style="margin-top: 0" itemprop="name headline" class="p-name">{{ .Title }}</h1>
     </header>
     <section class="e-content {{ .Params.font }}" itemprop="articlebody">
       {{ partial "processed-content" . -}}
     </section>
+      <div class="post-meta" style="margin-top: 2rem; margin-bottom: 0">
+        <p>
+        {{- partial "lastmod.html" (dict "Page" . "Prefix" "Last updated on ") -}}
+        {{- partial "tags.html" (dict "Page" . "Prefix" "&nbsp; · &nbsp;") }}
+        </p>
+      </div>
   </article>
 </div>
 {{- end }}

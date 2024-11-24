@@ -1,11 +1,10 @@
-{{ $taxonomy := "tags" -}}
-{{ $tags := .Page.Param $taxonomy -}}
+{{ $taxonomy := "tags" }}{{ $tags := .Page.Param $taxonomy -}}
 {{ if (len $tags) -}}
-    {{ with $.Prefix }}{{ . | safeHTML -}}{{ end -}}
-    <span class="tags">
-    {{- range $index, $tag := $tags -}}
-        {{- $taglink := $.Page.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-        {{- if $index -}}&nbsp;&nbsp;{{ end -}}<a rel="category tag" class="p-category tag" href="{{ $taglink.RelPermalink }}">#{{ $tag | urlize }}</a>
-    {{- end }}
-    </span>
+{{- with $.Prefix }}{{ . | safeHTML }}{{ end -}}
+<span class="tags">
+{{- range $index, $tag := $tags -}}
+{{- $taglink := $.Page.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
+{{- if $index -}}&nbsp;&nbsp;{{ end -}}<a rel="category tag" class="p-category tag" href="{{ $taglink.RelPermalink }}">#{{ $tag | urlize }}</a>
+{{- end }}
+</span>
 {{- end }}

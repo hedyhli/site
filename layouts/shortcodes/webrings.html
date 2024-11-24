@@ -12,14 +12,14 @@
     {{ range $data }}
     <li>
       <p>
-        <a aria-label="previous" class="arrow" referrerpolicy="strict-origin" href="{{ .previous }}">⇐</a>
+        <a title="Previous" class="arrow" referrerpolicy="strict-origin" href="{{ .previous }}">⇐</a>
         <span>
           <a href="{{ .url }}">{{ .name }}</a>
           {{ with .random }}
-          <a aria-label="random" referrerpolicy="strict-origin" href="{{ . }}">🔀</a>
+          <a class="shuffle" style="text-decoration: none;" title="Random" aria-label="random" referrerpolicy="strict-origin" href="{{ . }}">{{ (resources.Get "icons/shuffle.svg").Content | safeHTML -}}</a>
           {{ end }}
         </span>
-        <a aria-label="next" class="arrow" referrerpolicy="strict-origin" href="{{ .next }}">⇒</a>
+        <a title="Next" class="arrow" referrerpolicy="strict-origin" href="{{ .next }}">⇒</a>
       </p>
     </li>
     {{ end }}
