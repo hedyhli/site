@@ -98,8 +98,8 @@
     --text-light: #a6adc8;
     --non-text-light: #6c7086;
 
-    --button-bg: #555a79;
-    --button-border: #a5aac6;
+    --button-bg: var(--accent-bg);
+    --button-border: var(--border-light);
 
     --border: #aaa;
     --border-light: #565656;
@@ -316,7 +316,8 @@ figcaption {
 /* Format the expanding box */
 details {
 	padding: .6rem 1rem;
-	border: 2px solid var(--border-light);
+	border: 1px solid var(--border-light);
+	background-color: var(--accent-bg-light);
 	margin-bottom: 1rem;
 }
 
@@ -878,7 +879,7 @@ select,
 input {
   color: var(--text);
   background-color: var(--bg);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-light);
 }
 label {
   display: block;
