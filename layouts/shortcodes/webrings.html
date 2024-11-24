@@ -16,7 +16,7 @@
         <span>
           <a href="{{ .url }}">{{ .name }}</a>
           {{ with .random }}
-          <a class="shuffle" style="text-decoration: none;" title="Random" aria-label="random" referrerpolicy="strict-origin" href="{{ . }}">{{ (resources.Get "icons/shuffle.svg").Content | safeHTML -}}</a>
+          <a class="shuffle" style="text-decoration: none;" title="Random" aria-label="random" referrerpolicy="strict-origin" href="{{ . }}">{{ (resources.Get "icons/shuffle.svg").Content | safeHTML -}}<span hidden="">[random]</span></a>
           {{ end }}
         </span>
         <a title="Next" class="arrow" referrerpolicy="strict-origin" href="{{ .next }}">⇒</a>
