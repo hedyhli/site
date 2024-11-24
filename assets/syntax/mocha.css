@@ -1,20 +1,15 @@
-/*
-* https://github.com/catppuccin/chroma/blob/main/dist/latte-chroma-style.css
-* - Made comments (and other subtext 0) use #505469 for AA contrast
-* - Some other colors made to be borderline AA
-*/
 .chroma {
-  color: #4c4f69;
-  background-color: #eff1f5;
+  color: #cdd6f4;
+  background-color: #1e1e2e;
 }
 .chroma .cl {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .err {
-  color: #d20f39;
+  color: #f38ba8;
 }
 .chroma .x {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .lntd {
   border: 0;
@@ -34,242 +29,242 @@
 .chroma .hl {
   width: 100%;
   display: block;
-  background-color: #bcc0cc;
+  background-color: #45475a;
 }
 .chroma .lnt {
-  color: #8c8fa1;
+  color: #7f849c;
   padding: 0 0.4em 0 0.4em;
   font-size: 0.875rem;
   margin-right: 0.4em;
 }
 .chroma .ln {
-  color: #8c8fa1;
+  color: #7f849c;
   padding: 0 0.4em 0 0.4em;
   margin-right: 0.4em;
 }
 .chroma .k {
-  color: #8839ef;
+  color: #cba6f7;
 }
 .chroma .kr {
-  color: #8839ef;
+  color: #cba6f7;
 }
 .chroma .kp {
-  color: #8839ef;
+  color: #cba6f7;
 }
 .chroma .kc {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .kd {
-  color: #d20f39;
+  color: #f38ba8;
 }
 .chroma .kn {
-  color: #179299;
+  color: #94e2d5;
 }
 .chroma .kt {
-  color: #d20f39;
+  color: #f38ba8;
 }
 .chroma .n {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .nc {
-  color: #df8e1d;
+  color: #f9e2af;
 }
 .chroma .no {
-  color: #df8e1d;
+  color: #f9e2af;
 }
 .chroma .nd {
-  color: #1e66f5;
+  color: #89b4fa;
 }
 .chroma .ni {
-  color: #179299;
+  color: #94e2d5;
 }
 .chroma .ne {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .nf {
-  color: #1e66f5;
+  color: #89b4fa;
 }
 .chroma .fm {
-  color: #1e66f5;
+  color: #89b4fa;
 }
 .chroma .nl {
-  color: #057cab;
+  color: #89dceb;
 }
 .chroma .nn {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .py {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .nt {
-  color: #8839ef;
+  color: #cba6f7;
 }
 .chroma .nv {
-  color: #b25b47;
+  color: #f5e0dc;
 }
 .chroma .vc {
-  color: #b25b47;
+  color: #f5e0dc;
 }
 .chroma .vg {
-  color: #b25b47;
+  color: #f5e0dc;
 }
 .chroma .vi {
-  color: #b25b47;
+  color: #f5e0dc;
 }
 .chroma .vm {
-  color: #b25b47;
+  color: #f5e0dc;
 }
 .chroma .na {
-  color: #1e66f5;
+  color: #89b4fa;
 }
 .chroma .nb {
-  color: #057cab;
+  color: #89dceb;
 }
 .chroma .bp {
-  color: #057cab;
+  color: #89dceb;
 }
 .chroma .nx {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .l {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .ld {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .s {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .sc {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .s1 {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .s2 {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .sb {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .sx {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .ss {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .si {
-  color: #2e841b;
+  color: #a6e3a1;
 }
 .chroma .sa {
-  color: #d20f39;
+  color: #f38ba8;
 }
 .chroma .dl {
-  color: #1e66f5;
+  color: #89b4fa;
 }
 .chroma .se {
-  color: #1e66f5;
+  color: #89b4fa;
 }
 .chroma .sr {
-  color: #179299;
+  color: #94e2d5;
 }
 .chroma .sd {
-  color: #9ca0b0;
+  color: #9ca3c9;
 }
 .chroma .sh {
-  color: #9ca0b0;
+  color: #9ca3c9;
 }
 .chroma .m {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .mb {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .mh {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .mi {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .mf {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .il {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .mo {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .o {
-  color: #057cab;
+  color: #89dceb;
 }
 .chroma .ow {
-  color: #057cab;
+  color: #89dceb;
 }
 .chroma .c {
-  color: #9ca0b0;
+  color: #9ca3c9;
   font-style: italic;
 }
 .chroma .c1 {
-  color: #505469;
+  color: #9ca3c9;
   font-style: italic;
 }
 .chroma .cm {
-  color: #9ca0b0;
+  color: #9ca3c9;
   font-style: italic;
 }
 .chroma .cs {
-  color: #9ca0b0;
+  color: #9ca3c9;
   font-style: italic;
 }
 .chroma .ch {
-  color: #acb0be;
+  color: #585b70;
   font-style: italic;
 }
 .chroma .cp {
-  color: #9ca0b0;
+  color: #9ca3c9;
   font-style: italic;
 }
 .chroma .cpf {
-  color: #9ca0b0;
+  color: #9ca3c9;
 }
 .chroma .g {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .gi {
-  color: #2e841b;
-  background-color: #ccd0da;
+  color: #a6e3a1;
+  background-color: #313244;
 }
 .chroma .gd {
-  color: #d20f39;
-  background-color: #ccd0da;
+  color: #f38ba8;
+  background-color: #313244;
 }
 .chroma .ge {
-  color: #4c4f69;
+  color: #cdd6f4;
   font-style: italic;
 }
 .chroma .gs {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .gl {
-  color: #4c4f69;
+  color: #cdd6f4;
   text-decoration: underline;
 }
 .chroma .gh {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .gu {
-  color: #c84900;
+  color: #fab387;
 }
 .chroma .go {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .gp {
-  color: #4c4f69;
+  color: #cdd6f4;
 }
 .chroma .gr {
-  color: #d20f39;
+  color: #f38ba8;
 }
 .chroma .gt {
-  color: #d20f39;
+  color: #f38ba8;
 }

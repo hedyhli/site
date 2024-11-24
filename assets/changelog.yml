@@ -1,7 +1,8 @@
 - date: 2024-11-24
   desc: |
     Dark theme redesigned based on Catppuccin Mocha and Frappe, fixed the
-    display certain document elements.
+    display certain document elements. Adjusted Latte for syntax highlighting
+    for better contrast (AA minimum).
 - date: 2024-11-22
   desc: |
     Light theme redesigned based on Catppuccin Latte.

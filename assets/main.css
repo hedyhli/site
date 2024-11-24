@@ -90,12 +90,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #2d2d35;
+    --bg: #2d2d38;
     --accent-bg: #585b70;
     --accent-bg-light: #3a3a44; /* Adjusted from bg */
-    --code-bg: #3e3e4b;
+    --code-bg: #181926; /* Crust of Macchiato */
     --text: #d6ddf4;
     --text-light: #a6adc8;
+    --code: #e1e6f6;
     --non-text-light: #6c7086;
 
     --button-bg: var(--accent-bg);
@@ -105,8 +106,6 @@
     --border-light: #565656;
     --accent: #8be9fd;
     --accent-light: #ece1a1;
-    --code: #f06292;
-    --preformatted: #ccc;
     --disabled: #111;
 
     --headings: var(--text);
