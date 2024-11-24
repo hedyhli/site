@@ -11,8 +11,8 @@
 {{- if ne .Section "posts" }}
     {{- $title := printf "%s on %s" .Section .Site.Title }}
 {{- end}}
-{{- $favicon_svg := resources.Get "/favicon.svg" }}
-{{- $favicon_png := resources.Get "/favicon192.png" }}
+{{- $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}
+{{- $favicon_png := resources.Get "/favicon192.png" | resources.Fingerprint "md5" }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
 <feed
     xmlns="http://www.w3.org/2005/Atom"

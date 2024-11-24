@@ -10,7 +10,7 @@
 {{- if ge $limit 1 -}}
     {{- $pages = $pages | first $limit -}}
 {{- end -}}
-{{- $favicon_png := resources.Get "/favicon192.png" }}
+{{- $favicon_png := resources.Get "/favicon192.png" | resources.Fingerprint "md5" }}
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>

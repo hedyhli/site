@@ -53,20 +53,20 @@
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
 <meta name="color-scheme" content="light dark">
-{{ $css := resources.Get "main.css" | minify -}}
+{{ $css := resources.Get "main.css" | resources.Fingerprint "md5" | minify -}}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
-{{ $fonts_css := resources.Get "fonts.css" | minify -}}
+{{ $fonts_css := resources.Get "fonts.css" | resources.Fingerprint "md5" | minify -}}
 <style>{{ $fonts_css.Content | safeCSS }}</style>
 
 {{ if eq "mono" .Params.font -}}
-{{ $iawriter_css := resources.Get "iawriter.css" | minify -}}
+{{ $iawriter_css := resources.Get "iawriter.css" | resources.Fingerprint "md5" | minify -}}
 <style>{{ $iawriter_css.Content | safeCSS }}</style>
 {{- end }}
 
 {{ if .Params.highlight -}}
-{{ $syntaxlight := resources.Get "syntax/latte.css" | minify -}}
-{{ $syntaxdark := resources.Get "syntax/mocha.css" | minify  -}}
-{{ $syntaxcustom := resources.Get "syntax/custom.css" | minify  -}}
+{{ $syntaxlight := resources.Get "syntax/latte.css" | resources.Fingerprint "md5" | minify -}}
+{{ $syntaxdark := resources.Get "syntax/mocha.css" | resources.Fingerprint "md5" | minify  -}}
+{{ $syntaxcustom := resources.Get "syntax/custom.css" | resources.Fingerprint "md5" | minify  -}}
 <style>
 {{- $syntaxlight.Content | safeCSS }}
 @media(prefers-color-scheme: dark){ {{- $syntaxdark.Content | safeCSS -}} }
