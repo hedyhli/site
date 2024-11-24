@@ -64,7 +64,7 @@
 {{- end }}
 
 {{ if .Params.highlight -}}
-{{ $syntaxlight := resources.Get "syntax/light.css" | minify -}}
+{{ $syntaxlight := resources.Get "syntax/latte.css" | minify -}}
 {{ $syntaxdark := resources.Get "syntax/dark.css" | minify  -}}
 {{ $syntaxcustom := resources.Get "syntax/custom.css" | minify  -}}
 <style>

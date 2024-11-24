@@ -29,30 +29,62 @@
 	--body-font: var(--text-font);
   --mono-font: "IBM Plex Mono", "Fira Code", Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --body-mono-font: "iA Writer Duo", "iA Writer Mono", var(--mono-font);
-  --bg: #fff;
-  --accent-bg: #f7f4fb;
-  --accent-bg-light: #f2f2f2;
-  --code-bg: #f2f2f2;
-  --text: #0a0a0a;
-  --text-light: #787878;
-  --non-text-light: #95aac0;
 
-  --border: #bbb;
-  --border-light: var(--border);
-  --accent: #5c659b;
-  --accent-light: #7890c1;
-  --button-bg: var(--accent-light);
-  --button-border: var(--accent);
+  --bg: hsl(220deg, 23%, 97%);
+  --accent-bg: #dce0e8;
+  --accent-bg-light: #ebeef2;
+  --code-bg: #fbfcff;
+  --text: #323442;
+  --text-light: #7c7f93;
+  --non-text-light: #9ca0b0;
+
+  --border: #8c8fa1;
+  --border-light: #c7cbd9;
+  --accent: #1e66f5;
+  --accent-light: #7287fd;
+  --button-bg: #89b4fa;
+  --button-border: var(--button-bg);
   --button-text: var(--text);
   --button-hover: var(--bg);
-  --code: #d81b60;
-  --preformatted: #444;
-  --marked: #ffdd33;
+  --code: var(--text);
+  --preformatted: var(--code);
+  --marked: #e5c890;
   --disabled: #efefef;
 
-  --link: #3c63e8;
-  --link-visited: #6971a0;
+  --link: #1e66f5;
+  --link-visited: #7287fd;
   --link-alt: var(--link);
+
+  --selection-bg: rgba(114, 135, 253, 20%);
+  --headings: #54587b;
+}
+
+@media (max-width: 600px) {
+  :root {
+    /* Major second */
+    --header-scale: 1.125;
+  }
+}
+
+:root {
+  --rosewater: #dc8a78;
+  --flamingo: #dd7878;
+  --pink: #ea76cb;
+  --mauve: #8839ef;
+  --red: #d20f39;
+  --maroon: #e64553;
+  --peach: #fe640b;
+  --yellow: #df8e1d;
+  --green: #40a02b;
+  --teal: #179299;
+  --sky: #04a5e5;
+  --sapphire: #209fb5;
+  --blue: #1e66f5;
+  --lavender: #7287fd;
+}
+
+::selection {
+  background-color: var(--selection-bg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,6 +143,9 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1.1rem;
 	font-family: var(--heading-font);
 }
+h2, h3, h4, h5, h6 {
+  color: var(--headings);
+}
 h1 {
 	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
 	margin-top: calc(var(--line-height) * 1.3rem);
@@ -146,6 +181,9 @@ table {
 table caption {
 	font-weight: bold;
 	margin-bottom: .5rem;
+}
+table.no-header thead {
+  display: none;
 }
 td,
 th {
@@ -204,7 +242,7 @@ pre {
 	overflow: auto;
 	color: var(--preformatted);
 	background: var(--accent-bg-light);
-	border: 1px solid var(--border-light);
+	border: 2px solid var(--border-light);
 	border-radius: 0;
 }
 
@@ -286,7 +324,6 @@ nav {
     margin-left: 5%;
     margin-bottom: 4rem;
     padding: 1rem 0.3rem;
-    padding-top: 1.5rem;
     font-weight: 500;
 }
 
@@ -296,43 +333,53 @@ nav div {
 
 nav a {
 	text-decoration: none;
-	color: var(--link-alt);
+  margin-top: 1rem;
+  font-weight: 600;
+  border: 1px solid var(--bg);
+  padding: .75rem .75rem;
+}
+nav a, nav a:visited {
+  color: #5c5f77;
+}
+nav a:not(:has(.pfp)):hover, nav a:not(:has(.pfp)):visited:hover {
+  color: var(--flamingo);
+  transition: .25s;
+  background-color: var(--accent-bg-light);
+  /* background-image: linear-gradient(150deg, var(--lavender), transparent 90%); */
+  /* background-image: linear-gradient(150deg, var(--yellow) 10%, var(--mauve) 50%, var(--blue) 60%); */
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
 }
 
-/* To have the left nav item (homepage) and right items (other pages) display
- * on same line */
-nav .nav-left a {
-    margin-top: 1rem;
-    font-weight: 650;
-    padding-bottom: 0;
-}
-nav ul li:not(:last-child) {
-  margin-right: 1.5rem;
-}
-
-@media (min-width: 601px) {
-    nav .nav-right {
-        float: right;
-    }
-}
 @media (max-width: 600px) {
     /* Center-aligned nav on mobile */
     nav {
         margin: 0;
-        padding: 0;
-        text-align: center;
+        margin-top: 1.25rem;
+        padding-top: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    nav a .pfp-name {
-        color: var(--text);
+    nav li:has(#home) {
+        display: none;
+    }
+    nav.index {
+        text-align: center;
+        padding: 0;
+    }
+    nav a {
+        padding: .75rem .5rem
     }
 }
-
-nav .selected {
-    border-bottom: 2.5px solid;
+@media (max-width: 350px) {
+    nav a {
+        padding: .75rem .2rem
+    }
 }
 
 /* Idea from seirdy.one to have unstyled unordered-list nav */
-nav ul, nav a {
+nav ul {
 	padding: 0;
 	padding-bottom: 0.5rem;
 }
@@ -342,25 +389,12 @@ nav ul li, nav strong > a {
 
 .pfp {
     border: 1px solid var(--border);
-    border-radius: .35em;
+    border-radius: 100%;
 }
 
 nav .pfp {
-  height: 1.7rem;
+  height: 1.75rem;
   vertical-align: middle;
-}
-
-.pfp-name {
-	text-decoration: none;
-	padding-left: 6px;
-	padding-top: 0;
-}
-
-nav .pfp-name {
-	/* color: var(--accent-light); /1* Consistency with other nav items *1/ */
-    /* To have the icon and the text (.pfp-text) align */
-	display: table;
-	padding-left: 0;
 }
 
 h1 .pfp {
@@ -368,20 +402,23 @@ h1 .pfp {
     vertical-align: text-top;
 }
 
-nav .pfp-text {
-    /* TODO: Hardcoded alignment is ugly. Please find a better fix */
-    vertical-align: top;
-    padding-left: 0.5rem;
-    padding-top: 0.1rem;
-    font-size: 1.1rem;
-    display: inline-block;
-}
-
 /*******************************************************************
  * Homepage
  */
+.accent-bar {
+  display: grid;
+  grid-template-columns: repeat(14,1fr);
+  width: 100%;
+  height: 8px;
+  background-color: var(--mauve);
+  background-image: linear-gradient(90deg,var(--rosewater),var(--flamingo),var(--mauve),var(--red),var(--maroon),var(--peach),var(--green),var(--teal),var(--sky),var(--sapphire),var(--blue));
+  background-size: 400% 100%;
+  background-position: left;
+  animation: gradient 1s linear infinite forwards;
+}
 .hero {
-    margin-bottom: 5rem;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
     text-align: center;
 }
 
@@ -445,7 +482,7 @@ nav .pfp-text {
 	vertical-align: middle;
   margin-top: 0;
 	padding: 0.2rem 1rem;
-	border: 2px solid var(--border-light);
+	border: 1px solid var(--border-light);
 	background-color: var(--accent-bg-light);
 }
 .webrings li {
@@ -483,28 +520,41 @@ main, .after-content {
     text-decoration: none;
     color: var(--text-light) !important;
 }
-/* .after-content .tags a, */
-/* .after-content .tags a:visited { */
-/*     padding: .2rem .5rem; */
-/*     background-color: var(--accent-bg); */
-/* } */
-.tags a:hover,
-.after-content .tags a:hover {
-    text-decoration: underline;
-    color: var(--text-light);
-}
 
 footer {
-	text-align: center;
 	font-size: .9rem;
+  padding: 1.5rem 5%;
+  background-color: var(--accent-bg-light);
 	color: var(--text-light);
-	padding: .5rem 0 1rem 0;
-    margin: 0 5%;
 }
-footer a {
+footer a, footer a:visited {
+	color: var(--text-light);
+	text-decoration: underline;
+}
+footer a:hover, footer a:visited:hover {
+  text-decoration: underline;
+}
+footer p {
+  margin: 0;
+}
+footer p:not(:first-child) {
+  margin-top: 1rem;
+}
+footer a:not(:first-child) {
+  padding-left: .5rem;
+}
+@media (min-width: 600px) {
+  footer {
+    text-align: center;
+  }
+  footer p:not(:first-child) {
+    display: inline-block;
+  }
+  footer p.last-line a:first-child {
     padding-left: .5rem;
-    padding-right: .5rem;
+  }
 }
+
 header p {
 	text-align: left;
 }
@@ -521,62 +571,47 @@ header pre {
  * Links
  */
 a {
-    color: var(--link);
+  color: var(--link);
 }
 a:visited {
     color: var(--link-visited);
 }
-/* Don't change colors for visited links on nav, it makes nav bar look inconsistent */
-nav a:visited {
-    color: var(--link-alt);
-}
-.post-meta a:visited, .meta a:visited, footer a:visited, .after-content a:visited {
+.post-meta a:visited, .meta a:visited, .after-content a:visited {
     color: var(--link-alt);
 }
 
-main a:hover, .after-content .interactions a:hover {
-	opacity: .75;
-}
-
-nav a#home:hover {
+a:hover, .after-content .interactions a:hover {
 	opacity: .75;
 }
 
 /* Differentiating between normal content links and meta content links */
-.meta a, footer a, .after-content a {
+.meta a, .after-content a {
 	text-decoration: none;
 }
 @media (prefers-color-scheme: dark) {
-    .meta a, footer a, .after-content a {
+    .meta a, .after-content a {
         color: var(--link-alt);
     }
     .after-content .interactions a {
         color: var(--link);
     }
 }
-.meta a:hover, footer a:hover, .after-content a:hover {
-    color: var(--accent-light);
-    text-decoration: underline;
-}
 .after-content .interactions a:hover {
   color: var(--link);
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) { */
     .meta a:hover, footer a:hover, .after-content a:hover {
         opacity: .75;
     }
-}
+/* } */
 
 a:focus, form:focus {
-    outline: 1px solid var(--border);
+  background-color: var(--accent-bg-light);
 	text-decoration: none;
 }
 nav a:focus {
-    outline: none;
-}
-
-nav li a:hover {
-	border-bottom: 2.5px solid;
+  background-color: initial;
+  outline: none;
 }
 
 a.anchor {
@@ -585,9 +620,9 @@ a.anchor {
     padding-right: .2rem;
 }
 
-a.anchor:hover {
-    text-decoration: underline;
-}
+/* a.anchor:hover { */
+/*     text-decoration: underline; */
+/* } */
 
 /*******************************************************************
  * Post components
@@ -622,8 +657,8 @@ section[itemprop="articlebody"].mono :is(h1, h2, h3, h4, h5, h6) {
 div.callout {
   background-color: var(--accent-bg-light);
   padding: .5rem 2rem;
-  padding-bottom: 0;
-  border: 1px solid var(--border);
+  padding-bottom: .5rem;
+  /* border: 1px solid var(--border); */
   border-radius: var(--standard-border-radius);
 }
 div.callout::before {

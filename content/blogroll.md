@@ -59,7 +59,7 @@ informal posts in a Notes page, and keep a lot of their public Bookmarks.
 
 Protesilaos ("prot") is a prominent contributor to Emacs and Emacs packages. He
 is the author of the [Modus themes](https://protesilaos.com/emacs/modus-themes)
-used for syntax highlighting on this site. He blogs about technology,
+which was used for syntax highlighting on this site. He blogs about technology,
 philosophy, politics, and life and he also hosts documentation of his Emacs
 packages on his website. He has a YouTube channel where he talks about
 philosophy, and his hut, and shares Emacs screencasts.

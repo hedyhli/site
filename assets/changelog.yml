@@ -1,3 +1,6 @@
+- date: 2024-11-22
+  desc: |
+    Site redesigned based on Catppuccin themes.
 - date: 2024-11-21
   desc: |
     Put fetching of bookmarks part of the build script by using Raindrop's API,

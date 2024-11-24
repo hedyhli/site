@@ -1,13 +1,11 @@
-{{ $home := .Site.Title -}}
-{{ if (ne .RelPermalink "/") -}}
-    {{ $home = .Site.Title -}}
-    {{ if .Site.Params.navHomeUsePFPName -}}
-        {{ $home = partial "pfp-name.html" . -}}
-    {{ end -}}
-{{ end -}}
-<nav>
-    <div class="nav-left"><strong><a title="home" id="home" href="/">{{ $home }}</a></strong></div>
-    <div class="nav-right"><ul>
+<nav {{ if (eq .RelPermalink "/") }}class="index"{{ end }}>
+    <ul>
+    <li {{ if (eq .RelPermalink "/") -}}style="display: none"{{ end -}}>
+      <a title="home" id="icon" href="/">{{ partial "pfp.html" }}</a>
+    </li>
+    <li>
+        <a title="home" id="home" href="/">Home</a>
+    </li>
     {{- $currentPage := . }}
 
     {{- range .Site.Menus.main.ByWeight }}
@@ -19,5 +17,5 @@
     </li>
     {{ .Post  -}}
     {{- end }}
-    </ul></div>
+    </ul>
 </nav>

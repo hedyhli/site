@@ -6,7 +6,8 @@ Copyright © {{ with .Site.Params.CopyrightYearStart }}{{ . }}-{{ end -}}
  <a href="{{ .Site.Params.CopyrightLink }}">{{ .Site.Params.Copyright }}</a>
  <a href="/sitemap.xml">Sitemap</a>
  <a href="{{ .Site.Params.src }}">Source code</a>
-
+</p>
+<p class="last-line">
 {{ if eq .RelPermalink "/" }}
  <a rel="alternate" href="gemini://gmi.hedy.dev/">View on Gemini</a>
 {{- else }}

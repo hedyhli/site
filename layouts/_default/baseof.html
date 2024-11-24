@@ -4,6 +4,7 @@
         {{ partial "head.html" . }}
     </head>
     <body>
+        <div class="accent-bar"></div>
         <header>
             {{ partial "header.html" . }}
         </header>
@@ -14,8 +15,8 @@
         </main>
         <section class="after-content">
             {{- block "after" . }}{{ end }}
-            <hr style="margin-top: 4rem; margin-bottom: 0;"/>
         </section>
+        <br />
         <footer>
             {{ partial "footer.html" . }}
         </footer>

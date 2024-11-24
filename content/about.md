@@ -33,7 +33,7 @@ Other methods, in order of preference:
 
 ## Uses
 
-{{<table>}}
+{{<table no-header>}}
 | | |
 |-----|-------|
 | OS  | MacOS, Ubuntu, Nix |
@@ -47,8 +47,4 @@ Other methods, in order of preference:
 | Theme | [Catppuccin Mocha](https://catppuccin.com/), [Tundra (neovim)](https://github.com/sam4llis/nvim-tundra) |
 {{</table>}}
 
-For more information on my setup, check out my [dotfiles repository on GitHub](https://github.com/hedyhli/dotfiles) or [on SourceHut](https://sr.ht/~hedy/dotfiles).
-
-The code blocks on this site use [Emacs Modus themes by
-Protesilaos](https://protesilaos.com/emacs/modus-themes) for syntax
-highlighting as it provides good accessibility.
+For more information on my setup, check out my [dotfiles repository on GitHub](https://github.com/hedyhli/dotfiles).
