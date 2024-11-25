@@ -7,9 +7,11 @@
     {{ $data = sort (. | transform.Unmarshal) "name" "desc" }}
   {{ end }}
 {{ end }}
-<dl>
+<ul class="blogroll">
   {{ range $data }}
-  <dt><a href="{{ .url }}">{{ .name }}</a></dt>
-  <dd>{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .desc) }}</dd>
+  <li>
+    <p><a href="{{ .url }}">{{ .name }}</a></p>
+    <div>{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .desc) }}</div>
+  </li>
   {{ end }}
-</dl>
+</ul>

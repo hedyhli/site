@@ -526,6 +526,28 @@ h1 .pfp {
   height: 40px;
 }
 
+ul.blogroll {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.blogroll li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+ul.blogroll li {
+	border: 1px solid var(--border-light);
+  background-color: var(--accent-bg-light);
+  padding: .2rem 1rem;
+}
+
+ul.blogroll li > p:first-child {
+  font-size: 1.2rem;
+  font-family: var(--alt-font);
+  font-weight: bold;
+}
+
 /*******************************************************************
  * Page sections
  */
