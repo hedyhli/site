@@ -35,8 +35,8 @@
             element="published" data-type="date" label="Date published" default="true"/>
     </cf:listinfo>
     <author>
-        <name>{{ .Site.Params.author.name }}</name>
-        <email>{{ .Site.Params.author.email }}</email>
+        <name>{{ .Site.Params.name }}</name>
+        <email>{{ .Site.Params.email }}</email>
         <uri>{{ $.Site.BaseURL }}</uri>
     </author>
     {{- range where .Site.Pages "Kind" "page" }}
@@ -50,8 +50,8 @@
         <updated>{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z" }}</updated>
         {{ with .Description }}<summary type="text">{{ . }}</summary>{{- end }}
         <author>
-            <name>{{ $.Site.Params.author.name }}</name>
-            <email>{{ $.Site.Params.author.email }}</email>
+            <name>{{ $.Site.Params.name }}</name>
+            <email>{{ $.Site.Params.email }}</email>
             <uri>{{ $.Site.BaseURL }}</uri>
         </author>
         <content type="xhtml" xml:base="{{ .Permalink }}">

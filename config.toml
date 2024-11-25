@@ -33,12 +33,7 @@ geminiRoot = "gemini://gmi.hedy.dev"
 htmlBaseDomain = "home.hedy.dev"
 geminiBaseDomain = "gmi.hedy.dev"
 
-# true: Use shortcode pfp-name as the home link text in nav bar
-# false: Use shortTitle there instead
-navHomeUsePFPName = true
-
-[author]
-name = "hedy"
+name = "~hedy"
 email = "hedy.dev@protonmail.com"
 
 [taxonomies]
