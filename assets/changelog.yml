@@ -1,3 +1,8 @@
+- date: 2024-11-25
+  desc: |
+    Redesigned the [blogroll](/blogroll/). It also fetches from a YAML file
+    rather than being hardcoded in HTML within markdown. Also added display of
+    domain on blogroll and bookmark entries.
 - date: 2024-11-24
   desc: |
     Dark theme redesigned based on Catppuccin Mocha and Frappe, fixed the

@@ -15,11 +15,20 @@
     </header>
     <section class="e-content bookmarks" itemprop="articlebody">
       {{ partial "processed-content" . -}}
-      <hr />
       <br />
-      {{/* id,title,note,excerpt,url,tags,created,cover,highlights,favorite */}}
+      {{ "<!-- h3 in li? I love ul's, you see. -->" | safeHTML }}
+      {{ $lastmonth := "" }}
       {{ range $data }}
+        {{ $month := time.Format "2006 January" .created }}
+        {{ if (ne $lastmonth $month) }}
+        {{ if (ne $lastmonth "") }}</ul>{{ end }}
+        {{ partial "anchor-heading.html" (dict "Text" $month "Level" 2 "Anchor" (time.Format "2006-01" .created)) }}
+        <ul>
+        {{ $lastmonth = $month }}
+        {{ end }}
+        <li>
         <h3><a href="{{ .link }}">{{ .title }}</a></h3>
+        <p><code>{{ .domain }}</code></p>
         {{ with .excerpt }}
           {{ $maxlen := 250 }}
           {{ $e := . }}
@@ -36,9 +45,9 @@
         {{ with .note }}
           <div class="callout">{{ . | markdownify }}</div>
         {{ end }}
-        <p class="date dt-published">Bookmarked
-          <time>{{ .created | time.Format "2006 January" }}</time></p>
+        </li>
       {{ end }}
+      </ul>
     </section>
   </article>
   <br />

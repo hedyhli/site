@@ -8,9 +8,11 @@
   {{ end }}
 {{ end }}
 <ul class="blogroll">
+  {{ "<!-- h2 in li? I'm insane. Sorry. -->" | safeHTML }}
   {{ range $data }}
   <li>
-    <p><a href="{{ .url }}">{{ .name }}</a></p>
+    <h2><a href="{{ .url }}">{{ .name }}</a></h2>
+    <p><code>{{ .domain }}</code></p>
     <div>{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .desc) }}</div>
   </li>
   {{ end }}

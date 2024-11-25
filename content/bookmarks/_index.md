@@ -6,6 +6,6 @@ outputs = ['html', 'gemtext']
 slug = "bookmarks"
 +++
 
-This page is by a script that fetches bookmarks from
-[Raindrop](https://raindrop.io/) using the JSON rest API. I also have a Gemini
+This page is generated with a script that fetches bookmarks from
+[Raindrop](https://raindrop.io/) using the rest API. I also have a Gemini
 version (for smolnet links) linked at the footer.
