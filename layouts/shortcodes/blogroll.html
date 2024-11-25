@@ -1,0 +1,15 @@
+{{ $path := "blogroll.yml" }}
+{{ $data := slice }}
+{{ with resources.Get $path }}
+  {{ with .Err }}
+    {{ errorf "Error fetching blogroll: %s" . }}
+  {{ else }}
+    {{ $data = sort (. | transform.Unmarshal) "name" "desc" }}
+  {{ end }}
+{{ end }}
+<dl>
+  {{ range $data }}
+  <dt><a href="{{ .url }}">{{ .name }}</a></dt>
+  <dd>{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .desc) }}</dd>
+  {{ end }}
+</dl>

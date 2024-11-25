@@ -1,0 +1,76 @@
+- name: sloum
+  url: https://sloum.colorfield.space/
+  desc: |
+    sloum is a member of a number of non-tilde pubnixes such as
+    [rawtext.club](https://rawtext.club/) and Circumlunar.space. He writes
+    software, sometimes in his own languages, and maintains Gemini and Gopher
+    presences in addition to the WWW one. He blogs about many things other than
+    technology or the internet.
+
+    The website I linked is hosted on his own pubnix,
+    [colorfield.space](gopher://colorfield.space), which as far as I'm aware, is
+    only accessible via Gopher.
+- name: Seirdy
+  url: https://seirdy.one/
+  desc: |
+    Seirdy's site is the source of inspiration for many aspects of my own site,
+    including [meta pages](https://home.hedy.dev/posts/meta-pages/), accessibility
+    and other design choices. They write about fairly technical topics on their blog
+    which you might have already stumbled upon through link-aggregator sites.
+
+    In addition to their long-form articles, they also keep a log of shorter, more
+    informal posts in a Notes page, and keep a lot of their public Bookmarks.
+- name: Protesilaos
+  url: https://protesilaos.com/
+  desc: |
+    Protesilaos ("prot") is a prominent contributor to Emacs and Emacs packages. He
+    is the author of the [Modus themes](https://protesilaos.com/emacs/modus-themes)
+    which was used for syntax highlighting on this site. He blogs about technology,
+    philosophy, politics, and life and he also hosts documentation of his Emacs
+    packages on his website. He has a YouTube channel where he talks about
+    philosophy, and his hut, and shares Emacs screencasts.
+- name: Ploum
+  url: https://ploum.net/
+  desc: |
+    Ploum blogs about the internet, practices, and culture and is also a fiction
+    writer. He has a French [wikipedia
+    page](https://fr.wikipedia.org/wiki/Lionel_Dricot) and has both English and
+    French blog posts.
+- name: Jack Baty
+  url: https://baty.net/
+  desc: |
+    Jack writes about technology, his own website, workflows, among other topics. He
+    also has a daily journal at [daily.baty.net](https://daily.baty.net/). Jack has
+    been blogging for a long time and its set up has changed many times; as of
+    writing, his blog is currently powered by Ghost.
+- name: erock
+  url: https://bower.sh/
+  desc: |
+    erock blogs about technology and philosophy. He is the author of
+    [neovimcraft](https://neovimcraft.com/) and [pico.sh](https://pico.sh), the
+    latter of which provides a blog hosting service, [prose.sh](https://prose.sh)
+    which also hosts his own blog.
+- name: Arne
+  url: https://arne.me/
+  desc: |
+    Arne's blog has inspired me in many ways, most notably ["Why You Should Write
+    Your Own Static Site Generator"](https://arne.me/blog/write-your-own-ssg). Arne
+    also has a [newsletter](https://arne.me/weekly/) where they share interesting
+    links on the internet.
+- name: James
+  url: https://jamesg.blog/
+  desc: |
+    A wonderfully designed blog that covers a range of topics from snippets of
+    life to personal websites. They provide food for thought and even ideas for
+    your own personal website. James' blog also contains places such as a Link
+    Garden, a blogroll of other "web weavers", his own book about Technical
+    Writer, and more.
+- name: Manu
+  url: https://manuelmoreale.com/
+  desc: |
+    Manu's posts are thoughtful recollections of life, the personal web, on
+    practices and culture, and more. He hosts newsletters, like [People and
+    Blogs](https://peopleandblogs.com/) that interviews people about their
+    lives and their blogs. He writes often, and his posts are always
+    thought-provoking to me. He also started the ["I'll read
+    it"](https://manuelmoreale.com/i-ll-read-it) club.
