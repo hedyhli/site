@@ -492,13 +492,13 @@ h1 .pfp {
   }
   /* If there's an even number of children, make the first one take the full
    * width */
-  .webrings :has(li :last-child:nth-child(odd)) li:first-child {
+  .webrings:has(li:last-child:nth-child(odd)) li:first-child {
     width: 100%;
   }
-  .webrings :has(li :last-child:nth-child(odd)) li:nth-child(odd) {
+  .webrings:has(li:last-child:nth-child(odd)) li:nth-child(odd) {
     margin-right: 0;
   }
-  .webrings :has(li :last-child:nth-child(odd)) li:nth-child(even) {
+  .webrings:has(li:last-child:nth-child(odd)) li:nth-child(even) {
     margin-right: 1rem;
   }
 }

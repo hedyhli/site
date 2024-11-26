@@ -4,6 +4,11 @@
   random: https://meta-ring.hedy.dev/random
   next: https://meta-ring.hedy.dev/next
 
+# - name: IndieWeb Webring
+  # url: https://xn--sr8hvo.ws/previous
+  # previous: https://xn--sr8hvo.ws/previous
+  # next: https://xn--sr8hvo.ws/next
+
 - name: Fediring
   url: https://fediring.net
   previous: https://fediring.net/previous?host=home.hedy.dev
