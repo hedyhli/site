@@ -109,8 +109,6 @@ section = ["HTML", "RSS", "GEMATOM", "ATOM"]
 
 [minify]
 minifyOutput = true
-disableXML = true
-disableHTML = true
 
 [webmentions]
 webmentionsFile = "mentions.json"
@@ -131,4 +129,7 @@ excludeDestinations = [
 excludeSelectors = [
   ".interactions",
 ]
+concurrentFiles = 1
+concurrentRequests = 1
 newDir = "public"
+oldDir = "../site-public/"

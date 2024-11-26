@@ -2,7 +2,7 @@ HUGO=hugo
 HUGO_CACHEDIR=~/hugo_cache
 HUGO_FLAGS=--cleanDestinationDir
 
-PRETTIER=prettier
+PRETTIER=pnpm prettier
 
 RSYNC=rsync
 RSYNC_FLAGS=-rav
@@ -15,7 +15,7 @@ HTML_DEST=~/public_html
 
 DATA_BAK_DEST=pgs.sh:/site-data
 
-UGLYURL_EXCLUDE=*no-used-anymore*
+UGLYURL_EXCLUDE=*not-used-anymore*
 
 DEPLOY_HTML=home.hedy.dev
 DEPLOY_HTML_REPO=/Users/hedy/projects/site-public
@@ -36,8 +36,6 @@ lint-html-proofer:
 lint: lint-css lint-html-validate lint-html-proofer
 
 deploy-html:
-	hugo --minify
-	make html
 	$(RSYNC) -rv --delete --exclude .git $(HTML_DEST)/ $(DEPLOY_HTML_REPO)
 	cd $(DEPLOY_HTML_REPO) && git add -A
 	cd $(DEPLOY_HTML_REPO) && git commit -m 'make deploy-html'
