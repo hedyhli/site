@@ -7,6 +7,7 @@
 - name: IndieWeb Webring
   url: https://xn--sr8hvo.ws/previous
   previous: https://xn--sr8hvo.ws/previous
+  random: https://xn--sr8hvo.ws/random
   next: https://xn--sr8hvo.ws/next
 
 - name: Fediring
