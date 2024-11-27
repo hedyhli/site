@@ -1,5 +1,6 @@
 +++
 title = "Blogroll"
+description = "Recommendation of blogs and personal websites I enjoy."
 date = "2024-11-15"
 draft = false
 outputs = ['html', 'gemtext']

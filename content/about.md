@@ -1,6 +1,6 @@
 +++
 date = '2021-08-03'
-description = 'Where people can find me online and the software I use'
+description = 'Me, elsewhere, and the software I use.'
 outputs = ['html', 'gemtext']
 title = 'About'
 +++

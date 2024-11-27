@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h1>404… Uh-oh!</h1>
+<p>The link you tried to visit can't be accessed on this server! If someone linked this URL to you, perhaps they have made a typo? Try spotting it by double-checking the URL.</p>
+<p>Below are some suggestions on pages you might have intended to visit instead.</p>
+{{ partial "anchor-heading" (dict "Anchor" "recent" "Level" 2 "Text" "Recently updated pages") }}
+{{ partial "recent.html" . }}
+{{ end }}

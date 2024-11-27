@@ -1,3 +1,3 @@
 +++
-title = 'all tags'
+title = 'All tags'
 +++

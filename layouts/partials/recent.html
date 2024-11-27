@@ -1,0 +1,11 @@
+{{ $pages := where .Pages.ByLastmod.Reverse "Kind" "ne" "taxonomy" }}
+{{ $pages = where $pages "Kind" "ne" "term" }}
+{{ $pages = where $pages "Kind" "ne" "home" }}
+<ul style="list-style: none; padding: 0;">
+{{ range $pages | first 5 }}
+  <li style="margin-bottom: 2rem;">
+    <h3 style="margin-bottom: 0;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Description }}</p>
+  </li>
+{{ end }}
+</ul>

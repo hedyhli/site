@@ -1,5 +1,6 @@
 +++
 title = "Bookmarks"
+description = "Interesting links on the web."
 date = "2024-11-15"
 draft = false
 outputs = ['html', 'gemtext']
