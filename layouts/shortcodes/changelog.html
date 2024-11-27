@@ -7,13 +7,17 @@
     {{ $data = . | transform.Unmarshal }}
   {{ end }}
 {{ end }}
-<ul>
+{{ $lastmonth := "" }}
 {{ range $data }}
+  {{ $month := time.Format "2006 January" .date }}
+  {{ if (ne $lastmonth $month) }}
+  {{ if (ne $lastmonth "") }}</ul>{{ end }}
+  {{ partial "anchor-heading.html" (dict "Text" $month "Level" 3 "Anchor" (time.Format "2006-01" .date)) }}
+  <ul>
+  {{ $lastmonth = $month }}
+  {{ end }}
   <li>
-    <p>
-      <time>{{ .date }}</time> —
-      {{ .desc | markdownify }}
-    </p>
+    <p>{{ .desc | markdownify }}</p>
   </li>
 {{ end }}
 </ul>
