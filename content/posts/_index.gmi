@@ -1,7 +1,3 @@
 These are my long-form musings. Expect new posts no more frequently than yearly. If you're subscribed to my feed, rest assured it will never update more often than once every two days.
 
-Comments can be sent to my public mailing list where I'll also send new posts as plain text. If you subscribe to the list, it acts like a newsletter where you'll receive new posts from your inbox, and you can reply to the email to start a public discussion.
-
-Subscribing and commenting happen solely through emails. No external auth required.
-
-=> https://lists.sr.ht/~hedy/posts Subscribe to new posts
+=> /feed.xml Atom feed

@@ -6,12 +6,7 @@ title = 'Posts'
 These are my long-form musings. Expect posts no less frequent than yearly but
 never more frequent than daily.
 
-Comments can be sent to my
-[public mailing list](https://lists.sr.ht/~hedy/posts) where I'll also send new
-posts as plain text. If you subscribe to the list, it acts like a newsletter
-where you'll receive new posts at your inbox, and you can reply to the email
-to start a public discussion.
-
-Subscribing and commenting can happen solely through emails. No external auth
-required.
-
+Comments can be sent via [email](/about/) directly to me, or by interacting on
+the various places a post has been syndicated to. Syndications (if any) and
+reply-via-email links are included at the bottom of each post.
+[Webmentions](https://indieweb.org/Webmention) are also supported.

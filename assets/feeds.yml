@@ -1,0 +1,9 @@
+- name: Posts (RSS)
+  desc: Blog posts on home.hedy.dev.
+  url: /posts/index.xml
+- name: Posts (Atom)
+  desc: Blog posts on home.hedy.dev.
+  url: /posts/atom.xml
+- name: Gemlog posts (Atom)
+  url: gemini://gmi.hedy.dev/feed.xml
+  desc: Posts on my Gemlog ([what are Gemini and Gemlogs?](https://geminiprotocol.net/)) as a Gemini Atom feed.
