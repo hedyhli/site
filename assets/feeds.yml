@@ -6,4 +6,4 @@
   url: /posts/atom.xml
 - name: Gemlog posts (Atom)
   url: gemini://gmi.hedy.dev/feed.xml
-  desc: Posts on my Gemlog ([what are Gemini and Gemlogs?](https://geminiprotocol.net/)) as a Gemini Atom feed.
+  desc: Posts on my Gemlog as a Gemini Atom feed. ([What are Gemini and Gemlogs?](https://geminiprotocol.net/))

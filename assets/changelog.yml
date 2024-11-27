@@ -1,3 +1,6 @@
+- date: 2024-11-27
+  desc: |
+    Added a dedicated [feeds](/feeds/) page and a proper [404](/404.html).
 - date: 2024-11-25
   desc: |
     Redesigned the [blogroll](/blogroll/). It also fetches from a YAML file
