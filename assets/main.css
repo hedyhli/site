@@ -139,9 +139,6 @@
   img.icon {
     opacity: 1;
   }
-  .interactions img {
-    opacity: 1;
-  }
 
   .badges img, img.no-dim {
     opacity: 1;
@@ -652,7 +649,7 @@ a:visited {
 }
 
 a:hover,
-:is(.meta, footer, .after-content, .after-content .interactions) a:hover {
+:is(.meta, footer, .after-content) a:hover {
 	opacity: .7;
 	transition: .25s;
 }
@@ -665,12 +662,6 @@ a:hover,
     .meta a, .after-content a {
         color: var(--link-alt);
     }
-    .after-content .interactions a {
-        color: var(--link);
-    }
-}
-.after-content .interactions a:hover {
-  color: var(--link);
 }
 
 a:focus, form:focus {
@@ -797,38 +788,6 @@ ul.post-list {
 }
 .after-content {
   font-size: .9rem;
-}
-.interactions img:not(.icon) {
-  height: 20px;
-  width: auto;
-  vertical-align: text-bottom;
-}
-.interactions img.icon {
-  border-radius: 100%;
-}
-@media (max-width: 900px) {
-  .interaction div:has(img.icon) {
-    display: none;
-  }
-}
-.after-content .interactions a:has(img):hover {
-  text-decoration: none;
-}
-.interactions .interaction {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: end;
-}
-.interactions .interaction:not(:last-child) {
-  margin-bottom: 2rem;
-}
-.interactions time {
-  color: var(--text-light);
-  font-family: var(--alt-font);
 }
 /*******************************************************************
  * Bookmarks

@@ -12,59 +12,52 @@
     <section class="e-content {{ .Params.font }}" itemprop="articlebody">
       {{ partial "processed-content" . -}}
     </section>
-      <div class="post-meta" style="margin-top: 2rem; margin-bottom: 0">
-        <p>
-        {{- partial "lastmod.html" (dict "Page" . "Prefix" "Last updated on ") -}}
-        {{- partial "tags.html" (dict "Page" . "Prefix" "&nbsp; · &nbsp;") }}
-        </p>
-      </div>
+    <div class="post-meta" style="margin-bottom: 0; margin-top: 2rem;">
+      <p>
+      {{- partial "tags.html" (dict "Page" . "Prefix" "") }}
+      </p>
+    </div>
   </article>
 </div>
 {{- end }}
 {{- define "after" }}
-<hr style="margin-bottom:0;" />
-{{ $subject := printf "Re: %s" .Title }}
-<p class="post-actions" style="margin-bottom: 0; text-align: center;">
-  <a href="{{ .Site.Params.srcURLPrefix }}content/{{ .File.Path }}">Suggest an edit</a>
-  &nbsp; · &nbsp;
-  <a href="mailto:{{ .Site.Params.email }}?subject={{ $subject }}">Reply via email</a>
-</p>
-<hr style="margin-bottom:0;" />
+<hr />
+<section style="padding: 1rem; padding-bottom: .6rem; border: 2px solid var(--border-light); background-color: var(--accent-bg-light)">
+  <strong>Reply via email</strong>
+  {{ $subject := printf "Re: %s" .Title }}
+  <p>Thoughts, feedback, questions? My inbox is open. Start the conversation by dropping me an email at <a href="mailto:{{ .Site.Params.email }}?subject={{ $subject }}">hedy.dev[at]protonmail.com</a>.</p>
+</section>
+<br />
 
-<p id="-interact"><strong>Interact</strong></p>
-<p>You can interact with this post using {{ with .Params.Syndications }}the following syndications, or with {{ end }}<a href="#-webmentions">Webmentions</a>.</p>
 {{ with .Params.Syndications }}
-  <section class="syndication">
-    <p>This post has been syndicated on:</p>
-    <ul>
-      {{ range . }}
-      <li>
-      {{ with .mastodon }}<a href="{{ . }}">Mastodon</a> on the Fediverse
-      {{ else }}
-      {{ with .list }}<a href="{{ . }}">My blog-post mailing list</a>{{ end }}
-      {{ end }}
-      </li>
-      {{ end }}
-    </ul>
-  </section>
-  <br />
+<hr hidden=""/>
+<section style="border: 2px solid var(--border-light); background-color: var(--accent-bg-light); padding: 1rem; padding-bottom: .6rem;">
+  <strong>Read more</strong>
+  <p>Continue exploring this topic by reading related discussion on the following places. This post has been syndicated on:</p>
+  <ul>
+    {{ range . }}
+    <li>
+    {{ with .mastodon }}<a href="{{ . }}">Mastodon</a> on the Fediverse
+    {{ else }}
+    {{ with .list }}<a href="{{ . }}">My blog-post mailing list</a>{{ end }}
+    {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+<br />
 {{ end }}
-<section class="mentions" id="-webmentions">
-  <p><strong>Webmentions</strong></p>
-  <p>Web pages that mention this post will show up here via <a href="https://indieweb.org/Webmention">Webmentions</a>.</p>
-  <details open="">
-    <summary>Send a webmention</summary>
-    <p>Write a response on your own website, link to this page, then submit your URL here to send a webmention.</p>
-    <form itemprop="potentialAction" itemscope="" itemtype="https://schema.org/CommentAction" action="https://webmention.io/home.hedy.dev/webmention" method="post">
-      <meta itemprop="actionStatus" content="PotentialActionStatus">
-      <input type="hidden" name="target" value="{{ .Permalink }}">
-      <label for="wmsrc">URL</label>
-      <div style="display: flex; justify-content: space-between; gap: .5rem; height: 2.5rem;">
-        <input style="flex-grow: 2; margin: 0;" id="wmsrc" type="url" autocomplete="on" required="" name="source">
-        <input style="flex-shrink: 2; height: 100%; margin: 0;" type="submit" value="ping!">
-      </div>
-    </form>
-  </details>
-  {{ partial "webmentions.html" (dict "Page" .) }}
+<hr hidden="" />
+<section style="margin-bottom: 1rem; padding: 1rem; border: 2px solid var(--border-light); background-color: var(--accent-bg-light)">
+  <strong>Send a Webmention</strong>
+  <p>This site supports <a href="https://indieweb.org/Webmention">Webmentions</a>. If you have written something on your site that has linked to this page, you can submit your URL here to notify me.</p>
+  <form itemprop="potentialAction" itemscope="" itemtype="https://schema.org/CommentAction" action="https://webmention.io/home.hedy.dev/webmention" method="post">
+    <meta itemprop="actionStatus" content="PotentialActionStatus">
+    <input type="hidden" name="target" value="{{ .Permalink }}">
+    <div style="display: flex; justify-content: space-between; gap: .5rem; height: 2.5rem;">
+      <input style="flex-grow: 2; margin: 0;" id="wmsrc" type="url" autocomplete="on" required="" name="source" placeholder="https://your-awesome-site.example/mentioning-page">
+      <input style="flex-shrink: 2; height: 100%; margin: 0;" type="submit" value="ping!">
+    </div>
+  </form>
 </section>
 {{- end }}
