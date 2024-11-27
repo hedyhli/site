@@ -62,6 +62,9 @@ nonsymlink-clean:
 gen:
 	rm -rf $(HUGO_CACHEDIR)/site/filecache/getresource
 	bin/getraindrop.sh
+	make hugo
+
+hugo:
 	$(HUGO) $(HUGO_FLAGS) --cacheDir $(HUGO_CACHEDIR)
 
 gemini:

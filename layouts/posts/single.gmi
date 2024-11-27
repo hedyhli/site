@@ -6,14 +6,10 @@
 {{ partial "processed-content.gmi" . }}
 
 ***
-
-EOF
 {{ partial "tags.gmi" (dict "Page" . "Prefix" "tags: ") }}
 
-{{ $subject := urlquery (printf "Re: %s" .Title) }}
-=> {{ with .Params.publicReplyTo }}{{ . |safeHTML }}{{ else }}mailto:~hedy/posts@lists.sr.ht?subject={{ $subject }}{{ end }} Reply via email publicly (plain-text only)
-=> mailto:{{ .Site.Params.email }}?subject={{ $subject }} Reply via email privately
-=> {{ .Site.Params.srcURLPrefix }}content/{{ .File.Path }} Suggest an edit
+{{ $subject := printf "Re:SPACE%s" (replace .Title " " "SPACE") | urlquery | replaceRE "SPACE" "%20" -}}
+=> mailto:{{ .Site.Params.email }}?subject={{ $subject }} Reply via email
 
 => . ← Gemlog
 => / ← Capsule home
