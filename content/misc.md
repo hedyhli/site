@@ -8,6 +8,7 @@ title = 'Misc'
 +++
 
 - [Meta](/meta/) -- Meta information for this website
-- [Bookmarks](/bookmarks/) -- My public bookmarks; collection of interesting links on the internet
+- [Feeds](/feeds/) -- All RSS and Atoms feeds to subscribe to updates
+- [Bookmarks](/bookmarks/) -- My public bookmarks; a collection of interesting links on the internet
 - [Blogroll](/blogroll/) -- A selection of personal websites and blogs I enjoy
 - [~Cafe Spotlight](../cafe-spotlight/) -- Showcase of cool things on tilde.cafe

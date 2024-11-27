@@ -8,7 +8,7 @@ slug = "feeds"
 +++
 
 Subscribe to updates on my website via RSS or Atom feeds. ([What are
-feeds?](https://aboutfeeds.com/)).
+feeds?](https://aboutfeeds.com/))
 
 Here are all the available feeds on this site. If you'd like something
 different, such as [bookmark](/bookmarks/) or [blogroll](/blogroll/) updates,
@@ -16,4 +16,4 @@ different, such as [bookmark](/bookmarks/) or [blogroll](/blogroll/) updates,
 
 {{% feeds %}}
 
-Thank you for keeping RSS alive!
+Thank you for keeping RSS and Atom feeds alive!

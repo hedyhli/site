@@ -26,7 +26,7 @@
         <ul>
         {{ $lastmonth = $month }}
         {{ end }}
-        <li>
+        <li class="box" style="margin-bottom: 1rem;">
         <h3><a href="{{ .link }}">{{ .title }}</a></h3>
         <p><code>{{ .domain }}</code></p>
         {{ with .excerpt }}
@@ -43,7 +43,7 @@
           <p class="excerpt">{{ $e }}</p>
         {{ end }}
         {{ with .note }}
-          <div class="callout">{{ . | markdownify }}</div>
+          <div class="callout" style="border: 1px solid var(--border-light); padding: .5rem .8rem;">{{ . | markdownify }}</div>
         {{ end }}
         </li>
       {{ end }}

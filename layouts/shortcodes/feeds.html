@@ -9,7 +9,7 @@
 {{ end }}
 <ul style="list-style: none; padding: 0; margin: 2rem 0;">
   {{ range $data }}
-  <li style="padding: .5rem 1rem; background-color: var(--accent-bg-light); border: 1px solid var(--border-light); margin-top: 1rem;">
+  <li style="margin-top: 1rem" class="box">
     <h3 style="margin-top: 1rem"><a href="{{ .url | safeURL }}">{{ .name }}</a></h3>
     <p>{{ .desc | markdownify }}</p>
   </li>

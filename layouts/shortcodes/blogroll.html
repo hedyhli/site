@@ -10,7 +10,7 @@
 <ul class="blogroll">
   {{ "<!-- h2 in li? I'm insane. Sorry. -->" | safeHTML }}
   {{ range $data }}
-  <li>
+  <li class="box" style="padding: .2rem 1rem;">
     <h2><a href="{{ .url }}">{{ .name }}</a></h2>
     <p><code>{{ .domain }}</code></p>
     <div>{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .desc) }}</div>
