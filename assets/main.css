@@ -717,35 +717,27 @@ section[itemprop="articlebody"].mono {
 section[itemprop="articlebody"].mono :is(h1, h2, h3, h4, h5, h6) {
 	font-family: var(--body-mono-font);
 }
-div.callout {
+blockquote.callout {
   background-color: var(--accent-bg-light);
   padding: .5rem 2rem;
   border-radius: var(--standard-border-radius);
 }
 @media (max-width: 600px) {
-  div.callout {
+  blockquote.callout {
     padding: .25rem .5rem;
   }
 }
-div.callout::before {
-  font-family: var(--alt-text);
-  color: var(--text-light);
-  font-size: .8rem;
-  margin-bottom: 0;
-}
-div.callout p:first-child {
+blockquote.callout p.title{
   margin-top: .5rem;
 }
-div.callout.note {
+blockquote.callout.note {
   padding-left: 1rem;
   padding-top: .5rem; /* for the label */
 }
-div.callout.note::before {
-  content: "NOTE";
-}
-div.callout.note {
+blockquote.callout.note {
   border-left: 3px solid var(--blue);
 }
+
 .box {
   padding: .5rem 1rem;
   background-color: var(--accent-bg-light);

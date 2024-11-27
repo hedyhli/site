@@ -21,10 +21,10 @@ Recently, I've been looking at [Lume](https://lume.land/), a new-ish static-site
 
 I decided to give it a try when starting a new project, the static site for [Meta Ring](https://meta-ring.hedy.dev/). The many things Lume does well that made me consider the switch is beyond the scope of the article. Instead, let's talk about one thing I miss from Hugo: shortcodes.
 
-<div class="callout note">
+{{% callout note %}}
 
   If you're looking for the TL;DR solution, skip to the [conclusion](#conclusion).
-</div>
+{{% /callout %}}
 
 
 The homepage for my webring required a list of webring members, which is defined in a data file as JSON. It's trivial to use a template engine to parse the JSON and display the HTML, but I needed a way to specify where I want to insert that member list in my `index.md`. This would be easy had I used Hugo, because Hugo shortcodes lets me do exactly that.
@@ -125,10 +125,10 @@ We'll define the member list component in `_components/members.html` as a Lume c
 </ul>
 ```
 
-<div class="callout note">
+{{% callout note %}}
 
 The `members` variable contains the unmarshalled JSON list. This works by putting the member list in `_data/members.json` as Lume's [shared data](https://lume.land/docs/creating-pages/shared-data/).
-</div>
+{{% /callout %}}
 
 Next, in the frontmatter of `_index.md`, specify that we want to use Vento (our templating engine) to preprocess the markdown before passing it to markdown-it:
 
