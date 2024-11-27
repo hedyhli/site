@@ -51,9 +51,7 @@
             <guid>{{ .Permalink }}</guid>
             <description xml:base="{{ .Permalink }}">
                 {{ .Content | html }}
-                <hr />
-                <p><a href="{{ .Site.Params.email }}">Reply via email</a></p>
-                <p>Thank you keeping RSS alive.</p>
+                {{ printf `<hr /><p><a href="%s">Reply via email</a></p><p>Thank you keeping RSS alive.</p>` .Site.Params.email | html }}
             </description>
         </item>
         {{- end }}
