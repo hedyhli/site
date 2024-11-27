@@ -50,7 +50,7 @@
             <author>{{ .Site.Params.name }} ({{ .Site.Params.email }})</author>
             <guid>{{ .Permalink }}</guid>
             <description xml:base="{{ .Permalink }}">
-                {{ partial "processed-content.html" . }}
+                {{ .Content | html }}
                 <hr />
                 <p><a href="{{ .Site.Params.email }}">Reply via email</a></p>
                 <p>Thank you keeping RSS alive.</p>
