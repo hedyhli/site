@@ -22,7 +22,7 @@
 {{- end }}
 {{- define "after" }}
 <hr />
-<section style="padding: 1rem; padding-bottom: .6rem; border: 2px solid var(--border-light); background-color: var(--accent-bg-light)">
+<section class="box" style="padding-top: 1rem">
   <strong>Reply via email</strong>
   {{ $subject := printf "Re: %s" .Title }}
   <p>Thoughts, feedback, questions? My inbox is open. Start the conversation by dropping me an email at <a href="mailto:{{ .Site.Params.email }}?subject={{ $subject }}">hedy.dev[at]protonmail.com</a>.</p>
@@ -31,7 +31,7 @@
 
 {{ with .Params.Syndications }}
 <hr hidden=""/>
-<section style="border: 2px solid var(--border-light); background-color: var(--accent-bg-light); padding: 1rem; padding-bottom: .6rem;">
+<section class="box" style="padding: 1rem">
   <strong>Read more</strong>
   <p>Continue exploring this topic by reading related discussion on the following places. This post has been syndicated on:</p>
   <ul>
@@ -48,7 +48,7 @@
 <br />
 {{ end }}
 <hr hidden="" />
-<section style="margin-bottom: 1rem; padding: 1rem; border: 2px solid var(--border-light); background-color: var(--accent-bg-light)">
+<section style="margin-bottom: 1rem; padding: 1rem" class="box">
   <strong>Send a Webmention</strong>
   <p>This site supports <a href="https://indieweb.org/Webmention">Webmentions</a>. If you have written something on your site that has linked to this page, you can submit your URL here to notify me.</p>
   <form itemprop="potentialAction" itemscope="" itemtype="https://schema.org/CommentAction" action="https://webmention.io/home.hedy.dev/webmention" method="post">
