@@ -15,5 +15,3 @@ different, such as [bookmark](/bookmarks/) or [blogroll](/blogroll/) updates,
 [let me know](/about/) and I can provide one.
 
 {{% feeds %}}
-
-Thank you for keeping RSS and Atom feeds alive!

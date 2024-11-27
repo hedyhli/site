@@ -1,0 +1,1 @@
+{{ $subject := printf "Re: %s" .Page.Title }}<a href="mailto:{{ .Site.Params.email }}?subject={{ $subject }}">{{ .Text }}</a>{{ "" -}}

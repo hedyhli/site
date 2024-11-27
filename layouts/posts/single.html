@@ -24,8 +24,7 @@
 <hr />
 <section class="box" style="padding-top: 1rem">
   <strong>Reply via email</strong>
-  {{ $subject := printf "Re: %s" .Title }}
-  <p>Thoughts, feedback, questions? My inbox is open. Start the conversation by dropping me an email at <a href="mailto:{{ .Site.Params.email }}?subject={{ $subject }}">hedy.dev[at]protonmail.com</a>.</p>
+  <p>Thoughts, feedback, questions? My inbox is open. Start the conversation by dropping me an email at {{ partial "reply-via-email.html" (dict "Page" . "Text" "hedy.dev[at]protonmail.com") }}.</p>
 </section>
 <br />
 
