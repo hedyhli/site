@@ -811,6 +811,7 @@ ul.post-list {
   font-family: var(--alt-font);
 }
 .bookmarks .excerpt {
+  color: var(--text);
   margin-top: 0;
 }
 /*******************************************************************
