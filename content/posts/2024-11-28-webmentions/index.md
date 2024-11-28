@@ -54,11 +54,11 @@ I could use the API at `https://webmention.io/api/mentions.html?target=<page-URL
 
 At this stage, I did not consider sending Webmentions for other people.
 
-- [x] Manual approval: I could delete entries from the <webmention.io> dashboard and only include a public link that displays the list of Webmentions after all remaining entries are approved.
-- [x] Automatic verification: This was handled by <webmention.io>.
-- [ ] Automatic sending of Webmentions for changes on my site.
-- [x] A website should not be pinged twice for the same page on my site that mentions it;
-- [ ] Display approved Webmentions: well, somewhat, but not so much as I hoped for at the time.
+- ✅ Manual approval: I could delete entries from the <webmention.io> dashboard and only include a public link that displays the list of Webmentions after all remaining entries are approved.
+- ✅ Automatic verification: This was handled by <webmention.io>.
+- 🟨 Automatic sending of Webmentions for changes on my site.
+- ✅ A website should not be pinged twice for the same page on my site that mentions it;
+- 🟨 Display approved Webmentions: well, somewhat, but not so much as I hoped for at the time.
 
 
 ## 2. Sending Webmentions
@@ -104,11 +104,11 @@ But even if I could get the entire process streamlined with a script, I'd still 
 Again, that wasn't *too* bad.
 
 A review of the third pass:
-- [x] Manual approval: I could delete entries from the webmention.io dashboard like before, but this time, the JSON data has to go through a script, from which I copy the result and manually merge it with existing Webmentions. This means I was incentived to wait for a batch of Webmentions before merging it and rebuilding my site to display the new entries.
-- [x] Automatic verification: Again, this was handled by webmention.io.
-- [ ] Automatic sending of Webmentions for changes on my site.
-- [x] A website should not be pinged twice for the same page on my site that mentions it;
-- [x] Display approved Webmentions: not so timely though, due to what I've described in the first checklist item.
+- ✅ Manual approval: I could delete entries from the webmention.io dashboard like before, but this time, the JSON data has to go through a script, from which I copy the result and manually merge it with existing Webmentions. This means I was incentived to wait for a batch of Webmentions before merging it and rebuilding my site to display the new entries.
+- ✅ Automatic verification: Again, this was handled by webmention.io.
+- 🟨 Automatic sending of Webmentions for changes on my site.
+- ✅ A website should not be pinged twice for the same page on my site that mentions it;
+- ✅ Display approved Webmentions: not so timely though, due to what I've described in the first checklist item.
 
 
 ## 4. Sender, v2
@@ -136,11 +136,11 @@ Furthermore, despite all the controversy regarding different servers seeing a di
 I ditched displaying Webmentions altogether and resorted to updating my site when I get notified of a new Webmention to link to that site at the end of a post.
 
 A review of this pass:
-- [x] Manual approval: nothing is approved until I manually link to mentions on my site;
-- [x] Automatic verification;
-- [x] Automatic sending of Webmentions for changes on my site: not completely automatic, but I just need to submit the link of the new page;
-- [x] A website should not be pinged twice: Telegraph shows a list of previously sent Webmentions;
-- [x] Display approved Webmentions.
+- ✅ Manual approval: nothing is approved until I manually link to mentions on my site;
+- ✅ Automatic verification;
+- ✅ Automatic sending of Webmentions for changes on my site: not completely automatic, but I just need to submit the link of the new page;
+- ✅ A website should not be pinged twice: Telegraph shows a list of previously sent Webmentions;
+- ✅ Display approved Webmentions.
 
 ## Conclusion
 
