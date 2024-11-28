@@ -76,9 +76,9 @@ gemini-clean:
 	GEMINI_DEST=$(GEMINI_DEST) PUBLIC=public python3 bin/gemini-clean.py -n
 
 html:
-	$(RSYNC) $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
+	$(RSYNC) --delete $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
 	@# Manually include gemini tag (because it was excluded above)
-	$(RSYNC) $(RSYNC_FLAGS) public/tags/gemini $(HTML_DEST)/tags/
+	$(RSYNC) --delete $(RSYNC_FLAGS) public/tags/gemini $(HTML_DEST)/tags/
 
 html-prettify:
 	$(PRETTIER) --config .config/prettier.toml --write $(HTML_DEST)"/**/*.html"
