@@ -58,8 +58,7 @@
             <div xmlns="http://www.w3.org/1999/xhtml">
                 {{- partial "processed-content.html" . | replaceRE `(?: )?(?:item(type|scope|prop|id|ref)="[^"]*"|class="language-figure")` "" | replaceRE `<meta content="true" ?/>` "" | safeHTML -}}
                 <hr />
-                <p><a href="{{ .Site.Params.email }}">Reply via email</a></p>
-                <p>Thank you keeping RSS and Atom feeds alive.</p>
+                <p>{{ partial "reply-via-email.html" (dict "Site" $.Site "Page" . "Text" "Reply via email") }}</p>
             </div>
         </content>
     </entry>
