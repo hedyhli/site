@@ -40,10 +40,12 @@
             {{ end }}
             {{ $e = printf "%s…" $e }}
           {{ end }}
-          <p class="excerpt">{{ $e }}</p>
+          <p>
+            <blockquote>{{ $e }}</blockquote>
+          </p>
         {{ end }}
         {{ with .note }}
-          <div class="callout" style="border: 1px solid var(--border-light); padding: .5rem .8rem;">{{ . | markdownify }}</div>
+          <div>{{ . | markdownify }}</div>
         {{ end }}
         </li>
       {{ end }}
