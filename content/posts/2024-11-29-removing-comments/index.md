@@ -1,0 +1,100 @@
++++
+title = "Removing comments on my posts"
+description = "How the comment system on my blog and gemlog worked, and why I am now removing it."
+date = "2024-11-29T07:40:07Z"
+draft = false
+outputs = ['html', 'gemtext']
+
+slug = "removing-comments"
+tags = ['meta']
+
+highlight = false
+# font = "mono"
+
+# [[syndications]]
+# list =
+# mastodon =
++++
+
+
+A few years ago I had a wonderful idea. Arguably the best system I could think of for comments for my blog: a mailing list.
+
+Here's how it worked.
+
+I had set up a mailing list on [lists.sr.ht](https://lists.sr.ht/), which allowed people to subscribe and unsubscribe using only email (no sr.ht account required).
+
+When I published a new post, I would produce a plaintext version[^plaintext] and post it on the mailing list as a new thread. I would then put a `mailto:` link with a `in-reply-to` field at the end of the post so that people who wish to comment can click on the link, send an email, and the content will be displayed right under the thread as a public "comment".
+
+[^plaintext]: lists.sr.ht requires all emails to [use plaintext](https://useplaintext.email/). The setup can easily support HTML rendered posts by swapping lists.sr.ht with another mailing list provider.
+
+The mailing list would also serve as a newsletter. Someone who was subscribed would receive new posts at their inbox. They could hit the "reply-all" button in their email client to post a public "comment", or just "reply" to email me privately.
+
+To display these comments at the end of each post, I could either include a link to the lists.sr.ht thread which displays all the emails in that thread nicely in a single minimalist web page, or use sr.ht's API to fetch all replies and display them myself.
+
+This system had many advantages:
+- No JavaScript needed to fetch and display comments
+- No external server required, except choosing a mailing list service.
+- The authenticity of commentors were guaranteed (even more so with email encryption) since a email address to send the comment from is required.
+- It double serves as a newsletter. When someone reading the post in their inbox wishes to comment, they can do so directly from their email client.
+- It was simple and intuitive. We all know how to send emails.
+- There was no need to sign up on my blog, or require an account on a 3rd-party service to post a comment.
+
+Perhaps this kind of system is long tried and tested with the pitfalls discussed and explored, perhaps not. Nonetheless, I implemented it exactly as I planned, except for displaying those comments by fetching from an API -- I only included a link to the corresponding lists.sr.ht thread.
+
+Today, I am shutting down the mailing list and -- following my [removal of Webmentions](/posts/webmentions/) -- there will be no more comments on my blog at all. Here are are some of the reasons why I made this decision.
+
+
+## 1. Posting needed more overhead
+
+To commit to the mailing list system, I had to make sure all new posts were emailed every single time.
+
+This means I would:
+1. convert the markdown (the primary format I use for content) into plaintext by hand
+2. copy the result, paste it into my email client, and write the subject line
+3. send the email to the mailing list address
+4. go back to my browser, navigate to the link to the thread of the email I just posted and copy it
+5. go back to my editor and update the metadata of the post to include the link I copied
+
+...before deploying my updated website.
+
+All of these steps are non-trivial to automate, and naturally, I decided the time to figure out converting markdown into plaintext sensibly, sending emails from a script, and constructing the link of the thread, to automate the task would most definitely not be worth it over doing it manually each time.
+
+## 2. It wasn't really a newsletter
+
+Sometimes I write new posts daily, sometimes once in a year. I wouldn't subscribe to a newsletter that starts to send me emails every day following a long period of inactivity -- I would use a feed reader for blogs. To support comments on all my posts I needed to send an email for every post I publish.
+
+If I were to actually start a newsletter that mirrored content on my blog, I would do a weekly digest instead. Unfortunately, combining different posts into a single email thread doesn't quite work for the mailing-list-as-comments system I'm aiming for here.
+
+I didn't consider my mailing list an actual newsletter though it could function as one, neither did I really consider it a proper mailing list -- I was only using it for the sake of a platform for public comments.
+
+## 3. It wasn't used much
+
+Alongside the `mailto:` links that lets people reply publicly to posts, I included a "reply via email privately" link. This was simply a `mailto:` to my personal email address with the subject line set to `Re:` + the title of the post. I did this for both my web and [Gemini](https://geminiprotocol.net/) posts.
+
+For some reason, all replies via emails I received were sent to me privately.
+
+If I were a reader of someone else's blog and they had a public and a private option for "reply via email", I would also go for the private option; it's a nice opportunity to start a personal conversation with someone. Even if I just wanted to let them know about a typo in their post, I would choose "reply via email privately" and tell them about what I liked about the post, their site, and other things that might not even be related to the post or their blog, such as a project of theirs I found useful and have questions about.
+
+I never thought to ask those who have replied via email to my posts privately -- I already appreciate the fact that they've resonated with ideas presented in my post and have taken the time to share their thoughts -- perhaps the reasons are similar to mine, but either way, the mailing list did not see much usage.
+
+
+## 4. 3rd-party content didn't quite fit on my personal blog
+
+I explored ways I could get replies to display at the end of a post, and I didn't end up feeling satisfied with any way I came up with, so I ended up linking to the thread on lists.sr.ht instead.
+
+My posts are hosted on my personal website. Everything here is authored by myself. Contents of comments, if I were to display them on posts, would be considered 3rd-party content. It would be totally fine had it been content on guestbooks, but comments at the end of my posts are not the same as guestbooks.
+
+Blog articles also get syndicated to a number of places. To social media, to link-aggregators. My mailing list would be another place posts are syndicated to. All of these places are communities in itself, and all of these let members comment and interact with my post. Displaying comments from my mailing list on my blog would essentially declare my mailing list as the "canonical" source of comments. People from those other places might even end up commenting on the comments on my mailing list, because they are shown alongside the primary blog post content!
+
+This just doesn't sit right with me.
+
+
+## Conclusion
+
+I don't regret experimenting with mailing lists for a commenting platform. I know of a few people that do something similar (but not quite identical), and I'm glad it has worked for them.
+
+By the time you see this post, I will have removed all links to the mailing list on my blog. 
+
+You can still (and are encouraged to) use the "reply via email" link at the end of each post to share your thoughts on each topic. There is also a form that lets you send [Webmentions](/posts/webmentions) -- sites that links to my post. These will get manually included in the "syndications" section at the end of each post when there are any. You also have the option to interact from those places.
+
+Sourcehut lists does not allow mailing list owners to view subscribers. If you had subscribed to the list, please use the [RSS or Atom feeds](/feeds/) instead, thank you for supporting me.
