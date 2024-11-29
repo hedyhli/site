@@ -30,16 +30,16 @@
 
 {{ with .Params.Syndications }}
 <hr hidden=""/>
-<section class="box" style="padding: 1rem">
-  <strong>Read more</strong>
-  <p>Continue exploring this topic by reading related discussion on the following places. This post has been syndicated on:</p>
-  <ul>
+<section class="box" style="padding: 1rem; padding-bottom: .5rem;">
+  <strong>Interact</strong>
+  <p>Read related discussion or interact with this post in the following places.</p>
+  <ul style="list-style: none; padding: 0;">
     {{ range . }}
     <li>
-    {{ with .mastodon }}<a href="{{ . }}">Mastodon</a> on the Fediverse
-    {{ else }}
-    {{ with .list }}<a href="{{ . }}">My blog-post mailing list</a>{{ end }}
-    {{ end }}
+      {{ with .mastodon }}<a href="{{ . }}"><img class="no-dim" height="20" width="20" src="https://joinmastodon.org/logos/logo-purple.svg" alt="Mastodon Logo" style="margin-right: .2rem; vertical-align: top" /> Mastodon</a>
+      {{ else }}
+      {{ with .bluesky }}<a href="{{ . }}">{{ (resources.Get "icons/bluesky.svg").Content | safeHTML -}} Bluesky</a>{{ end }}
+      {{ end }}
     </li>
     {{ end }}
   </ul>

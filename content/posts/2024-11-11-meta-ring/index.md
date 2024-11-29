@@ -13,7 +13,6 @@ highlight = false
 # font = "mono"
 
 [[syndications]]
-# list =
 mastodon = 'https://tilde.zone/@hedy/113473523167094682'
 +++
 

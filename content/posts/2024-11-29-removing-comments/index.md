@@ -11,9 +11,11 @@ tags = ['meta']
 highlight = false
 # font = "mono"
 
-# [[syndications]]
-# list =
-# mastodon =
+[[syndications]]
+mastodon = "https://tilde.zone/@hedy/113565215114144022"
+
+[[syndications]]
+bluesky = "https://bsky.app/profile/hedy.dev/post/3lc34tdqlqk2y"
 +++
 
 

@@ -12,9 +12,10 @@ tags = ['howto', 'hugo', 'lume']
 highlight = true
 # font = "mono"
 
-# [[syndications]]
-# list =
-# mastodon =
+[[syndications]]
+bluesky = "https://bsky.app/profile/hedy.dev/post/3lbr24ry74225"
+[[syndications]]
+mastodon = "https://tilde.zone/@hedy/113542500250389455"
 +++
 
 Recently, I've been looking at [Lume](https://lume.land/), a new-ish static-site generator that runs on [Deno](https://deno.land/) as a possible replacement for Hugo on my site.
