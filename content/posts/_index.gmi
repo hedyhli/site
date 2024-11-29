@@ -1,3 +1,4 @@
 These are my long-form musings. Expect new posts no more frequently than yearly. If you're subscribed to my feed, rest assured it will never update more often than once every two days.
 
 => /feed.xml Atom feed
+=> /posts/ All posts
