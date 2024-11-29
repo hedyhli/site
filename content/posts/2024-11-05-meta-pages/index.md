@@ -11,7 +11,6 @@ slug = "meta-pages"
 
 [[syndications]]
 mastodon = "https://tilde.zone/@hedy/113430153626263981"
-list = "https://lists.sr.ht/~hedy/posts/%3CRVhDhyDzZC28FkwJjJkSiG7jzSOf3Gm5iLQVaLDVnIdOR96UXZwuTcdmwSKGVUMYUVcX2av7MkzjBrirnvcpX1wXzL9Sfl7xZp4kHNMfPr4=@protonmail.com%3E"
 +++
 
 <details open=""><summary>Update (2024-11-11)</summary>
