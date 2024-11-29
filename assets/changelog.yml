@@ -1,3 +1,8 @@
+- date: 2024-11-28
+  desc: |
+    [Webmentions other than links will no longer show after each
+    post](/posts/webmentions/); the form to send webmentions will still be
+    available.
 - date: 2024-11-27
   desc: |
     Added a dedicated [feeds](/feeds/) page and a proper [404](/404.html).
