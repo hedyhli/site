@@ -10,9 +10,9 @@ title = 'Setting up syntax highlighting for Hugo'
 +++
 
 Hugo uses [chroma](https://github.com/alecthomas/chroma) as its syntax
-highlighter. All you basically need for having your code highlighted is to let
-chroma put the syntax classes in the generated HTML, for the correct language,
-and then make sure you have corresponding CSS for those classes.
+highlighter. All you need for having your code highlighted is to let chroma put
+the syntax classes in the generated HTML, for the correct language, and then
+make sure you have corresponding CSS for those classes.
 
 Let's start by enabling syntax highlighting in your configuration file.
 
