@@ -1,39 +1,52 @@
-Pronouns: She/Her/They/Them
+Pronouns: She/Her
 
-## Places online (web)
+## Links (gemini)
 
-=> https://tilde.zone/@hedy fediverse
-=> https://lemmy.sdf.org/u/hedy lemmy
-=> https://sr.ht/~hedy sourcehut
+=> gopher://rawtext.club/~hedy/ my gopherhole and phlog
+=> gemini://bbs.geminispace.org/u/hedy hedy @ bbs.geminispace.org
+=> gemini://station.martinrue.com/hedy/ hedy @ station
+
+## Links (web)
+
+=> https://home.hedy.dev/ personal website
 => https://github.com/hedyhli github
+=> https://sr.ht/~hedy sourcehut
+=> https://tilde.zone/@hedy the fediverse
+
+=> https://lemmy.sdf.org/u/hedy lemmy
+=> https://pixel.32bit.cafe/hedy pixelfed
+=> https://bsky.app/profile/hedy.dev bluesky
 => https://lobste.rs/u/hedy lobste.rs
 => https://tildes.net/user/hedy tildes.net
 
 ## Contact
 
-Preferred method of contact:
-=> mailto:hedy.dev@protonmail.com Email: hedy.dev@protonmail.com
+I love to connect with people over email conversations. Share your thoughts on a topic from any of my blog gemlog posts by using the "reply via email" link at the bottom of each post.
 
+My preferred method of contact is email:
+=> mailto:hedy.dev@protonmail.com hedy.dev@protonmail.com
+
+Other places you can reach me:
 * Fediverse: @hedy@tilde.zone
 * IRC: hedy on tilde.chat, libera.chat, and more
-* Matrix: hedy:envs.net
 * XMPP: hedy@hmm.st
+* Matrix: hedy:envs.net
 
 
 ## Uses
 ```
 .---------------------------------------------------.
-| OS             | MacOS, Ubuntu, Nix               |
+| OS             | MacOS, Ubuntu                    |
 | Browser        | Zen, Vivaldi                     |
-| Terminal       | Kitty, EAT (Emacs)               |
+| Terminal       | Kitty                            |
 | Gemini Client  | Lagrange, gelim                  |
 | Spartan Client | gelim                            |
 | Gopher Client  | Lagrange                         |
-| Editor         | Helix, Neovim, Emacs             |
-| Shell          | Fish, Nu, Eshell (Emacs)         |
+| Editor         | Neovim                           |
+| Shell          | Fish, Nu                         |
 | Theme          | Catppuccin Mocha, Tundra (Neovim)|
 '---------------------------------------------------'
 ```
 
-=> https://github.com/hedyhli/dotfiles Dotfiles on GitHub
-=> https://sr.ht/~hedy/dotfiles Dotfiles on SourceHut
+=> https://github.com/hedyhli/gelim gelim (gemini and spartan client)
+=> https://github.com/hedyhli/dotfiles dotfiles
