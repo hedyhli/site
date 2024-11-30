@@ -15,7 +15,7 @@ via <a rel="me" href="https://tilde.zone/@hedy">Mastodon</a> on the
 Fediverse.
 
 Alternate versions of this site are available on
-[gemini://](https://geminiprotocol.net) (linked in the footer on each
+[gemini://](https://geminiquickst.art) (linked in the footer on each
 page that supports it),
 [spartan://](https://portal.mozz.us/gemini/spartan.mozz.us), and gopher.
 

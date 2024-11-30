@@ -71,7 +71,7 @@ I didn't consider my mailing list an actual newsletter though it could function 
 
 ## 3. It wasn't used much
 
-Alongside the `mailto:` links that lets people reply publicly to posts, I included a "reply via email privately" link. This was simply a `mailto:` to my personal email address with the subject line set to `Re:` + the title of the post. I did this for both my web and [Gemini](https://geminiprotocol.net/) posts.
+Alongside the `mailto:` links that lets people reply publicly to posts, I included a "reply via email privately" link. This was simply a `mailto:` to my personal email address with the subject line set to `Re:` + the title of the post. I did this for both my web and [Gemini](https://geminiquickst.art/) posts.
 
 For some reason, all replies via emails I received were sent to me privately.
 
