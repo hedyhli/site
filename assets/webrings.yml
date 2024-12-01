@@ -1,58 +1,72 @@
 - name: Meta Ring
+  desc: Personal website tinkerers; those with meta pages or [colophons](https://en.wiktionary.org/wiki/colophon#Noun).
   url: https://meta-ring.hedy.dev/
   previous: https://meta-ring.hedy.dev/previous
   random: https://meta-ring.hedy.dev/random
   next: https://meta-ring.hedy.dev/next
 
 - name: IndieWeb 🕸️💍
-  url: https://xn--sr8hvo.ws/previous
+  desc: |
+    "For folks adding [IndieWeb building blocks](https://indieweb.org/building-blocks) to their personal websites to find (and be found by) other folks with IndieWeb building blocks on their sites!"
+  url: https://xn--sr8hvo.ws/
   previous: https://xn--sr8hvo.ws/previous
   random: https://xn--sr8hvo.ws/random
   next: https://xn--sr8hvo.ws/next
 
 - name: Fediring
+  desc: |
+    "Personal sites of any member of the [fediverse](https://en.wikipedia.org/wiki/Fediverse) (also known as fedizens)."
   url: https://fediring.net
   previous: https://fediring.net/previous?host=home.hedy.dev
   random: https://fediring.net/random
   next: https://fediring.net/next?host=home.hedy.dev
 
 - name: CSS JOY
+  desc: CSS enjoyers.
   url: https://cs.sjoy.lol/
   previous: https://webri.ng/webring/cssjoy/previous?via=https://home.hedy.dev/
   random: https://webri.ng/webring/cssjoy/random?via=https://home.hedy.dev/
   next: https://webri.ng/webring/cssjoy/next?via=https://home.hedy.dev/
 
-- name: Loopring
-  url: https://loop.graycot.dev/webring.html?action=home
-  previous: https://loop.graycot.dev/webring.html?action=prev
-  random: https://loop.graycot.dev/webring.html?action=rand
-  next: https://loop.graycot.dev/webring.html?action=next
-
 - name: Bucket webring
+  desc: Cool people who like to make things.
   url: https://webring.bucketfish.me/
   previous: https://webring.bucketfish.me/redirect.html?to=prev&name=~hedy
   random: https://webring.bucketfish.me/redirect.html?to=random&name=~hedy
   next: https://webring.bucketfish.me/redirect.html?to=next&name=~hedy
 
 - name: Retronaut webring
+  desc: |
+    "Some of us miss the messy old days of the Internet where we tried to get along and we'd link to each other's sites and it was all so much fun."
   url: https://webring.dinhe.net/
   previous: https://webring.dinhe.net/prev/https://home.hedy.dev/
   next: https://webring.dinhe.net/next/https://home.hedy.dev/
 
 - name: a11y webring
+  desc: Digital accessibility practitioners.
   url: https://a11y-webring.club/
   previous: https://a11y-webring.club/prev
   random: https://a11y-webring.club/random
   next: https://a11y-webring.club/next
 
 - name: No AI Webring
+  desc: Personal websites without any AI-generated content.
   url: https://baccyflap.com/noai
   previous: https://baccyflap.com/noai/?prv&s=dsh
   random: https://baccyflap.com/noai/?rnd
   next: https://baccyflap.com/noai/?nxt&s=dsh
 
 - name: Geek Ring
+  desc: |
+    "For all those funny, quirky, interesting, personal, strange, offbeat websites that's not page 1 on the search engines. Everyone here gets a chance to have their site viewed, and everyone will find something they have not seen before!"
   url: https://geekring.net/
   previous: http://geekring.net/site/429/previous
   random: http://geekring.net/site/429/random
   next: http://geekring.net/site/429/next
+
+- name: the safonts webring
+  url: https://xandra.cc/safonts/
+  desc: |
+    "this is a list of personal websites that feature fonts and text as main design elements and/or as a featured part of their layout, either past or present. maybe you love particular fonts or you just prefer having minimalist layouts—regardless of reason, you're likely a safont!"
+  previous: https://suxnode.com/
+  next: https://xandra.cc/

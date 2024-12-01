@@ -1,0 +1,15 @@
+- name: adage
+  class: noun
+  def: A saying that sets forth a general truth and that has gained credit through long use.
+- name: winnow
+  class: verb
+  def: To examine closely in order to separate the good from the bad; sift.
+- name: non-seqitur
+  class: noun
+  def:
+    - An inference or conclusion that does not follow from the premises or evidence.
+    - A statement that does not follow logically from what preceded it.
+    - Any abrupt and inexplicable transition or occurrence.
+- name: apostasy
+  class: noun
+  def: the abandonment or renunciation of a religious or political belief

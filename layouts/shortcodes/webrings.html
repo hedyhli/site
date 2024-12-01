@@ -11,15 +11,19 @@
   <ul>
     {{ range $data }}
     <li>
+      <p><a href="{{ .url }}"><strong>{{ .name }}</strong></a></p>
+      <p style="flex-grow: 1; vertical-align: middle;">{{ .desc | markdownify }}</p>
       <p>
-        <a title="Previous" class="arrow" referrerpolicy="strict-origin" href="{{ .previous }}">⇐</a>
+        <a class="arrow" title="Previous" class="arrow" referrerpolicy="strict-origin" href="{{ .previous }}">⇐</a>
+        {{ with .random }}
         <span>
-          <a href="{{ .url }}">{{ .name }}</a>
-          {{ with .random }}
-          <a class="icon" style="height: 16px; width: 16px; display: inline-block; vertical-align: middle; text-decoration: none; border-radius: 100%; background-color: var(--accent-bg); padding: 5px" title="Random" aria-label="random" referrerpolicy="strict-origin" href="{{ . }}">{{ (resources.Get "icons/shuffle.svg").Content | safeHTML -}}<span hidden="">[random]</span></a>
-          {{ end }}
+          <a title="Random" aria-label="random" referrerpolicy="strict-origin" href="{{ . }}">
+          <!-- <span class="icon" style="height: 16px; width: 16px; display: inline-block; text-decoration: none; vertical-align: top; border-radius: 100%; background-color: var(--accent-bg); padding: 5px; margin-right: .5rem" ></span> -->
+            🎲 Random
+          </a>
         </span>
-        <a title="Next" class="arrow" referrerpolicy="strict-origin" href="{{ .next }}">⇒</a>
+        {{ end }}
+        <a class="arrow" title="Next" class="arrow" referrerpolicy="strict-origin" href="{{ .next }}">⇒</a>
       </p>
     </li>
     {{ end }}

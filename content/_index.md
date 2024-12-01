@@ -23,8 +23,17 @@ page that supports it),
 
 ## Webrings
 
+> A [webring](https://en.wikipedia.org/wiki/Webring) is a collection of websites made by like-minded folks, usually centered around a topic, aesthetic, or common interest.
+>
+> -- from the [safonts](https://xandra.cc/safonts/) webring
+
+Here are the webrings my personal website is part of. Click on the arrows to
+visit my neighbor sites on each ring. Some webrings also lets you visit a
+random site part of the ring. Pick a ring and you'll be off!
+
 {{< webrings >}}
 
-My [gemini capsule](gemini://gmi.hedy.dev/) is part of a few other "web"-rings.
+My [gemini capsule](gemini://gmi.hedy.dev/) is part of a few other webrings,
+also known as "orbits" in [Geminispace](https://geminiquickst.art/).
 
-View member sites & badges on my [meta](/meta/) page.
+Member sites & badges are listed on my [meta](/meta/) page.

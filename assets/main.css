@@ -479,10 +479,7 @@ h1 .pfp {
     flex-wrap: wrap;
   }
   .webrings li {
-    width: calc(50% - 0.5rem);
-  }
-  .webrings li p {
-    margin: 0;
+    width: calc(50% - .65rem);
   }
   .webrings li:nth-child(odd) {
     margin-right: 1rem;
@@ -499,24 +496,40 @@ h1 .pfp {
     margin-right: 1rem;
   }
 }
+.webrings li {
+  margin-bottom: 1.2rem;
+	border: 1px solid var(--border-light);
+	background-color: var(--accent-bg-light);
+
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: .5rem;
+}
 .webrings li p {
+	padding: 0 1rem;
+  text-align: left;
+  margin: 0;
+}
+.webrings li p:last-child {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 1rem;
   text-align: center;
-	vertical-align: middle;
-  margin-top: 0;
-	padding: 0.2rem 1rem;
-	border: 1px solid var(--border-light);
-	background-color: var(--accent-bg-light);
+
+  padding: 0;
+  margin-top: .5rem;
 }
-.webrings li {
-  margin-bottom: 1.2rem;
-}
-.webrings a.arrow {
-  font-size: 1.5rem;
+.webrings li p:last-child a {
   text-decoration: none;
+}
+.webrings li p:first-child {
+	padding-top: 1rem;
+}
+.webrings .arrow {
+  font-size: 1.5rem;
+  padding: 0 1rem;
 }
 
 .badges img {
