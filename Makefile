@@ -76,6 +76,7 @@ gemini-clean:
 	GEMINI_DEST=$(GEMINI_DEST) PUBLIC=public python3 bin/gemini-clean.py -n
 
 html:
+	rm -rf public/tags/*/index.xml
 	$(RSYNC) --delete $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
 	@# Manually include gemini tag (because it was excluded above)
 	$(RSYNC) --delete $(RSYNC_FLAGS) public/tags/gemini $(HTML_DEST)/tags/
