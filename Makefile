@@ -5,7 +5,7 @@ HUGO_FLAGS=--cleanDestinationDir
 PRETTIER=pnpm prettier
 
 RSYNC=rsync
-RSYNC_FLAGS=-rav
+RSYNC_FLAGS=
 
 HUT=hut
 
@@ -43,7 +43,7 @@ deploy-html:
 	$(RSYNC) -rv assets/data $(DATA_BAK_DEST)
 
 deploy-gemini:
-	$(RSYNC) $(RSYNC_FLAGS) ../spsrv/README.gmi $(GEMINI_DEST)/spsrv/index.gmi
+	$(RSYNC) -rav ../spsrv/README.gmi $(GEMINI_DEST)/spsrv/index.gmi
 	tar -C $(GEMINI_DEST) -cvz . > $(DEPLOY_GEMINI_DIST)
 	$(HUT) pages publish --protocol GEMINI -d $(DEPLOY_GEMINI) $(DEPLOY_GEMINI_DIST)
 	rm $(DEPLOY_GEMINI_DIST)
@@ -51,9 +51,9 @@ deploy-gemini:
 deploy: deploy-html deploy-gemini
 
 backup:
-	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
-	$(RSYNC) $(RSYNC_FLAGS) $(HTML_DEST) $(HTML_DEST)-back --delete
-	$(RSYNC) $(RSYNC_FLAGS) assets/data $(HTML_DEST)-back/data
+	$(RSYNC) -ra $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
+	$(RSYNC) -ra $(HTML_DEST) $(HTML_DEST)-back --delete
+	$(RSYNC) -ra assets/data $(HTML_DEST)-back/data
 
 nonsymlink-clean:
 	# clean all non-symlink files
@@ -68,18 +68,18 @@ hugo:
 	$(HUGO) $(HUGO_FLAGS) --cacheDir $(HUGO_CACHEDIR)
 
 gemini:
-	$(RSYNC) $(RSYNC_FLAGS) $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
-	$(RSYNC) $(RSYNC_FLAGS) public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
-	$(RSYNC) $(RSYNC_FLAGS) public/posts/gemini/* public/posts/*.gmi $(GEMINI_DEST)/posts --exclude _index.gmi
+	$(RSYNC) -rav $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
+	$(RSYNC) -rav public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
+	$(RSYNC) -rav public/posts/gemini/* public/posts/*.gmi $(GEMINI_DEST)/posts --exclude _index.gmi
 
 gemini-clean:
 	GEMINI_DEST=$(GEMINI_DEST) PUBLIC=public python3 bin/gemini-clean.py -n
 
 html:
 	rm -rf public/tags/*/index.xml
-	$(RSYNC) --delete $(RSYNC_FLAGS) public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
+	$(RSYNC) --delete -ra public/ --exclude '*.gmi' --exclude gemini $(HTML_DEST)
 	@# Manually include gemini tag (because it was excluded above)
-	$(RSYNC) --delete $(RSYNC_FLAGS) public/tags/gemini $(HTML_DEST)/tags/
+	$(RSYNC) --delete -ra public/tags/gemini $(HTML_DEST)/tags/
 
 html-prettify:
 	$(PRETTIER) --config .config/prettier.toml --write $(HTML_DEST)"/**/*.html"
