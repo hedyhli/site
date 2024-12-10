@@ -1,3 +1,6 @@
+- date: 2024-12-10
+  desc: |
+    Removed Inter and replace body font with IBM Plex Sans.
 - date: 2024-12-01
   desc: |
     Webring list redesigned and added descriptions.

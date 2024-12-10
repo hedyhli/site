@@ -77,13 +77,12 @@ automatically deploys to netlify.
 ## Fonts
 
 The following fonts are used on this site:
-- [Inter](https://github.com/rsms/inter)
 - [IBM Plex Sans and Mono](https://github.com/IBM/type)
 - [iA Writer Duo](https://github.com/iaolo/iA-Fonts)
 
-All written primary content for reading uses Inter, except for some blog posts
-which is displayed in iA Writer Duo. Headings and meta information use IBM Plex
-Sans. IBM Plex Mono is used for all code snippets and code blocks.
+All written primary content for reading uses IBM Plex Sans, except for some blog posts
+which is displayed in iA Writer Duo. IBM Plex Mono is used for all code snippets
+and code blocks.
 
 ## Colors
 
