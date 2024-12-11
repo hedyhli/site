@@ -88,6 +88,10 @@
   background-color: var(--selection-bg);
 }
 
+strong {
+  font-weight: 600;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #2d2d38;
@@ -150,6 +154,7 @@ body {
 	color: var(--text);
 	font-family: var(--text-font);
 	font-size: var(--base-fontsize);
+	font-weight: 400;
 	line-height: var(--line-height);
 
 	margin: auto;
@@ -161,6 +166,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1.1rem;
 	font-family: var(--heading-font);
+	font-weight: 500;
 }
 h2, h3, h4, h5, h6 {
   color: var(--headings);
@@ -173,18 +179,19 @@ h2 {
 	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
 	margin-top: calc(var(--line-height) * 1.1rem);
 }
-h3 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor));
-}
-h4 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale));
-}
-h5 {
-	font-size: var(--base-fontsize);
-}
-h6 {
-	font-size: calc(var(--base-fontsize) / var(--header-scale));
-}
+/* Let the user agent decide */
+/* h3 { */
+/* 	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor)); */
+/* } */
+/* h4 { */
+/* 	font-size: calc(var(--base-fontsize) * var(--header-scale)); */
+/* } */
+/* h5 { */
+/* 	font-size: var(--base-fontsize); */
+/* } */
+/* h6 { */
+/* 	font-size: calc(var(--base-fontsize) / var(--header-scale)); */
+/* } */
 
 blockquote {
 	margin-left: 0;
@@ -204,7 +211,7 @@ table {
 	width: 100%;
 }
 table caption {
-	font-weight: bold;
+	font-weight: 600;
 	margin-bottom: .5rem;
 }
 table.no-header thead {
@@ -221,7 +228,7 @@ th:empty {
 }
 th {
 	background: var(--accent-bg-light);
-	font-weight: bold;
+	font-weight: 600;
 }
 
 small {
@@ -327,7 +334,7 @@ details {
 
 summary {
 	cursor: pointer;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 details[open] {
@@ -350,7 +357,6 @@ nav {
     margin-left: 5%;
     margin-bottom: 4rem;
     padding: 1rem 0.3rem;
-    font-weight: 500;
 }
 
 nav div {
@@ -360,7 +366,7 @@ nav div {
 nav a {
 	text-decoration: none;
   margin-top: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   border: 1px solid var(--bg);
   padding: .75rem .75rem;
 }
@@ -424,8 +430,8 @@ nav .pfp {
 }
 
 h1 .pfp {
-    height: 2.5rem;
-    vertical-align: text-top;
+  height: 2.5rem;
+  vertical-align: text-bottom;
 }
 
 /*******************************************************************
@@ -435,12 +441,19 @@ h1 .pfp {
   display: grid;
   grid-template-columns: repeat(14,1fr);
   width: 100%;
-  height: 8px;
-  background-color: var(--mauve);
-  background-image: linear-gradient(90deg,var(--rosewater),var(--flamingo),var(--mauve),var(--red),var(--maroon),var(--peach),var(--green),var(--teal),var(--sky),var(--sapphire),var(--blue));
+  height: 5px;
+  background-color: var(--non-text-light);
+  background-image: linear-gradient(90deg,var(--lavender),var(--flamingo),var(--rosewater),var(--maroon),var(--peach),var(--green),var(--teal));
   background-size: 400% 100%;
   background-position: left;
-  animation: gradient 1s linear infinite forwards;
+  animation: gradient 2s linear infinite forwards;
+}
+@media (prefers-color-scheme: dark) {
+  .accent-bar {
+    background-image: linear-gradient(90deg,var(--blue),var(--mauve),var(--lavender),var(--flamingo),var(--red),var(--maroon),var(--peach));
+    background-size: 200% 100%;
+    background-position: 50%;
+  }
 }
 .hero {
     padding-top: 2rem;
@@ -601,10 +614,6 @@ footer {
 }
 footer a, footer a:visited {
 	color: var(--text-light);
-	text-decoration: underline;
-}
-footer a:hover, footer a:visited:hover {
-  text-decoration: underline;
 }
 footer p {
   margin: 0;
@@ -647,10 +656,20 @@ header pre {
  */
 a {
   color: var(--link);
+	text-underline-offset: 3px;
+	text-decoration-thickness: 0.5px;
 }
 a:visited {
     color: var(--link-visited);
 }
+a[role=doc-noteref] {
+  text-decoration: none;
+}
+a[role=doc-noteref],
+a[role=doc-noteref]:visited {
+  color: var(--link-alt);
+}
+
 .post-meta a:visited, .meta a:visited, .after-content a:visited {
     color: var(--link-alt);
 }
@@ -681,14 +700,22 @@ nav a:focus {
 }
 
 a.anchor {
-    text-decoration: none;
-    color: var(--non-text-light);
-    padding-right: .2rem;
+  text-decoration: none;
+  color: var(--non-text-light);
+  padding-right: .2rem;
 }
 
-/* a.anchor:hover { */
-/*     text-decoration: underline; */
-/* } */
+section[itemprop="articlebody"]
+a[href^='http']:not([href^='https://muan.co/'],.no-ext,:has(img)):after {
+  content: "↗" / " (external)";
+  font-size: 0.75em;
+  line-height: 0;
+  text-decoration: none;
+  /* position: absolute; */
+  /* margin-top: calc(1rem - 1.7em); */
+  line-height: 1em;
+  color: var(--text-light);
+}
 
 /*******************************************************************
  * Post components
@@ -781,7 +808,7 @@ ul.post-list {
 .post-list h3, .post-list h2 {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 .post-list p {
     margin-top: 0;
@@ -877,6 +904,7 @@ input[type="range"] {
 /* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
 abbr[title] {
   cursor: help;
+	text-underline-offset: 3px;
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }

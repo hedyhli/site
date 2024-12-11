@@ -1,11 +1,17 @@
 {{ define "main" }}
-    <div class="hero h-card">
-      <h1>{{ partial "pfp-name.html" . }}<span class="blink">▂</span></h1>
+<div class="hero h-card">
+  <h1>{{ partial "pfp-name.html" . }}<span class="blink">▂</span></h1>
 
-      <p><a rel="me" class="u-url" href="https://tilde.zone/@hedy">Fediverse</a> ⋅ <a href="https://github.com/hedyhli">GitHub</a> ⋅ <a href="https://sr.ht/~hedy">SourceHut</a></p>
-    </div>
+  <p>
+    <a rel="me" class="u-url" href="https://tilde.zone/@hedy">Fediverse</a>
+    <span style="color: var(--non-text-light)">⋅</span>
+    <a href="https://github.com/hedyhli">GitHub</a>
+    <span style="color: var(--non-text-light)">⋅</span>
+    <a href="https://sr.ht/~hedy">SourceHut</a>
+  </p>
+</div>
 
-    <hr style="margin-bottom: 1.5rem" />
+<hr style="margin-bottom: 1.5rem" />
 
-    {{ .Content }}
+{{ .Content }}
 {{ end }}
