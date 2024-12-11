@@ -119,7 +119,7 @@ strong {
     --link-alt: var(--yellow);
     --link-nav: #b0bce3;
 
-    --selection-bg: rgba(137, 220, 235, 25%);
+    --selection-bg: rgba(238, 190, 190, 30%);
 
     --rosewater: #f5e0dc;
     --flamingo: #f2cdcd;
@@ -298,7 +298,7 @@ hr {
 	color: var(--border-light);
 	border-color: var(--border-light);
 	border-style: solid;
-	border-width: 1px;
+	border-width: 0.5px;
 	margin: 1rem auto;
 }
 
@@ -420,7 +420,7 @@ nav ul li, nav strong > a {
 }
 
 .pfp {
-    border: 2px solid var(--border-light);
+    border: 1px solid var(--border-light);
     border-radius: 100%;
 }
 
