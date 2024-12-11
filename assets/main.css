@@ -434,6 +434,10 @@ h1 .pfp {
   vertical-align: text-bottom;
 }
 
+h1 .pfp-text {
+  padding-left: .5rem;
+}
+
 /*******************************************************************
  * Homepage
  */
@@ -706,13 +710,13 @@ a.anchor {
 }
 
 section[itemprop="articlebody"]
-a[href^='http']:not([href^='https://muan.co/'],.no-ext,:has(img)):after {
+a[href^='http']:not([href^='https://home.hedy.dev/'],.no-ext,:has(img)):after {
   content: "↗" / " (external)";
   font-size: 0.75em;
   line-height: 0;
   text-decoration: none;
-  /* position: absolute; */
-  /* margin-top: calc(1rem - 1.7em); */
+  position: relative;
+  top: 0;
   line-height: 1em;
   color: var(--text-light);
 }
@@ -761,6 +765,8 @@ blockquote.callout {
   background-color: var(--accent-bg-light);
   padding: .5rem 2rem;
   border-radius: var(--standard-border-radius);
+  margin-right: 0;
+  margin-left: 0;
 }
 @media (max-width: 600px) {
   blockquote.callout {
