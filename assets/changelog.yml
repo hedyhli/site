@@ -1,6 +1,7 @@
 - date: 2024-12-11
   desc: |
-    Added external link indicator arrows and updated font weight of headings.
+    Added external link indicator arrows and updated font weight of headings,
+    inspired by [muan.co](https://muan.co).
 - date: 2024-12-10
   desc: |
     Removed Inter and replaced body font with IBM Plex Sans.
