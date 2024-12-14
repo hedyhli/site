@@ -1,21 +1,21 @@
 <nav {{ if (eq .RelPermalink "/") }}class="index"{{ end }}>
-    <ul>
+  <ul>
     <li {{ if (eq .RelPermalink "/") -}}style="display: none"{{ end -}}>
       <a title="home" id="icon" href="/">{{ partial "pfp.html" }}</a>
     </li>
     <li>
-        <a title="home" id="home" href="/">Home</a>
+      <a title="home" id="home" href="/">Home</a>
     </li>
     {{- $currentPage := . }}
 
     {{- range .Site.Menus.main.ByWeight }}
     {{- .Pre }}
     <li>
-        <a href="{{ .URL }}"
-           {{- if hasPrefix $currentPage.RelPermalink .URL }}class="selected"{{ end -}}
-           title="{{ .Title  }}">{{- .Name -}}</a>
+      <a href="{{ .URL }}"
+        {{- if hasPrefix $currentPage.RelPermalink .URL }}class="selected"{{ end -}}
+        title="{{ .Title  }}">{{- .Name -}}</a>
     </li>
     {{ .Post  -}}
     {{- end }}
-    </ul>
+  </ul>
 </nav>

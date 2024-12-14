@@ -1,14 +1,14 @@
 {{- define "main" }}
-    {{ if (eq .Title "All tags") -}}
-    <h1>All tags</h1>
-    {{ else -}}
-    <h1>Posts tagged <code>{{ .Title }}</code></h1>
-    {{ end }}
-    <ul>
-        {{- range .Data.Pages  }}
-        <li>
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        {{- end }}
-    </ul>
+{{ if (eq .Title "All tags") -}}
+<h1>All tags</h1>
+{{ else -}}
+<h1>Posts tagged <code>{{ .Title }}</code></h1>
+{{ end }}
+<ul>
+  {{- range .Data.Pages  }}
+  <li>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  </li>
+  {{- end }}
+</ul>
 {{- end }}

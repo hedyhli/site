@@ -1,15 +1,15 @@
 /*
- * Mostly based on simplecss.org
- * Also based on cssbed, forgot which theme exactly, might be bamboo or
- * "evenbettermotherfucking"
- *
- * Inspirations:
- * - seirdy.one
- * - kevq.uk
- * - smol.pub
- * - drewdevault.com
- * - gregoryhammond.ca
- */
+* Mostly based on simplecss.org
+* Also based on cssbed, forgot which theme exactly, might be bamboo or
+* "evenbettermotherfucking"
+*
+* Inspirations:
+* - seirdy.one
+* - kevq.uk
+* - smol.pub
+* - drewdevault.com
+* - gregoryhammond.ca
+*/
 
 :root {
   --base-fontsize: 1rem;
@@ -23,10 +23,10 @@
   --line-height: 1.618;
   --standard-border-radius: 0;
 
-	--text-font: "IBM Plex Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	--alt-font: var(--text-font);
-	--heading-font: var(--text-font);
-	--body-font: var(--text-font);
+  --text-font: "IBM Plex Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --alt-font: var(--text-font);
+  --heading-font: var(--text-font);
+  --body-font: var(--text-font);
   --mono-font: "IBM Plex Mono", "Fira Code", Hack, Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --body-mono-font: "iA Writer Duo", "iA Writer Mono", var(--mono-font);
 
@@ -150,34 +150,34 @@ strong {
 }
 
 body {
-	background-color: var(--bg);
-	color: var(--text);
-	font-family: var(--text-font);
-	font-size: var(--base-fontsize);
-	font-weight: 400;
-	line-height: var(--line-height);
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--text-font);
+  font-size: var(--base-fontsize);
+  font-weight: 400;
+  line-height: var(--line-height);
 
-	margin: auto;
+  margin: auto;
 }
 
 /*******************************************************************
- * Body elements
- */
+* Body elements
+*/
 h1, h2, h3, h4, h5, h6 {
-	margin-bottom: 1.1rem;
-	font-family: var(--heading-font);
-	font-weight: 500;
+  margin-bottom: 1.1rem;
+  font-family: var(--heading-font);
+  font-weight: 500;
 }
 h2, h3, h4, h5, h6 {
   color: var(--headings);
 }
 h1 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
-	margin-top: calc(var(--line-height) * 1.3rem);
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
+  margin-top: calc(var(--line-height) * 1.3rem);
 }
 h2 {
-	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
-	margin-top: calc(var(--line-height) * 1.1rem);
+  font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
+  margin-top: calc(var(--line-height) * 1.1rem);
 }
 /* Let the user agent decide */
 /* h3 { */
@@ -194,10 +194,10 @@ h2 {
 /* } */
 
 blockquote {
-	margin-left: 0;
-	padding-left: 1.25rem;
-	border-left: 3px solid var(--text-light);
-	opacity: .85;
+  margin-left: 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--text-light);
+  opacity: .85;
 }
 
 @media (max-width: 600px) {
@@ -207,38 +207,38 @@ blockquote {
 }
 
 table {
-	border-collapse: collapse;
-	width: 100%;
+  border-collapse: collapse;
+  width: 100%;
 }
 table caption {
-	font-weight: 600;
-	margin-bottom: .5rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
 }
 table.no-header thead {
   display: none;
 }
 td,
 th {
-	border: 1px solid var(--border-light);
-	text-align: left;
-	padding: .5rem;
+  border: 1px solid var(--border-light);
+  text-align: left;
+  padding: .5rem;
 }
 th:empty {
-    visibility: hidden;
+  visibility: hidden;
 }
 th {
-	background: var(--accent-bg-light);
-	font-weight: 600;
+  background: var(--accent-bg-light);
+  font-weight: 600;
 }
 
 small {
-    font-size: .8rem;
-    color: var(--text-light);
+  font-size: .8rem;
+  color: var(--text-light);
 }
 
 ul li {
-    /* Fix sizing of tap target when it's a list of links */
-    margin-bottom: 0.5rem;
+  /* Fix sizing of tap target when it's a list of links */
+  margin-bottom: 0.5rem;
 }
 
 /* Use mono font for code like elements */
@@ -247,124 +247,124 @@ pre,
 pre span,
 kbd,
 samp {
-	font-family: var(--mono-font);
-	font-size: 98%;
+  font-family: var(--mono-font);
+  font-size: 98%;
 }
 
 /* Inline code snips hopefully */
 :not(pre)>code, :not(pre)>samp, kbd {
-    background-color: var(--code-bg);
-    border: 1px solid var(--border-light);
-    /* border-radius: 6px; */
-    padding: .01em .1em;
+  background-color: var(--code-bg);
+  border: 1px solid var(--border-light);
+  /* border-radius: 6px; */
+  padding: .01em .1em;
 }
 
 kbd {
-	color: var(--preformatted);
-	border: 1px solid var(--preformatted);
-	border-bottom: 3px solid var(--preformatted);
-	border-radius: 5px;
-	padding: .1rem;
+  color: var(--preformatted);
+  border: 1px solid var(--preformatted);
+  border-bottom: 3px solid var(--preformatted);
+  border-radius: 5px;
+  padding: .1rem;
 }
 
 /* This would be overridden by chroma if the page wants highlighting */
 pre {
-	padding: .8rem 1rem;
-	max-width: 100%;
-	overflow: auto;
-	color: var(--preformatted);
-	background: var(--code-bg);
-	border: 1px solid var(--border-light);
-	border-radius: 0;
+  padding: .8rem 1rem;
+  max-width: 100%;
+  overflow: auto;
+  color: var(--preformatted);
+  background: var(--code-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 0;
 }
 
 /* Fix embedded code within pre */
 pre code {
-	color: var(--preformatted);
-	background: none;
-	margin: 0;
-	padding: 0;
+  color: var(--preformatted);
+  background: none;
+  margin: 0;
+  padding: 0;
 
-	tab-size: 4;
+  tab-size: 4;
 }
 
 fieldset {
-	border: 0;
-	padding: 0;
-	margin: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
 }
 
 hr {
-	color: var(--border-light);
-	border-color: var(--border-light);
-	border-style: solid;
-	border-width: 0.5px;
-	margin: 1rem auto;
+  color: var(--border-light);
+  border-color: var(--border-light);
+  border-style: solid;
+  border-width: 0.5px;
+  margin: 1rem auto;
 }
 
 mark {
-	padding: 2px 5px;
-	border-radius: 4px;
-	background: var(--marked);
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: var(--marked);
 }
 
 main img, main video {
-	max-width: 100%;
-	border-radius: 5px;
+  max-width: 100%;
+  border-radius: 5px;
 }
 
 figure {
-	margin: 0;
+  margin: 0;
 }
 
 figcaption {
-	font-size: .9rem;
-	color: var(--text-light);
-	text-align: center;
-	margin-bottom: 1rem;
+  font-size: .9rem;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 /* Format the expanding box */
 details {
-	padding: .6rem 1rem;
-	border: 1px solid var(--border-light);
-	background-color: var(--accent-bg-light);
-	margin-bottom: 1rem;
+  padding: .6rem 1rem;
+  border: 1px solid var(--border-light);
+  background-color: var(--accent-bg-light);
+  margin-bottom: 1rem;
 }
 
 summary {
-	cursor: pointer;
-	font-weight: 600;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 details[open] {
-	padding-bottom: .75rem;
+  padding-bottom: .75rem;
 }
 
 details[open] summary {
-	margin-bottom: .5rem;
+  margin-bottom: .5rem;
 }
 
 details[open]>*:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /*******************************************************************
- * Nav
- */
+* Nav
+*/
 nav {
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 4rem;
-    padding: 1rem 0.3rem;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 4rem;
+  padding: 1rem 0.3rem;
 }
 
 nav div {
-    display: inline;
+  display: inline;
 }
 
 nav a {
-	text-decoration: none;
+  text-decoration: none;
   margin-top: 1rem;
   font-weight: 500;
   border: 1px solid var(--bg);
@@ -385,43 +385,43 @@ nav a:not(:has(.pfp)):hover, nav a:not(:has(.pfp)):visited:hover {
 }
 
 @media (max-width: 600px) {
-    /* Center-aligned nav on mobile */
-    nav {
-        margin: 0;
-        margin-top: 1.25rem;
-        padding-top: 0;
-        padding-left: .5rem;
-        padding-right: 1rem;
-    }
-    nav li:has(#home) {
-        display: none;
-    }
-    nav.index {
-        text-align: center;
-        padding: 0;
-    }
-    nav a {
-        padding: .75rem .5rem
-    }
+  /* Center-aligned nav on mobile */
+  nav {
+    margin: 0;
+    margin-top: 1.25rem;
+    padding-top: 0;
+    padding-left: .5rem;
+    padding-right: 1rem;
+  }
+  nav li:has(#home) {
+    display: none;
+  }
+  nav.index {
+    text-align: center;
+    padding: 0;
+  }
+  nav a {
+    padding: .75rem .5rem
+  }
 }
 @media (max-width: 350px) {
-    nav a {
-        padding: .75rem .2rem
-    }
+  nav a {
+    padding: .75rem .2rem
+  }
 }
 
 /* Idea from seirdy.one to have unstyled unordered-list nav */
 nav ul {
-	padding: 0;
-	padding-bottom: 0.5rem;
+  padding: 0;
+  padding-bottom: 0.5rem;
 }
 nav ul li, nav strong > a {
-	display: inline-block;
+  display: inline-block;
 }
 
 .pfp {
-    border: 1px solid var(--border-light);
-    border-radius: 100%;
+  border: 1px solid var(--border-light);
+  border-radius: 100%;
 }
 
 nav .pfp {
@@ -439,8 +439,8 @@ h1 .pfp-text {
 }
 
 /*******************************************************************
- * Homepage
- */
+* Homepage
+*/
 .accent-bar {
   display: grid;
   grid-template-columns: repeat(14,1fr);
@@ -460,25 +460,25 @@ h1 .pfp-text {
   }
 }
 .hero {
-    padding-top: 2rem;
-    padding-bottom: 5rem;
-    text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.2rem;
+  font-size: 2.2rem;
 }
 
 .blink {
-    opacity: 0;
-    color: var(--text-light);
-    animation: blinker 1s step-start 5;
-    font-family: var(--mono-font);
+  opacity: 0;
+  color: var(--text-light);
+  animation: blinker 1s step-start 5;
+  font-family: var(--mono-font);
 }
 @keyframes blinker {
-    50% {
-        opacity: 100%;
-    }
+50% {
+  opacity: 100%;
+}
 }
 
 .webrings {
@@ -502,7 +502,7 @@ h1 .pfp-text {
     margin-right: 1rem;
   }
   /* If there's an even number of children, make the first one take the full
-   * width */
+* width */
   .webrings:has(li:last-child:nth-child(odd)) li:first-child {
     width: 100%;
   }
@@ -515,24 +515,24 @@ h1 .pfp-text {
 }
 .webrings li {
   margin-bottom: 1.2rem;
-	border: 1px solid var(--border-light);
-	background-color: var(--accent-bg-light);
+  border: 1px solid var(--border-light);
+  background-color: var(--accent-bg-light);
 
-	display: flex;
-	justify-content: space-between;
-	flex-direction: column;
-	gap: .5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: .5rem;
 }
 .webrings li p {
-	padding: 0 1rem;
+  padding: 0 1rem;
   text-align: left;
   margin: 0;
 }
 .webrings li p:last-child {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
 
   padding: 0;
@@ -542,7 +542,7 @@ h1 .pfp-text {
   text-decoration: none;
 }
 .webrings li p:first-child {
-	padding-top: 1rem;
+  padding-top: 1rem;
 }
 .webrings .arrow {
   font-size: 1.5rem;
@@ -582,27 +582,27 @@ ul.blogroll li > p:nth-child(2) code {
 }
 
 /*******************************************************************
- * Page sections
- */
+* Page sections
+*/
 main, .after-content {
-    /* For better reading experience.
-     * I don't want paragraphs to be too narrow, it looks ugly; Though I don't
-     * want them to be too wide, either. Reading experience is important:
-     * https://en.wikipedia.org/wiki/Eye_movement_in_reading */
-	max-width: 40rem;
+  /* For better reading experience.
+* I don't want paragraphs to be too narrow, it looks ugly; Though I don't
+* want them to be too wide, either. Reading experience is important:
+* https://en.wikipedia.org/wiki/Eye_movement_in_reading */
+  max-width: 40rem;
 
-	margin: auto;
-	padding: 0 5%;
+  margin: auto;
+  padding: 0 5%;
 }
 
 /* Tags */
 .post-list .tags, .post-list time {
-	font-size: .9rem;
+  font-size: .9rem;
 }
 .tags a,
 .tags a:visited {
-    text-decoration: none;
-    color: var(--text-light) !important;
+  text-decoration: none;
+  color: var(--text-light) !important;
 }
 
 footer {
@@ -617,7 +617,7 @@ footer {
   }
 }
 footer a, footer a:visited {
-	color: var(--text-light);
+  color: var(--text-light);
 }
 footer p {
   margin: 0;
@@ -644,27 +644,27 @@ footer a:not(:first-child) {
 }
 
 header p {
-	text-align: left;
+  text-align: left;
 }
 header pre {
-	margin-bottom: 2rem;
-	max-width:auto;
+  margin-bottom: 2rem;
+  max-width:auto;
 }
 
 .post-date {
-	margin-right: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 /*******************************************************************
- * Links
- */
+* Links
+*/
 a {
   color: var(--link);
-	text-underline-offset: 3px;
-	text-decoration-thickness: 0.5px;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 0.5px;
 }
 a:visited {
-    color: var(--link-visited);
+  color: var(--link-visited);
 }
 a[role=doc-noteref] {
   text-decoration: none;
@@ -675,28 +675,28 @@ a[role=doc-noteref]:visited {
 }
 
 .post-meta a:visited, .meta a:visited, .after-content a:visited {
-    color: var(--link-alt);
+  color: var(--link-alt);
 }
 
 a:hover,
 :is(.meta, footer, .after-content) a:hover {
-	opacity: .7;
-	transition: .25s;
+  opacity: .7;
+  transition: .25s;
 }
 
 /* Differentiating between normal content links and meta content links */
 .meta a, .after-content a {
-	text-decoration: none;
+  text-decoration: none;
 }
 @media (prefers-color-scheme: dark) {
-    .meta a, .after-content a {
-        color: var(--link-alt);
-    }
+  .meta a, .after-content a {
+    color: var(--link-alt);
+  }
 }
 
 a:focus, form:focus {
   background-color: var(--accent-bg-light);
-	text-decoration: none;
+  text-decoration: none;
 }
 nav a:focus {
   background-color: initial;
@@ -722,17 +722,17 @@ a[href^='http']:not([href^='https://home.hedy.dev/'],.no-ext,:has(img)):after {
 }
 
 /*******************************************************************
- * Post components
- */
+* Post components
+*/
 #post-header h1 {
-	margin-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
   font-family: var(--heading-font);
 }
 #post-header {
-	margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .post-meta, .post-list time, .tags {
-    font-family: var(--alt-font);
+  font-family: var(--alt-font);
 }
 .post-meta {
   margin-top: 1rem;
@@ -741,12 +741,12 @@ a[href^='http']:not([href^='https://home.hedy.dev/'],.no-ext,:has(img)):after {
   margin: 0;
 }
 .post-meta, .meta, footer {
-	font-size: .9rem;
-	color: var(--text-light);
+  font-size: .9rem;
+  color: var(--text-light);
 }
 
 section[itemprop="articlebody"] {
-    font-family: var(--body-font);
+  font-family: var(--body-font);
 }
 
 section[itemprop="articlebody"].mono {
@@ -759,7 +759,7 @@ section[itemprop="articlebody"].mono {
   }
 }
 section[itemprop="articlebody"].mono :is(h1, h2, h3, h4, h5, h6) {
-	font-family: var(--body-mono-font);
+  font-family: var(--body-mono-font);
 }
 blockquote.callout {
   background-color: var(--accent-bg-light);
@@ -791,16 +791,16 @@ blockquote.callout.note {
 }
 
 #content div#main {
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .footnotes {
-    margin-top: 3rem;
-	  font-size: .9rem;
+  margin-top: 3rem;
+  font-size: .9rem;
 }
 .footnotes ol {
-    margin-top: none;
+  margin-top: none;
 }
 .footnotes a.back {
   color: var(--link-alt);
@@ -808,17 +808,17 @@ blockquote.callout.note {
 }
 
 ul.post-list {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
+  padding-left: 0;
 }
 .post-list h3, .post-list h2 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 400;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 .post-list p {
-    margin-top: 0;
-    margin-bottom: .3rem;
+  margin-top: 0;
+  margin-bottom: .3rem;
 }
 .post-list p:has(time) {
   color: var(--text-light);
@@ -827,8 +827,8 @@ ul.post-list {
   font-size: .9rem;
 }
 /*******************************************************************
- * Bookmarks
- */
+* Bookmarks
+*/
 .bookmarks ul {
   list-style: none;
   margin: 0;
@@ -857,20 +857,20 @@ ul.post-list {
   margin-top: 0;
 }
 /*******************************************************************
- * Chroma
- */
+* Chroma
+*/
 .chroma .lntable pre {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 .chroma .lntable {
-    border: 1px solid var(--border);
-    padding: .01em .1em;
+  border: 1px solid var(--border);
+  padding: .01em .1em;
 }
 
 /*******************************************************************
- * Forms
- */
+* Forms
+*/
 textarea,
 select,
 input,
@@ -891,7 +891,7 @@ input[type="button"] {
   padding: 0.5rem 0.9rem;
   text-decoration: none;
   line-height: normal;
-	transition: .4s;
+  transition: .4s;
 }
 
 .button[aria-disabled="true"],
@@ -907,10 +907,11 @@ button[disabled] {
 input[type="range"] {
   padding: 0;
 }
-/* Set the cursor to '?' on an abbreviation and style the abbreviation to show that there is more information underneath */
+/* Set the cursor to '?' on an abbreviation and style the abbreviation to show
+* that there is more information underneath */
 abbr[title] {
   cursor: help;
-	text-underline-offset: 3px;
+  text-underline-offset: 3px;
   text-decoration-line: underline;
   text-decoration-style: dotted;
 }
@@ -926,9 +927,9 @@ input[type="button"]:enabled:hover {
 .button:focus-visible,
 button:focus-visible:where(:enabled),
 input:enabled:focus-visible:where(
-  [type="submit"],
-  [type="reset"],
-  [type="button"]
+[type="submit"],
+[type="reset"],
+[type="button"]
 ) {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
@@ -1009,7 +1010,8 @@ input[type="radio"]:checked {
 }
 
 input[type="checkbox"]:checked::after {
-  /* Creates a rectangle with colored right and bottom borders which is rotated to look like a check mark */
+  /* Creates a rectangle with colored right and bottom borders which is rotated
+   * to look like a check mark */
   content: " ";
   width: 0.18em;
   height: 0.32em;
