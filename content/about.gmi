@@ -1,14 +1,16 @@
 Pronouns: She/Her
 
-## Links (gemini)
+## Links (smolnet)
 
-=> gopher://rawtext.club/~hedy/ my gopherhole and phlog
+=> gopher://rawtext.club/~hedy/ gopherhole and phlog
 => gemini://bbs.geminispace.org/u/hedy hedy @ bbs.geminispace.org
 => gemini://station.martinrue.com/hedy/ hedy @ station
+=> gemini://smol.hedy.dev/ smol.hedy.dev
 
 ## Links (web)
 
 => https://home.hedy.dev/ personal website
+=> https://smol.hedy.dev/ thoughtful ramblings
 => https://github.com/hedyhli github
 => https://sr.ht/~hedy sourcehut
 => https://tilde.zone/@hedy the fediverse

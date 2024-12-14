@@ -138,7 +138,7 @@ strong {
   }
 
   img:not(.pfp), video {
-    opacity: .6;
+    opacity: .9;
   }
   img.icon {
     opacity: 1;
@@ -177,12 +177,13 @@ h1 {
 }
 h2 {
   font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
-  margin-top: calc(var(--line-height) * 1.1rem);
+  margin-top: calc(var(--line-height) * 1.2rem);
 }
 /* Let the user agent decide */
-/* h3 { */
-/* 	font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor)); */
-/* } */
+h3 {
+	/* font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale-minor)); */
+	margin-top: calc(var(--line-height) * 1.1rem)
+}
 /* h4 { */
 /* 	font-size: calc(var(--base-fontsize) * var(--header-scale)); */
 /* } */
@@ -276,6 +277,9 @@ pre {
   background: var(--code-bg);
   border: 1px solid var(--border-light);
   border-radius: 0;
+
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Fix embedded code within pre */
