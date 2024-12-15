@@ -10,6 +10,6 @@
 {{ range (where .Site.RegularPages "Section" "posts") }}
 {{- if .OutputFormats.Get "gemtext" }}
 
-=> {{replace (replace .RelPermalink "/gemini" "" 1) "/index.gmi" ".gmi" 1}} {{ .Date.Format "2006-01-02" }} · {{.Title | safeHTML}}
+=> {{replace (replace .RelPermalink "/gemini" "" 1) "/index.gmi" ".gmi" 1}} {{ .Date.Format "2006-01-02" }} {{.Title | safeHTML}}
 {{ .Description }}{{- end }}{{ end }}
 
