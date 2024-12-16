@@ -68,9 +68,9 @@ hugo:
 	$(HUGO) $(HUGO_FLAGS) --cacheDir $(HUGO_CACHEDIR)
 
 gemini:
-	$(RSYNC) -rav $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
-	$(RSYNC) -rav public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
-	$(RSYNC) -rav public/posts/gemini/* public/posts/*.gmi $(GEMINI_DEST)/posts --exclude _index.gmi
+	$(RSYNC) -ra $(GEMINI_DEST) $(GEMINI_DEST)-back --delete
+	$(RSYNC) -ra public/gemini/ $(GEMINI_DEST)/ --exclude _index.gmi
+	$(RSYNC) -ra public/posts/gemini/* public/posts/*.gmi $(GEMINI_DEST)/posts --exclude _index.gmi
 
 gemini-clean:
 	GEMINI_DEST=$(GEMINI_DEST) PUBLIC=public python3 bin/gemini-clean.py -n

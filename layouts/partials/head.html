@@ -19,9 +19,6 @@
 {{ if lt .Date .Lastmod -}}
 <meta property="article:modified_time" content="{{ .Lastmod.UTC.Format "2006-01-02T15:04:05Z" | safeHTML }}">
 {{- end -}}
-<!-- Have concerns? My inbox is open. -->
-<script data-goatcounter="https://stats.hedy.dev/count"
-        async src="{{ (resources.Get "/goat.js").RelPermalink | safeHTML }}"></script>
 
 <!--favicon-->
 {{ $favicon_svg := resources.Get "/favicon.svg" | resources.Fingerprint "md5" }}
@@ -44,7 +41,8 @@
 
 <!-- Fonts -->
 {{/* IBM Plex */}}
-<link rel="preconnect" href="https://gatsby.carbondesignsystem.com">
+<link rel="preload" href="https://gatsby.carbondesignsystem.com/fonts/IBMPlexSansLatin-VF.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-duo@latest/latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {{/* iA Writer */}}

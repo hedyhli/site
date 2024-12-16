@@ -12,7 +12,7 @@
 */
 
 :root {
-  --base-fontsize: 1rem;
+  --base-fontsize: 16px;
 
   /* Major third scale progression - see https://type-scale.com/ */
   --header-scale: 1.25;
@@ -35,7 +35,7 @@
   --accent-bg-light: #ebeef2;
   --code-bg: #fbfcff;
   --text: #323442;
-  --text-light: #7c7f93;
+  --text-light: #6e707e;
   --non-text-light: #9ca0b0;
 
   --border: #8c8fa1;
@@ -166,10 +166,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.1rem;
   font-family: var(--heading-font);
-  font-weight: 500;
+  font-weight: normal;
 }
 h2, h3, h4, h5, h6 {
   color: var(--headings);
+  font-weight: 500;
 }
 h1 {
   font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
@@ -370,7 +371,7 @@ nav div {
 nav a {
   text-decoration: none;
   margin-top: 1rem;
-  font-weight: 500;
+  font-weight: 450;
   border: 1px solid var(--bg);
   padding: .75rem .75rem;
 }
@@ -440,6 +441,7 @@ h1 .pfp {
 
 h1 .pfp-text {
   padding-left: .5rem;
+  font-weight: 500;
 }
 
 /*******************************************************************
@@ -471,18 +473,6 @@ h1 .pfp-text {
 
 .hero h1 {
   font-size: 2.2rem;
-}
-
-.blink {
-  opacity: 0;
-  color: var(--text-light);
-  animation: blinker 1s step-start 5;
-  font-family: var(--mono-font);
-}
-@keyframes blinker {
-50% {
-  opacity: 100%;
-}
 }
 
 .webrings {

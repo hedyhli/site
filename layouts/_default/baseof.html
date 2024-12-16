@@ -4,6 +4,8 @@
     {{ partial "head.html" . }}
   </head>
   <body>
+    <script data-goatcounter="https://stats.hedy.dev/count"
+            async src="{{ (resources.Get "/goat.js").RelPermalink | safeHTML }}"></script>
     <div class="accent-bar"></div>
     <header>
       {{ partial "header.html" . }}
