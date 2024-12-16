@@ -36,7 +36,7 @@ lint-html-proofer:
 lint: lint-css lint-html-validate lint-html-proofer
 
 deploy-html:
-	$(RSYNC) -rv --delete --exclude .git $(HTML_DEST)/ $(DEPLOY_HTML_REPO)
+	$(RSYNC) -r --delete --exclude .git $(HTML_DEST)/ $(DEPLOY_HTML_REPO)
 	cd $(DEPLOY_HTML_REPO) && git add -A
 	cd $(DEPLOY_HTML_REPO) && git commit -m 'make deploy-html'
 	cd $(DEPLOY_HTML_REPO) && git push
