@@ -3,9 +3,6 @@ outputs = ['html', 'gemtext']
 title = 'home'
 +++
 
-Hi, I'm ~hedy (she/her). You have stumbled upon my little corner of the
-internet.
-
 ## Contact
 
 My preferred method of contact is

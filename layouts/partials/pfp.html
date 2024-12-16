@@ -1,3 +1,2 @@
 {{ $pfp := resources.Get "/dotslash-brush.svg" | resources.Fingerprint "md5" -}}
 <img alt="./" class="pfp u-photo" src="data:image/svg+xml;base64,{{ $pfp.Content | base64Encode }}">
-{{- /* should this set a default size? */ -}}

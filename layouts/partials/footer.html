@@ -1,9 +1,17 @@
 <p>
-© {{ with .Site.Params.CopyrightYearStart }}{{ . }}-{{ end -}}
-{{ now.Format "2006" }}
+  © {{ with .Site.Params.CopyrightYearStart }}{{ . }}-{{ end -}}
+  {{ now.Format "2006" }}
+  <span class="h-card p-author">
+    <a
+      itemprop="url"
+      rel="author me home cc:attributionURL"
+      href="{{ .Site.BaseURL }}" class="u-url">
+      {{ partial "pfp-name.html" . }}
+    </a>
+  </span>
+  <a href="{{ .Site.Params.CopyrightLink }}">{{ .Site.Params.Copyright }}</a>
 </p>
 <p>
- <a href="{{ .Site.Params.CopyrightLink }}">{{ .Site.Params.Copyright }}</a>
  <a href="/feeds/">Website Feeds</a>
  <a href="{{ .Site.Params.src }}">Source Code</a>
 </p>

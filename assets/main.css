@@ -401,10 +401,6 @@ nav a:not(:has(.pfp)):hover, nav a:not(:has(.pfp)):visited:hover {
   nav li:has(#home) {
     display: none;
   }
-  nav.index {
-    text-align: center;
-    padding: 0;
-  }
   nav a {
     padding: .75rem .5rem
   }
@@ -434,16 +430,6 @@ nav .pfp {
   vertical-align: middle;
 }
 
-h1 .pfp {
-  height: 2.5rem;
-  vertical-align: text-bottom;
-}
-
-h1 .pfp-text {
-  padding-left: .5rem;
-  font-weight: 500;
-}
-
 /*******************************************************************
 * Homepage
 */
@@ -465,14 +451,14 @@ h1 .pfp-text {
     background-position: 50%;
   }
 }
-.hero {
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-  text-align: center;
-}
 
+.hero {
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
 .hero h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  color: var(--headings);
 }
 
 .webrings {
@@ -605,6 +591,12 @@ footer {
   padding-bottom: 2.5rem;
   color: var(--text-light);
 }
+footer img.pfp {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+  margin-left: .5rem;
+}
 @media (prefers-color-scheme: light) {
   footer {
     background-color: var(--accent-bg-light);
@@ -626,7 +618,7 @@ footer a:not(:first-child) {
   footer {
     text-align: center;
   }
-  footer p {
+  footer p:not(:first-child) {
     display: inline-block;
   }
   footer p:first-child {
