@@ -4,9 +4,10 @@ description = 'Links to miscellaneous pages.'
 draft = false
 outputs = ['html', 'gemtext']
 slug = 'misc'
-title = 'Misc'
+title = 'Directory'
 +++
 
+- [Guestbook](/guestbook/) -- Sign my guestbook!
 - [Meta](/meta/) -- Meta information for this website
 - [Feeds](/feeds/) -- All RSS and Atoms feeds to subscribe to updates
 - [Bookmarks](/bookmarks/) -- My public bookmarks; a collection of interesting links on the internet

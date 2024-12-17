@@ -1,0 +1,15 @@
+<div class="box guestbook">
+  <form action="/guestbook/success/" name="join" method="POST" data-netlify="true">
+    <label>Your name</label>
+    <input required type="text" name="name" placeholder="Your Name"/>
+
+    <label>Your website <small>(optional)</small></label>
+    <input type="url" type="text" name="website" placeholder="https://awesome-website.example/"/>
+
+    <label>Message</label>
+    <textarea required name="message" placeholder="Markdown is supported, such as *italics*, **bold**, and [links](https://example.org/)"></textarea>
+    <div style="text-align: right">
+      <input type="submit" value="Send 💌"></input>
+    </div>
+  </form>
+</div>

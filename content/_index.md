@@ -34,3 +34,9 @@ My [gemini capsule](gemini://gmi.hedy.dev/) is part of a few other webrings,
 also known as "orbits" in [Geminispace](https://geminiquickst.art/).
 
 Member sites & badges are listed on my [meta](/meta/) page.
+
+## Guestbook
+
+Thanks for stopping by!
+
+{{< guestbook >}}

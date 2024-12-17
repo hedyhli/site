@@ -529,6 +529,30 @@ nav .pfp {
   padding: 0 1rem;
 }
 
+.guestbook input, .guestbook textarea {
+  width: calc(100% - 1rem);
+  max-width: calc(100% - 1rem);
+  font-family: var(--mono-font);
+}
+
+.guestbook label {
+  margin-top: 1rem;
+}
+
+.guestbook input[type="submit"] {
+  height: 100%;
+  width: max-content;
+}
+
+.guestbook textarea {
+  resize: vertical;
+  min-height: 5.5rem;
+}
+
+.guestbook {
+  padding-bottom: 0;
+}
+
 .badges img {
   height: 40px;
 }
