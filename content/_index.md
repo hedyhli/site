@@ -37,6 +37,6 @@ Member sites & badges are listed on my [meta](/meta/) page.
 
 ## Guestbook
 
-Thanks for stopping by!
+Thanks for stopping by! You can leave a note by signing my guestbook.
 
 {{< guestbook >}}
