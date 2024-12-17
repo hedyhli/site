@@ -6,6 +6,12 @@ outputs = ['html']
 slug = "guestbook"
 +++
 
-Thanks for stopping by!
+Thanks for stopping by! You can leave a note by signing my guestbook.
 
 {{< guestbook >}}
+
+<br />
+
+<br />
+
+{{< guestbook-entries >}}

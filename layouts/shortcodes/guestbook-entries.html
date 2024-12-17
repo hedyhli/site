@@ -1,0 +1,24 @@
+{{ $path := "data/guestbook.yml" }}
+{{ $data := slice }}
+{{ with resources.Get $path }}
+  {{ with .Err }}
+    {{ errorf "Error fetching guestbook entries: %s" . }}
+  {{ else }}
+    {{ $data = sort (. | transform.Unmarshal) "date" "desc" }}
+  {{ end }}
+{{ end }}
+<ul class="guestbook-entries">
+  {{ range $data }}
+  <li class="box">
+    <p>
+      {{ with .website }}<a href="{{ . }}">{{ end }}
+        <strong>{{ .name }}</strong>
+      {{ with .website }}</a>{{ end }}
+    </p>
+    <div style="font-family: var(--mono-font);">{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .message) }}</div>
+    <p style="text-align: right; color: var(--text-light);">
+      <time datetime="{{ .date }}">{{ .date }}</time>
+    </p>
+  </li>
+  {{ end }}
+</ul>

@@ -529,6 +529,10 @@ nav .pfp {
   padding: 0 1rem;
 }
 
+.guestbook form > p {
+  margin: 0;
+}
+
 .guestbook input, .guestbook textarea {
   width: calc(100% - 1rem);
   max-width: calc(100% - 1rem);
@@ -551,6 +555,25 @@ nav .pfp {
 
 .guestbook {
   padding-bottom: 0;
+}
+
+ul.guestbook-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.guestbook-entries > li {
+  padding-bottom: 0;
+  font-size: .9rem;
+  margin-bottom: 1.5rem;
+}
+
+ul.guestbook-entries > li > p:first-child {
+  margin-bottom: 0;
+}
+ul.guestbook-entries > li > p:first-child > a {
+  font-size: initial;
 }
 
 .badges img {
