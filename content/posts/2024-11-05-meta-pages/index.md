@@ -61,3 +61,7 @@ Some people include information about their site in a dedicated section of their
 <br />
 
 Now it's your turn! If you've been blogging for a while you may have come across common questions such as people asking about the tools you use to build you site, or how you host it. You can now simply link them to that page :)
+
+## See also
+
+- [Colophons on the IndieWeb](https://indieweb.org/colophon)
