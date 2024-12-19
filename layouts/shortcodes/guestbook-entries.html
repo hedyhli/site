@@ -16,6 +16,10 @@
       {{ with .website }}</a>{{ end }}
     </p>
     <div style="font-family: var(--mono-font);">{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .message) }}</div>
+    {{ with .book }}
+    <hr />
+    <div style="font-family: var(--mono-font);"><p>📚 {{ . }}</p></div>
+    {{ end }}
     <p style="text-align: right; color: var(--text-light);">
       <time datetime="{{ .date }}">{{ .date }}</time>
     </p>

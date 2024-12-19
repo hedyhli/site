@@ -40,3 +40,5 @@ Member sites & badges are listed on my [meta](/meta/) page.
 Thanks for stopping by! You can leave a note by signing my guestbook.
 
 {{< guestbook >}}
+
+View all guestbook entries [here](/guestbook/).
