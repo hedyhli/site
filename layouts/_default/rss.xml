@@ -51,7 +51,8 @@
             <guid>{{ .Permalink }}</guid>
             <description xml:base="{{ .Permalink }}">
                 {{ partial "processed-content.html" . | html }}
-                {{ printf `<hr /><p>%s</p>` (partial "reply-via-email.html" (dict "Site" $.Site "Page" . "Text" "Reply via email")) | html }}
+                {{ printf `<hr /><p>%s` (partial "reply-via-email.html" (dict "Site" $.Site "Page" . "Text" "Reply via email")) | html }}
+                {{ printf ` / <a href="%s%s">%s</a></p>` .Site.BaseURL "/guestbook/" "Sign my guestbook" | html }}
             </description>
         </item>
         {{- end }}
