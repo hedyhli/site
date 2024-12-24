@@ -16,40 +16,30 @@
     <section class="e-content bookmarks" itemprop="articlebody">
       {{ partial "processed-content" . -}}
       <br />
-      {{ "<!-- h3 in li? I love ul's, you see. -->" | safeHTML }}
-      {{ $lastmonth := "" }}
       {{ range $data }}
-        {{ $month := time.Format "2006 January" .created }}
-        {{ if (ne $lastmonth $month) }}
-        {{ if (ne $lastmonth "") }}</ul>{{ end }}
-        {{ partial "anchor-heading.html" (dict "Text" $month "Level" 2 "Anchor" (time.Format "2006-01" .created)) }}
         <ul>
-        {{ $lastmonth = $month }}
-        {{ end }}
         <li class="box" style="margin-bottom: 1rem;">
-        <h3><a href="{{ .link }}">{{ .title }}</a></h3>
-        <p><code>{{ .domain }}</code></p>
-        {{ with .excerpt }}
-          {{ $maxlen := 250 }}
-          {{ $e := . }}
-          {{ if gt (len $e) $maxlen }}
-            {{ $e = slicestr $e 0 $maxlen }}
-            {{ if gt (countwords $e) 1 }}
-              {{/* Chomp last word */}}
-              {{ $e = replaceRE ` [^ ]*$` "" $e }}
-            {{ end }}
+          <h3><a href="{{ .link }}">{{ .title }}</a></h3>
+          <p><code>{{ .domain }}</code></p>
+          {{ with .excerpt }}
+            {{ $maxlen := 250 }}
+            {{ $e := . }}
+            {{ if gt (len $e) $maxlen }}
+              {{ $e = slicestr $e 0 $maxlen }}
+              {{ if gt (countwords $e) 1 }}
+                {{/* Chomp last word */}}
+                {{ $e = replaceRE ` [^ ]*$` "" $e }}
+              {{ end }}
             {{ $e = printf "%s…" $e }}
+            {{ end }}
+            <p><blockquote>{{ $e }}</blockquote></p>
           {{ end }}
-          <p>
-            <blockquote>{{ $e }}</blockquote>
-          </p>
-        {{ end }}
-        {{ with .note }}
-          <div>{{ . | markdownify }}</div>
-        {{ end }}
+          {{ with .note }}
+            <div>{{ . | markdownify }}</div>
+          {{ end }}
         </li>
-      {{ end }}
       </ul>
+      {{ end }}
     </section>
   </article>
   <br />
