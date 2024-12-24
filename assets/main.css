@@ -12,7 +12,7 @@
 */
 
 :root {
-  --base-fontsize: 16px;
+  --base-fontsize: 1rem;
 
   /* Major third scale progression - see https://type-scale.com/ */
   --header-scale: 1.25;
@@ -147,6 +147,10 @@ strong {
   .badges img, img.no-dim {
     opacity: 1;
   }
+}
+
+html {
+  font-size: clamp(14px, 0.39vw + 12.5px, 22px);
 }
 
 body {
@@ -537,6 +541,7 @@ nav .pfp {
   width: calc(100% - 1rem);
   max-width: calc(100% - 1rem);
   font-family: var(--mono-font);
+  font-size: .9rem;
 }
 
 .guestbook label {

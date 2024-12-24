@@ -37,7 +37,8 @@ Member sites & badges are listed on my [meta](/meta/) page.
 
 ## Guestbook
 
-Thanks for stopping by! You can leave a note by signing my guestbook.
+Like what you see? Leave a public note by signing my guestbook. Write a message
+for both the curator of this web garden, and the next visitor like you 💜
 
 {{< guestbook >}}
 
