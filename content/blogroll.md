@@ -17,7 +17,10 @@ Descriptions are written by myself based on my own experience gathered from
 before I have decided to include someone in this list. I am not affiliated with
 any of the services, companies, or products mentioned unless noted otherwise.
 
-Entries are sorted in reverse-alphabetical order.
+You can view their latest blog posts or subscribe via RSS on
+[Blogflock](https://blogflock.com/list/yq60j).
+
+Entries below are list in reverse-alphabetical order.
 
 <br />
 
