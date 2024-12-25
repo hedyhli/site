@@ -150,7 +150,7 @@ strong {
 }
 
 html {
-  font-size: clamp(14px, 0.39vw + 12.5px, 22px);
+  font-size: 18px;
 }
 
 body {
