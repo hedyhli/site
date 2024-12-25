@@ -176,6 +176,10 @@ h2, h3, h4, h5, h6 {
   color: var(--headings);
   font-weight: 500;
 }
+:is(h2,h3,h4,h5,h6):target {
+  outline: 3px dotted;
+  outline-offset: 5px;
+}
 h1 {
   font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale) * var(--header-scale-minor) * var(--header-scale-minor));
   margin-top: calc(var(--line-height) * 1.3rem);
@@ -842,6 +846,16 @@ blockquote.callout.note {
 .footnotes a.back {
   color: var(--link-alt);
   text-decoration: none;
+}
+.footnotes li:target {
+  outline: 2px dotted;
+  outline-color: var(--link-alt);
+  outline-offset: 3px;
+}
+a[role=doc-noteref]:target {
+  outline: 3px dotted;
+  outline-offset: 5px;
+  outline-color: var(--accent-light);
 }
 
 ul.post-list {
