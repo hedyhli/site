@@ -1,6 +1,6 @@
 +++
 title = "Typing vs Writing"
-description = "Exploring the effects of a difference in speed of typing vs writing with respect to the speed of thought using analogies."
+description = "Exploring the effects of a difference in speed of typing vs writing with respect to the speed of thought."
 tags = ['personal']
 highlight = false
 draft = false
@@ -8,13 +8,12 @@ draft = false
 date = "2024-11-04T01:58:05Z"
 outputs = ['html', 'gemtext']
 slug = "typing-vs-writing"
-font = "mono"
 
 [[syndications]]
 mastodon = "https://tilde.zone/@hedy/113424115841405221"
 +++
 
-I type faster than I can write. But regardless of how I put my thoughts down, the speed at which my thoughts can keep up with me putting them down is the same[^speed]. I believe that my speed of thought is right in-between the speed of my handwriting and typing; and this effects how I perceive the general act of writing[^writing] on my abilities to articulate.
+I type faster than I can write. But regardless of how I put my thoughts down, the speed at which my thoughts can keep up with me putting them down is the same[^speed]. I believe that my speed of thought is right in-between the speed of my handwriting and typing; and this affects how I perceive the general act of writing[^writing] on my abilities to articulate.
 
 [^speed]: Or so I shall stipulate for the purposes of our discussion.
 [^writing]: I will  be sticking to "writing" as "writing on paper, by hand, with a pen" hereafter and so I clarify here with "general writing" to mean either writing on paper or typing on a keyboard.
