@@ -85,4 +85,7 @@ Configuration and scripts of interest for everything I use in the terminal can b
 - **Dotfiles manager**: yadm
 
 
-Welp, I can only seem to maintain long lists like these once a year... I remember now, why I don't have a `/uses` page! ;)
+That's all of the apps I'll include this year. I could potentially reproduce
+something similar on a dedicated page, only it will get out of date fairly
+easily. I care a lot about choosing the right tools and tailoring them to best
+fit my needs. Do you have similar setups? What do you like/dislike about it?
