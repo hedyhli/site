@@ -59,13 +59,13 @@ I've considered using Org-mode with Emacs on the desktop and Orgzly on mobile, h
 
 - **Reddit client**: [Red Reader](https://github.com/QuantumBadger/RedReader) (android)
 - **Mastodon client**: [Phanpy](https://phanpy.social/) (PWA[^PWA])
-- **Pleroma/Akkoma client[^pleroma]**: Husky (android)
+- **Pleroma/Akkoma client**[^pleroma]: Husky (android)
 - **Bluesky client**: the official web client as a PWA <br />
   I used to use [TOKIMEKI](https://tokimeki.blue/), but some Bluesky features such as starter-packs prefers to open links in its official client instead, so I've switched away from TOKIMEKI until the situation improves.
 - **IRC client**: [senpai](https://sr.ht/~delthas/senpai/) and [gamja](https://codeberg.org/emersion/gamja)
 - **IRC bouncer**: soju on [SourceHut](https://man.sr.ht/chat.sr.ht/)
 - **Matrix client**: [Cinny](https://cinny.in/)
-- **Lemmy[^lemmy] client**: [Voyager](https://vger.app/) (mobile)
+- **Lemmy client**[^lemmy]: [Voyager](https://vger.app/) (mobile)
 
 [^PWA]: Progressive Web App. In this context, it means I have the web app "installed" on mobile using -- what is usually called -- the "add to home screen" feature.
 
@@ -81,9 +81,11 @@ Configuration and scripts of interest for everything I use in the terminal can b
 - **Terminal**: Kitty
 - **Shell**: Fish
 - **File manager**: ranger
-- **Multiplexer**: tmux (I've tried Zellij, but I did not have a good experience with WASM plugins; perhaps I should write about it sometime)
+- **Multiplexer**: tmux <br />
+  I've tried Zellij, but I did not have a good experience with WASM plugins; perhaps I should write about it sometime.
 - **Dotfiles manager**: yadm
 
+<br />
 
 That's all of the apps I'll include this year. I could potentially reproduce
 something similar on a dedicated page, only it will get out of date fairly
