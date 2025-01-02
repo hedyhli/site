@@ -25,6 +25,11 @@
                 {{- $title }}
             {{- end -}}
         </title>
+        <image>
+            <url>{{ $favicon_png.Permalink }}</url>
+            <title>~hedy</title>
+            <link>{{ .Site.BaseURL }}</link>
+        </image>
         <link>{{ .Permalink }}</link>
         <description>Recent content in {{ $title }}</description>
         <ttl>1440</ttl>
