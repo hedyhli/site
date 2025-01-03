@@ -1,0 +1,46 @@
++++
+title = "📚 The Night Circus"
+description = "A much delayed book review for The Night Circus by Erin Morgenstern."
+date = "2025-01-03T07:14:02Z"
+
+draft = false
+outputs = ['html', 'gemtext']
+
+slug = "the-night-circus"
+tags = ['books']
+
+highlight = false
+# font = "mono"
+
+# [[syndications]]
+# mastodon =
+# bluesky =
++++
+
+The Night Circus is a book I had wanted to read for a long time, as an enjoyer of other "magical circus" stories inspired by it. It ended up giving me mixed feelings, and so it was hard write a satisfactory review that captured all that ought to be said. Despite this, I thought it'd be awesome to start a book-review series on my blog with this book, and so I'll try my best to reproduce the short review I wrote for it over a year ago.
+
+---
+
+<br />
+
+> *The circus arrives without warning. No announcements precede it. It is simply there, when yesterday it was not.*
+
+<br />
+
+This book is one of the must-reads when it comes to magical circuses and historical fantasy. It's rated over four stars on Goodreads with plenty of mixed reviews -- the result of good marketing.
+
+The story is set in a world with a soft magic system: "anyone can be taught" / "with a bit of studying..."
+
+It describes a long-standing battle between two masters with different educational approaches who choose their own students and set them into duel that span over decades. Two students thrown into competition, but this time, they fell in love.
+
+The book is full of descriptive prose that enchanted me with attractions and entertainment in the circus. There were many opportunities for sensory imagery, even when it comes to the refreshments at the small shops within the circus.
+
+I tend to enjoy a book with long passages of beautiful prose for the magic. However, what was described just felt too intangible and inexplicable to be fully appreciated. The magical system was barely ever explained. You could argue that that was the whole point, and was what made this fantasy. But really, what does it mean for Bailey taking over the 'weight' of the circus in the end? What magical energy must be contained or protected and why? What happened to Celia and Marco?
+
+In the end, the pieces of imagery that stuck with me was only the grandfather clock placed at the entrance of the circus, and the dark, sweet, swirling cups of liquid desserts sold as circus delights.
+
+The narration follows a non-linear timeline. It explored many different characters with multiple perspectives and side plots. Many of which seemed to only provide the atmosphere with little to no contribution to the plot at all. It jumps around, lost me at times, pulled me back with flowery prose then finally threw me off again with a seemingly beautiful yet confusing ending.
+
+Overall, I really enjoyed reading the book but the world-building just isn't my cup of tea (pun unintentional). I give The Night Circus 3.9/5 stars; worth a re-read.
+
+[Goodreads](https://www.goodreads.com/book/show/9361589-the-night-circus)
