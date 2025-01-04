@@ -37,9 +37,8 @@ Member sites & badges are listed on my [meta](/meta/) page.
 
 ## Guestbook
 
-Like what you see? Leave a public note by signing my guestbook. Write a message
-for both the curator of this web garden, and the next visitor like you 💜
-
-{{< guestbook >}}
+Like what you see? Leave a public note by signing my [guestbook](/guestbook/).
+Write a message for both the curator of this web garden, and the next visitor
+like you 💜
 
 View all guestbook entries [here](/guestbook/).
