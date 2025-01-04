@@ -17,9 +17,11 @@ highlight = false
 # bluesky =
 +++
 
-The Night Circus is a book I had wanted to read for a long time, as an enjoyer of other "magical circus" stories inspired by it. It ended up giving me mixed feelings, and so it was hard write a satisfactory review that captured all that ought to be said. Despite this, I thought it'd be awesome to start a book-review series on my blog with this book, and so I'll try my best to reproduce the short review I wrote for it over a year ago.
+The Night Circus is a book I had wanted to read for a long time, as an enjoyer of other "magical circus" stories inspired by it. It ended up giving me mixed feelings, and so it was difficult to write a satisfactory review that captured all that ought to be said. Despite this, I thought it'd be awesome to start a book-review series on my blog with this book, and so I'll try my best to reproduce the short review I wrote for it over a year ago.
 
----
+<br />
+
+{{< figure src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387124618i/9361589.jpg" alt="Book cover for The Night Circus" caption="[View on Goodreads](https://www.goodreads.com/book/show/9361589-the-night-circus)" >}}
 
 <br />
 
@@ -43,4 +45,4 @@ The narration follows a non-linear timeline. It explored many different characte
 
 Overall, I really enjoyed reading the book but the world-building just isn't my cup of tea (pun unintentional). I give The Night Circus 3.9/5 stars; worth a re-read.
 
-[Goodreads](https://www.goodreads.com/book/show/9361589-the-night-circus)
+

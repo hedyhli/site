@@ -326,6 +326,11 @@ main img, main video {
   border-radius: 5px;
 }
 
+figure img {
+  display: block;
+  margin: auto;
+}
+
 figure {
   margin: 0;
 }
