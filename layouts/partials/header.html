@@ -18,4 +18,6 @@
     {{ .Post  -}}
     {{- end }}
   </ul>
+  {{ $rss := resources.Get "icons/rss.svg" }}
+  <span><a class="rss" href="/posts/index.xml">{{ $rss.Content | safeHTML }}</a></span>
 </nav>

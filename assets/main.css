@@ -371,42 +371,49 @@ details[open]>*:last-child {
 * Nav
 */
 nav {
-  margin-right: 5%;
-  margin-left: 5%;
-  margin-bottom: 4rem;
-  padding: 1rem 0.3rem;
+  margin-right: 3%;
+  margin-left: 3%;
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 nav div {
   display: inline;
 }
 
-nav a {
+nav span a.rss {
+  display: inline-block;
+}
+
+nav span a .lucide-rss {
+  vertical-align: middle;
+}
+
+nav li a {
   text-decoration: none;
   margin-top: 1rem;
   font-weight: 450;
-  border: 1px solid var(--bg);
   padding: .75rem .75rem;
 }
-nav a, nav a:visited {
+nav a, nav a:visited, nav span {
   color: var(--link-nav);
 }
-nav a:not(:has(.pfp)):hover, nav a:not(:has(.pfp)):visited:hover {
+nav li a:not(:has(.pfp)):hover, nav li a:not(:has(.pfp)):visited:hover {
   color: var(--flamingo);
   transition: .25s;
   background-color: var(--accent-bg-light);
-  /* background-image: linear-gradient(150deg, var(--lavender), transparent 90%); */
-  /* background-image: linear-gradient(150deg, var(--yellow) 10%, var(--mauve) 50%, var(--blue) 60%); */
-  /* background-clip: text; */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
 }
 
 @media (max-width: 600px) {
   /* Center-aligned nav on mobile */
   nav {
     margin: 0;
-    margin-top: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     padding-top: 0;
     padding-left: .5rem;
     padding-right: 1rem;
@@ -414,12 +421,12 @@ nav a:not(:has(.pfp)):hover, nav a:not(:has(.pfp)):visited:hover {
   nav li:has(#home) {
     display: none;
   }
-  nav a {
+  nav li a {
     padding: .75rem .5rem
   }
 }
 @media (max-width: 350px) {
-  nav a {
+  nav li a {
     padding: .75rem .2rem
   }
 }
@@ -427,10 +434,13 @@ nav a:not(:has(.pfp)):hover, nav a:not(:has(.pfp)):visited:hover {
 /* Idea from seirdy.one to have unstyled unordered-list nav */
 nav ul {
   padding: 0;
-  padding-bottom: 0.5rem;
+  margin: 0;
 }
 nav ul li, nav strong > a {
   display: inline-block;
+}
+nav ul li {
+  margin-bottom: 0;
 }
 
 .pfp {
@@ -440,7 +450,7 @@ nav ul li, nav strong > a {
 
 nav .pfp {
   height: 1.75rem;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 
 /*******************************************************************
