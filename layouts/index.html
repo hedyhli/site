@@ -8,5 +8,9 @@
 </div>
 
 
-{{ .Content }}
+<article itemprop="mainEntityOfPage">
+  <section class="e-content" itemprop="articlebody">
+    {{ partial "processed-content" . -}}
+  </section>
+</article>
 {{ end }}

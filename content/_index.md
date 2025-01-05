@@ -3,18 +3,38 @@ outputs = ['html', 'gemtext']
 title = 'home'
 +++
 
-## Contact
+## Start exploring
 
-My preferred method of contact is
-<a rel="me" href="mailto:hedy.dev@protonmail.com">email</a>
-(<a href="https://meta.sr.ht/~hedy.pgp">PGP</a>); you can also reach me
-via <a rel="me" href="https://tilde.zone/@hedy">Mastodon</a> on the
-Fediverse.
+Welcome. Do come in, make yourself comfortable. This is a digital garden curated
+by a living, breathing human just like you. Here are some of the things of
+interest it features.
 
-Alternate versions of this site are available on
-[gemini://](https://geminiquickst.art) (linked in the footer on each
-page that supports it),
-[spartan://](https://portal.mozz.us/gemini/spartan.mozz.us), and gopher.
+- Find out how to best get in touch on my [**/about**](/about/) page, as
+well as other places on the internet you can find me.
+
+- Read about why this place exists, how it's made and how it evolved through its
+history on the [**/meta**](/meta/) page.
+
+- Below you will find a selection of my blog posts, the full list can also be
+found in my [**/posts**](/posts/) if you're willing to binge-it-all. Point your
+[feed reader](/feeds/) at my [RSS](/posts/index.xml) or [Atom](/posts/atom.xml)
+feed to subscribe to updates.
+
+- Take a look at my [**/bookmarks**](/bookmarks/) for some internet content I've
+been enjoying lately.
+
+- Looking for similar places like this? The list of [**webrings**](#webrings)
+below is all you need to continue your exploration. I also have a curated list
+of other people's blogs I appreciate on my [**/blogroll**](/blogroll/).
+
+- Before you leave, you can leave a trace of your presence by writing a message
+and leaving a book recommendation on my [**/guestbook**](/guestbook).
+
+Curious to explore places beyond the realms of the web? Learn about the
+[Gemini](https://geminiquickst.art) protocol,
+[Gopher](https://en.wikipedia.org/wiki/Gopher_(protocol)), and the rest of the
+"small internet". When you're ready to dive in, check out my Gemini presence at
+[gmi.hedy.dev](gemini://gmi.hedy.dev/).
 
 {{% posts-list %}}
 
@@ -30,7 +50,7 @@ random site part of the ring. Pick a ring and you'll be off!
 
 {{< webrings >}}
 
-My [gemini capsule](gemini://gmi.hedy.dev/) is part of a few other webrings,
+My [Gemini capsule](gemini://gmi.hedy.dev/) is part of a few other webrings,
 also known as "orbits" in [Geminispace](https://geminiquickst.art/).
 
 Member sites & badges are listed on my [meta](/meta/) page.
@@ -38,7 +58,7 @@ Member sites & badges are listed on my [meta](/meta/) page.
 ## Guestbook
 
 Like what you see? Leave a public note by signing my [guestbook](/guestbook/).
-Write a message for both the curator of this web garden, and the next visitor
-like you 💜
+Write a message and leave an optional book recommendation for both the curator
+of this web garden, and the next visitor like you.
 
 View all guestbook entries [here](/guestbook/).

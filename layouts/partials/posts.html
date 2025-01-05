@@ -9,11 +9,6 @@
 {{ (.Site.GetPage "posts").Content }}
 {{- end }}
 
-<p class="meta">
-<a href="/tags/">All Tags</a> &nbsp;|&nbsp;
-<a href="/feeds/">Feeds</a>
-</p>
-
 <ul class="post-list">
   {{- range (where .Site.RegularPages "Section" "posts") }}
   <li class="h-entry hentry" itemprop="item" itemscope="" itemtype="https://schema.org/BlogPosting" itemid="{{ .Permalink }}">
