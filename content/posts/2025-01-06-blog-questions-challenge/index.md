@@ -7,7 +7,7 @@ draft = false
 outputs = ['html']
 
 slug = "blog-questions-challenge"
-tags = []
+tags = ['meta']
 
 highlight = false
 # font = "mono"
