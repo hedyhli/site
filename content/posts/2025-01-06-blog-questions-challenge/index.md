@@ -25,7 +25,7 @@ So, let's get right into it.
 
 I published my first blog post using Blogger about a decade ago as a form of public long-form note-taking for cool tech "tips and tricks" I've learnt every day.
 
-Back then, I was only just getting into tinkering with technology as a hobby rather than a necessity. I realized that there were many little things I had previously ignored when I comes to the user interfaces we interact with everyday; so many opportunities for maximizing my productivity and technical knowledge that I could unlock by just paying more attention to the software and hardware I was using, and researching even just a little about them: finding out how it works under the hood, customizing and optimizing it. 
+Back then, I was only just getting into tinkering with technology as a hobby rather than a necessity. I realized that there were many little things I had previously ignored when it comes to the user interfaces we interact with everyday; so many opportunities for maximizing my productivity and technical knowledge that I could unlock by just paying more attention to the software and hardware I was using, and researching even just a little about them: finding out how it works under the hood, customizing and optimizing it. 
 
 I didn't care much about how the blog looked or how posts were written. Only that I was recording my notes and publishing it for anyone who shared similar interests.
 
