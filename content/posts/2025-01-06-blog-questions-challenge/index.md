@@ -1,6 +1,6 @@
 +++
 title = "Blog questions challenge"
-description = "Blog questions challenge"
+description = "My response to the blog questions challenge Kev Quirk."
 date = "2025-01-06T05:12:31Z"
 
 draft = false
