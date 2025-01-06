@@ -24,25 +24,38 @@ last_post = START
 posts = {}
 postlist = []
 
+def use_this(date_s: str, name: str):
+    global posts, postlist, last_post, COUNT
+
+    date = datetime.strptime(date_s, "%Y-%m-%d")
+    posts[date] = True
+    if date >= START:
+        COUNT += 1
+        postlist.append(date_s + " " + name)
+    if date > last_post:
+        last_post = date
+
 for file in glob("content/posts/*"):
     if not os.path.isdir(file):
         continue
     date_s = file.split("/")[2][:10]
-    date = datetime.strptime(file.split("/")[2][:10], "%Y-%m-%d")
-    posts[date] = True
     slug = file.split("/")[2][11:]
-    if date >= START:
-        COUNT += 1
-        postlist.append(date_s + " " + slug.replace("-", " ").capitalize())
-    if date > last_post:
-        last_post = date
+    use_this(date_s, slug.replace("-", " ").capitalize())
 
-print("\n".join(sorted(postlist)))
+with open("extra.txt") as f:
+    for line in f.read().strip().splitlines():
+        date_s, name = line[:10], line[11:]
+        use_this(date_s, name + " (extra)")
+
+
+for i, p in enumerate(sorted(postlist)):
+    print(f"{i+1:3}. {p}")
 print()
 print(START.strftime("%Y-%m-%d"), "..", last_post.strftime("%Y-%m-%d"))
 days = (last_post - START).days
 print(COUNT, "posts in", days, "days")
-print(f"{100 / 365 * days - COUNT:.2f} days behind")
+behind = 100 / 365 * days - COUNT
+print(f"{behind:.2f} days behind")
 
 for i in range((datetime.today() - START).days + 1):
     date = START + timedelta(days=i)
