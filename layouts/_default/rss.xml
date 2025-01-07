@@ -52,7 +52,7 @@
             <title>{{ .Title }}</title>
             <link>{{ .Permalink }}</link>
             <pubDate>{{ .Date.UTC.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-            <author>{{ .Site.Params.name }} ({{ .Site.Params.email }})</author>
+            <author>{{ .Site.Params.email }} ({{ .Site.Params.name }})</author>
             <guid>{{ .Permalink }}</guid>
             <description xml:base="{{ .Permalink }}">
                 {{ partial "processed-content.html" . | html }}

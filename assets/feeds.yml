@@ -1,8 +1,8 @@
 - name: Posts (RSS)
-  desc: All blog posts with full post content directly in your feed reader.
+  desc: All blog posts, full content. Usually using the `index.xml` file name under each supporting section of my site.
   url: /posts/index.xml
 - name: Posts (Atom)
-  desc: All blog posts, descriptions only.
+  desc: All blog posts, full content via [Atom](https://en.wikipedia.org/wiki/Atom_(web_standard)). Usually using the `atom.xml` file name under each supporting section of my site.
   url: /posts/atom.xml
 - name: Gemlog posts (Atom)
   url: gemini://gmi.hedy.dev/feed.xml
