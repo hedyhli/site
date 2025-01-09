@@ -1,6 +1,6 @@
-# hedy's gemlog
+# ~hedy's gemlog
 
-Hi, I'm hedy. This is where I occasionally post long-form articles and thoughts.
+Hi, I'm Hedy. This is where I occasionally post long-form articles and thoughts.
 
 => /posts/ 📔 gemlog
 => about.gmi 💬 about me, methods of contact, and the software I use
