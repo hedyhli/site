@@ -40,14 +40,11 @@
 <meta name="robots" content="noindex">
 {{- end -}}
 
-<!-- Fonts -->
 {{/* IBM Plex */}}
-<link rel="preload" href="https://gatsby.carbondesignsystem.com/fonts/IBMPlexSansLatin-VF.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-duo@latest/latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preload" href="https://unpkg.com/@ibm/plex-sans@1.1.0/fonts/split/woff2/IBMPlexSans-Regular-Latin3.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-{{/* iA Writer */}}
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 <meta name="color-scheme" content="light dark">
 {{ $css := resources.Get "main.css" | resources.Fingerprint "md5" | minify -}}
@@ -56,6 +53,9 @@
 <style>{{ $fonts_css.Content | safeCSS }}</style>
 
 {{ if eq "mono" .Params.font -}}
+{{/* iA Writer */}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preload" href="https://cdn.jsdelivr.net/fontsource/fonts/ia-writer-duo@latest/latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 {{ $iawriter_css := resources.Get "iawriter.css" | resources.Fingerprint "md5" | minify -}}
 <style>{{ $iawriter_css.Content | safeCSS }}</style>
 {{- end }}
