@@ -20,6 +20,14 @@
     <hr />
     <div style="font-family: var(--mono-font);"><p>📚 {{ . }}</p></div>
     {{ end }}
+    {{ with .books }}
+    <hr />
+    <div style="font-family: var(--mono-font);">
+      {{ range . }}
+      <p style="margin: 0">📚 {{ . }}</p>
+      {{ end }}
+    </div>
+    {{ end }}
     <p style="text-align: right; color: var(--text-light);">
       <time datetime="{{ .date }}">{{ .date }}</time>
     </p>
