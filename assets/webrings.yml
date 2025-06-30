@@ -49,6 +49,14 @@
   random: https://a11y-webring.club/random
   next: https://a11y-webring.club/next
 
+- name: Design Systems Webring
+  url: https://design-system.club/
+  desc: |
+    Design system practitioners.
+  previous: https://design-system.club/prev
+  random: https://design-system.club/random
+  next: https://design-system.club/next
+
 - name: No AI Webring
   desc: Personal websites without any AI-generated content.
   url: https://baccyflap.com/noai
