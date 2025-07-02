@@ -50,20 +50,22 @@ Here are some other places you can find me on the internet.
 
 ## Contact
 
-I love to connect with people over email conversations. Share your thoughts on
-a topic from any of my blog posts by using the "reply via email" link at the
+I love to connect with people over email conversations. Share your thoughts on a
+topic from any of my blog posts by using the "reply via email" link at the
 bottom of each post.
 
 My preferred method of contact is email, at
 [hedy.dev@protonmail.com](mailto:hedy.dev@protonmail.com).
 
+If instant messaging is your jam, hit me up on Signal; I'm `hedy.492`.
+
 Here are some other methods of contact, in order of preference:
-* Fediverse: [@hedy@tilde.zone](https://tilde.zone/@hedy)
+* The fediverse: [@hedy@tilde.zone](https://tilde.zone/@hedy)
 * Bluesky: @hedy.dev
+* Matrix: [hedy:envs.net](matrix:u/hedy:envs.net)
 * IRC: hedy ([tilde.chat](https://tilde.chat),
   [libera.chat](https://libera.chat), [newsnet](https://newsnet.net))
-* XMPP: hedy at hmm.st
-* Matrix: [hedy:envs.net](matrix:u/hedy:envs.net)
+* XMPP: hedy at hmm.st (barely used)
 
 
 ## Uses
@@ -80,10 +82,11 @@ Here are some other methods of contact, in order of preference:
 | Gopher Client | [Lagrange](https://gmi.skyjake.fi/lagrange/) |
 | Editor | [Neovim](https://neovim.io/), [Emacs](https://www.gnu.org/software/emacs/) |
 | Shell | [Fish](https://fishshell.com/), [Nu](https://www.nushell.sh/) |
-| Theme | [Catppuccin Mocha](https://catppuccin.com/), [Tundra (neovim)](https://github.com/sam4llis/nvim-tundra) |
+| Theme | [Catppuccin Mocha](https://catppuccin.com/), [Tundra (for neovim)](https://github.com/sam4llis/nvim-tundra) |
 {{</table>}}
 
-For more information on my setup, check out my [dotfiles repository on GitHub](https://github.com/hedyhli/dotfiles).
+For more information on my setup, check out my [dotfiles repository on
+GitHub](https://github.com/hedyhli/dotfiles).
 
 The tech stack for this blog and other related information can be found in my
 [colophon](/meta/).
