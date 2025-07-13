@@ -74,12 +74,10 @@ Here are some other methods of contact, in order of preference:
 | | |
 |-----|-------|
 | OS  | MacOS, Ubuntu |
-| Browser | [Zen](https://zen-browser.app), [Vivaldi](https://vivaldi.com/) |
+| Browser | [Vivaldi](https://vivaldi.com/) |
 | Terminal | [Kitty](https://sw.kovidgoyal.net/kitty/) |
-| Monospace Font | [IBM Plex Mono](https://github.com/IBM/type) |
-| Gemini Client | [gelim](https://github.com/hedyhli/gelim), [Lagrange](https://gmi.skyjake.fi/lagrange/) |
-| Spartan Client | [gelim](https://github.com/hedyhli/gelim) |
-| Gopher Client | [Lagrange](https://gmi.skyjake.fi/lagrange/) |
+| Programming Font | [IBM Plex Mono](https://github.com/IBM/type) |
+| Gemini/Gopher Client | [gelim](https://github.com/hedyhli/gelim), [Lagrange](https://gmi.skyjake.fi/lagrange/) |
 | Editor | [Neovim](https://neovim.io/), [Emacs](https://www.gnu.org/software/emacs/) |
 | Shell | [Fish](https://fishshell.com/), [Nu](https://www.nushell.sh/) |
 | Theme | [Catppuccin Mocha](https://catppuccin.com/), [Tundra (for neovim)](https://github.com/sam4llis/nvim-tundra) |

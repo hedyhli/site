@@ -39,7 +39,7 @@ Other places you can reach me:
 ```
 .---------------------------------------------------.
 | OS             | MacOS, Ubuntu                    |
-| Browser        | Zen, Vivaldi                     |
+| Browser        | Vivaldi                          |
 | Terminal       | Kitty                            |
 | Gemini Client  | Lagrange, gelim                  |
 | Spartan Client | gelim                            |
