@@ -72,9 +72,10 @@
   random: http://geekring.net/site/429/random
   next: http://geekring.net/site/429/next
 
-- name: the safonts webring
-  url: https://xandra.cc/safonts/
+- name: The Safonts Webring
+  url: https://safonts.club/
   desc: |
-    "this is a list of personal websites that feature fonts and text as main design elements and/or as a featured part of their layout, either past or present. maybe you love particular fonts or you just prefer having minimalist layouts—regardless of reason, you're likely a safont!"
-  previous: https://suxnode.com/
-  next: https://foolcrum57.nekoweb.org/
+    "A 'safont' is just somebody that loves fonts, whether that’s loving particular fonts, or like using them as a key element in designs. 'Safont' is a portmanteau of 'font savant', made to closely sound like 'savant'."
+  previous: https://safonts.club/prev/home.hedy.dev
+  random: https://safonts.club/random
+  next: https://safonts.club/prev/home.hedy.dev
