@@ -18,7 +18,7 @@
     <div style="font-family: var(--mono-font);">{{ $.Page.RenderString (dict "display" "block") (printf "\n\n%s\n" .message) }}</div>
     {{ with .book }}
     <hr />
-    <div style="font-family: var(--mono-font);"><p>📚 {{ . }}</p></div>
+    <div style="font-family: var(--mono-font);"><p>{{ $.Page.RenderString (dict "display" "inline") (printf "%s %s" "📚" (trim . "\n ")) }}</p></div>
     {{ end }}
     {{ with .books }}
     <hr />
