@@ -556,6 +556,10 @@ nav .pfp {
   margin: 0;
 }
 
+.guestbook .coffee-cup {
+  display: none;
+}
+
 .guestbook input, .guestbook textarea {
   width: calc(100% - 1rem);
   max-width: calc(100% - 1rem);
